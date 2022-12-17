@@ -1571,7 +1571,6 @@ margin: 0;
     margin-left: auto;
 
     margin-right: auto;
-	margin-top: 65px;
 
 
 
@@ -2729,6 +2728,7 @@ iframe{
 
 .my-3{
     margin-top: 0 !important;
+    margin-bottom: 0 !important;
 }
 
 #about-us-div {
