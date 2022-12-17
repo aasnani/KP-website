@@ -1041,13 +1041,19 @@ button{
     
 }
 
-#gold, #collections, .owl-prev, .owl-next{
+#gold, #collections{
     background-color: #f3dcb4 !important; /* NOTE 1: change color of gold and collection sections */
 
 
     /*background: #f6edea;*/
     /*   background: rgb(248,242,240);
     background: linear-gradient(55deg, rgba(248,242,240,1) 0%, rgba(244,228,211,1) 24%, rgba(241,217,187,1) 24%, rgba(240,211,175,1) 55%, rgba(232,181,112,1) 55%, rgba(230,175,100,1) 80%, rgba(228,165,80,1) 80%, rgba(218,127,0,1) 100%);*/
+
+}
+
+.owl-prev, .owl-next{
+    /* background-color: #f3dcb4 !important; */
+    color: #;
 
 }
 
@@ -2186,7 +2192,7 @@ margin-bottom: 0;
 top: -44px;
 background: none;
 }
-	#gold .owl-carousel .owl-nav button.owl-next span {
+	#gold .owl-carousel .owl-nav button.owl-next [aria-label="Search by voice"] {
     font-size: 30px;
 	background: none;
 
@@ -2246,6 +2252,10 @@ background: none;
 
     height: 447px;
 }
+}
+
+[aria-label="Previous"], [aria-label="Next"]{
+    background-color: #f3dcb4 !important;
 }
 
 
