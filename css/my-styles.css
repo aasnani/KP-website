@@ -581,16 +581,16 @@ justify-content: center;
 .carousel-control-next-icon {
 
     background-image:url(../images/next_new.png);
-    width: 30px !important;
-    height: 30px !important;
+    width: 50px !important;
+    height: 50px !important;
 
 }
 
 .carousel-control-prev-icon {
 
     background-image: url(../images/prev_new.png);
-    width: 30px !important;
-    height: 30px !important;
+    width: 50px !important;
+    height: 50px !important;
 }
 
 .carousel-small-next-icon {
