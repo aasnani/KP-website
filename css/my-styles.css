@@ -2253,6 +2253,10 @@ background: none;
     color: white; /* text color */
 }
 
+#stone{
+    margin-bottom: 1rem;
+}
+
 /*Start Animation*/
 
 .text-wrapper{
