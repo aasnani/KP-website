@@ -2270,6 +2270,8 @@ background: none;
     opacity: 1;
  }
 
+/* NOTE 4 */
+
  #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
     color: red !important;
 }
