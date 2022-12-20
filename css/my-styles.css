@@ -2255,6 +2255,21 @@ background: none;
     color: white; /* text color */
 }
 
+.dropdown .dropdown-menu{
+    display: block; 
+    opacity:0;
+    -webkit-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+    -ms-transition: all 200ms ease-in;
+    -o-transition: all 200ms ease-in;
+    transition: all 200ms ease-in;
+    border-radius: 5px;
+ }
+ .dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+ }
+
 /*Start Animation*/
 
 .text-wrapper{
