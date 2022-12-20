@@ -2256,6 +2256,26 @@ background: none;
 #stone{
     margin-bottom: 1rem;
 }
+.dropdown .dropdown-menu{
+    display: block; 
+    opacity:0;
+    -webkit-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+    -ms-transition: all 200ms ease-in;
+    -o-transition: all 200ms ease-in;
+    transition: all 200ms ease-in;
+    border-radius: 5px;
+ }
+.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+ }
+
+/* NOTE 4 */
+
+ #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
+    color: red !important;
+}
 
 /*Start Animation*/
 
