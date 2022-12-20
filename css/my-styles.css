@@ -1461,8 +1461,6 @@ margin: 0;
 
     margin-left: auto;
     margin-right: auto;
-
-  margin-top: 65px;
 }
 .kp-viewmore{
     border: 2px solid #23140e;
@@ -2255,6 +2253,9 @@ background: none;
     color: white; /* text color */
 }
 
+#stone{
+    margin-bottom: 1rem;
+}
 .dropdown .dropdown-menu{
     display: block; 
     opacity:0;
@@ -2265,7 +2266,7 @@ background: none;
     transition: all 200ms ease-in;
     border-radius: 5px;
  }
- .dropdown:hover .dropdown-menu {
+.dropdown:hover .dropdown-menu {
     display: block;
     opacity: 1;
  }
