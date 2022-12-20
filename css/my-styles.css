@@ -2262,7 +2262,9 @@ background: none;
     background-color: #f3dcb4 !important;
 }
 
-.gold-carousel-text{
+/* NOTE 2 */
+
+.gold-carousel-text{ 
     background-color: #000 !important; /* background color */
     color: white; /* text color */
 }
