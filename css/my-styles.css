@@ -1096,6 +1096,8 @@ section {
 
 
 
+
+
 .home-text {
 
     text-align: center;
@@ -2260,6 +2262,12 @@ background: none;
     background-color: #f3dcb4 !important;
 }
 
+/* NOTE 2 */
+
+.gold-carousel-text{ 
+    background-color: #000 !important; /* background color */
+    color: white; /* text color */
+}
 
 /*Start Animation*/
 
