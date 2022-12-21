@@ -1429,7 +1429,7 @@ margin: 0;
 
     background-position: 50%;
 
-    background-image: url(../images/heal.jpg);
+    background-image: url(../images/heal.jpg); /* NOTE 5 */
 
     background-attachment: fixed;
 
