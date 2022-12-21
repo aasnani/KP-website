@@ -2277,6 +2277,11 @@ background: none;
     color: red !important;
 }
 
+#subscribe-success-alert{
+    margin-top: 0.3rem;
+    width: 342px;
+}
+
 /*Start Animation*/
 
 .text-wrapper{
