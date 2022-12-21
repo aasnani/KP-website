@@ -828,7 +828,7 @@ button{
 
 .container-90{
 
-    width: 90%;
+    /* width: 90%; */
 
     margin: auto;
 
@@ -2058,7 +2058,7 @@ padding-right: 20px;
 
 }
 .healwithlove-gold {
-    margin-top: 11px !important;
+    /* margin-top: 11px !important; */
 }
 	.healwithlove-antique {
 		 margin-top: 11px !important;
