@@ -2285,6 +2285,13 @@ background: none;
     /* NOTE 6 */
     color: inherit; 
     font-family: inherit; 
+    font-size: 90%;
+
+    font-weight: 600;
+
+    padding: .75em 0;
+
+    letter-spacing: 1px;
 }
 
 #mainNav {
