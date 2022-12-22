@@ -2281,17 +2281,18 @@ background: none;
     color: red !important;
 }
 
-#mainNav {
-    text-align: center !important;
-    vertical-align: middle !important;
+#mainNav .navbar-nav .nav-item .nav-link {
+    /* NOTE 6 */
+    color: inherit; 
+    font-family: inherit; 
 }
 
 #mainNav {
-
-    /* background-color: #212529; */
-    background: rgb(176, 167, 148);
-    /* background: rgb(248,242,240);
-    background: linear-gradient(55deg, rgba(248,242,240,1) 0%, rgba(79,57,69,0.25) 24%, rgba(79,57,69,0.5) 24%, rgba(79,57,69,0.8) 55%, rgba(79,57,69,0.8) 55%, rgba(79,57,69,1) 80%); */
+    /* NOTE 6 */
+    text-align: center !important;
+    vertical-align: middle !important;
+    background: rgb(219, 206, 206);
+    /* background: linear-gradient(55deg, rgba(248,242,240,1) 0%, rgba(79,57,69,0.25) 24%, rgba(79,57,69,0.5) 24%, rgba(79,57,69,0.8) 55%, rgba(79,57,69,0.8) 55%, rgba(79,57,69,1) 80%); */ 
 }
 
 #collectionsDropdown {
