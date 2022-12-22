@@ -1,0 +1,330 @@
+<!doctype html>
+
+<html>
+
+    <head>
+
+        <meta charset="utf-8">
+        <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Kay Pee Jewelers</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/animatecss/3.5.2/animate.min.css" />
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/agency.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css" />
+        <link href="css/my-styles.css" rel="stylesheet">
+        <link href="css/owl.carousel.min.css" rel="stylesheet">
+
+        <style>
+            /*Start Video Style*/
+
+            header {
+
+                /* background: url(images/bg-video.jpg) black no-repeat center center scroll; */
+
+                position: relative;
+
+                /* background-color: black; */
+
+                height: 100vh;
+
+                min-height: 25rem;
+
+                width: 100%;
+
+                overflow: hidden;
+
+            }
+
+
+
+            header video {
+
+                position: absolute;
+
+                top: 50%;
+
+                left: 50%;
+
+                min-width: 100%;
+
+                min-height: 100%;
+
+                width: auto;
+
+                height: auto;
+
+                z-index: 0;
+
+                -ms-transform: translateX(-50%) translateY(-50%);
+
+                -moz-transform: translateX(-50%) translateY(-50%);
+
+                -webkit-transform: translateX(-50%) translateY(-50%);
+
+                transform: translateX(-50%) translateY(-50%);
+
+            }
+
+
+
+            header .container {
+
+                position: relative;
+
+                z-index: 2;
+
+            }
+
+
+
+            header .overlay {
+
+                position: absolute;
+
+                top: 0;
+
+                left: 0;
+
+                height: 100%;
+
+                width: 100%;
+
+                /* background-color: black; */
+
+                opacity: 0.5;
+
+                z-index: 1;
+
+            }
+
+			@media(min-width:1200px){
+				.slider-image{
+					height: 100vh;
+				}
+			}
+
+
+
+            @media (max-width:992px){
+
+                .navbar{display:none !important;}
+
+                .dropdown-menu{
+
+                    width:100%;
+
+                    background: #1e0f0b;
+
+
+
+                }
+
+                .dropdown-item:hover{
+
+                    background:#000;
+
+                }
+
+                .active{
+
+                    color:#fff !important;
+
+                    opacity:1;
+
+                }
+
+
+
+            }
+          @media (max-width:768px){
+              /* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  body {
+    -ms-overflow-style: none;  /* IE and Edge */
+
+  }
+  body {
+
+overflow-x: hidden;
+
+}
+
+          }
+
+            @media (max-width:576px){
+
+
+
+                .footer-sdr {
+
+                    text-align:center;
+
+                }
+
+                /* #landing-section {
+
+                    padding-top: 51px;
+
+                    padding-bottom: 31px;
+
+                } */
+
+
+
+            }
+
+
+
+
+
+            /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+
+
+            @media (pointer: coarse) and (hover: none) {
+
+                header {
+
+                    background: url(images/bg-video.jpg) black no-repeat center center scroll;
+
+                }
+
+                header video {
+
+                    display: none;
+
+                }
+
+            }
+
+
+
+            /*End Video Style*/
+
+        </style>
+
+    </head>
+
+    <body>
+
+    <div id="mySidebar" class="sidebar">
+
+            <a href="javascript:void(0)" class="closebtn" onClick="closeNav()">×</a>
+
+            <a class="link" id="home-active" href="#">Home</a>
+            <a class="link" href="#new-arr">New Arrivals</a>
+        <a class="link" href="#gold">Gold Jewelry</a>
+
+
+        <a class="link" href="#diamond">Diamond Jewelry</a>
+        <div class="dropdown">
+
+            <a class="nav-link  dropdown-toggle"  data-toggle="dropdown" id="dropdownMenuButton"  href="stone.html" aria-haspopup="true" aria-expanded="false">collections</a>
+
+
+
+            <div id="drop" class="dropdown-menu collection-menu d-none" aria-labelledby="dropdownMenuButton" style="left:4px">
+
+                <a class="dropdown-item link" href="stone.html">Precious Gemstone Jewelry</a>
+                <a class="dropdown-item link" href="antique.html">Antique Jewelry</a>
+                <a class="dropdown-item link" href="mangalsutra.html">Mangal Sutras</a>
+                <a class="dropdown-item link" href="rings.html">Engagement Rings and Wedding Bands</a>
+
+            </div>
+
+        </div>
+
+
+
+
+        <a href="#contact-us" id="trigger1" class=" trigger1 link">Contact Us</a>
+
+    </div>
+
+
+
+    <div id="main">
+
+        <div class="btn-div">
+
+            <button class="openbtn" onClick="openNav()">☰ </button>
+
+        </div>
+
+
+        <div class="mobile-logo">
+
+            <a href="index.html"><img src="images/logo.png"/></a>
+
+        </div>
+
+
+
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+
+            <div class="container">
+
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> Menu </button>
+
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+
+                    <ul class="navbar-nav text-uppercase ml-auto mr-auto">
+
+                        <li class="nav-item"> <a class="nav-link " href="index.html">Home</a> </li>
+
+                        <li class="nav-item"> <a class="nav-link " href="new_arrivals.html">New Arrivals</a> </li>
+                        <li class="nav-item"> <a class="nav-link " href="gold-jewelry.html">Gold Jewelry</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="diamond.html">Diamond Jewelry</a> </li>
+                        
+
+
+                        <li class="logo-l-r"> <a href="#landing" class="">
+
+                                <a href="index.html"><div class="mitra-logo"> </div> </a>
+
+                            </a> </li>
+                        
+                        <li class="nav-item"> <a class="nav-link " href="antique.html">Antique Jewelry</a> </li>
+
+                        <li class="nav-item"> <a class="nav-link " href="stone.html">Precious Gemstone Jewelry</a> </li>
+                            
+                        <div class="dropdown">
+
+                            <li class="nav-item" > <a class="nav-link  dropdown-toggle"  data-toggle="dropdown" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">collections</a>
+
+
+
+                                <div class="dropdown-menu collection-menu" aria-labelledby="dropdownMenuButton">
+
+                                    <a class="dropdown-item" href="mangalsutra.html">Mangal Sutras</a>
+                                    <a class="dropdown-item" href="rings.html">Engagement Rings and Wedding Bands</a>
+                                    <a class="dropdown-item" href="rings.html">Rhodium Bangles</a>
+                                    <a class="dropdown-item" href="rings.html">Temple Jewelry</a>
+
+                                </div>
+
+                        </div>
+
+                        </li>
+
+
+
+                        <li class="nav-item"> <a class="nav-link" href="#contact-us">Contact Us</a> </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+</html>
