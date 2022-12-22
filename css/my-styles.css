@@ -1015,6 +1015,10 @@ button{
 
 @media only screen and (min-width: 1367px) {
 
+    .btn-div{
+        display: none;
+    }
+
     #diamond, #gold, #new-arr {
         padding: 95px 0px 123px;
         /* scroll-margin-top: calc(120px-85px);  */
@@ -2275,6 +2279,23 @@ background: none;
 
  #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
     color: red !important;
+}
+
+#mainNav {
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+#mainNav {
+
+    /* background-color: #212529; */
+    background: rgb(176, 167, 148);
+    /* background: rgb(248,242,240);
+    background: linear-gradient(55deg, rgba(248,242,240,1) 0%, rgba(79,57,69,0.25) 24%, rgba(79,57,69,0.5) 24%, rgba(79,57,69,0.8) 55%, rgba(79,57,69,0.8) 55%, rgba(79,57,69,1) 80%); */
+}
+
+#collectionsDropdown {
+    margin-right: 1.2em;
 }
 
 /*Start Animation*/

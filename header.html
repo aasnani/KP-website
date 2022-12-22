@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html>
 
@@ -296,7 +296,7 @@ overflow-x: hidden;
 
                         <li class="nav-item"> <a class="nav-link " href="stone.html">Precious Gemstone Jewelry</a> </li>
                             
-                        <div class="dropdown">
+                        <div class="dropdown" id="collectionsDropdown">
 
                             <li class="nav-item" > <a class="nav-link  dropdown-toggle"  data-toggle="dropdown" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">collections</a>
 
@@ -326,5 +326,221 @@ overflow-x: hidden;
             </div>
 
         </nav>
+
+
+        <script>
+            $(document).ready(function(){
+              $(".link").click(function(){
+                $("#mySidebar").css("width", "0");
+                  $("#main").css("left", "0");
+            
+              });
+            });
+            </script>
+                <script>
+                            new WOW().init();
+                            $.ready(function () {
+            
+                                $('a[href*=#]').bind('click', function (e) {
+            
+                                    e.preventDefault(); // prevent hard jump, the default behavior
+            
+            
+            
+                                    var target = $(this).attr("href"); // Set the target as variable
+            
+            
+            
+                                    // perform animated scrolling by getting top-position of target-element and set it as scroll target
+            
+                                    $('html, body').stop().animate({
+            
+                                        scrollTop: $(target).offset().top
+            
+                                    }, 600, function () {
+            
+                                        location.hash = target; //attach the hash (#jumptarget) to the pageurl
+            
+                                    });
+            
+            
+            
+                                    return false;
+            
+                                });
+            
+                            });
+            
+            
+            
+                            $(window).scroll(function () {
+            
+                                var scrollDistance = $(window).scrollTop();
+            
+            
+            
+                                // Show/hide menu on scroll
+            
+                                //if (scrollDistance >= 850) {
+            
+                                //		$('nav').fadeIn("fast");
+            
+                                //} else {
+            
+                                //		$('nav').fadeOut("fast");
+            
+                                //}
+            
+            
+            
+                                // Assign active class to nav links while scolling
+            
+                                $('.page-section').each(function (i) {
+            
+                                    if ($(this).position().top <= scrollDistance) {
+            
+                                        $('.navigation a.active').removeClass('active');
+            
+                                        $('.navigation a').eq(i).addClass('active');
+            
+                                    }
+            
+                                });
+            
+                            }).scroll();
+            
+            
+            
+                            function openNav() {
+            
+                                document.getElementById("mySidebar").style.width = "250px";
+            
+                                document.getElementById("main").style.left = "250px";
+            
+                                document.getElementById("main").style.position = "relative";
+            
+                            }
+            
+            
+            
+                            function closeNav() {
+            
+                                document.getElementById("mySidebar").style.width = "0";
+            
+                                document.getElementById("main").style.left = "0";
+            
+                                document.getElementById("main").style.position = "relative";
+            
+            
+            
+            
+            
+                            }
+            
+            
+            
+                            $(document).mouseup(function (e)
+            
+                            {
+            
+                                var container = $('#mySidebar');
+            
+            
+            
+                                if (container.is(e.target) && container.has(e.target).length === 0) {
+            
+            
+            
+            
+            
+                                    closeNav();
+            
+            
+            
+                                }
+            
+            
+            
+            
+            
+            
+            
+                                /*$(document).mouseup(function(e)
+            
+                                 {
+            
+                                 var container = $("#mySidebarR");
+            
+            
+            
+                                 // if the target of the click isn't the container nor a descendant of the container
+            
+                                 if (!container.is(e.target) && container.has(e.target).length === 0)
+            
+                                 {
+            
+                                 container.closeNav();
+            
+                                 }
+            
+                                 });*/
+            
+            
+            
+            
+            
+                            });
+            
+            
+            
+                            $('#dropdownMenuButton').click(function () {
+            
+                                if ($('#drop').hasClass('d-none')) {
+            
+                                    $('#drop').removeClass('d-none');
+            
+                                    $('#trigger1').css('margin-top', '160px');
+            
+                                } else {
+            
+                                    $('#drop').addClass('d-none');
+            
+                                    $('#trigger1').css('margin-top', '0px');
+            
+                                }
+            
+                                //$("#drop").toggle();
+            
+            
+            
+                            });
+            
+                            function onClick() {
+            
+                                document.getElementById("drop").style.width = "250px";
+            
+                                document.getElementById("trigger1").style.marginTop = "50px";
+            
+                                document.getElementById("trigger1").style.position = "relative";
+            
+                            }
+            
+            
+            
+            
+            
+                            $(document).ready(function () {
+            
+                                $("#home-active").addClass('active')
+            
+                            });
+            
+                            $('.link').click(function (e) {
+                                $('#home-active').removeClass('active');
+                                 $('.link').removeClass('active');
+                                 $(this).addClass('active');
+                            });
+            
+                </script>
 
 </html>
