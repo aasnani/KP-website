@@ -2286,11 +2286,8 @@ background: none;
     color: inherit; 
     font-family: inherit; 
     font-size: 90%;
-
     font-weight: 600;
-
     padding: .75em 0;
-
     letter-spacing: 1px;
 }
 
@@ -2304,6 +2301,16 @@ background: none;
 
 #collectionsDropdown {
     margin-right: 1.2em;
+}
+
+@media screen and (max-width: 1200px) {
+    .container{
+        max-width: 1120px;
+    }
+
+    #mainNav .navbar-nav .nav-item .nav-link {
+        font-size: 75%;
+    }
 }
 
 /*Start Animation*/
