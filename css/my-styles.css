@@ -2287,7 +2287,7 @@ background: none;
     font-family: inherit; 
     font-size: 90%;
     font-weight: 600;
-    padding: .75em 0;
+    /* padding: .75em 0; */
     letter-spacing: 1px;
 }
 
@@ -2312,6 +2312,37 @@ background: none;
         font-size: 75%;
     }
 }
+
+@media screen and (min-width: 992px) {
+    #mainNav .navbar-nav .nav-item:not(#dropdownMenuButton)::after{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-color: #000000;
+        width: 0%;
+        content: "";
+        height: 4px;
+        transition: all 0.5s;
+      }
+    
+    #mainNav .navbar-nav .nav-item:not(#collectionsDropDownNavItem):hover::after{
+    width: 100%;
+    }
+
+    .navbar .navbar-nav .nav-item:not(#collectionsDropDownNavItem){
+    position: relative;
+    }
+
+    #mainNav .navbar-nav .nav-item .nav-link {
+
+    padding: 2.8em 1em 1.4em 1em !important;
+
+    }
+    
+}
+
 
 /*Start Animation*/
 
