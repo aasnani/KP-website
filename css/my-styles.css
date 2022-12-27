@@ -2312,9 +2312,9 @@ background: none;
         font-size: 75%;
     }
 
-    #mainNav .navbar-nav .nav-item-r{
+    /* #mainNav .navbar-nav .nav-item-r{
         font-size: 70%;
-    }
+    } */
 }
 
 @media screen and (min-width: 992px) {
@@ -2331,7 +2331,7 @@ background: none;
         transition: all 0.5s;
       }
     
-    #mainNav .navbar-nav .nav-item:not(#collectionsDropDownNavItem):hover::after{
+    #mainNav .navbar-nav .nav-item:not(#collectionsDropDownNavItem):not(#kp-logo):hover::after{
     width: 100%;
     }
 
@@ -2345,10 +2345,40 @@ background: none;
 
     }
 
+    /* #mainNav .navbar-nav .nav-item .nav-link-r {
+
+        padding: 2.8em 0.46em 1.4em 0.46em !important;
+    
+    } */
+
     /* #mainNav .navbar-nav .nav-item-r {
         font-size: 85%;
     } */
+
+    #mainNav .navbar-nav .nav-item{
+        width: 11.1%;
+    }
     
+}
+
+@media screen and (min-width: 1200px) {
+    .container{
+        max-width: fit-content;
+    }
+
+    #mainNav .navbar-nav .nav-item{
+        width: 11.1%;
+    }
+
+    .img-fluid{
+        max-height: 125px;
+        max-width: 125px;
+    }
+    
+}
+
+.loc-phone{
+    font-size:80%;
 }
 
 /*Start Animation*/
