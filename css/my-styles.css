@@ -2278,7 +2278,7 @@ background: none;
 /* NOTE 4 */
 
  #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: red !important;
+    color: white !important;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
@@ -2318,7 +2318,7 @@ background: none;
 }
 
 @media screen and (min-width: 992px) {
-    #mainNav .navbar-nav .nav-item:not(#dropdownMenuButton)::after{
+    #mainNav .navbar-nav .nav-item:not(#collectionsDropdown)::after{
         position: absolute;
         bottom: 0;
         left: 0;
@@ -2331,18 +2331,22 @@ background: none;
         transition: all 0.5s;
       }
     
-    #mainNav .navbar-nav .nav-item:not(#collectionsDropDownNavItem):not(#kp-logo):hover::after{
+    #mainNav .navbar-nav .nav-item:not(#collectionsDropdown):not(#kp-logo):hover::after{
     width: 100%;
     }
 
-    .navbar .navbar-nav .nav-item:not(#collectionsDropDownNavItem){
+    .navbar .navbar-nav .nav-item:not(#collectionsDropdown){
     position: relative;
     }
 
-    #mainNav .navbar-nav .nav-item .nav-link {
+    #mainNav .navbar-nav .nav-item .nav-link:not(#dropdownMenuButton) {
 
     padding: 2.8em 1em 1.4em 1em !important;
 
+    }
+
+    #dropdownMenuButton{
+        padding: 2.8em 0em 1.4em 0em !important;
     }
 
     /* #mainNav .navbar-nav .nav-item .nav-link-r {
