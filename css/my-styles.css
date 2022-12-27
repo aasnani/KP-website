@@ -1433,7 +1433,7 @@ margin: 0;
 
     background-position: 50%;
 
-    background-image: url(../images/heal.jpg);
+    background-image: url(../images/heal.jpg); /* NOTE 5 */
 
     background-attachment: fixed;
 
@@ -2383,6 +2383,13 @@ background: none;
 
 .loc-phone{
     font-size:80%;
+}
+
+#subscribe-success-alert{
+    margin-top: 0.3rem;
+    width: 342px;
+    height: 30px;
+    line-height:7px;
 }
 
 /*Start Animation*/

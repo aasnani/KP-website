@@ -1313,7 +1313,7 @@ overflow-x: hidden;
 
 
 
-                <input type="text" class="subscribe-input" placeholder="Enter Your Email Address">
+                <input type="text" id="subscribe-form" class="subscribe-input" placeholder="Enter Your Email Address">
 
 <!-- <div align="center"><a href="https://visitor.r20.constantcontact.com/d.jsp?llr=le98qgabb&amp;p=oi&amp;m=le98qgabb&amp;sit=7o6m7leob&amp;f=3838d12c-2729-49ca-a4a2-14d9ffcab449" class="button" style="background-color:#e8e8e8;border:solid 1px #5b5b5b;color:#5b5b5b;display:inline-block;padding: 8px 10px;text-shadow:none;">Sign Up Now</a>
 <div id="ctct_button_footer" align="center" style="font-family:Arial,Helvetica,sans-serif;font-size:10px;color:#999999;margin-top: 10px;">For Email Newsletters you can trust.</div></div> -->
@@ -1325,7 +1325,11 @@ overflow-x: hidden;
 <!-- Begin Constant Contact Inline Form Code -->
 <!-- <div class="ctct-inline-form" data-form-id="b22eb75b-642f-41b1-a04b-12b6fe2ba109"></div> -->
 <!-- End Constant Contact Inline Form Code -->
-                <button class="subscribe-btn">Subscribe </button>
+                <button onclick="subscribe()" class="subscribe-btn">Subscribe </button>
+
+                <div id="subscribe-success-alert" class="alert alert-success hide fade" role="alert">
+                  Successfully added to email list!
+                </div>
 
             </div>
 
@@ -1615,6 +1619,18 @@ $(document).ready(function(){
   });
 });
 </script>
+
+<script>
+  function subscribe() {
+    $("#subscribe-success-alert").addClass("show");
+    $("#subscribe-success-alert").removeClass("hide");
+    setTimeout(() => {
+      $("#subscribe-success-alert").removeClass("show");
+      $("#subscribe-success-alert").addClass("hide");
+    }, 5000)
+  }
+</script>
+
     <script>
                 new WOW().init();
                 $.ready(function () {
@@ -1825,7 +1841,7 @@ $(document).ready(function(){
     items:4,
     loop:true,
     margin:30,
-    autoplay:false,
+    autoplay:true,
     autoplayTimeout:2000,
 	smartSpeed:1000,
     autoplayHoverPause:true,
@@ -1889,6 +1905,8 @@ formData = {
   'address': $('input[name=address]').val(),
   'comment': $('textarea[name=comment]').val()
 };
+
+
 
 
 $.ajax({
