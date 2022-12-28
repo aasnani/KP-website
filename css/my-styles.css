@@ -182,6 +182,8 @@ body::-ms-scrollbar-thumb {background: #000;}
 .new-arrive-product{
     float:left;
     width:100%;
+    border: 1.5px solid #e8ca96;
+
 }
 
 .arrive-btm{
@@ -1019,15 +1021,15 @@ button{
         padding: 95px 0px 123px;
         /* scroll-margin-top: calc(120px-85px);  */
         scroll-margin-top: 35px;
-    
+
     }
 
     #collections {
         padding: 95px 0px 123px 0px;
         /* scroll-margin-top: calc(120px-85px);  */
-        scroll-margin-top: 35px; 
+        scroll-margin-top: 35px;
     }
-    
+
 }
 
 #gold, #collections{
@@ -2248,7 +2250,7 @@ background: none;
 
 /* NOTE 2 */
 
-.gold-carousel-text{ 
+.gold-carousel-text{
     background-color: #000 !important; /* background color */
     color: white; /* text color */
 }
@@ -2257,7 +2259,7 @@ background: none;
     margin-bottom: 1rem;
 }
 .dropdown .dropdown-menu{
-    display: block; 
+    display: block;
     opacity:0;
     -webkit-transition: all 200ms ease-in;
     -moz-transition: all 200ms ease-in;
