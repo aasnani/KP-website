@@ -823,6 +823,8 @@ button{
 
     font-size: 35px;
     padding-bottom: 8%;
+    font-family: 'Playfair Display', serif;
+
 
 }
 
@@ -1037,7 +1039,7 @@ button{
 }
 
 #gold, #collections{
-    background-color: #f3dcb4 !important; /* NOTE 1: change color of gold and collection sections */
+    background-color: #78b6a5 !important; /* NOTE 1: change color of gold and collection sections */
 
 
     /*background: #f6edea;*/
@@ -2280,13 +2282,13 @@ background: none;
 /* NOTE 4 */
 
  #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: white !important;
+    color: #704a57 !important; /*Note highliht color*/
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
     /* NOTE 6 */
-    color: inherit; 
-    font-family: inherit; 
+    color: inherit;
+    font-family: 'Playfair Display', serif;
     font-size: 90%;
     font-weight: 600;
     /* padding: .75em 0; */
@@ -2297,8 +2299,8 @@ background: none;
     /* NOTE 6 */
     text-align: center !important;
     vertical-align: middle !important;
-    background: rgb(219, 206, 206);
-    /* background: linear-gradient(55deg, rgba(248,242,240,1) 0%, rgba(79,57,69,0.25) 24%, rgba(79,57,69,0.5) 24%, rgba(79,57,69,0.8) 55%, rgba(79,57,69,0.8) 55%, rgba(79,57,69,1) 80%); */ 
+    background: rgb(255, 255, 255);
+    /* background: linear-gradient(55deg, rgba(248,242,240,1) 0%, rgba(79,57,69,0.25) 24%, rgba(79,57,69,0.5) 24%, rgba(79,57,69,0.8) 55%, rgba(79,57,69,0.8) 55%, rgba(79,57,69,1) 80%); */
 }
 
 /* #collectionsDropdown {
@@ -2326,13 +2328,13 @@ background: none;
         left: 0;
         right: 0;
         margin: auto;
-        background-color: #000000;
+        background-color: #704a57; /*Note highliht color*/
         width: 0%;
         content: "";
-        height: 4px;
+        height: 2px;
         transition: all 0.5s;
       }
-    
+
     #mainNav .navbar-nav .nav-item:not(#collectionsDropdown):not(#kp-logo):hover::after{
     width: 100%;
     }
@@ -2354,7 +2356,7 @@ background: none;
     /* #mainNav .navbar-nav .nav-item .nav-link-r {
 
         padding: 2.8em 0.46em 1.4em 0.46em !important;
-    
+
     } */
 
     /* #mainNav .navbar-nav .nav-item-r {
@@ -2364,7 +2366,7 @@ background: none;
     #mainNav .navbar-nav .nav-item{
         width: 11.1%;
     }
-    
+
 }
 
 @media screen and (min-width: 1200px) {
@@ -2380,7 +2382,7 @@ background: none;
         max-height: 125px;
         max-width: 125px;
     }
-    
+
 }
 
 .loc-phone{
