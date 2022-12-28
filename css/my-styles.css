@@ -2261,8 +2261,9 @@ background: none;
     margin-bottom: 1rem;
 }
 .dropdown .dropdown-menu{
-    display: block; 
-    opacity:0;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
     -webkit-transition: all 200ms ease-in;
     -moz-transition: all 200ms ease-in;
     -ms-transition: all 200ms ease-in;
@@ -2271,10 +2272,21 @@ background: none;
     border-radius: 5px;
  }
 
-.dropdown-menu:hover {
+.dropdown-menu:hover::after + .dropdown-toggle{
+    transform: rotate(180deg);
+}
+
+ #dropdownMenuButton:hover + .dropdown-menu, .dropdown-menu:hover{
     display: block;
+    visibility: visible;
     opacity: 1;
  }
+
+ .dropdown-toggle:hover::after{
+    transform: rotate(180deg);
+}
+
+
 
 /* NOTE 4 */
 
