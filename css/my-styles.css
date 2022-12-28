@@ -2271,7 +2271,7 @@ background: none;
     border-radius: 5px;
  }
 
-#dropdownMenuButton:hover + .dropdown-menu {
+.dropdown-menu:hover {
     display: block;
     opacity: 1;
  }
@@ -2342,12 +2342,12 @@ background: none;
 
     #mainNav .navbar-nav .nav-item .nav-link:not(#dropdownMenuButton) {
 
-    padding: 2.8em 1em 1.4em 1em !important;
+    margin: 2.8em 1em 1.4em 1em !important;
 
     }
 
     #dropdownMenuButton{
-        padding: 2.8em 0em 1.4em 0em !important;
+        margin: 2.8em 0em 1.4em 0em !important;
     }
 
     /* #mainNav .navbar-nav .nav-item .nav-link-r {
