@@ -2336,7 +2336,7 @@ background: none;
       }
 
     #mainNav .navbar-nav .nav-item:not(#collectionsDropdown):not(#kp-logo):hover::after{
-    width: 100%;
+    width: 75%;
     }
 
     .navbar .navbar-nav .nav-item:not(#collectionsDropdown){
