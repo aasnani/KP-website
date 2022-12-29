@@ -1050,7 +1050,7 @@ button{
 
 .owl-prev, .owl-next{
     /* background-color: #f3dcb4 !important; */
-    color: #;
+    /* color: #; */
 
 }
 
@@ -2349,12 +2349,12 @@ background: none;
         transition: all 0.5s;
       }
 
-    #mainNav .navbar-nav .nav-item:not(#collectionsDropdown):not(#kp-logo):hover::after{
-    width: 75%;
+    #mainNav .navbar-nav .nav-item .nav-link:not(#dropdownMenuButton):not(#kp-logo):hover::after{
+        width: 75%;
     }
 
     #mainNav .navbar-nav .nav-item .nav-link.active:not(#dropdownMenuButton):not(#kp-logo)::after{
-        width: 100%;
+        width: 75%;
     }
 
     .navbar .navbar-nav .nav-item .nav-link:not(#dropdownMenuButton){
