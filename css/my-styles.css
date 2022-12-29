@@ -2395,6 +2395,10 @@ background: none;
         max-height: 125px;
         max-width: 125px;
     }
+
+    .single-line-link{
+        line-height: 43px;
+    }
     
 }
 
