@@ -57,16 +57,16 @@ html, body {
 }
 html{scrollbar-color:#000 #e8b46f; scrollbar-width: thin;}
 body::-webkit-scrollbar { width: 12px;}
-body::-webkit-scrollbar-track {background: #755b6d;}
+body::-webkit-scrollbar-track {background: #704a57;}
 body::-webkit-scrollbar-thumb {background: #000;}
 body::-moz-scrollbar { width: 12px;}
-body::-moz-scrollbar-track {background: #755b6d;}
+body::-moz-scrollbar-track {background: #704a57;}
 body::-moz-scrollbar-thumb {background: #000;}
 body::-o-scrollbar { width: 12px;}
-body::-o-scrollbar-track {background: #755b6d;}
+body::-o-scrollbar-track {background: #704a57;}
 body::-o-scrollbar-thumb {background: #000;}
 body::-ms-scrollbar { width: 12px;}
-body::-ms-scrollbar-track {background: #755b6d}
+body::-ms-scrollbar-track {background: #704a57}
 body::-ms-scrollbar-thumb {background: #000;}
 
 
@@ -1038,7 +1038,7 @@ button{
 
 }
 
-#gold, #collections{
+#gold, #collections, [aria-label="Previous"], [aria-label="Next"]{
     background-color: #78b6a5 !important; /* NOTE 1: change color of gold and collection sections */
 
 
@@ -1264,6 +1264,10 @@ span{
 
     border: 1px solid #ecc6a9;
 
+}
+
+.card {
+  border: 0px;
 }
 
 .btn-success {
@@ -2248,10 +2252,6 @@ background: none;
 
     height: 447px;
 }
-}
-
-[aria-label="Previous"], [aria-label="Next"]{
-    background-color: #f3dcb4 !important;
 }
 
 /* NOTE 2 */
