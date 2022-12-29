@@ -2348,6 +2348,10 @@ background: none;
         width: 100%;
     }
 
+    #mainNav .navbar-nav .nav-item .nav-link.active:not(#dropdownMenuButton):not(#kp-logo)::after{
+        width: 100%;
+    }
+
     .navbar .navbar-nav .nav-item .nav-link:not(#dropdownMenuButton){
         position: relative;
     }
