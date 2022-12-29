@@ -57,16 +57,16 @@ html, body {
 }
 html{scrollbar-color:#000 #e8b46f; scrollbar-width: thin;}
 body::-webkit-scrollbar { width: 12px;}
-body::-webkit-scrollbar-track {background: #755b6d;}
+body::-webkit-scrollbar-track {background: #704a57;}
 body::-webkit-scrollbar-thumb {background: #000;}
 body::-moz-scrollbar { width: 12px;}
-body::-moz-scrollbar-track {background: #755b6d;}
+body::-moz-scrollbar-track {background: #704a57;}
 body::-moz-scrollbar-thumb {background: #000;}
 body::-o-scrollbar { width: 12px;}
-body::-o-scrollbar-track {background: #755b6d;}
+body::-o-scrollbar-track {background: #704a57;}
 body::-o-scrollbar-thumb {background: #000;}
 body::-ms-scrollbar { width: 12px;}
-body::-ms-scrollbar-track {background: #755b6d}
+body::-ms-scrollbar-track {background: #704a57}
 body::-ms-scrollbar-thumb {background: #000;}
 
 
@@ -182,6 +182,8 @@ body::-ms-scrollbar-thumb {background: #000;}
 .new-arrive-product{
     float:left;
     width:100%;
+    border: 1.5px solid #e8ca96;
+
 }
 
 .arrive-btm{
@@ -821,6 +823,8 @@ button{
 
     font-size: 35px;
     padding-bottom: 8%;
+    font-family: 'Playfair Display', serif;
+
 
 }
 
@@ -1023,19 +1027,19 @@ button{
         padding: 95px 0px 123px;
         /* scroll-margin-top: calc(120px-85px);  */
         scroll-margin-top: 35px;
-    
+
     }
 
     #collections {
         padding: 95px 0px 123px 0px;
         /* scroll-margin-top: calc(120px-85px);  */
-        scroll-margin-top: 35px; 
+        scroll-margin-top: 35px;
     }
-    
+
 }
 
-#gold, #collections{
-    background-color: #f3dcb4 !important; /* NOTE 1: change color of gold and collection sections */
+#gold, #collections, [aria-label="Previous"], [aria-label="Next"]{
+    background-color: #78b6a5 !important; /* NOTE 1: change color of gold and collection sections */
 
 
     /*background: #f6edea;*/
@@ -1260,6 +1264,10 @@ span{
 
     border: 1px solid #ecc6a9;
 
+}
+
+.card {
+  border: 0px;
 }
 
 .btn-success {
@@ -2246,13 +2254,9 @@ background: none;
 }
 }
 
-[aria-label="Previous"], [aria-label="Next"]{
-    background-color: #f3dcb4 !important;
-}
-
 /* NOTE 2 */
 
-.gold-carousel-text{ 
+.gold-carousel-text{
     background-color: #000 !important; /* background color */
     color: white; /* text color */
 }
@@ -2262,6 +2266,7 @@ background: none;
 }
 .dropdown .dropdown-menu{
     display: block;
+    opacity:0;
     visibility: hidden;
     opacity: 0;
     -webkit-transition: all 200ms ease-in;
@@ -2291,13 +2296,13 @@ background: none;
 /* NOTE 4 */
 
  #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: rgb(236, 239, 201) !important;
+    color: #704a57 !important; /*Note highliht color*/
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
     /* NOTE 6 */
-    color: inherit; 
-    font-family: inherit; 
+    color: inherit;
+    font-family: 'Playfair Display', serif;
     font-size: 90%;
     font-weight: 600;
     /* padding: .75em 0; */
@@ -2308,8 +2313,8 @@ background: none;
     /* NOTE 6 */
     text-align: center !important;
     vertical-align: middle !important;
-    background: rgb(219, 206, 206);
-    /* background: linear-gradient(55deg, rgba(248,242,240,1) 0%, rgba(79,57,69,0.25) 24%, rgba(79,57,69,0.5) 24%, rgba(79,57,69,0.8) 55%, rgba(79,57,69,0.8) 55%, rgba(79,57,69,1) 80%); */ 
+    background: rgb(255, 255, 255);
+    /* background: linear-gradient(55deg, rgba(248,242,240,1) 0%, rgba(79,57,69,0.25) 24%, rgba(79,57,69,0.5) 24%, rgba(79,57,69,0.8) 55%, rgba(79,57,69,0.8) 55%, rgba(79,57,69,1) 80%); */
 }
 
 /* #collectionsDropdown {
@@ -2337,15 +2342,15 @@ background: none;
         left: 0;
         right: 0;
         margin: auto;
-        background-color: #000000;
+        background-color: #704a57; /*Note highliht color*/
         width: 0%;
         content: "";
-        height: 4px;
+        height: 2px;
         transition: all 0.5s;
       }
-    
-    #mainNav .navbar-nav .nav-item .nav-link:not(#dropdownMenuButton):not(#kp-logo):hover::after{
-        width: 100%;
+
+    #mainNav .navbar-nav .nav-item:not(#collectionsDropdown):not(#kp-logo):hover::after{
+    width: 75%;
     }
 
     #mainNav .navbar-nav .nav-item .nav-link.active:not(#dropdownMenuButton):not(#kp-logo)::after{
@@ -2369,7 +2374,7 @@ background: none;
     /* #mainNav .navbar-nav .nav-item .nav-link-r {
 
         padding: 2.8em 0.46em 1.4em 0.46em !important;
-    
+
     } */
 
     /* #mainNav .navbar-nav .nav-item-r {
@@ -2379,7 +2384,7 @@ background: none;
     #mainNav .navbar-nav .nav-item{
         width: 11.1%;
     }
-    
+
 }
 
 @media screen and (min-width: 1200px) {
