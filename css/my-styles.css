@@ -2267,6 +2267,8 @@ background: none;
 .dropdown .dropdown-menu{
     display: block;
     opacity:0;
+    visibility: hidden;
+    opacity: 0;
     -webkit-transition: all 200ms ease-in;
     -moz-transition: all 200ms ease-in;
     -ms-transition: all 200ms ease-in;
@@ -2274,10 +2276,22 @@ background: none;
     transition: all 200ms ease-in;
     border-radius: 5px;
  }
-.dropdown:hover .dropdown-menu {
+
+.dropdown-menu:hover::after + .dropdown-toggle{
+    transform: rotate(180deg);
+}
+
+ #dropdownMenuButton:hover + .dropdown-menu, .dropdown-menu:hover{
     display: block;
+    visibility: visible;
     opacity: 1;
  }
+
+ .dropdown-toggle:hover::after{
+    transform: rotate(180deg);
+}
+
+
 
 /* NOTE 4 */
 
@@ -2322,7 +2336,7 @@ background: none;
 }
 
 @media screen and (min-width: 992px) {
-    #mainNav .navbar-nav .nav-item:not(#collectionsDropdown)::after{
+    #mainNav .navbar-nav .nav-item .nav-link:not(#dropdownMenuButton)::after{
         position: absolute;
         bottom: 0;
         left: 0;
@@ -2339,18 +2353,22 @@ background: none;
     width: 75%;
     }
 
-    .navbar .navbar-nav .nav-item:not(#collectionsDropdown){
-    position: relative;
+    #mainNav .navbar-nav .nav-item .nav-link.active:not(#dropdownMenuButton):not(#kp-logo)::after{
+        width: 100%;
+    }
+
+    .navbar .navbar-nav .nav-item .nav-link:not(#dropdownMenuButton){
+        position: relative;
     }
 
     #mainNav .navbar-nav .nav-item .nav-link:not(#dropdownMenuButton) {
 
-    padding: 2.8em 1em 1.4em 1em !important;
+    margin: 2.8em 1em 1.4em 1em !important;
 
     }
 
     #dropdownMenuButton{
-        padding: 2.8em 0em 1.4em 0em !important;
+        margin: 2.8em 0em 1.4em 0em !important;
     }
 
     /* #mainNav .navbar-nav .nav-item .nav-link-r {
@@ -2383,6 +2401,14 @@ background: none;
         max-width: 125px;
     }
 
+    .single-line-link{
+        line-height: 43px;
+    }
+
+    .dropdown-menu{
+        margin-top:35px
+    }
+    
 }
 
 .loc-phone{

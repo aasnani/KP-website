@@ -203,13 +203,7 @@ img::-moz-selection {
     color: rgb(167 99 5);
 
 }
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-.dropdown:hover .dropdown-toggle:after{
-    transform: rotate(180deg);
 
-}
 
 
 
