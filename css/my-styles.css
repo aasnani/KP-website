@@ -1015,6 +1015,10 @@ button{
 
 @media only screen and (min-width: 1367px) {
 
+    .btn-div{
+        display: none;
+    }
+
     #diamond, #gold, #new-arr {
         padding: 95px 0px 123px;
         /* scroll-margin-top: calc(120px-85px);  */
@@ -2257,8 +2261,9 @@ background: none;
     margin-bottom: 1rem;
 }
 .dropdown .dropdown-menu{
-    display: block; 
-    opacity:0;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
     -webkit-transition: all 200ms ease-in;
     -moz-transition: all 200ms ease-in;
     -ms-transition: all 200ms ease-in;
@@ -2266,15 +2271,143 @@ background: none;
     transition: all 200ms ease-in;
     border-radius: 5px;
  }
-.dropdown:hover .dropdown-menu {
+
+.dropdown-menu:hover::after + .dropdown-toggle{
+    transform: rotate(180deg);
+}
+
+ #dropdownMenuButton:hover + .dropdown-menu, .dropdown-menu:hover{
     display: block;
+    visibility: visible;
     opacity: 1;
  }
+
+ .dropdown-toggle:hover::after{
+    transform: rotate(180deg);
+}
+
+
 
 /* NOTE 4 */
 
  #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: red !important;
+    color: rgb(236, 239, 201) !important;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link {
+    /* NOTE 6 */
+    color: inherit; 
+    font-family: inherit; 
+    font-size: 90%;
+    font-weight: 600;
+    /* padding: .75em 0; */
+    letter-spacing: 1px;
+}
+
+#mainNav {
+    /* NOTE 6 */
+    text-align: center !important;
+    vertical-align: middle !important;
+    background: rgb(219, 206, 206);
+    /* background: linear-gradient(55deg, rgba(248,242,240,1) 0%, rgba(79,57,69,0.25) 24%, rgba(79,57,69,0.5) 24%, rgba(79,57,69,0.8) 55%, rgba(79,57,69,0.8) 55%, rgba(79,57,69,1) 80%); */ 
+}
+
+/* #collectionsDropdown {
+    margin-right: 1.2em;
+} */
+
+@media screen and (max-width: 1200px) {
+    .container{
+        max-width: 1120px;
+    }
+
+    #mainNav .navbar-nav .nav-item .nav-link {
+        font-size: 75%;
+    }
+
+    /* #mainNav .navbar-nav .nav-item-r{
+        font-size: 70%;
+    } */
+}
+
+@media screen and (min-width: 992px) {
+    #mainNav .navbar-nav .nav-item .nav-link:not(#dropdownMenuButton)::after{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-color: #000000;
+        width: 0%;
+        content: "";
+        height: 4px;
+        transition: all 0.5s;
+      }
+    
+    #mainNav .navbar-nav .nav-item .nav-link:not(#dropdownMenuButton):not(#kp-logo):hover::after{
+        width: 100%;
+    }
+
+    #mainNav .navbar-nav .nav-item .nav-link.active:not(#dropdownMenuButton):not(#kp-logo)::after{
+        width: 100%;
+    }
+
+    .navbar .navbar-nav .nav-item .nav-link:not(#dropdownMenuButton){
+        position: relative;
+    }
+
+    #mainNav .navbar-nav .nav-item .nav-link:not(#dropdownMenuButton) {
+
+    margin: 2.8em 1em 1.4em 1em !important;
+
+    }
+
+    #dropdownMenuButton{
+        margin: 2.8em 0em 1.4em 0em !important;
+    }
+
+    /* #mainNav .navbar-nav .nav-item .nav-link-r {
+
+        padding: 2.8em 0.46em 1.4em 0.46em !important;
+    
+    } */
+
+    /* #mainNav .navbar-nav .nav-item-r {
+        font-size: 85%;
+    } */
+
+    #mainNav .navbar-nav .nav-item{
+        width: 11.1%;
+    }
+    
+}
+
+@media screen and (min-width: 1200px) {
+    .container{
+        max-width: fit-content;
+    }
+
+    #mainNav .navbar-nav .nav-item{
+        width: 11.1%;
+    }
+
+    .img-fluid{
+        max-height: 125px;
+        max-width: 125px;
+    }
+
+    .single-line-link{
+        line-height: 43px;
+    }
+
+    .dropdown-menu{
+        margin-top:35px
+    }
+    
+}
+
+.loc-phone{
+    font-size:80%;
 }
 
 #subscribe-success-alert{
