@@ -1039,7 +1039,7 @@ button{
 }
 
 #gold, #collections, [aria-label="Previous"], [aria-label="Next"]{
-    background-color: #78b6a5 !important; /* NOTE 1: change color of gold and collection sections */
+    background-color: #FFCEA4 !important; /* NOTE 1: change color of gold and collection sections */
 
 
     /*background: #f6edea;*/
@@ -1084,7 +1084,7 @@ section {
 
 .card-body {
 
-    padding: 0;
+    padding: 0px !important;
 
 }
 
@@ -1268,6 +1268,7 @@ span{
 
 .card {
   border: 0px;
+  background-color: #FFCEA4;
 }
 
 .btn-success {
@@ -2257,8 +2258,10 @@ background: none;
 /* NOTE 2 */
 
 .gold-carousel-text{
-    background-color: #000 !important; /* background color */
+    /* background-color: #000 !important; /* background color
     color: white; /* text color */
+        background-color: #FFCEA4 !important;
+
 }
 
 #stone{
