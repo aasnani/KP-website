@@ -2399,6 +2399,7 @@ background: none;
     .img-fluid{
         max-height: 125px;
         max-width: 125px;
+        margin-top: 12px;
     }
 
     .single-line-link{
