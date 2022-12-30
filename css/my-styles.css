@@ -2353,9 +2353,9 @@ background: none;
         width: 75%;
     }
 
-    #mainNav .navbar-nav .nav-item .nav-link.active:not(#dropdownMenuButton):not(#kp-logo)::after{
+    /* #mainNav .navbar-nav .nav-item .nav-link.active:not(#dropdownMenuButton):not(#kp-logo)::after{
         width: 75%;
-    }
+    } */
 
     .navbar .navbar-nav .nav-item .nav-link:not(#dropdownMenuButton){
         position: relative;
@@ -2399,6 +2399,7 @@ background: none;
     .img-fluid{
         max-height: 125px;
         max-width: 125px;
+        margin-top: 12px;
     }
 
     .single-line-link{
@@ -2407,6 +2408,10 @@ background: none;
 
     .dropdown-menu{
         margin-top:35px
+    }
+
+    #dropdownMenuButton{
+        cursor: default;
     }
     
 }
