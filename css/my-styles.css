@@ -2427,6 +2427,14 @@ background: none;
     line-height:7px;
 }
 
+.always-show{
+    display: block !important;
+}
+
+.never-show{
+    display: none !important;
+}
+
 /*Start Animation*/
 
 .text-wrapper{
