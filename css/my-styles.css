@@ -2268,7 +2268,7 @@ background: none;
     margin-bottom: 1rem;
 }
 .dropdown .dropdown-menu{
-    display: block;
+    display: flex;
     opacity:0;
     visibility: hidden;
     opacity: 0;
@@ -2281,7 +2281,7 @@ background: none;
  }
 
 .dropdown-menu:hover::after + .dropdown-toggle{
-    transform: rotate(180deg);
+    transform: rotatez(180deg);
 }
 
  #dropdownMenuButton:hover + .dropdown-menu, .dropdown-menu:hover{
@@ -2291,7 +2291,8 @@ background: none;
  }
 
  .dropdown-toggle:hover::after{
-    transform: rotate(180deg);
+    transform: rotatez(180deg);
+    transition: .7s ease;
 }
 
 
