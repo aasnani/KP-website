@@ -2773,7 +2773,7 @@ iframe{
 
     .healwithlove {
 
-        height: 230px;
+        height: 230px !important;
 
         background-size: cover;
 
