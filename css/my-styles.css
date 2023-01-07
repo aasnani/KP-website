@@ -2297,6 +2297,8 @@ background: none;
 
  #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
     color: #704a57 !important; /*Note highliht color*/
+    text-shadow: 0 0 0.65px #704a57;
+    transition: all 200ms ease-in;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
