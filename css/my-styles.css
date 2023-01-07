@@ -2290,7 +2290,7 @@ background: none;
 
 .dropdown-toggle::after{
     transition: all 200ms ease;
-
+    font-size: 17px; /* NOTE 8 */
 }
 
 
