@@ -2277,18 +2277,20 @@ background: none;
     border-radius: 5px;
  }
 
-.dropdown-menu:hover::after + .dropdown-toggle{
-    transform: rotate(180deg);
-}
-
  #dropdownMenuButton:hover + .dropdown-menu, .dropdown-menu:hover{
     display: block;
     visibility: visible;
     opacity: 1;
  }
 
- .dropdown-toggle:hover::after{
+.dropdown-toggle:hover::after{
     transform: rotate(180deg);
+    transition: all 200ms ease-in-out;
+}
+
+.dropdown-toggle::after{
+    transition: all 200ms ease;
+
 }
 
 
@@ -2410,7 +2412,7 @@ background: none;
     }
 
     .dropdown-menu{
-        margin-top:35px
+        margin-top:28px
     }
 
     #dropdownMenuButton{
