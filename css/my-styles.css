@@ -2432,6 +2432,14 @@ background: none;
     line-height:7px;
 }
 
+.always-show{
+    display: block !important;
+}
+
+.never-show{
+    display: none !important;
+}
+
 /*Start Animation*/
 
 .text-wrapper{
@@ -2770,7 +2778,7 @@ iframe{
 
     .healwithlove {
 
-        height: 230px;
+        height: 250px !important;
 
         background-size: cover;
 
