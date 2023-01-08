@@ -1656,7 +1656,9 @@
   </script>
 
   <script>
-    $(window).on('load', function () {
+
+
+   function ctctToKPSubscribe() {
       // Note 7
       $(".ctct-form-defaults").css("padding", "0");
       $(".ctct-form-defaults").css("background-color", "rgb(247, 242, 240)");
@@ -1714,7 +1716,10 @@
       $(".ctct-form-label").css("display", "none");
       $("#gdpr_text").css("display", "none");
       $(".ctct-form-footer").css("display", "none");
-    });
+    }
+
+    window.onload = ctctToKPSubscribe;
+    window.onpageshow = ctctToKPSubscribe;
 
 
   </script>
