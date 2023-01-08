@@ -83,6 +83,6 @@
   mail($recipient, $subj, $content, $headers) or die("Error!");
   $result = mail($recipient, $subj, $content, $headers);
   echo '<script>alert('.$result!')</script>';
-  //print json_encode(array('message' => $msg, 'code' => 1));
+  print json_encode(array('message' => $msg, 'code' => 1));
   exit();
 ?>
