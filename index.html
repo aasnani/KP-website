@@ -1713,6 +1713,9 @@
       $(".ctct-form-footer").css("display", "none");
     }
     window.onload = ctctToKPSubscribe;
+    if(document.readyState !== 'complete'){
+      ctctToKPSubscribe();
+    }
     // window.onpageshow = ctctToKPSubscribe;
 
 
