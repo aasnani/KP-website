@@ -1717,7 +1717,9 @@
     //   ctctToKPSubscribe();
     // }
 
-    window.addEventListener('pageshow', ctctToKPSubscribe, false);
+    window.addEventListener('pageshow', function(){
+      setTimeout(ctctToKPSubscribe, 500)
+    }, false);
     // window.onpageshow = ctctToKPSubscribe;
 
 
