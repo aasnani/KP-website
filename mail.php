@@ -6,6 +6,8 @@
   require_once __DIR__ . '/vendor/phpmailer/phpmailer/src/PHPMailer.php';
   require_once __DIR__ . '/vendor/phpmailer/phpmailer/src/SMTP.php';
 
+  echo '<script>alert("Here")</script>';
+
   if (isset($_POST['name']))
     $name = $_POST['name'];
   if (isset($_POST['city']))
