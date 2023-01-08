@@ -2442,6 +2442,10 @@ background: none;
     display: none !important;
 }
 
+.navbar-nav{
+    max-height: 125.25px;
+}
+
 /*Start Animation*/
 
 .text-wrapper{
