@@ -2004,6 +2004,9 @@
         },
         error: function (jqXHR, textStatus, errorThrown) {
           $('#status').text(jqXHR);
+          console.log(jqXHR);
+          console.log(textStatus);
+          console.log(errorThrown);
         }
       });
 
