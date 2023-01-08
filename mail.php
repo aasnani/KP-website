@@ -45,7 +45,7 @@
   // set_error_handler("var_dump");
 
 
-  $recipient = "mishink7@gmail.com";
+  $recipient = "armand.asnani@gmail.com";
   $subj = "Kaypee Jeweller Contact Us From: $name";
   $content = "Name: $name \nCity: $city \nState: $state \nZip: $zip \nEmail: $email \nNumber: $number \nAddress: $address \nComment: $comment";
 
