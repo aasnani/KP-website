@@ -2275,6 +2275,8 @@ background: none;
     -o-transition: all 200ms ease-in;
     transition: all 200ms ease-in;
     border-radius: 5px;
+    font-size: 1.2vw;
+    margin-top: 2vw;
  }
 
  #dropdownMenuButton:hover + .dropdown-menu, .dropdown-menu:hover{
