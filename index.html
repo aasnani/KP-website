@@ -1712,10 +1712,12 @@
       $("#gdpr_text").css("display", "none");
       $(".ctct-form-footer").css("display", "none");
     }
-    window.onload = ctctToKPSubscribe;
-    if(document.readyState !== 'complete'){
-      ctctToKPSubscribe();
-    }
+    // window.onload = ctctToKPSubscribe;
+    // if(document.readyState !== 'complete'){
+    //   ctctToKPSubscribe();
+    // }
+
+    window.addEventListener('load', ctctToKPSubscribe, false);
     // window.onpageshow = ctctToKPSubscribe;
 
 
