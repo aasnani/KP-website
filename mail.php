@@ -7,6 +7,7 @@
   require_once __DIR__ . '/vendor/phpmailer/phpmailer/src/SMTP.php';
 
   echo '<script>alert("Here")</script>';
+  return;
 
   if (isset($_POST['name']))
     $name = $_POST['name'];
