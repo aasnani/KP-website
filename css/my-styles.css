@@ -2288,10 +2288,7 @@ background: none;
     transition: all 200ms ease-in-out;
 }
 
-.dropdown-toggle::after{
-    transition: all 200ms ease;
-    font-size: 17px; /* NOTE 8 */
-}
+
 
 
 
@@ -2416,7 +2413,12 @@ background: none;
     }
 
     #dropdownMenuButton{
-        cursor: default;
+        cursor: pointer;
+    }
+
+    .dropdown-toggle::after{
+        transition: all 200ms ease;
+        font-size: 17px; /* NOTE 8 */
     }
     
 }
