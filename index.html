@@ -1998,9 +1998,9 @@
         data: formData,
         complete: function (data) {
           console.log(data);
-          $('#status').text(data);
+          $('#status').text(data.responseText);
           // if (data.code) //If mail was sent successfully, reset the form.
-          $('#contact-form').closest('form').find("input[type=text], textarea").val("");
+          $('#contact-form').closest('form').find("input[type=text],input[type=email], textarea").val("");
         },
         error: function (jqXHR, textStatus, errorThrown) {
           $('#status').text(jqXHR);
