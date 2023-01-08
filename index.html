@@ -2002,11 +2002,9 @@
           // if (data.code) //If mail was sent successfully, reset the form.
           $('#contact-form').closest('form').find("input[type=text],input[type=email], textarea").val("");
         },
-        error: function (jqXHR, textStatus, errorThrown) {
-          $('#status').text(jqXHR);
-          console.log(jqXHR);
-          console.log(textStatus);
-          console.log(errorThrown);
+        error: function (data) {
+          $('#status').text(data.responseText);
+          console.log(data);
         }
       });
 
