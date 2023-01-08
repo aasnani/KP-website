@@ -57,5 +57,5 @@
     $msg .= 'Message sent!';
   }
 
-  exit();
+  echo $msg;
 ?>
