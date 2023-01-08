@@ -1996,7 +1996,7 @@
         url: "mail.php",
         type: "POST",
         data: formData,
-        success: function (data) {
+        complete: function (data) {
 
           $('#status').text(data);
           // if (data.code) //If mail was sent successfully, reset the form.
