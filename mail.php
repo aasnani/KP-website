@@ -23,7 +23,7 @@
   if (isset($_POST['comment']))
     $comment = $_POST['comment'];
 
-  $recipient = "armand.asnani@gmail.com";
+  $recipient = "kaypeejewelers@gmail.com";
   $subj = "Kaypee Jeweller Contact Us From: $name";
   $content = "Name: $name \nCity: $city \nState: $state \nZip: $zip \nEmail: $email \nNumber: $number \nAddress: $address \nComment: $comment";
 
