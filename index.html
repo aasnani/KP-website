@@ -1988,6 +1988,8 @@
 
       console.log(formData);
       document.getElementById("contact-us-alert").innerHTML = "Sending...";
+      $('#contact-us-alert').removeClass("alert-danger");
+      $('#contact-us-alert').removeClass("alert-success");
       $("#contact-us-alert").addClass("alert-secondary");
       $('#contact-us-alert').removeClass("hide");
       $('#contact-us-alert').addClass("show");
@@ -2000,7 +2002,9 @@
         complete: function (data) {
           console.log(data);
           document.getElementById("contact-us-alert").innerHTML = "Message Sent Successfully!";
-          $("#contact-us-alert").addClass("alert-secondary");
+          $('#contact-us-alert').removeClass("alert-secondary");
+          $('#contact-us-alert').removeClass("alert-danger");
+          $("#contact-us-alert").addClass("alert-success");
           $('#contact-us-alert').removeClass("hide");
           $('#contact-us-alert').addClass("show");
           setTimeout(function(){
@@ -2013,6 +2017,8 @@
         error: function (data) {
           console.log(data);
           document.getElementById("contact-us-alert").innerHTML = "Error Sending Message";
+          $('#contact-us-alert').removeClass("alert-secondary");
+          $('#contact-us-alert').removeClass("alert-success");
           $("#contact-us-alert").addClass("alert-danger");
           $('#contact-us-alert').removeClass("hide");
           $('#contact-us-alert').addClass("show");
