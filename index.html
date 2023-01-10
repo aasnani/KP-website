@@ -1457,7 +1457,7 @@
 
 
 
-                      <button type="button" class="btn btn-success contact-btn" value="Send" onclick="validateForm()">Submit</button></Sub></button>
+                      <button type="button" id="contact-us-button" class="btn btn-success contact-btn" value="Send" onclick="validateForm()">Submit</button></Sub></button>
                       <div id="contact-us-alert" class="alert hide fade contact-us-alert" style=""role="alert">Sending...</div>
                       <!--<span class="glyphicon glyphicon-ok"></span>-->
 
@@ -1987,6 +1987,7 @@
       };
 
       console.log(formData);
+      $("#contact-us-button").attr("disabled", "true");
       document.getElementById("contact-us-alert").innerHTML = "Sending...";
       $('#contact-us-alert').removeClass("alert-danger");
       $('#contact-us-alert').removeClass("alert-success");
@@ -2015,6 +2016,7 @@
             $('#contact-us-alert').fadeOut();
             $('#contact-us-alert').removeClass("show");
             $('#contact-us-alert').addClass("hide");
+            $("#contact-us-button").attr("disabled", "false");
           }, 5000);
           // if (data.code) //If mail was sent successfully, reset the form.
           var form = document.getElementById("contact-form").reset();
