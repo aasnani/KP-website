@@ -1458,7 +1458,7 @@
 
 
                       <button type="button" class="btn btn-success contact-btn" value="Send" onclick="validateForm()">Submit</button></Sub></button>
-                      <div id="contact-us-alert" class="alert alert-success hide fade" style=""role="alert"> Message Sent Successfully!</div>
+                      <div id="contact-us-success-alert" class="alert alert-success hide fade" style=""role="alert"> Message Sent Successfully!</div>
                       <div class="status" id="status"></div>
                       <!--<span class="glyphicon glyphicon-ok"></span>-->
 
@@ -2000,6 +2000,8 @@
         complete: function (data) {
           console.log(data);
           $('#status').text(data.responseText);
+          $('#contact-us-success-alert').removeClass("hide");
+          $('#contact-us-success-alert').addClass("show");
           // if (data.code) //If mail was sent successfully, reset the form.
           $('#contact-form').closest('form').find("input[type=text],input[type=email], textarea").val("");
         },
