@@ -1458,8 +1458,7 @@
 
 
                       <button type="button" class="btn btn-success contact-btn" value="Send" onclick="validateForm()">Submit</button></Sub></button>
-                      <div id="contact-us-sending-alert" class="alert alert-secondary hide fade contact-us-alert" style=""role="alert">Sending...</div>
-                      <div id="contact-us-success-alert" class="alert alert-success hide fade contact-us-alert" style=""role="alert"> Message Sent Successfully!</div>
+                      <div id="contact-us-alert" class="alert hide fade contact-us-alert" style=""role="alert">Sending...</div>
                       <!--<span class="glyphicon glyphicon-ok"></span>-->
 
                     </div>
@@ -1988,28 +1987,40 @@
       };
 
       console.log(formData);
-
-
-
-
+      document.getElementById("contact-us-alert").innerHTML = "Sending...";
+      $("#contact-us-alert").addClass("alert-secondary");
+      $('#contact-us-alert').removeClass("hide");
+      $('#contact-us-alert').addClass("show");
+      
+      
       $.ajax({
         url: "mail.php",
         type: "POST",
         data: formData,
         complete: function (data) {
           console.log(data);
-          $('#contact-us-success-alert').removeClass("hide");
-          $('#contact-us-success-alert').addClass("show");
+          document.getElementById("contact-us-alert").innerHTML = "Message Sent Successfully!";
+          $("#contact-us-alert").addClass("alert-secondary");
+          $('#contact-us-alert').removeClass("hide");
+          $('#contact-us-alert').addClass("show");
           setTimeout(function(){
-            $('#contact-us-success-alert').removeClass("show");
-            $('#contact-us-success-alert').addClass("hide");
+            $('#contact-us-alert').removeClass("show");
+            $('#contact-us-alert').addClass("hide");
           }, 3000);
           // if (data.code) //If mail was sent successfully, reset the form.
           var form = document.getElementById("#contact-form").reset();
         },
         error: function (data) {
-          $('#status').text(data.responseText);
           console.log(data);
+          document.getElementById("contact-us-alert").innerHTML = "Error Sending Message";
+          $("#contact-us-alert").addClass("alert-danger");
+          $('#contact-us-alert').removeClass("hide");
+          $('#contact-us-alert').addClass("show");
+          setTimeout(function(){
+            $('#contact-us-alert').removeClass("show");
+            $('#contact-us-alert').addClass("hide");
+          }, 3000);
+          
         }
       });
 
