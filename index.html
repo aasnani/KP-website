@@ -2007,9 +2007,9 @@
           $('#contact-us-alert').removeClass("alert-secondary");
           $('#contact-us-alert').removeClass("alert-danger");
           $("#contact-us-alert").addClass("alert-success");
+          // $('#contact-us-alert').removeClass("hide");
+          // $('#contact-us-alert').addClass("show");
           $('#contact-us-alert').fadeIn();
-          $('#contact-us-alert').removeClass("hide");
-          $('#contact-us-alert').addClass("show");
           setTimeout(function(){
             $('#contact-us-alert').fadeOut();
             $('#contact-us-alert').removeClass("show");
@@ -2026,10 +2026,10 @@
           $('#contact-us-alert').removeClass("alert-success");
           $("#contact-us-alert").addClass("alert-danger");
           $('#contact-us-alert').fadeIn();
-          $('#contact-us-alert').removeClass("hide");
-          $('#contact-us-alert').addClass("show");
+          // $('#contact-us-alert').removeClass("hide");
+          // $('#contact-us-alert').addClass("show");
           setTimeout(function(){
-            $('#contact-us-alert').fadeIn();
+            $('#contact-us-alert').fadeOut();
             $('#contact-us-alert').removeClass("show");
             $('#contact-us-alert').addClass("hide");
           }, 3000);
