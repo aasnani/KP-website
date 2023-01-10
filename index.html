@@ -2003,13 +2003,15 @@
         complete: function (data) {
           console.log(data);
           $('#contact-us-alert').fadeOut();
-          document.getElementById("contact-us-alert").innerHTML = "Message Sent Successfully!";
+          // $('#contact-us-alert').removeClass("hide");
+          // $('#contact-us-alert').addClass("show");
+          setTimeout(function(){
+            document.getElementById("contact-us-alert").innerHTML = "Message Sent Successfully!";
           $('#contact-us-alert').removeClass("alert-secondary");
           $('#contact-us-alert').removeClass("alert-danger");
           $("#contact-us-alert").addClass("alert-success");
-          // $('#contact-us-alert').removeClass("hide");
-          // $('#contact-us-alert').addClass("show");
-          $('#contact-us-alert').fadeIn();
+            $('#contact-us-alert').fadeIn();
+          }, 1000);
           setTimeout(function(){
             $('#contact-us-alert').fadeOut();
             $('#contact-us-alert').removeClass("show");
