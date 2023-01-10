@@ -1458,8 +1458,8 @@
 
 
                       <button type="button" class="btn btn-success contact-btn" value="Send" onclick="validateForm()">Submit</button></Sub></button>
-                      <div id="contact-us-success-alert" class="alert alert-success hide fade" style=""role="alert"> Message Sent Successfully!</div>
-                      <div class="status" id="status"></div>
+                      <div id="contact-us-sending-alert" class="alert alert-secondary hide fade contact-us-alert" style=""role="alert">Sending...</div>
+                      <div id="contact-us-success-alert" class="alert alert-success hide fade contact-us-alert" style=""role="alert"> Message Sent Successfully!</div>
                       <!--<span class="glyphicon glyphicon-ok"></span>-->
 
                     </div>
@@ -1975,7 +1975,6 @@
       //   //document.querySelector('.status').innerHTML = "Message cannot be empty";
       //   return false;
       // }
-      document.getElementById('status').innerHTML = "Sending...";
 
       formData = {
         'name': $('input[name=name]').val(),
@@ -1999,7 +1998,6 @@
         data: formData,
         complete: function (data) {
           console.log(data);
-          $('#status').text(data.responseText);
           $('#contact-us-success-alert').removeClass("hide");
           $('#contact-us-success-alert').addClass("show");
           setTimeout(function(){

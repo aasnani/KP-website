@@ -2427,6 +2427,11 @@ background: none;
     line-height:7px;
 }
 
+#contact-us-alert{
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
 .always-show{
     display: block !important;
 }
