@@ -2002,8 +2002,12 @@
           $('#status').text(data.responseText);
           $('#contact-us-success-alert').removeClass("hide");
           $('#contact-us-success-alert').addClass("show");
+          setTimeout(function(){
+            $('#contact-us-success-alert').removeClass("show");
+            $('#contact-us-success-alert').addClass("hide");
+          }, 3000);
           // if (data.code) //If mail was sent successfully, reset the form.
-          $('#contact-form').closest('form').find("input[type=text],input[type=email], textarea").val("");
+          var form = document.getElementById("#contact-form").reset();
         },
         error: function (data) {
           $('#status').text(data.responseText);
