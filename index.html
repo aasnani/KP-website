@@ -2016,7 +2016,7 @@
             $('#contact-us-alert').fadeOut();
             $('#contact-us-alert').removeClass("show");
             $('#contact-us-alert').addClass("hide");
-            $("#contact-us-button").attr("disabled", "false");
+            $("#contact-us-button").removeAttr("disabled");
           }, 5000);
           // if (data.code) //If mail was sent successfully, reset the form.
           var form = document.getElementById("contact-form").reset();
