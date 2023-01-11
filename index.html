@@ -1711,6 +1711,7 @@
       $(".ctct-form-label").css("display", "none");
       $("#gdpr_text").css("display", "none");
       $(".ctct-form-footer").css("display", "none");
+      $('.rc-anchor').css("display", "none");
     }
 
     window.addEventListener('pageshow', function(){
@@ -1985,8 +1986,6 @@
       $('#contact-us-alert').removeClass("hide");
       $('#contact-us-alert').addClass("show");
       // $('#contact-us-alert').fadeIn();
-
-      $('.rc-anchor').css("display", "none");
       
       
       $.ajax({
