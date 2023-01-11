@@ -2291,7 +2291,7 @@ background: none;
 
 /* NOTE 4 */
 
- #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
+ #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover, .nav-link-force-hover {
     color: #704a57 !important; /*Note highliht color*/
     text-shadow: 0 0 0.65px #704a57;
     transition: all 200ms ease-in;
