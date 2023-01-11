@@ -1951,6 +1951,9 @@
 
   <!-----email validation---->
   <script>
+    $("#contact-form").submit(function(e){
+      e.preventDefault();
+    });
     function validateForm() {
       // var name = document.getElementById('name').value;
       // if (name == "") {
