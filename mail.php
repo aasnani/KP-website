@@ -24,7 +24,7 @@
     $comment = $_POST['comment'];
 
   $recipient = "kaypeejewelers@gmail.com";
-  $subj = "Kaypee Jeweller Contact Us From: $name";
+  $subj = "Kay Pee Jewelers Contact Us From: $name";
   $content = "Name: $name \nCity: $city \nState: $state \nZip: $zip \nEmail: $email \nNumber: $number \nAddress: $address \nComment: $comment";
 
   $mail = new PHPMailer();
