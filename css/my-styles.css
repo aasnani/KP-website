@@ -2325,6 +2325,18 @@ background: none;
     margin-right: 1.2em;
 } */
 
+@media screen and (min-width: 1201px) and (max-width: 1211px) {
+    #contact-us-nav-link{
+        line-height: inherit;
+    }
+}
+
+@media screen and (max-width: 1095px) {
+    #contact-us-nav-link{
+        line-height: inherit;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .container{
         max-width: 1120px;
@@ -2333,6 +2345,11 @@ background: none;
     #mainNav .navbar-nav .nav-item .nav-link {
         font-size: 80%;
     }
+
+    .single-line-link{
+        line-height: 36px;
+    }
+
 
     /* #mainNav .navbar-nav .nav-item-r{
         font-size: 70%;
