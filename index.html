@@ -1684,8 +1684,11 @@
       $(".ctct-form-element").css("height", "40px");
       $(".ctct-form-element").css("background", "white");
       $(".ctct-form-element").attr("placeholder", "Enter Your Email Address");
-      $(".ctct-form-element").click(function(){
+      $(".ctct-form-element").on("click", function(){
         $(".ctct-form-element").attr("placeholder", "");
+      })
+      $(".ctct-form-element").off("click", function(){
+        $(".ctct-form-element").attr("placeholder", "Enter Your Email Address");
       })
       // $(".ctct-form-element").css("text-align", "left");
       $("#email_address_field_0").css("text-align", "center");
