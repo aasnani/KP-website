@@ -2351,6 +2351,10 @@ background: none;
     } */
 }
 
+::selection{
+    background-color: #ACCEF7;
+}
+
 @media screen and (min-width: 992px) {
     #mainNav .navbar-nav .nav-item .nav-link:not(#dropdownMenuButton)::after{
         position: absolute;
