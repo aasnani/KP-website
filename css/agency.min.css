@@ -164,7 +164,7 @@ img::-moz-selection {
     width: fit-content;
     border:none;
 	    width: auto;
-      background:#FFCEA4;
+      background:#59464D;
 }
 .kp-modal-dialog{
     display: flex;
@@ -175,7 +175,7 @@ img::-moz-selection {
 
 .kp-modal-header{
     border: none;
-    background:#FFCEA4;
+    background:#59464D;
     color:#fff;
 
 }
