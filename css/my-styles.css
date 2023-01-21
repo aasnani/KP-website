@@ -1442,7 +1442,7 @@ margin: 0;
 
     background-position: 50%;
 
-    background-image: url(../images/heal.jpg); /* NOTE 5 */
+    background-image: url(../images/heal.webp); /* NOTE 5 */
 
     background-attachment: fixed;
 
@@ -2278,11 +2278,9 @@ background: none;
     -o-transition: all 200ms ease-in;
     transition: all 200ms ease-in;
     border-radius: 5px;
+    font-size: 1.2vw;
+    margin-top: 2vw;
  }
-
-.dropdown-menu:hover::after + .dropdown-toggle{
-    transform: rotatez(180deg);
-}
 
  #dropdownMenuButton:hover + .dropdown-menu, .dropdown-menu:hover{
     display: block;
@@ -2290,10 +2288,12 @@ background: none;
     opacity: 1;
  }
 
- .dropdown-toggle:hover::after{
-    transform: rotatez(180deg);
-    transition: .7s ease;
+.dropdown-toggle:hover::after{
+    transform: rotate(180deg);
+    transition: all 200ms ease-in-out;
 }
+
+
 
 
 
@@ -2301,6 +2301,8 @@ background: none;
 
  #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
     color: #704a57 !important; /*Note highliht color*/
+    text-shadow: 0 0 0.65px #704a57;
+    transition: all 200ms ease-in;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
@@ -2318,6 +2320,7 @@ background: none;
     text-align: center !important;
     vertical-align: middle !important;
     background: rgb(255, 255, 255);
+    box-shadow: 0 10px 10px rgb(0 0 0 / 10%);
     /* background: linear-gradient(55deg, rgba(248,242,240,1) 0%, rgba(79,57,69,0.25) 24%, rgba(79,57,69,0.5) 24%, rgba(79,57,69,0.8) 55%, rgba(79,57,69,0.8) 55%, rgba(79,57,69,1) 80%); */
 }
 
@@ -2411,12 +2414,17 @@ background: none;
     }
 
     .dropdown-menu{
-        margin-top:35px
+        margin-top:28px
     }
 
 
     #dropdownMenuButton{
-        cursor: default;
+        cursor: pointer;
+    }
+
+    .dropdown-toggle::after{
+        transition: all 200ms ease;
+        font-size: 17px; /* NOTE 8 */
     }
 
 }
@@ -2438,6 +2446,10 @@ background: none;
 
 .never-show{
     display: none !important;
+}
+
+.navbar-nav{
+    max-height: 125.25px;
 }
 
 /*Start Animation*/
