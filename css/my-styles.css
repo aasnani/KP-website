@@ -1033,7 +1033,7 @@ button{
 
 }
 
-#gold, #collections, [aria-label="Previous"], [aria-label="Next"]{
+#gold, #collections{
     background-color: #78b6a5 !important; /* NOTE 1: change color of gold and collection sections */
 
 
@@ -1043,10 +1043,8 @@ button{
 
 }
 
-.owl-prev, .owl-next{
-    /* background-color: #f3dcb4 !important; */
-    /* color: #; */
-
+#gold [aria-label="Previous"], #gold [aria-label="Next"]{
+    background-color: #78b6a5 !important;
 }
 
 
