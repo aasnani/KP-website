@@ -1947,9 +1947,10 @@
   </script>
 
   <script>
+    var pad = $("#collections").css("padding-top").replace("px", "");
     $('.dropdown-toggle').click(function (event) {
       $('body, html').animate({
-        scrollTop: $("#collections").offset().top
+        scrollTop: $("#collections").offset().top - pad
       }, 600);
 
     });

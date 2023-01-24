@@ -1025,7 +1025,8 @@ button{
     }
 
     #diamond, #gold, #new-arr, #collections {
-        padding: 48px 0px 62px; /* NOTE 9 */
+        padding-top: 48px; /* NOTE 9 */
+        padding-bottom: 62px;
         /* scroll-margin-top: calc(120px-85px);  */
         scroll-margin-top: 35px;
 
@@ -1932,7 +1933,9 @@ margin-bottom: 21px;
     font-size: 10px;
 }
 #diamond, #gold, #collections, #new-arr {
-    padding: 85px 0px 123px;
+    padding-top: 85px; /* NOTE 9 */
+    padding-bottom: 123px;
+    /* padding: 85px 0px 123px; */
     scroll-margin-top: 35px;
 
 }
