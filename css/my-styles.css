@@ -2475,6 +2475,12 @@ background: none;
     max-height: 125.25px;
 }
 
+#special-hours{
+    font-size: 1.2em;
+    background-color: gold;
+    text-align: center;
+}
+
 /*Start Animation*/
 
 .text-wrapper{
