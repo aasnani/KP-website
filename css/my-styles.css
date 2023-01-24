@@ -1025,7 +1025,7 @@ button{
     }
 
     #diamond, #gold, #new-arr, #collections {
-        padding: 48px 0px 62px;
+        padding: 48px 0px 62px; /* NOTE 9 */
         /* scroll-margin-top: calc(120px-85px);  */
         scroll-margin-top: 35px;
 
