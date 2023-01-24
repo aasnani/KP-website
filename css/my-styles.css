@@ -2670,7 +2670,8 @@ background: none;
 
 iframe{
 
-
+    width: 100%;
+    height: 90%;
 
 }
 
