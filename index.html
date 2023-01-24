@@ -1687,6 +1687,12 @@
       $(".ctct-form-element").css("height", "40px");
       $(".ctct-form-element").css("background", "white");
       $(".ctct-form-element").attr("placeholder", "Enter Your Email Address");
+      $(".ctct-form-element").focusin(function(){
+        $(".ctct-form-element").attr("placeholder", "");
+      })
+      $(".ctct-form-element").focusout(function(){
+        $(".ctct-form-element").attr("placeholder", "Enter Your Email Address");
+      })
       // $(".ctct-form-element").css("text-align", "left");
       $("#email_address_field_0").css("text-align", "center");
       //Button Stuff
@@ -1728,6 +1734,7 @@
       $("#gdpr_text").css("display", "none");
       $(".ctct-form-footer").css("display", "none");
       $('.grecaptcha-badge').css("display", "none");
+  
     }
 
     window.addEventListener('pageshow', function () {
