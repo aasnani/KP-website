@@ -1025,7 +1025,8 @@ button{
     }
 
     #diamond, #gold, #new-arr, #collections {
-        padding: 48px 0px 62px;
+        padding-top: 48px; /* NOTE 9 */
+        padding-bottom: 62px;
         /* scroll-margin-top: calc(120px-85px);  */
         scroll-margin-top: 35px;
 
@@ -1934,7 +1935,9 @@ margin-bottom: 21px;
     font-size: 10px;
 }
 #diamond, #gold, #collections, #new-arr {
-    padding: 85px 0px 123px;
+    padding-top: 85px; /* NOTE 9 */
+    padding-bottom: 123px;
+    /* padding: 85px 0px 123px; */
     scroll-margin-top: 35px;
 
 }
@@ -2477,6 +2480,14 @@ background: none;
     max-height: 125.25px;
 }
 
+#special-hours{
+    font-size: 1.2em;
+    background-color: gold;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color:black;
+}
+
 /*Start Animation*/
 
 .text-wrapper{
@@ -2675,7 +2686,8 @@ background: none;
 
 iframe{
 
-
+    width: 100%;
+    height: 90%;
 
 }
 

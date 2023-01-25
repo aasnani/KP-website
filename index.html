@@ -103,7 +103,7 @@
 
     @media(min-width:1200px) {
       .slider-image {
-        height: 100vh;
+        height: 80vh;
       }
     }
 
@@ -209,6 +209,10 @@
 
       }
 
+    }
+
+    body {
+      font-family: 'Playfair Display', serif;
     }
 
 
@@ -364,9 +368,11 @@
 
           <div class="carousel-item active">
 
-            <img src="images/Banner/Test50.webp" alt="Los Angeles" class="mobile-disable slider-image">
 
-            <img src="images/Banner/Test50.webp" alt="Los Angeles" width="1100" class="mobile-enable">
+            <img src="images/Banner/banner_test.webp" alt="Los Angeles" width="1100" height="500"
+              class="mobile-disable slider-image">
+
+            <img src="images/Banner/banner_test.webp" alt="Los Angeles" width="1100" class="mobile-enable">
 
             <!--<div class="carousel-caption">
 
@@ -409,11 +415,13 @@
             <!-- <video class="img-fluid slider-image" autoplay loop muted>
               <source src="images/Banner/Templejewelry.mp4" type="video/mp4" />
             </video> -->
-<!--
-            <img src="images/Banner/compressed2.webp" alt="Chicago" width="1100" height="500"
-              class="mobile-disable slider-image"> -->
 
-            <!-- <img src="images/Banner/Test50.webp" alt="Los Angeles" width="1100" class="mobile-enable"> -->
+
+            <img src="images/Banner/banner_test.png" alt="Chicago" width="1100" height="500"
+              class="mobile-disable slider-image">
+
+            <img src="images/Banner/banner_test.png" alt="Los Angeles" width="1100" class="mobile-enable">
+
             <!-- <img src="images/Banner/main-banner-3-mob.jpg" alt="Los Angeles" width="1100"  class="mobile-enable">
 
                         <div class="carousel-caption"> -->
@@ -448,7 +456,11 @@
 
     </section>
 
-
+    <div id="special-hours">
+      Christmas Hours: 12:00 - 18:00
+      <br>
+      New Years Hours: Closed
+    </div>
 
 
 
@@ -745,6 +757,8 @@
       </div>
 
     </section>
+
+    <img class="img-fluid" src="images/page-break.png" style="height: 125px;"> <!-- NOTE 11-->
 
 
 
@@ -1495,7 +1509,7 @@
 
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2940.168851887272!2d-71.20821954944634!3d42.53046777907358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3a01d6954e0ef%3A0x48400773408dda9b!2sKay%20Pee%20Jewelers!5e0!3m2!1sen!2sus!4v1672952094137!5m2!1sen!2sus"
-              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+               style="border:0;" allowfullscreen="" loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"></iframe>
 
           </div>
@@ -1734,7 +1748,7 @@
       $("#gdpr_text").css("display", "none");
       $(".ctct-form-footer").css("display", "none");
       $('.grecaptcha-badge').css("display", "none");
-  
+
     }
 
     window.addEventListener('pageshow', function () {
@@ -1950,9 +1964,10 @@
   </script>
 
   <script>
+    var pad = $("#collections").css("padding-top").replace("px", "");
     $('.dropdown-toggle').click(function (event) {
       $('body, html').animate({
-        scrollTop: $("#collections").offset().top
+        scrollTop: $("#collections").offset().top - pad
       }, 600);
 
     });
