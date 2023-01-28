@@ -1232,6 +1232,7 @@ span{
     font-size: 21px;
     color: #FFFFFF;
     text-align: center;
+    font-weight:normal;
 }
 
 .cover-con p{
@@ -1251,7 +1252,7 @@ span{
     justify-content: space-around;
     background-color: #4f3945;
 
-
+    font-family: 'Raleway,sans-serif';
 
 }
 
