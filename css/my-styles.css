@@ -2336,6 +2336,16 @@ background: none;
 }
 
 @media screen and (max-width: 1200px) {
+
+    #top-navbar p{
+        padding-right: 0.5rem;
+        text-align: right;
+        font-size: 80%;
+        /* background-color: #704a57;
+        color:white; */
+        /* font-family: 'Playfair Display', serif; */
+    }
+
     .container{
         max-width: 1120px;
     }
@@ -2413,7 +2423,7 @@ background: none;
 .kp-logo-img{
     max-height: 125px;
     max-width: 125px;
-    margin-top: 14px;
+    margin: 10px 0;
 }
 
 @media screen and (min-width: 1200px) {
@@ -2423,6 +2433,14 @@ background: none;
 
     #mainNav .navbar-nav .nav-item{
         width: 11.1%;
+    }
+
+    #top-navbar p{
+        padding-right: 0.5rem;
+        text-align: right;
+        /* background-color: #704a57;
+        color:white; */
+        /* font-family: 'Playfair Display', serif; */
     }
 
 
@@ -2484,14 +2502,6 @@ background: none;
     height: 5px;
     padding: 0;
     
-}
-
-#top-navbar p{
-    padding-left: 0.5rem;
-    text-align: left;
-    /* background-color: #704a57;
-    color:white; */
-    /* font-family: 'Playfair Display', serif; */
 }
 
 #navbar-row{
