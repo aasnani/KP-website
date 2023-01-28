@@ -2037,28 +2037,21 @@
         'comment': $('textarea[name=comment]').val()
       };
 
+      $("#contact-us-button").attr("disabled", "true");
       document.getElementById("contact-us-alert").innerHTML = "Message Sent Successfully!";
-          $('#contact-us-alert').removeClass("alert-secondary");
-          $('#contact-us-alert').removeClass("alert-danger");
           $("#contact-us-alert").addClass("alert-success");
+          $("#contact-us-alert").css("display", "block");
+          $('#contact-us-alert').removeClass("hide");
+          $('#contact-us-alert').addClass("show");
           $('#contact-us-alert').fadeIn();
-          setTimeout(function () {
+      setTimeout(function () {
             $('#contact-us-alert').fadeOut();
             $('#contact-us-alert').removeClass("show");
             $('#contact-us-alert').addClass("hide");
             $("#contact-us-button").removeAttr("disabled");
-          }, 5000);
+      }, 5000);
 
       console.log(formData);
-      // $("#contact-us-button").attr("disabled", "true");
-      // document.getElementById("contact-us-alert").innerHTML = "Sending...";
-      // $('#contact-us-alert').removeClass("alert-danger");
-      // $('#contact-us-alert').removeClass("alert-success");
-      // $("#contact-us-alert").addClass("alert-secondary");
-      // $("#contact-us-alert").css("display", "block");
-      // $('#contact-us-alert').removeClass("hide");
-      // $('#contact-us-alert').addClass("show");
-      // // $('#contact-us-alert').fadeIn();
 
       if ($("#comment2").val()){
         return;
@@ -2071,10 +2064,6 @@
         data: formData,
         complete: function (data) {
           console.log(data);
-          // $('#contact-us-alert').fadeOut();
-          // $('#contact-us-alert').removeClass("hide");
-          // $('#contact-us-alert').addClass("show");
-          // if (data.code) //If mail was sent successfully, reset the form.
           var form = document.getElementById("contact-form").reset();
         },
         error: function (data) {
