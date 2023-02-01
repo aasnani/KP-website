@@ -1047,7 +1047,7 @@ button{
 }
 
 #gold [aria-label="Previous"], #gold [aria-label="Next"]{
-    background-color: #78b6a5 !important;
+    /* background-color: #78b6a5 !important; */
 }
 
 
@@ -1284,9 +1284,9 @@ span{
 
     color: #333;
 
-    background-color: var(--yellow);
+    background-color: rgb(202, 245, 202);
 
-    border-color: var(--warning);
+    border-color: rgb(202, 245, 202);
 
 }
 
@@ -2431,7 +2431,7 @@ background: none;
     display: none;
 }
 
-.container-cell{
+.flickity-container-gold .container-cell{
     width: 20%;
     opacity: 0.8;
     margin: 0px 20px;
@@ -2440,10 +2440,36 @@ background: none;
     /* transform: translateX(0%); */
 }
 
-.is-selected{
+.flickity-container-gold .is-selected{
     opacity: 1;
     /* transition: 200ms ease; */
     /* transform: scale(1.08) !important; */
+}
+
+.flickity-container-gold .flickity-button, .flickity-container-banner .flickity-button{
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    /* color: gold; */
+}
+
+.form-control{
+    border: solid lightgray;
+    /* border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-radius: 0; */
+    background-color: rgba(255, 255, 255 ,1);
+    border-radius: 0;
+}
+
+.form-control:focus{
+    box-shadow: none;
+    border-color: black;
+    background-color: rgba(255, 255, 255 ,1);
+}
+
+#contact-us-form-section{
+    background-color: lightgray;
+    padding-top:20px;
 }
 
 #top-navbar div{

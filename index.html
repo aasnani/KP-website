@@ -20,7 +20,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
+  
   <style>
     /*Start Video Style*/
 
@@ -364,101 +366,26 @@
 
     <section id="landing-section">
 
-      <div id="demo" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
-
-        <ul class="carousel-indicators">
-
-          <li data-target="#demo" data-slide-to="0" class="active"></li>
-
-          <li data-target="#demo" data-slide-to="1"></li>
-
-          <li data-target="#demo" data-slide-to="2"></li>
-
-        </ul>
-
-        <div class="carousel-inner">
-
-          <div class="carousel-item active">
-
-            <img src="images/Banner/banner_test.webp" alt="Los Angeles" width="1100" height="500"
-              class="mobile-disable slider-image img-fluid">
-
-            <img src="images/Banner/banner_test.webp" alt="Los Angeles" width="1100" class="mobile-enable">
-
-            <!--<div class="carousel-caption">
-
-                          <h3>Los Angeles</h3>
-
-                          <p>We had such a great time in LA!</p>
-
-                        </div>  -->
-
-          </div>
-
-          <div class="carousel-item">
-
-            <img src="images/Banner/banner_test_2.webp" alt="Chicago" width="1100" height="500"
-              class="mobile-disable slider-image img-fluid">
-
-            <img src="images/Banner/banner_test_2.webp" alt="Los Angeles" width="1100" class="mobile-enable">
-
-            <!--<div class="carousel-caption">
-
-                          <h3>Chicago</h3>
-
-                          <p>Thank you, Chicago!</p>
-
-                        </div>   -->
-
-          </div>
-
-          <div class="carousel-item">
-
-            <!-- <video loop="" autoplay="" muted="" class="width-full"> -->
-            <!-- <video loop="" autoplay="" muted="" class="width-full" poster="assets/images/media/bssppg-video-cover.jpg"> -->
-
-            <!-- <source type="video/mp4" src="images/Banner/Templejewelry.mp4">
-  Your browser does not support the video tag.
-</video> -->
-            <!-- <video src="images/Banner/Templejewelry.mp4"> -->
-            <!-- <video autoplay="True" controls>
-              <source type="video/mp4" src="images/Banner/Templejewelry.mp4">
-            </video> -->
-            <!-- <video class="img-fluid slider-image" autoplay loop muted>
-              <source src="images/Banner/Templejewelry.mp4" type="video/mp4" />
-            </video> -->
-
-            <img src="images/Banner/banner_test_3.webp" alt="Chicago" width="1100" height="500"
-              class="mobile-disable slider-image img-fluid"> 
-
-            <img src="images/Banner/banner_test_3.webp" alt="Los Angeles" width="1100" class="mobile-enable">
-            <!-- <img src="images/Banner/main-banner-3-mob.jpg" alt="Los Angeles" width="1100"  class="mobile-enable">
-
-                        <div class="carousel-caption"> -->
-            <!--
-                          <h3>New York</h3>
-
-                          <p>We love the Big Apple!</p> -->
-
-            <!-- </div> -->
-
-          </div>
-
+      <div class="flickity-container-banner">
+        <div class="container-cell">
+          <img src="images/Banner/banner_test.webp" alt="Los Angeles" width="1100" height="500"
+          class="mobile-disable slider-image img-fluid">
+          <img src="images/Banner/banner_test.webp" alt="Los Angeles" width="1100" class="mobile-enable">
         </div>
+        <div class="container-cell">
+          <img src="images/Banner/banner_test_2.webp" alt="Chicago" width="1100" height="500"
+          class="mobile-disable slider-image img-fluid">
 
-        <a style="top: 0" class="carousel-control-prev" href="#demo" data-slide="prev">
+        <img src="images/Banner/banner_test_2.webp" alt="Los Angeles" width="1100" class="mobile-enable">
+        </div>
+        <div class="container-cell">
+          <img src="images/Banner/banner_test_3.webp" alt="Chicago" width="1100" height="500"
+          class="mobile-disable slider-image img-fluid"> 
 
-          <span class="carousel-control-prev-icon"></span>
-
-        </a>
-
-        <a style="top: 0" class="carousel-control-next" href="#demo" data-slide="next">
-
-          <span class="carousel-control-next-icon"></span>
-
-        </a>
-
+        <img src="images/Banner/banner_test_3.webp" alt="Los Angeles" width="1100" class="mobile-enable">
+        </div>
       </div>
+
 
 
 
@@ -786,7 +713,7 @@
 
         <div class="row">
           <div class="col">
-            <div class="flickity-container">
+            <div class="flickity-container-gold">
               <div class="container-cell">
                 <div class="card">
       
@@ -1505,7 +1432,7 @@
 
         <div class="row pb-5">
 
-          <div class="col-md-6">
+          <div class="col-md-6" id="contact-us-form-section">
 
             <div class="panel panel-primary">
 
@@ -1516,30 +1443,37 @@
                   <div class="row">
 
                     <div class="col-lg-6 col-md-6 col-sm-6" style="padding-bottom: 10px;">
-                      <div class="input-group">
+                      <!-- <div class="input-group">
                         <div class="input-group-prepend">
                           <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-person-circle"></i></span>
-                          </div>
+                          </div> -->
                           <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-                      </div>
+                      <!-- </div> -->
                       
 
                     </div>
 
                     <div class="col-lg-6 col-md-6 col-sm-6" style="padding-bottom: 10px;">
-                      <div class="input-group">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text" id="inputGroupPrepend2"><i class="bi bi-pin-map-fill"></i></span>
-                          </div>
-                          <input class="form-control" id="city" name="city" placeholder="City" type="text">
-                      </div>
-                      
+
+                      <input class="form-control" id="number" name="number" type="tel" placeholder="Phone Number"
+                        type="text" required>
 
                     </div>
 
+                    <!-- <div class="col-lg-6 col-md-6 col-sm-6" style="padding-bottom: 10px;"> -->
+                      <!-- <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="inputGroupPrepend2"><i class="bi bi-pin-map-fill"></i></span>
+                          </div> -->
+                          <!-- <input class="form-control" id="city" name="city" placeholder="City" type="text"> -->
+                      <!-- </div> -->
+                      
+
+                    <!-- </div> -->
+
                   </div>
 
-                  <div class="row">
+                  <!-- <div class="row">
 
                     <div class="col-lg-6 col-md-6 col-sm-6" style="padding-bottom: 10px;">
 
@@ -1553,27 +1487,27 @@
 
                     </div>
 
-                  </div>
+                  </div> -->
 
                   <div class="row">
 
-                    <div class="col-lg-6 col-md-6 col-sm-6" style="padding-bottom: 10px;">
+                    <div class="col-lg col-md col-sm" style="padding-bottom: 10px;">
 
                       <input class="form-control" id="email" name="email" type="email" placeholder="E-mail" type="text"
                         required>
 
                     </div>
 
-                    <div class="col-lg-6 col-md-6 col-sm-6" style="padding-bottom: 10px;">
+                    <!-- <div class="col-lg-6 col-md-6 col-sm-6" style="padding-bottom: 10px;">
 
                       <input class="form-control" id="number" name="number" type="tel" placeholder="Phone Number"
                         type="text" required>
 
-                    </div>
+                    </div> -->
 
                   </div>
 
-                  <div class="row">
+                  <!-- <div class="row">
 
                     <div class="col-lg-12 col-md-12 col-sm-12" style="padding-bottom: 10px;">
 
@@ -1581,7 +1515,7 @@
 
                     </div>
 
-                  </div>
+                  </div> -->
 
                   <div class="row">
 
@@ -2258,19 +2192,23 @@
 </script> -->
 
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script src="https://unpkg.com/flickity-fade@1/flickity-fade.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
   
 
 
   <script defer>
-    $(".flickity-container").flickity({
+    $(".flickity-container-gold").flickity({
       wrapAround: true
+    });
+    $(".flickity-container-banner").flickity({
+      'fade': true,
+      wrapAround: true,
+      friction: 0.35,
+      pageDots: false
     });
   </script>
   <script defer>
-    $("a#testfancy").fancybox({
-		'hideOnContentClick': true
-	});
   </script>
 </body>
 
