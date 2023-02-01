@@ -8,24 +8,16 @@
 
   if (isset($_POST['name']))
     $name = $_POST['name'];
-  if (isset($_POST['city']))
-    $city = $_POST['city'];
-  if (isset($_POST['state']))
-    $state = $_POST['state'];
-  if (isset($_POST['zip']))
-    $zip = $_POST['zip'];
   if (isset($_POST['email']))
     $email = $_POST['email'];
   if (isset($_POST['number']))
     $number = $_POST['number'];
-  if (isset($_POST['address']))
-    $address = $_POST['address'];
   if (isset($_POST['comment']))
     $comment = $_POST['comment'];
 
   $recipient = "armand.asnani@gmail.com";
   $subj = "Kay Pee Jewelers Contact Us From: $name";
-  $content = "Name: $name \nCity: $city \nState: $state \nZip: $zip \nEmail: $email \nNumber: $number \nAddress: $address \nComment: $comment";
+  $content = "Name: $name \nEmail: $email \nNumber: $number \nComment: $comment";
 
   $mail = new PHPMailer();
 
