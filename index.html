@@ -102,11 +102,11 @@
 
     }
 
-    @media(min-width:1200px) {
+
       .slider-image {
-        height: 100vh;
+        /* max-height: 90vh; */
       }
-    }
+    
 
 
 
@@ -210,6 +210,10 @@
 
       }
 
+    }
+
+    body {
+      font-family: 'Playfair Display', serif;
     }
 
 
@@ -360,7 +364,7 @@
 
     <section id="landing-section">
 
-      <div id="demo" class="carousel slide carousel-fade" data-ride="carousel" data-interval="5000">
+      <div id="demo" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
 
         <ul class="carousel-indicators">
 
@@ -376,10 +380,10 @@
 
           <div class="carousel-item active">
 
-            <img src="images/Banner/compressed2.webp" alt="Los Angeles" width="1100" height="500"
-              class="mobile-disable slider-image">
+            <img src="images/Banner/banner_test.webp" alt="Los Angeles" width="1100" height="500"
+              class="mobile-disable slider-image img-fluid">
 
-            <img src="images/Banner/compressed2.webp" alt="Los Angeles" width="1100" class="mobile-enable">
+            <img src="images/Banner/banner_test.webp" alt="Los Angeles" width="1100" class="mobile-enable">
 
             <!--<div class="carousel-caption">
 
@@ -393,10 +397,10 @@
 
           <div class="carousel-item">
 
-            <img src="images/Banner/compressed3.webp" alt="Chicago" width="1100" height="500"
-              class="mobile-disable slider-image">
+            <img src="images/Banner/banner_test_2.webp" alt="Chicago" width="1100" height="500"
+              class="mobile-disable slider-image img-fluid">
 
-            <img src="images/Banner/compressed3.webp" alt="Los Angeles" width="1100" class="mobile-enable">
+            <img src="images/Banner/banner_test_2.webp" alt="Los Angeles" width="1100" class="mobile-enable">
 
             <!--<div class="carousel-caption">
 
@@ -420,14 +424,14 @@
             <!-- <video autoplay="True" controls>
               <source type="video/mp4" src="images/Banner/Templejewelry.mp4">
             </video> -->
-            <video class="img-fluid slider-image" autoplay loop muted>
+            <!-- <video class="img-fluid slider-image" autoplay loop muted>
               <source src="images/Banner/Templejewelry.mp4" type="video/mp4" />
-            </video>
-<!-- 
-            <img src="images/Banner/compressed2.webp" alt="Chicago" width="1100" height="500"
-              class="mobile-disable slider-image"> -->
+            </video> -->
 
-            <img src="images/Banner/compressed2.webp" alt="Los Angeles" width="1100" class="mobile-enable">
+            <img src="images/Banner/banner_test_3.webp" alt="Chicago" width="1100" height="500"
+              class="mobile-disable slider-image img-fluid"> 
+
+            <img src="images/Banner/banner_test_3.webp" alt="Los Angeles" width="1100" class="mobile-enable">
             <!-- <img src="images/Banner/main-banner-3-mob.jpg" alt="Los Angeles" width="1100"  class="mobile-enable">
 
                         <div class="carousel-caption"> -->
@@ -462,7 +466,11 @@
 
     </section>
 
-
+    <div id="special-hours">
+      Christmas Hours: 12:00 - 18:00
+      <br>
+      New Years Hours: Closed
+    </div>
 
 
 
@@ -759,6 +767,8 @@
       </div>
 
     </section>
+
+    <img class="img-fluid" src="images/page-break.png" style="height: 125px;"> <!-- NOTE 11-->
 
 
 
@@ -1472,6 +1482,17 @@
 
                   </div>
 
+                  <div class="row" style="display: none;">
+
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+
+                      <textarea style="resize:vertical;" class="form-control" id="comment2" placeholder="Message..."
+                        rows="6" name="comment"></textarea>
+
+                    </div>
+
+                  </div>
+
                   <div class="row">
 
                     <div class="col-lg-12 col-md-12 col-sm-12">
@@ -1504,7 +1525,7 @@
 
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2940.168851887272!2d-71.20821954944634!3d42.53046777907358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3a01d6954e0ef%3A0x48400773408dda9b!2sKay%20Pee%20Jewelers!5e0!3m2!1sen!2sus!4v1672952094137!5m2!1sen!2sus"
-              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+               style="border:0;" allowfullscreen="" loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"></iframe>
 
           </div>
@@ -1983,9 +2004,10 @@
   </script>
 
   <script>
+    var pad = $("#collections").css("padding-top").replace("px", "");
     $('.dropdown-toggle').click(function (event) {
       $('body, html').animate({
-        scrollTop: $("#collections").offset().top
+        scrollTop: $("#collections").offset().top - pad
       }, 600);
 
     });
@@ -2048,19 +2070,28 @@
         'email': $('input[name=email]').val(),
         'number': $('input[name=number]').val(),
         'address': $('input[name=address]').val(),
-        'comment': $('textarea[name=comment]').val()
+        'comment': $('#comment').val()
       };
 
-      console.log(formData);
       $("#contact-us-button").attr("disabled", "true");
-      document.getElementById("contact-us-alert").innerHTML = "Sending...";
-      $('#contact-us-alert').removeClass("alert-danger");
-      $('#contact-us-alert').removeClass("alert-success");
-      $("#contact-us-alert").addClass("alert-secondary");
-      $("#contact-us-alert").css("display", "block");
-      $('#contact-us-alert').removeClass("hide");
-      $('#contact-us-alert').addClass("show");
-      // $('#contact-us-alert').fadeIn();
+      document.getElementById("contact-us-alert").innerHTML = "Message Sent Successfully!";
+          $("#contact-us-alert").addClass("alert-success");
+          $("#contact-us-alert").css("display", "block");
+          $('#contact-us-alert').removeClass("hide");
+          $('#contact-us-alert').addClass("show");
+          $('#contact-us-alert').fadeIn();
+      setTimeout(function () {
+            $('#contact-us-alert').fadeOut();
+            $('#contact-us-alert').removeClass("show");
+            $('#contact-us-alert').addClass("hide");
+            $("#contact-us-button").removeAttr("disabled");
+      }, 5000);
+
+      console.log(formData);
+
+      if ($("#comment2").val()){
+        return;
+      }
 
 
       $.ajax({
@@ -2069,21 +2100,6 @@
         data: formData,
         complete: function (data) {
           console.log(data);
-          // $('#contact-us-alert').fadeOut();
-          // $('#contact-us-alert').removeClass("hide");
-          // $('#contact-us-alert').addClass("show");
-          document.getElementById("contact-us-alert").innerHTML = "Message Sent Successfully!";
-          $('#contact-us-alert').removeClass("alert-secondary");
-          $('#contact-us-alert').removeClass("alert-danger");
-          $("#contact-us-alert").addClass("alert-success");
-          $('#contact-us-alert').fadeIn();
-          setTimeout(function () {
-            $('#contact-us-alert').fadeOut();
-            $('#contact-us-alert').removeClass("show");
-            $('#contact-us-alert').addClass("hide");
-            $("#contact-us-button").removeAttr("disabled");
-          }, 5000);
-          // if (data.code) //If mail was sent successfully, reset the form.
           var form = document.getElementById("contact-form").reset();
         },
         error: function (data) {
