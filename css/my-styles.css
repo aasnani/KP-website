@@ -623,7 +623,9 @@ justify-content: center;
 
 a:hover {
 
-    color: #d8a805;
+    color: #704a57 !important; /*Note highliht color*/
+    text-shadow: 0 0 0.65px #704a57;
+    transition: all 100ms ease-in-out;
 
     text-decoration: none;
 
@@ -1230,9 +1232,10 @@ span{
     font-size: 21px;
     color: #FFFFFF;
     text-align: center;
+    font-weight:normal;
 }
 
-.cover-con p {
+.cover-con p{
     font-size: 16px;
     color: #FFFFFF;
     text-align: center;
@@ -1240,7 +1243,7 @@ span{
 
 .cover-con {
 
-    padding-top: 1%;
+    padding-top: 2%;
 
     margin-bottom: 0;
 
@@ -1249,7 +1252,7 @@ span{
     justify-content: space-around;
     background-color: #4f3945;
 
-
+    font-family: 'Raleway,sans-serif';
 
 }
 
@@ -2312,6 +2315,9 @@ background: none;
     background: rgb(255, 255, 255);
     box-shadow: 0 10px 10px rgb(0 0 0 / 10%);
     /* background: linear-gradient(55deg, rgba(248,242,240,1) 0%, rgba(79,57,69,0.25) 24%, rgba(79,57,69,0.5) 24%, rgba(79,57,69,0.8) 55%, rgba(79,57,69,0.8) 55%, rgba(79,57,69,1) 80%); */
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
 }
 
 /* #collectionsDropdown {
@@ -2331,6 +2337,16 @@ background: none;
 }
 
 @media screen and (max-width: 1200px) {
+
+    #top-navbar p{
+        padding-right: 0.5rem;
+        text-align: right;
+        font-size: 80%;
+        /* background-color: #704a57;
+        color:white; */
+        /* font-family: 'Playfair Display', serif; */
+    }
+
     .container{
         max-width: 1120px;
     }
@@ -2408,7 +2424,7 @@ background: none;
 .kp-logo-img{
     max-height: 125px;
     max-width: 125px;
-    margin-top: 14px;
+    margin: 10px 0;
 }
 
 @media screen and (min-width: 1200px) {
@@ -2418,6 +2434,14 @@ background: none;
 
     #mainNav .navbar-nav .nav-item{
         width: 11.1%;
+    }
+
+    #top-navbar p{
+        padding-right: 0.5rem;
+        text-align: right;
+        /* background-color: #704a57;
+        color:white; */
+        /* font-family: 'Playfair Display', serif; */
     }
 
 
@@ -2469,7 +2493,20 @@ background: none;
 }
 
 .navbar-nav{
-    max-height: 125.25px;
+    /* max-height: 125.25px; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#top-navbar{
+    width: 100%;
+    height: 5px;
+    padding: 0;
+    
+}
+
+#navbar-row{
+    width: 100%;
 }
 
 /*Start Animation*/
@@ -2939,7 +2976,7 @@ iframe{
 
 
 #main{padding-top:120px;}
-#mainNav{height:120px;}
+/* #mainNav{height:120px;} */
 
 @media  (max-width:992px){
   #main{padding-top:51px;}
