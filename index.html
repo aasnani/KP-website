@@ -2257,7 +2257,11 @@
     })();
 </script> -->
 
-  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js">
+        $(".flickity-container").flickity({
+      wrapAround: true
+    });
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js">
     $("a#testfancy").fancybox({
 		'hideOnContentClick': true
@@ -2266,14 +2270,6 @@
   
 
 
-  <script>
-    $(".flickity-container").flickity({
-      wrapAround: true
-    });
-  </script>
-  <script>
-
-  </script>
 </body>
 
 </html>
