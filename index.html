@@ -2258,7 +2258,11 @@
 </script> -->
 
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js">
+    $("a#testfancy").fancybox({
+		'hideOnContentClick': true
+	});
+  </script>
   
 
 
@@ -2268,9 +2272,7 @@
     });
   </script>
   <script>
-    $("a#testfancy").fancybox({
-		'hideOnContentClick': true
-	});
+
   </script>
 </body>
 
