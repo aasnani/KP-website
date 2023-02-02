@@ -2266,8 +2266,8 @@ background: none;
 /* NOTE 2 */
 
 .gold-carousel-text{
-    background-color: #000 !important; /* background color */
-    color: white; /* text color */
+    background-color: white !important; /* background color */
+    color: black; /* text color */
 }
 
 #stone{
@@ -2453,9 +2453,19 @@ background: none;
     /* transform: scale(1.08) !important; */
 }
 
-.flickity-container-gold .flickity-button, .flickity-container-banner .flickity-button{
+.flickity-container-banner .flickity-button{
     background-color: rgba(255, 255, 255, 0.4) !important;
     /* color: gold; */
+}
+
+.flickity-page-dots{
+    display: none;
+}
+
+.flickity-container-gold .flickity-button{
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    color: black; 
+    border: solid 1px black ;
 }
 
 .form-control{
@@ -3075,7 +3085,32 @@ iframe{
 
 @media  (max-width:992px){
   #main{padding-top:51px;}
+
+  .flickity-container-gold .container-cell{
+    width: 90%;
+    opacity: 0.8;
+    margin: 0px 20px;
+    /* transition: 200ms ease-in; */
+    /* zoom: 0.99 */
+    /* transform: translateX(0%); */
+}
+
+.flickity-container-gold .is-selected{
+    opacity: 1;
+    /* transition: 200ms ease; */
+    /* transform: scale(1.08) !important; */
+}
+
+.flickity-button {
+    display: none;
+}
+
+.flickity-page-dots{
+    display: block;
+}
   }
+
+
 
 
 .close{
