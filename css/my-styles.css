@@ -55,7 +55,7 @@ html, body {
 
 
 }
-html{scrollbar-color:#000 #e8b46f; scrollbar-width: thin;}
+/* html{scrollbar-color:#000 #e8b46f; scrollbar-width: thin;}
 body::-webkit-scrollbar { width: 12px;}
 body::-webkit-scrollbar-track {background: #704a57;}
 body::-webkit-scrollbar-thumb {background: #000;}
@@ -67,7 +67,7 @@ body::-o-scrollbar-track {background: #704a57;}
 body::-o-scrollbar-thumb {background: #000;}
 body::-ms-scrollbar { width: 12px;}
 body::-ms-scrollbar-track {background: #704a57}
-body::-ms-scrollbar-thumb {background: #000;}
+body::-ms-scrollbar-thumb {background: #000;} */
 
 
 .active-new{
@@ -621,10 +621,10 @@ justify-content: center;
 
 }
 
-a:hover {
+#top-navbar a:hover {
 
-    color: #704a57 !important; /*Note highliht color*/
-    text-shadow: 0 0 0.65px #704a57;
+    color: white !important; /*Note highliht color*/
+    /* text-shadow: 0 0 0.65px #704a57; */
     transition: all 100ms ease-in-out;
 
     text-decoration: none;
@@ -1036,14 +1036,21 @@ button{
 
 }
 
-#gold, #collections{
-    background-color: #78b6a5 !important; /* NOTE 1: change color of gold and collection sections */
+#gold, #collections, #pagebreak2, #pagebreak4{
+    background-color: white !important; /* NOTE 1: change color of gold and collection sections */
 
 
     /*background: #f6edea;*/
     /*   background: rgb(248,242,240);
     background: linear-gradient(55deg, rgba(248,242,240,1) 0%, rgba(244,228,211,1) 24%, rgba(241,217,187,1) 24%, rgba(240,211,175,1) 55%, rgba(232,181,112,1) 55%, rgba(230,175,100,1) 80%, rgba(228,165,80,1) 80%, rgba(218,127,0,1) 100%);*/
 
+}
+
+#diamond, #pagebreak3{
+    background-color: black;
+}
+#diamond h3{
+    color:white;
 }
 
 #gold [aria-label="Previous"], #gold [aria-label="Next"]{
@@ -2475,10 +2482,18 @@ background: none;
 #top-navbar div{
     padding-right: 0.5rem;
     text-align: right;
-    background-color: #a27786;
+    background-color: #8d6774;
     /* background-color: #704a57;
     color:white; */
     /* font-family: 'Playfair Display', serif; */
+}
+
+#new-arr, #pagebreak1, #contact-us{
+    background-color: aliceblue;
+}
+
+#collectionsDropdownMenu{
+    margin-top: 0px;
 }
 
 .image-nav-item{
@@ -2489,6 +2504,7 @@ background: none;
     display: inline; 
     border-left: solid; 
     padding-left: 5px;
+    font-family: 'Twentieth Century',serif;
 }
 
 .container{
