@@ -182,7 +182,7 @@ body::-ms-scrollbar-thumb {background: #000;} */
 .new-arrive-product{
     float:left;
     width:100%;
-    border: 1.5px solid #e8ca96;
+    /* border: 1.5px solid #e8ca96; */
 
 }
 
@@ -842,7 +842,7 @@ button{
 
 .new-arr-container, .diamond-container{
 
-    width: 90%;
+    /* width: 90%; */
     margin-top:2px;
     /* margin: auto; */
 
@@ -879,13 +879,15 @@ button{
 .left-row{
 
     width: 100%;
-	padding-right: 28px;
-
+	/* padding-right: 28px; */
+    margin-left: 0;
+    margin-right: 0;
+    
 }
 
 .left-row p {
 
-    font-size: 14px;
+    font-size: 17px;
 
     font-weight: bold;
 
@@ -897,7 +899,7 @@ button{
 
 .left-row span {
 
-    font-size: 12px;
+    font-size: 15px;
 
     font-weight: bold;
 
@@ -910,7 +912,7 @@ button{
 
 #diamond p, #gold p, #collections p {
 
-    font-size: 14px;
+    font-size: 16px;
 
     font-weight: bold;
 
@@ -1921,7 +1923,7 @@ margin-bottom: 21px;
         margin: 0px 0 21px;
     }
     .left-row p {
-        font-size: 12px;
+        font-size: 18px;
     }
     .type {
         font-size: 12px !important;
