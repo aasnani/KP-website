@@ -19,6 +19,10 @@
   <link href="css/owl.carousel.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
+  
   <style>
     /*Start Video Style*/
 
@@ -289,32 +293,30 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
 
       <!-- <div class="container"> -->
-
+        <div class="row mx-auto" id= "navbar-row">
+          <div class="col ml-auto" id="top-navbar">
+            <div><p><a href="tel:781-229-9170"><i class="fa fa-phone"></i> 781-229-9170</a></p> <p><i class="bi bi-instagram"></i> kaypeejewelers </p><p> <a href="https://goo.gl/maps/SpqAM3tbYXB2t5BdA" target="_blank" rel="noopener noreferrer"><i class="bi bi-pin-map-fill"></i> Burlington, MA</a></p></div>
+          </div>
+          <div class="w-100"></div>
         <!-- <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> Menu </button> -->
-
+        <a href="index.html" class="navbar-brand"><img src="./images/KPlogo_test.webp" class="img-fluid mr-auto" id="kp-logo-test"></a>
         <div class="collapse navbar-collapse" id="navbarResponsive">
 
-          <div class="row mx-auto" id= "navbar-row">
+          
 
             
-            <div class="col mx-auto" id="top-navbar">
-              <p><i class="fa fa-phone"></i> <a href="tel:781-229-9170">781-229-9170</a> &nbsp; <i class="bi bi-instagram"></i> kaypeejewelers &nbsp; <i class="bi bi-pin-map-fill"></i> <a href="https://goo.gl/maps/SpqAM3tbYXB2t5BdA" target="_blank" rel="noopener noreferrer">Burlington, MA</a></p>
-            </div>
-            <div class="w-100"></div>
+
+            
             <!-- <div class="col mx-auto" style="width: 100%;"> -->
-
           <ul class="navbar-nav justify-content-center text-uppercase">
-
             <li class="nav-item"> <a class="nav-link single-line-link active" href="index.html">Home</a> </li>
 
 
-            <li class="nav-item"> <a class="nav-link " href="new_arrivals.html">New Arrivals</a> </li>
+            <li class="nav-item"> <a class="nav-link single-line-link" href="new_arrivals.html">New Arrivals</a> </li>
             <li class="nav-item"> <a class="nav-link " href="gold-jewelry.html">Gold Jewelry</a> </li>
             <li class="nav-item"> <a class="nav-link" href="diamond.html">Diamond Jewelry</a> </li>
 
-            <li class="nav-item" id="kp-logo">
-              <a href="index.html"><img src="./images/KPlogo.webp" class="img-fluid kp-logo-img"></a>
-            </li>
+
             </li>
 
             <li class="nav-item"> <a class="nav-link " href="antique.html">Antique Jewelry</a> </li>
@@ -364,101 +366,26 @@
 
     <section id="landing-section">
 
-      <div id="demo" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
-
-        <ul class="carousel-indicators">
-
-          <li data-target="#demo" data-slide-to="0" class="active"></li>
-
-          <li data-target="#demo" data-slide-to="1"></li>
-
-          <li data-target="#demo" data-slide-to="2"></li>
-
-        </ul>
-
-        <div class="carousel-inner">
-
-          <div class="carousel-item active">
-
-            <img src="images/Banner/banner_test.webp" alt="Los Angeles" width="1100" height="500"
-              class="mobile-disable slider-image img-fluid">
-
-            <img src="images/Banner/banner_test.webp" alt="Los Angeles" width="1100" class="mobile-enable">
-
-            <!--<div class="carousel-caption">
-
-                          <h3>Los Angeles</h3>
-
-                          <p>We had such a great time in LA!</p>
-
-                        </div>  -->
-
-          </div>
-
-          <div class="carousel-item">
-
-            <img src="images/Banner/banner_test_2.webp" alt="Chicago" width="1100" height="500"
-              class="mobile-disable slider-image img-fluid">
-
-            <img src="images/Banner/banner_test_2.webp" alt="Los Angeles" width="1100" class="mobile-enable">
-
-            <!--<div class="carousel-caption">
-
-                          <h3>Chicago</h3>
-
-                          <p>Thank you, Chicago!</p>
-
-                        </div>   -->
-
-          </div>
-
-          <div class="carousel-item">
-
-            <!-- <video loop="" autoplay="" muted="" class="width-full"> -->
-            <!-- <video loop="" autoplay="" muted="" class="width-full" poster="assets/images/media/bssppg-video-cover.jpg"> -->
-
-            <!-- <source type="video/mp4" src="images/Banner/Templejewelry.mp4">
-  Your browser does not support the video tag.
-</video> -->
-            <!-- <video src="images/Banner/Templejewelry.mp4"> -->
-            <!-- <video autoplay="True" controls>
-              <source type="video/mp4" src="images/Banner/Templejewelry.mp4">
-            </video> -->
-            <!-- <video class="img-fluid slider-image" autoplay loop muted>
-              <source src="images/Banner/Templejewelry.mp4" type="video/mp4" />
-            </video> -->
-
-            <img src="images/Banner/banner_test_3.webp" alt="Chicago" width="1100" height="500"
-              class="mobile-disable slider-image img-fluid"> 
-
-            <img src="images/Banner/banner_test_3.webp" alt="Los Angeles" width="1100" class="mobile-enable">
-            <!-- <img src="images/Banner/main-banner-3-mob.jpg" alt="Los Angeles" width="1100"  class="mobile-enable">
-
-                        <div class="carousel-caption"> -->
-            <!--
-                          <h3>New York</h3>
-
-                          <p>We love the Big Apple!</p> -->
-
-            <!-- </div> -->
-
-          </div>
-
+      <div class="flickity-container-banner">
+        <div class="container-cell">
+          <img src="images/Banner/banner_test.webp" alt="Los Angeles" width="1100" height="500"
+          class="mobile-disable slider-image img-fluid">
+          <img src="images/Banner/banner_test.webp" alt="Los Angeles" width="1100" class="mobile-enable">
         </div>
+        <div class="container-cell">
+          <img src="images/Banner/banner_test_2.webp" alt="Chicago" width="1100" height="500"
+          class="mobile-disable slider-image img-fluid">
 
-        <a style="top: 0" class="carousel-control-prev" href="#demo" data-slide="prev">
+        <img src="images/Banner/banner_test_2.webp" alt="Los Angeles" width="1100" class="mobile-enable">
+        </div>
+        <div class="container-cell">
+          <img src="images/Banner/banner_test_3.webp" alt="Chicago" width="1100" height="500"
+          class="mobile-disable slider-image img-fluid"> 
 
-          <span class="carousel-control-prev-icon"></span>
-
-        </a>
-
-        <a style="top: 0" class="carousel-control-next" href="#demo" data-slide="next">
-
-          <span class="carousel-control-next-icon"></span>
-
-        </a>
-
+        <img src="images/Banner/banner_test_3.webp" alt="Los Angeles" width="1100" class="mobile-enable">
+        </div>
       </div>
+
 
 
 
@@ -476,7 +403,7 @@
 
     <section id="new-arr">
 
-      <div class="container-90 new-arr-container">
+      <div class="container new-arr-container">
 
 
 
@@ -491,18 +418,18 @@
 
           <div class="row">
 
-            <div class="col-md-6 col-sm-12">
+            <div class="col-md-12 col-sm-12">
 
               <div class="row left-row">
 
 
 
-                <div class="col-md-4 col-sm-6 col-6">
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
 
                   <div class="new-arrive-product wow fadeInUp">
 
-                    <a data-toggle="modal" data-target="#kpexampleModal"><img style="cursor: pointer;"
-                        src="images/Home-newarr/kara-small.jpg" width="100%;" /></a>
+                    <a data-fancybox data-src="images/img_1.jpg" data-caption="Gents and Ladies Matching Band"><img style="cursor: pointer;"
+                        src="images/img_1.jpg" width="100%;" /></a>
 
                     <p><a>Elegant Antique Kara</a></p>
 
@@ -516,12 +443,12 @@
 
                 </div>
 
-                <div class="col-md-4 col-sm-6 col-6">
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
 
                   <div class="new-arrive-product wow fadeInUp">
 
-                    <a data-toggle="modal" data-target="#kpexampleModal2"><img style="cursor: pointer;"
-                        src="images/Home-newarr/gulab-small.jpg" width="100%;" /></a>
+                    <a data-fancybox data-src="images/img_2.jpg" data-caption="Gents and Ladies Matching Band"><img style="cursor: pointer;"
+                        src="images/img_2.jpg" width="100%;" /></a>
 
                     <p><a>Gulab Karas</a></p>
 
@@ -531,12 +458,12 @@
 
                 </div>
 
-                <div class="col-md-4 col-sm-6 col-6">
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
 
                   <div class="new-arrive-product wow fadeInUp">
 
-                    <a data-toggle="modal" data-target="#kpexampleModal3"><img style="cursor: pointer;"
-                        src="images/Home-newarr/lakshmi-small.jpg" width="100%;" /></a>
+                    <a data-fancybox data-src="images/img_1.jpg" data-caption="Gents and Ladies Matching Band"><img style="cursor: pointer;"
+                        src="images/img_1.jpg" width="100%;" /></a>
 
                     <p><a>Lakshmi Necklace</a></p>
 
@@ -548,7 +475,8 @@
 
                 </div>
 
-                <div class="col-md-4 col-sm-6 col-6  ">
+
+                  <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
 
 
 
@@ -558,8 +486,8 @@
 
 
 
-                    <a data-toggle="modal" data-target="#kpexampleModal4"><img style="cursor: pointer;"
-                        src="images/Home-newarr/rhodium-small.jpg" width="100%;" /></a>
+                    <a data-fancybox data-src="images/img_5.jpg" data-caption="Gents and Ladies Matching Band"><img style="cursor: pointer;"
+                        src="images/img_5.jpg" width="100%;" /></a>
 
                     <p><a>Trendy Rhodium Bangle</a></p>
 
@@ -571,7 +499,7 @@
 
                 </div>
 
-                <div class="col-md-4 col-sm-6 col-6">
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
 
 
 
@@ -579,8 +507,8 @@
 
 
 
-                    <a data-toggle="modal" data-target="#kpexampleModal5"><img style="cursor: pointer;"
-                        src="images/Home-newarr/emerald-small.jpg" width="100%;" /></a>
+                    <a data-fancybox data-src="images/img_5.jpg" data-caption="Gents and Ladies Matching Band"><img style="cursor: pointer;"
+                        src="images/img_5.jpg" width="100%;" /></a>
 
                     <p><a>Precious Peacock Emerald Bangles </a></p>
 
@@ -590,7 +518,7 @@
 
                 </div>
 
-                <div class="col-md-4 col-sm-6 col-6">
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
 
                   <div class="new-arrive-product arrive-btm  wow fadeInUp">
 
@@ -598,8 +526,8 @@
 
 
 
-                    <a data-toggle="modal" data-target="#kpexampleModal6"><img style="cursor: pointer;"
-                        src="images/Home-newarr/navratna-small.jpg" width="100%;" /></a>
+                    <a data-fancybox data-src="images/img_5.jpg" data-caption="Gents and Ladies Matching Band"><img style="cursor: pointer;"
+                        src="images/img_5.jpg" width="100%;" /></a>
 
                     <p><a>Precious Gemstone Oval Navratna Bangle</a></p>
 
@@ -613,13 +541,13 @@
 
             </div>
 
-            <div class="col-md-6 col-sm-12 wow fadeInUp">
+            <!-- <div class="col-md-6 col-sm-12 wow fadeInUp">
 
               <div class="border-only">
 
                 <a data-toggle="modal" data-target="#kpexampleModal7"><img src="images/Home-newarr/slide-1.png"
                     d-arrive" />
-                  <!-- <div class="d-arrive-txt">
+                  <div class="d-arrive-txt">
 										<div class="d-arrive-wrapper">
 										<img src="images/logoold.png" class="d-arrive-logo">
 										<h6>Elegant Fashion Design</h6>
@@ -627,10 +555,10 @@
 										<img src="images/divider2.png" class="divider2">
 										<p>Jewel that define you </p>
 										</div>
-									</div> -->
+									</div>
                 </a>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="col-md-12 text-center">
@@ -768,7 +696,7 @@
 
     </section>
 
-    <img class="img-fluid" src="images/page-break.png" style="height: 125px;"> <!-- NOTE 11-->
+    <img class="img-fluid" id="pagebreak1" src="images/page-break.png" style="height: 125px;"> <!-- NOTE 11-->
 
 
 
@@ -778,17 +706,143 @@
 
 
 
-      <div class="container-90 text-center my-3">
+      <div class=" text-center my-3">
 
 
 
         <h3 class="section-headers wow fadeInUp" align="center">Gold Jewelry</h3>
 
+        <div class="row">
+          <div class="col">
+            <div class="flickity-container-gold">
+              <div class="container-cell">
+                <div class="card">
+      
+                  <div class="card-body">
 
+                    
+                    <a data-fancybox data-src="images/gold-jewelry/Band1.jpg" data-caption="Gents and Ladies Matching Band">
+                    <img src="images/gold-jewelry/Band1.jpg"
+                        width="100%" />
+                      <p class="gold-carousel-text">Gents and Ladies Matching Band</p>
+                    </a>
+      
+      
+                    <!--<span>$90</span>-->
+      
+                  </div>
+      
+      
+      
+                </div>
+              </div>
+              <div class="container-cell">
+                <div class="card">
+      
+                  <div class="card-body">
+      
+                    <a data-fancybox data-src="images/gold-jewelry/Kara2.jpg" data-caption="Gulab Karas">
+                      <img src="images/gold-jewelry/Kara2.jpg"
+                      width="100%" />
+                    <p class="gold-carousel-text">Gulab Karas</p>
+                      </a>
+      
+      
+                    <!--<span>$90</span>-->
+      
+                  </div>
+      
+      
+      
+                </div>
+              </div>
+              <div class="container-cell">
+                <div class="card">
+      
+                  <div class="card-body">
+      
+                    <a data-fancybox data-src="images/gold-jewelry/Kara1.jpg" data-caption="Ladies Meena Karas">
+                      <img src="images/gold-jewelry/Kara1.jpg"
+                      width="100%" />
+                    <p class="gold-carousel-text">Ladies Meena Karas</p>
+                      </a>
+      
+      
+                    <!--<span>$90</span>-->
+      
+                  </div>
+      
+      
+      
+                </div>
+              </div>
+              <div class="container-cell">
+                <div class="card">
+      
+                  <div class="card-body">
+      
+                    <a data-fancybox data-src="images/gold-jewelry/N1.jpg" data-caption="Pearl Necklace Set">
+                      <img src="images/gold-jewelry/N1.jpg"
+                      width="100%" />
+                    <p class="gold-carousel-text">Pearl Necklace Set</p>
+                      </a>
+      
+      
+                    <!--<span>$90</span>-->
+      
+                  </div>
+      
+      
+      
+                </div>
+              </div>
+              <div class="container-cell">
+                <div class="card">
+      
+                  <div class="card-body">
+      
+                    <a data-fancybox data-src="images/gold-jewelry/Kara3.jpg" data-caption="Handemade Filigree Karas">
+                      <img src="images/gold-jewelry/Kara3.jpg"
+                      width="100%" />
+                    <p class="gold-carousel-text">Handemade Filigree Karas</p>
+                      </a>
+      
+      
+                    <!--<span>$90</span>-->
+      
+                  </div>
+      
+      
+      
+                </div>
+              </div>
+              <div class="container-cell">
+                <div class="card">
+      
+                  <div class="card-body">
+      
+                    <a data-fancybox data-src="images/gold-jewelry/Mens1.jpg" data-caption="Mens Kara">
+                      <img src="images/gold-jewelry/Mens1.jpg"
+                      width="100%" />
+                    <p class="gold-carousel-text">Mens Kara</p>
+                      </a>
+      
+      
+                    <!--<span>$90</span>-->
+      
+                  </div>
+      
+      
+      
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
 
-
-
-        <div class="row mx-auto my-auto">
+<!-- 
+        <div class="row">
 
 
           <div class="owl-carousel owl-theme gold-slider">
@@ -803,7 +857,7 @@
                   </a>
 
 
-                  <!--<span>$90</span>-->
+                 
 
                 </div>
 
@@ -824,7 +878,7 @@
 
 
 
-                  <!--<span>$90</span>-->
+                 
 
                 </div>
               </div>
@@ -844,7 +898,7 @@
 
 
 
-                  <!--<span>$90</span>-->
+                
 
                 </div>
 
@@ -861,7 +915,7 @@
                   </a>
 
 
-                  <!--<span>$90</span>-->
+                  
 
                 </div>
 
@@ -878,7 +932,7 @@
 
 
 
-                  <!--<span>$90</span>-->
+                
 
                 </div>
               </div>
@@ -895,7 +949,7 @@
 
 
 
-                  <!--<span>$90</span>-->
+               
 
                 </div>
 
@@ -904,7 +958,7 @@
 
           </div>
 
-
+        -->
 
         </div>
         <div class="col-md-12 text-center">
@@ -912,7 +966,7 @@
         </div>
 
 
-
+        <!--
 
 
       </div>
@@ -1022,10 +1076,10 @@
 
           </div>
         </div>
-      </div>
+      </div> -->
     </section>
 
-
+    <img class="img-fluid" id="pagebreak2" src="images/page-break.png" style="height: 125px;"> <!-- NOTE 11-->
 
     <section id="diamond">
 
@@ -1212,7 +1266,7 @@
 
     </section>
 
-
+    <img class="img-fluid" id="pagebreak3" src="images/page-break-white.png" style="height: 125px;"> <!-- NOTE 11-->
 
 
 
@@ -1378,7 +1432,7 @@
     </section>
 
 
-
+    <img class="img-fluid" id="pagebreak4" src="images/page-break.png" style="height: 125px;"> <!-- NOTE 11-->
 
 
 
@@ -1403,7 +1457,7 @@
 
         <div class="row pb-5">
 
-          <div class="col-md-6">
+          <div class="col-md-6" id="contact-us-form-section">
 
             <div class="panel panel-primary">
 
@@ -1414,20 +1468,37 @@
                   <div class="row">
 
                     <div class="col-lg-6 col-md-6 col-sm-6" style="padding-bottom: 10px;">
-
-                      <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                      <!-- <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-person-circle"></i></span>
+                          </div> -->
+                          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                      <!-- </div> -->
+                      
 
                     </div>
 
                     <div class="col-lg-6 col-md-6 col-sm-6" style="padding-bottom: 10px;">
 
-                      <input class="form-control" id="city" name="city" placeholder="City" type="text">
+                      <input class="form-control" id="number" name="number" type="tel" placeholder="Phone Number"
+                        type="text" required>
 
                     </div>
 
+                    <!-- <div class="col-lg-6 col-md-6 col-sm-6" style="padding-bottom: 10px;"> -->
+                      <!-- <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="inputGroupPrepend2"><i class="bi bi-pin-map-fill"></i></span>
+                          </div> -->
+                          <!-- <input class="form-control" id="city" name="city" placeholder="City" type="text"> -->
+                      <!-- </div> -->
+                      
+
+                    <!-- </div> -->
+
                   </div>
 
-                  <div class="row">
+                  <!-- <div class="row">
 
                     <div class="col-lg-6 col-md-6 col-sm-6" style="padding-bottom: 10px;">
 
@@ -1441,27 +1512,27 @@
 
                     </div>
 
-                  </div>
+                  </div> -->
 
                   <div class="row">
 
-                    <div class="col-lg-6 col-md-6 col-sm-6" style="padding-bottom: 10px;">
+                    <div class="col-lg col-md col-sm" style="padding-bottom: 10px;">
 
                       <input class="form-control" id="email" name="email" type="email" placeholder="E-mail" type="text"
                         required>
 
                     </div>
 
-                    <div class="col-lg-6 col-md-6 col-sm-6" style="padding-bottom: 10px;">
+                    <!-- <div class="col-lg-6 col-md-6 col-sm-6" style="padding-bottom: 10px;">
 
                       <input class="form-control" id="number" name="number" type="tel" placeholder="Phone Number"
                         type="text" required>
 
-                    </div>
+                    </div> -->
 
                   </div>
 
-                  <div class="row">
+                  <!-- <div class="row">
 
                     <div class="col-lg-12 col-md-12 col-sm-12" style="padding-bottom: 10px;">
 
@@ -1469,7 +1540,7 @@
 
                     </div>
 
-                  </div>
+                  </div> -->
 
                   <div class="row">
 
@@ -1682,6 +1753,7 @@
   <!-----Smooth Scroll 2------>
 
   <script src="js/jquery-3.3.1.min.js"></script>
+  <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script> -->
 
   <!--<script  src="css/index.js"></script>-->
 
@@ -2064,12 +2136,12 @@
 
       formData = {
         'name': $('input[name=name]').val(),
-        'city': $('input[name=city]').val(),
-        'state': $('input[name=state]').val(),
-        'zip': $('input[name=zip]').val(),
+        // 'city': $('input[name=city]').val(),
+        // 'state': $('input[name=state]').val(),
+        // 'zip': $('input[name=zip]').val(),
         'email': $('input[name=email]').val(),
         'number': $('input[name=number]').val(),
-        'address': $('input[name=address]').val(),
+        // 'address': $('input[name=address]').val(),
         'comment': $('#comment').val()
       };
 
@@ -2081,9 +2153,10 @@
           $('#contact-us-alert').addClass("show");
           $('#contact-us-alert').fadeIn();
       setTimeout(function () {
-            $('#contact-us-alert').fadeOut();
+            // $('#contact-us-alert').fadeOut();
             $('#contact-us-alert').removeClass("show");
             $('#contact-us-alert').addClass("hide");
+            // $("#contact-us-alert").css("display", "block");
             $("#contact-us-button").removeAttr("disabled");
       }, 5000);
 
@@ -2110,10 +2183,10 @@
           $('#contact-us-alert').removeClass("alert-success");
           $("#contact-us-alert").addClass("alert-danger");
           $('#contact-us-alert').fadeIn();
-          // $('#contact-us-alert').removeClass("hide");
-          // $('#contact-us-alert').addClass("show");
+          $('#contact-us-alert').removeClass("hide");
+          $('#contact-us-alert').addClass("show");
           setTimeout(function () {
-            $('#contact-us-alert').fadeOut();
+            // $('#contact-us-alert').fadeOut();
             $('#contact-us-alert').removeClass("show");
             $('#contact-us-alert').addClass("hide");
           }, 3000);
@@ -2131,8 +2204,38 @@
       $("#dropdownMenuButton").trigger("mouseenter");
     })
   </script> -->
+<!-- 
+  <script type="text/javascript">
+    jQuery.browser = {};
+    (function () {
+        jQuery.browser.msie = false;
+        jQuery.browser.version = 0;
+        if (navigator.userAgent.match(/MSIE ([0-9]+)\./)) {
+            jQuery.browser.msie = true;
+            jQuery.browser.version = RegExp.$1;
+        }
+    })();
+</script> -->
+
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script src="https://unpkg.com/flickity-fade@1/flickity-fade.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  
 
 
+  <script defer>
+    $(".flickity-container-gold").flickity({
+      wrapAround: true
+    });
+    $(".flickity-container-banner").flickity({
+      'fade': true,
+      wrapAround: true,
+      friction: 0.35,
+      pageDots: false
+    });
+  </script>
+  <script defer>
+  </script>
 </body>
 
 </html>
