@@ -3,7 +3,14 @@
 @charset "utf-8";
 
 /* CSS Document */
-
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px; 
+    padding: 0px;
+    overflow-x: clip; 
+}
 @font-face {
     font-family: 'MontserratExtraBold';
     src: url('../fonts/MontserratExtraBold.eot');
@@ -55,9 +62,9 @@ html, body {
 
 
 }
-/* html{scrollbar-color:#000 #e8b46f; scrollbar-width: thin;}
-body::-webkit-scrollbar { width: 12px;}
-body::-webkit-scrollbar-track {background: #704a57;}
+/* html{scrollbar-color:#000 #e8b46f; scrollbar-width: thin;} */
+/* body::-webkit-scrollbar { width: 12px;} */
+/* body::-webkit-scrollbar-track {background: #704a57;}
 body::-webkit-scrollbar-thumb {background: #000;}
 body::-moz-scrollbar { width: 12px;}
 body::-moz-scrollbar-track {background: #704a57;}
