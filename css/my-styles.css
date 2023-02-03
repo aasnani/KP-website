@@ -3090,7 +3090,7 @@ iframe{
 }
 
 
-#main{padding-top:104px;}
+#homepage, #goldpage{padding-top:104px;}
 /* #mainNav{height:120px;} */
 
 @media  (max-width:992px){
