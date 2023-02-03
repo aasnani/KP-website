@@ -1491,18 +1491,19 @@ margin: 0;
     margin-right: auto;
 }
 .kp-viewmore{
-    border: 2px solid #23140e;
+    border: 2px solid black;
     padding: 6px 15px;
     border-radius: 6px;
     position: relative;
     top: 43px;
     font-weight: 700;
-    color: #23130e;
+    color: black;
 
 }
 .kp-viewmore:hover{
-    background: #23140e;
+    background: black;
     color:#fff;
+    text-decoration: none;
 }
 
 
@@ -2501,7 +2502,7 @@ background: none;
 #top-navbar div{
     padding-right: 0.5rem;
     text-align: right;
-    background-color: #8d6774;
+    background-color: #d5d2d3;
     /* background-color: #704a57;
     color:white; */
     /* font-family: 'Playfair Display', serif; */
