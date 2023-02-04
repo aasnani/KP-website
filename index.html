@@ -6420,7 +6420,10 @@
       pageDots: false
     });
     }
-    flickity_set();
+
+    window.addEventListener('pageshow', function () {
+      setTimeout(flickity_set, 100);
+    }, false);
 
 
   </script>
