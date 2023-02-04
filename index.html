@@ -4226,7 +4226,7 @@
     }
 
     window.addEventListener('pageshow', function () {
-      setTimeout(ctctToKPSubscribe, 500)
+      setTimeout(ctctToKPSubscribe, 100)
     }, false);
 
 
@@ -4585,7 +4585,10 @@
 
 
 
-  <script async="false">
+  <script>
+
+
+    function flickity_set(){
       $(".flickity-container-gold").flickity({
       wrapAround: true
     });
@@ -4595,6 +4598,12 @@
       friction: 0.35,
       pageDots: false
     });
+    }
+
+    window.addEventListener('pageshow', function () {
+      setTimeout(flickity_set, 100)
+    }, false);
+
 
   </script>
   <script defer>
