@@ -6409,8 +6409,8 @@
   <script>
 
 
-    function flickity_set(){
-      $(".flickity-container-gold").flickity({
+    window.addEventListener('pageshow', function () {
+        $(".flickity-container-gold").flickity({
       wrapAround: true
     });
     $(".flickity-container-banner").flickity({
@@ -6419,10 +6419,6 @@
       friction: 0.35,
       pageDots: false
     });
-    }
-
-    window.addEventListener('pageshow', function () {
-      setTimeout(flickity_set, 100);
     }, false);
 
 
