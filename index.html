@@ -6478,6 +6478,7 @@
 
 
   <script>
+    $(window).on("load", function() {
       console.log("Loading Flickity");
       $(".flickity-container-gold").flickity({
         wrapAround: true
@@ -6488,7 +6489,7 @@
         friction: 0.35,
         pageDots: false
       });
-
+    });
 
   </script>
 </body>
