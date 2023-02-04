@@ -16,7 +16,6 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css" />
   <link href="css/my-styles.css" rel="stylesheet">
-  <link href="css/owl.carousel.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
@@ -6329,37 +6328,6 @@
     });
 
   </script>
-  <script defer>
-    $('.gold-slider').owlCarousel({
-      items: 4,
-      loop: true,
-      margin: 30,
-      autoplay: true,
-      autoplayTimeout: 3300,
-      smartSpeed: 1500,
-      autoplayHoverPause: true,
-      responsive: {
-        0: {
-          items: 1,
-          nav: true
-        },
-        767: {
-          items: 2,
-          nav: true
-        },
-        991: {
-          items: 3,
-          nav: true
-        },
-        1199: {
-          items: 4,
-          nav: true,
-          loop: true
-        }
-      }
-    })
-
-  </script>
 
   <script>
     var pad = $("#collections").css("padding-top").replace("px", "");
@@ -6510,7 +6478,6 @@
 
 
   <script>
-    $(window).on("load",  function () {
       console.log("Loading Flickity");
       $(".flickity-container-gold").flickity({
         wrapAround: true
@@ -6521,7 +6488,6 @@
         friction: 0.35,
         pageDots: false
       });
-    });
 
 
   </script>
