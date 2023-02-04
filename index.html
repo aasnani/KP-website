@@ -262,12 +262,12 @@
 
         <!-- <div class="col mx-auto" style="width: 100%;"> -->
         <ul class="navbar-nav justify-content-center text-uppercase">
-          <li class="nav-item"> <a class="nav-link single-line-link active" href="#"
+          <li class="nav-item"> <a class="nav-link single-line-link active" href="#homepage"
               onclick="changePage('#homepage')">Home</a> </li>
 
 
           <li class="nav-item"> <a class="nav-link single-line-link" href="new_arrivals.html">New Arrivals</a> </li>
-          <li class="nav-item"> <a class="nav-link " href="#" onclick="changePage('#goldpage')">Gold Jewelry</a> </li>
+          <li class="nav-item"> <a class="nav-link " href="#goldpage" onclick="changePage('#goldpage')">Gold Jewelry</a> </li>
           <li class="nav-item"> <a class="nav-link" href="#" onclick="changePage('#diamondpage')">Diamond Jewelry</a> </li>
 
 
@@ -4585,8 +4585,9 @@
 
 
 
-  <script defer>
-    $(".flickity-container-gold").flickity({
+  <script>
+    $(document).on("load", () => {
+      $(".flickity-container-gold").flickity({
       wrapAround: true
     });
     $(".flickity-container-banner").flickity({
@@ -4595,6 +4596,8 @@
       friction: 0.35,
       pageDots: false
     });
+    })
+
   </script>
   <script defer>
   </script>
