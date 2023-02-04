@@ -299,7 +299,7 @@
 
 
           <li class="nav-item"> <a id="contact-us-nav-link" class="nav-link single-line-link"
-              href="index.html#contact-us">Contact Us</a> </li>
+              href="#" onclick="goToContactUs()">Contact Us</a> </li>
 
         </ul>
       </div>
@@ -5951,6 +5951,13 @@
         $(pages[i]).css("display", "none");
       }
       $(page).css("display", "block");
+    }
+    function goToContactUs(){
+      console.log("test");
+      changePage('#homepage');
+    $('html, body').animate({
+        scrollTop: $("#contact-us").offset().top - 110
+    }, 500);
     }
   </script>
 
