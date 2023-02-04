@@ -6510,9 +6510,7 @@
 
 
   <script>
-
-
-    window.addEventListener('pageload', function () {
+    window.on("load",  function () {
       $(".flickity-container-gold").flickity({
         wrapAround: true
       });
@@ -6522,7 +6520,7 @@
         friction: 0.35,
         pageDots: false
       });
-    }, false);
+    });
 
 
   </script>
