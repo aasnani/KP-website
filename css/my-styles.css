@@ -423,7 +423,7 @@ justify-content: center;
 
 .collection-menu{
 
-    background: #f0cb9b;
+    background: white;
     border: none;
 
     top: 77px;
@@ -917,7 +917,7 @@ button{
 }
 .cover-div img{}
 
-#diamond p, #gold p, #collections p {
+ #gold p, #collections p {
 
     font-size: 16px;
 
@@ -2457,10 +2457,39 @@ background: none;
     /* transform: translateX(0%); */
 }
 
+
 .flickity-container-gold .is-selected{
     opacity: 1;
     /* transition: 200ms ease; */
     /* transform: scale(1.08) !important; */
+}
+
+.flickity-container-diamond .container-cell{
+    width: 100%;
+    /* opacity: 0.8; */
+    /* margin: 0px 20px; */
+    /* transition: 200ms ease-in; */
+    /* zoom: 0.99 */
+    /* transform: translateX(0%); */
+}
+
+#flickity-diamond-col{
+    display: grid;
+    align-items: center;
+}
+
+.flickity-container-diamond .container-cell p {
+    text-align: center;
+    font-size: 1.5em;
+    background-color: black;
+    color: white;
+}
+
+#diamond .row p{
+    text-align: center;
+    font-size: 1em;
+    background-color: black;
+    color: white;
 }
 
 .flickity-container-banner .flickity-button{
@@ -2834,6 +2863,15 @@ iframe{
 
 }
 
+.dropdown-item:hover{
+    color: #704a57;
+    text-shadow: #704a57;
+    text-shadow: 0 0 0.65px #704a57;
+    transition: all 50ms ease-in;
+    text-decoration: none;
+    background-color: whitesmoke;
+}
+
 
 
 @media (max-width:576px){
@@ -3117,6 +3155,14 @@ iframe{
 
 .flickity-page-dots{
     display: block;
+}
+
+#flickity-diamond-col{
+    padding-bottom: 50px;
+}
+
+.flickity-container-diamond .flickity-page-dots .dot{
+    background: white;
 }
   }
 
