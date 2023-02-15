@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
+  <link rel="stylesheet" href="css/animate.min.css" />
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/flickity.pkgd.min.js"></script>
   <script src="js/flickity-fade.js"></script>
@@ -252,7 +253,7 @@
       </div>
       <div class="w-100"></div>
       <!-- <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> Menu </button> -->
-      <a href="index.html" class="navbar-brand"><img src="./images/KPlogo_test.webp" class="img-fluid mr-auto"
+      <a href="#" onclick="changePage('#homepage')" class="navbar-brand"><img src="./images/KPlogo_test.webp" class="img-fluid mr-auto"
           id="kp-logo-test"></a>
       <div class="collapse navbar-collapse" id="navbarResponsive">
 
@@ -263,13 +264,13 @@
 
         <!-- <div class="col mx-auto" style="width: 100%;"> -->
         <ul class="navbar-nav justify-content-center text-uppercase">
-          <li class="nav-item"> <a class="nav-link single-line-link active" href="#homepage"
+          <li class="nav-item"> <a class="nav-link single-line-link active" href="#"
               onclick="changePage('#homepage')">Home</a> </li>
 
 
           <li class="nav-item"> <a class="nav-link single-line-link" href="#"
               onclick="changePage('#newarrivalpage')">New Arrivals</a> </li>
-          <li class="nav-item"> <a class="nav-link " href="#goldpage" onclick="changePage('#goldpage')">Gold Jewelry</a>
+          <li class="nav-item"> <a class="nav-link " href="#" onclick="changePage('#goldpage')">Gold Jewelry</a>
           </li>
           <li class="nav-item"> <a class="nav-link" href="#" onclick="changePage('#diamondpage')">Diamond Jewelry</a>
           </li>
@@ -1343,7 +1344,7 @@
                 <img class="img-responsive" src="images/gemstone-collection.jpg" alt="">
                 <div class="overlay">
                    <!-- <h2></h2> -->
-                   <a class="info" href="#">View</a>
+                   <a class="info" href="#">View Precious Gemstone Jewelry</a>
                 </div>
             </div>
             <p>Precious Jemstone Jewelery</p>
@@ -1360,7 +1361,7 @@
                 <img class="img-responsive" src="images/antique-collection.jpg" alt="">
                 <div class="overlay">
                    <!-- <h2></h2> -->
-                   <a class="info" href="#">View</a>
+                   <a class="info" onclick="changePage('#antiquepage')" href="#">View</a>
                 </div>
             </div>
             <p>Antique Jewelery</p>
@@ -1506,7 +1507,7 @@
       <div class="container-90">
 
 
-        <h3 class="contact-arrivals  " align="center">Contact Us</h3>
+        <h3 class="section-headers " align="center">Contact Us</h3>
 
 
         <div class="row pb-5">
@@ -1607,7 +1608,7 @@
 
                   </div>
 
-                  <div class="row">
+                  <!-- <div class="row">
 
                     <div class="col-lg-12 col-md-12 col-sm-12">
 
@@ -1616,7 +1617,7 @@
 
                     </div>
 
-                  </div>
+                  </div> -->
 
                   <div class="row">
 
@@ -5076,13 +5077,21 @@
   </script>
 
   <script>
-    $(".dropdown-menu").hover(function () {
-      $(".dropdown-toggle").toggleClass("nav-link-force-hover");
-      console.log("Test");
-    }, function () {
-      console.log("Test2");
-      $(".dropdown-toggle").toggleClass("nav-link-force-hover");
+    $(".dropdown-menu").hover(function(e){
+      $(".dropdown-toggle").attr("aria-expanded", "true");
+      $(".dropdown-toggle").addClass("nav-link-force-hover");
+      console.log("trigger");
+    }, function(e){
+      $(".dropdown-toggle").attr("aria-expanded", "false");
+      $(".dropdown-toggle").removeClass("nav-link-force-hover");
     });
+    // $(".dropdown-menu").hover(function () {
+    //   $(".dropdown-toggle").ho;
+    //   console.log("Test");
+    // }, function () {
+    //   console.log("Test2");
+    //   $(".dropdown-toggle").toggleClass("nav-link-force-hover");
+    // });
   </script>
 
   <!-----email validation---->
