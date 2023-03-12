@@ -2076,7 +2076,7 @@ margin-bottom: 0;
 
     color: inherit;
     font-family: 'Twentieth Century',serif;
-    font-size: 1rem;
+    font-size: 1vw;
     font-weight: normal;
 
     letter-spacing: 0.5px;
@@ -2109,7 +2109,7 @@ margin-bottom: 0;
     #top-navbar p{
         padding-right: 0.5rem;
         text-align: right;
-        font-size: 1rem;
+        font-size: 1.1vw;
 
 
     }
@@ -2125,7 +2125,7 @@ margin-bottom: 0;
     }
 
     #mainNav .navbar-nav .nav-item .nav-link,  .dropdown-item{
-        font-size: 0.8rem;
+        font-size: 1vw
     }
 /* 
     .single-line-link{
@@ -2330,7 +2330,7 @@ margin-bottom: 0;
     #top-navbar p{
         padding-right: 0.5rem;
         text-align: right;
-        font-size: 1.2rem;
+        font-size: min(1vw, 1.2rem)
 
 
     }
@@ -2341,8 +2341,9 @@ margin-bottom: 0;
     
     }
 
-    
-
+    #mainNav .navbar-nav .nav-item .nav-link,  .dropdown-item{
+        font-size: min(0.9vw, 1rem)
+    }
 
 
 
