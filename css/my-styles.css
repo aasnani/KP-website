@@ -2076,7 +2076,7 @@ margin-bottom: 0;
 
     color: inherit;
     font-family: 'Twentieth Century',serif;
-    font-size: 85%;
+    font-size: 1rem;
     font-weight: normal;
 
     letter-spacing: 0.5px;
@@ -2096,12 +2096,20 @@ margin-bottom: 0;
 
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1450px) {
+
+    #mainNav .navbar-nav .nav-item .nav-link {
+
+        margin: 0.5rem 0.75rem 0rem 0.75rem !important;
+    
+    }
+
+    #homepage, #newarrivalpage, #goldpage, #diamondpage, #antiquepage, #gemstonepage, #mangalsutrapage, #engagementpage{padding-top:95px !important;}
 
     #top-navbar p{
         padding-right: 0.5rem;
         text-align: right;
-        font-size: 75%;
+        font-size: 1rem;
 
 
     }
@@ -2117,12 +2125,12 @@ margin-bottom: 0;
     }
 
     #mainNav .navbar-nav .nav-item .nav-link,  .dropdown-item{
-        font-size: 75%;
+        font-size: 0.8rem;
     }
-
+/* 
     .single-line-link{
         line-height: 38px;
-    }
+    } */
 
 
 
@@ -2147,7 +2155,7 @@ margin-bottom: 0;
       }
 
     #mainNav .navbar-nav .nav-item .nav-link:not(#dropdownMenuButton):not(#kp-logo):hover::after{
-        width: 75%;
+        width: 100%;
     }
 
 
@@ -2156,15 +2164,15 @@ margin-bottom: 0;
         position: relative;
     }
 
-    #mainNav .navbar-nav .nav-item .nav-link {
+    /* #mainNav .navbar-nav .nav-item .nav-link {
 
-    margin: 0.5em 1.5em 0em 1.5em !important;
+    margin: 0.5rem 1.5rem 0rem 1.5rem !important;
 
-    }
+    } */
 
-    #dropdownMenuButton{
+    /* #dropdownMenuButton{
         margin: 0.5em 0em 0em 0em !important;
-    }
+    } */
 
 
 
@@ -2311,7 +2319,7 @@ margin-bottom: 0;
     /* width: 12.5%; */
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1450px) {
 
     #kp-logo-test{
         height:55px;
@@ -2319,6 +2327,21 @@ margin-bottom: 0;
         margin: 0.5rem 0rem 0.5rem 1.5rem;
     }
 
+    #top-navbar p{
+        padding-right: 0.5rem;
+        text-align: right;
+        font-size: 1.2rem;
+
+
+    }
+
+    #mainNav .navbar-nav .nav-item .nav-link {
+
+        margin: 0.5rem 1.25rem 0rem 1.25rem !important;
+    
+    }
+
+    
 
 
 
