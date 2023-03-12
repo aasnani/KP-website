@@ -9,7 +9,6 @@ html,body
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: clip;
 }
 @font-face {
     font-family: 'MontserratExtraBold';
@@ -405,7 +404,7 @@ justify-content: center;
     background: rgb(253, 253, 253);
     border: none;
 
-    top: 77px;
+    /* top: 77px; */
 
     border-radius: 0;
 
@@ -2157,9 +2156,9 @@ margin-bottom: 0;
         position: relative;
     }
 
-    #mainNav .navbar-nav .nav-item .nav-link:not(#dropdownMenuButton) {
+    #mainNav .navbar-nav .nav-item .nav-link {
 
-    margin: 0.5em 0.5em 0em 0.5em !important;
+    margin: 0.5em 1.5em 0em 1.5em !important;
 
     }
 
@@ -2172,7 +2171,7 @@ margin-bottom: 0;
 
 
     #mainNav .navbar-nav .nav-item{
-        width: 12.5%;
+        /* width: 12.5%; */
     }
 
 
@@ -2289,7 +2288,7 @@ margin-bottom: 0;
 }
 
 #collectionsDropdownMenu{
-    margin-top: -10px;
+    margin-top: 0px;
 }
 
 .image-nav-item{
@@ -2309,7 +2308,7 @@ margin-bottom: 0;
 }
 
 #mainNav .navbar-nav .nav-item{
-    width: 12.5%;
+    /* width: 12.5%; */
 }
 
 @media screen and (min-width: 1200px) {
@@ -2325,7 +2324,7 @@ margin-bottom: 0;
 
 
     .single-line-link{
-        line-height: 43px;
+        /* line-height: 43px; */
     }
 
     .dropdown-menu{
@@ -2371,7 +2370,8 @@ margin-bottom: 0;
 }
 
 .navbar-nav{
-
+    display: inline-flex;
+    align-items: center;
     margin-left: auto;
     margin-right: auto;
 }
