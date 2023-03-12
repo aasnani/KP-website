@@ -794,7 +794,9 @@ button{
 }
 
 #gold p{
-    font-size: 16px;
+    font-size: max(0.8vw, 1rem);
+    text-shadow: 0 0 0.1px black;
+    color: black;
 }
 
 #diamond span , #gold span , #collections span{
@@ -1325,12 +1327,13 @@ margin: 0;
 .kp-viewmore{
     border: 2px solid black;
     padding: 6px 15px;
-    border-radius: 6px;
+    border-radius: 5px;
     position: relative;
     top: 43px;
     font-weight: 700;
     color: black;
     transition: all .2s ease-in-out;
+    font-size: max(0.75vw, 1rem);
 }
 .kp-viewmore:hover{
     background: black;
@@ -2198,18 +2201,16 @@ margin-bottom: 0;
 
 .flickity-container-gold .container-cell{
     width: 20%;
-    opacity: 0.85;
     margin: 0px 20px;
+}
 
-
-
+.flickity-container-gold .container-cell img{
+    opacity: 0.85;
 }
 
 
-.flickity-container-gold .is-selected{
+.flickity-container-gold .is-selected img{
     opacity: 1;
-
-
 }
 
 .flickity-container-diamond .container-cell{
