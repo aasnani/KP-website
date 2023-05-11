@@ -3,12 +3,15 @@
 @charset "utf-8";
 
 
+
 html,body
 {
     width: 100%;
     height: 100%;
     margin: 0px;
     padding: 0px;
+    /* overflow-x:hidden;  scrollbar goes underneath header */
+    /* overflow-x:clip; issue with flexbox */
 }
 @font-face {
     font-family: 'MontserratExtraBold';
@@ -20,15 +23,11 @@ html,body
          url('../fonts/MontserratExtraBold.svg#MontserratExtraBold') format('svg');
 }
 
-
-
 body {
 
     margin: 0;
 
     font-family: 'Montserrat', sans-serif;
-
-
 
     background-size: cover;
     background-repeat: no-repeat;
@@ -367,30 +366,6 @@ justify-content: center;
 	text-transform: capitalize
 }
 
-#new-arr{
-
-
-
-
-}
-
-#diamond{
-
-
-
-
-}
-
-#contact-us{
-
-
-
-
-
-
-}
-
-
 
 
 .inner-img-div {
@@ -411,6 +386,17 @@ justify-content: center;
 
 
 
+
+}
+
+/* layout shift fancybox */
+body.compensate-for-scrollbar {
+    overflow: visible !important;
+}
+
+
+.compensate-for-scrollbar{
+  padding-right:0px !important;
 
 }
 
@@ -526,6 +512,12 @@ justify-content: center;
     padding: 8px 0 7px;
 
 }
+
+.fancybox__caption {
+  font-size:25px;
+
+}
+
 
 .related{
 
@@ -793,6 +785,10 @@ button{
 
 }
 
+#collections img{
+  border-radius:5px;
+}
+
 #gold p{
     font-size: max(0.8vw, 1rem);
     text-shadow: 0 0 0.1px black;
@@ -819,6 +815,50 @@ button{
 
 
 
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide columns by default */
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Add a grey background color on mouse-over */
+.btn:hover {
+  background-color: #ddd;
+}
+
+/* Add a dark background color to the active button */
+.btn.active {
+  background-color: #666;
+   color: white;
+}
 
 .contact-arrivals {
 
@@ -1078,14 +1118,14 @@ span{
 
 .cover-con h4 {
     font-size: 21px;
-    color: #FFFFFF;
+    color:#e4bab4;
     text-align: center;
     font-weight:normal;
 }
 
 .cover-con p{
     font-size: 16px;
-    color: #FFFFFF;
+    color:#e4bab4;
     text-align: center;
 }
 
@@ -1098,21 +1138,28 @@ span{
     display: flex;
 
     justify-content: space-around;
-    background-color: #4f3945;
+    background-color: #36384d;
+
 
     font-family: 'Raleway,sans-serif';
 
 }
 
-.form-control {
-
-
-
-}
 
 .card {
   border: 0px;
-  background-color: #59464D;
+  /* background-color: #59464D; */
+}
+
+.btn {
+  border: none !important;
+  outline: none !important;
+  padding: 8px 7px !important;
+  cursor: pointer !important;
+  font-size: 16px !important;
+}
+#myBtnContainer {
+  padding: 15px 0;
 }
 
 .btn-success {
@@ -1140,7 +1187,8 @@ span{
 
 .footer-sdr {
 
-    background-color: #4f3945;
+
+    background-color: #36384d;
 
     color: #f8f2f0;
 
@@ -1172,7 +1220,7 @@ display: block !important;
 
 .footer-sdr a{
 
-    color: #FFFFFF;
+    color:#e4bab4;
 
 }
 
@@ -1899,16 +1947,7 @@ padding-right: 20px;
     float: left;
     width: 100%;
 }
-	.btn {
-    border: none !important;
-    outline: none !important;
-    padding: 8px 7px !important;
-    cursor: pointer !important;
-    font-size: 16px !important;
-}
-	#myBtnContainer {
-    padding: 15px 0;
-}
+
 	.d-arrive-logo {
     width: 56px;
 }
@@ -1975,9 +2014,11 @@ margin-bottom: 0;
 
 	.cover-con p {
     font-size: 13px;
+    color:#e4bab4;
 }
 .cover-con h4 {
     font-size: 18px;
+    color:#e4bab4;
 	}
 .cover-con li {
     list-style: none;
@@ -2032,7 +2073,7 @@ margin-bottom: 0;
     margin-bottom: 1rem;
 }
 .dropdown .dropdown-menu{
-    display: flex;
+    display: block;
     opacity:0;
     visibility: hidden;
     opacity: 0;
@@ -2080,9 +2121,9 @@ margin-bottom: 0;
 #mainNav .navbar-nav .nav-item .nav-link, .dropdown-item {
 
     color: inherit;
-    font-family: 'Spectral',serif;
+    font-family: 'Playfair Display',serif;
     font-size: 85%;
-    font-weight: normal;
+    font-weight: Bold;
 
     letter-spacing: 0.5px;
 }
@@ -2117,11 +2158,12 @@ margin-bottom: 0;
         font-size: 1.1vw;
 
 
+
     }
 
     #kp-logo-test{
-        height:45px;
-        width: 90px;
+        height:29px;
+        width: 200px;
         margin: 0.5rem 0rem 0.5rem 1.5rem;
     }
 
@@ -2265,10 +2307,12 @@ margin-bottom: 0;
 }
 
 .form-control{
-    border: solid lightgray;
+    /* border: #4D3643; */
 
     background-color: rgba(255, 255, 255 ,1);
-    border-radius: 0;
+    /* border-radius: 0; */
+    color:black;
+    font-weight:600;
 }
 
 .form-control:focus{
@@ -2278,14 +2322,14 @@ margin-bottom: 0;
 }
 
 #contact-us-form-section{
-    background-color: lightgray;
+    background-color: #4D3643;
     padding-top:20px;
 }
 
 #top-navbar div{
     padding-right: 0.5rem;
     text-align: right;
-    background-color: #eeecec;
+    background-color: #36384d;
 
 
 }
@@ -2312,6 +2356,7 @@ margin-bottom: 0;
     padding-left: 5px;
     font-family: 'Twentieth Century',serif;
     letter-spacing: 0.5px;
+    color:#e4bab4 !important;
 }
 
 .container{
@@ -2325,8 +2370,8 @@ margin-bottom: 0;
 @media screen and (min-width: 1450px) {
 
     #kp-logo-test{
-        height:55px;
-        width: 110px;
+        height:29px;
+        width: 200px;
         margin: 0.5rem 0rem 0.5rem 1.5rem;
     }
 
@@ -2406,6 +2451,7 @@ margin-bottom: 0;
 
 #navbar-row{
     background-color: rgb(255, 255, 255);
+    padding-bottom:5px;
 }
 
 #top-navbar{
@@ -2618,7 +2664,7 @@ iframe{
 
     html {
 
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
 
 
     }
@@ -2804,7 +2850,7 @@ iframe{
 }
 
 
-#homepage, #newarrivalpage, #goldpage, #diamondpage, #antiquepage, #gemstonepage, #mangalsutrapage, #engagementpage{padding-top:110px;}
+#homepage, #newarrivalpage, #goldpage, #diamondpage, #antiquepage, #gemstonepage, #mangalsutrapage, #engagementpage{padding-top:90.3px;}
 
 
 @media  (max-width:992px){
