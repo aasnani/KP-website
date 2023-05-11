@@ -702,6 +702,9 @@ button{
 
 
 }
+.diamond-container img{
+cursor: pointer;
+}
 
 .cover-div{
 
@@ -2150,7 +2153,7 @@ margin-bottom: 0;
 
     }
 
-    #homepage, #newarrivalpage, #goldpage, #diamondpage, #antiquepage, #gemstonepage, #mangalsutrapage, #engagementpage{padding-top:95px !important;}
+    #homepage, #newarrivalpage, #goldpage, #diamondpage, #antiquepage, #gemstonepage, #mangalsutrapage, #engagementpage,#templepage,#rhodiumpage{padding-top:95px !important;}
 
     #top-navbar p{
         padding-right: 0.5rem;
@@ -2850,7 +2853,7 @@ iframe{
 }
 
 
-#homepage, #newarrivalpage, #goldpage, #diamondpage, #antiquepage, #gemstonepage, #mangalsutrapage, #engagementpage{padding-top:90.3px;}
+#homepage, #newarrivalpage, #goldpage, #diamondpage, #antiquepage, #gemstonepage, #mangalsutrapage, #engagementpage,#templepage,#rhodiumpage{padding-top:90.3px;}
 
 
 @media  (max-width:992px){
@@ -3093,6 +3096,6 @@ iframe{
     padding-bottom: 10px;
   }
 
-  #newarrivalpage, #goldpage, #diamondpage, #antiquepage, #gemstonepage, #mangalsutrapage, #engagementpage{
+  #newarrivalpage, #goldpage, #diamondpage, #antiquepage, #gemstonepage, #mangalsutrapage, #engagementpage,#templepage,#rhodiumpage{
     display: none;
   }
