@@ -53,23 +53,15 @@ html, body {
 
 }
 
-#landing-section {
 
 
-
-}
-
-
-
-
-
-.active-new{
+/* .active-new{
 
        border-bottom: 1px solid #332d2d;
 
-}
+} */
 
-.new-btn{
+/*NOT USED?  .new-btn{
 
     background: none;
 
@@ -79,7 +71,7 @@ html, body {
 
     border-top: 0;
 
-}
+} */
 
 .sidebar {
     height: 100%;
@@ -88,10 +80,28 @@ html, body {
     z-index: 100;
     top: 0;
     left: 0;
-    background-color: #4f3945;
+    background-color: #36384d;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
+    padding-top:50px;
+}
+
+.mobile-header{
+  /* display:flex;
+  align-items:center;
+  justify-content:space-between; */
+  position:relative;
+  background-color: #36384d;
+}
+
+.mobile-logo{
+display:flex;
+justify-content:center;
+}
+
+.mobile-logo img{
+height:55px;
+padding:5px;
 }
 
 
@@ -127,7 +137,7 @@ html, body {
 
 .sidebar .closebtn {
 
-    position: fixed;
+    position: absolute;
 
     top: 0;
 
@@ -147,15 +157,16 @@ html, body {
 
     cursor: pointer;
 
-    background-color: #4f3945;
+    background-color: #36384d;
 
     color: white;
 
     padding: 10px 15px;
 
     border: none;
-
-    float:right;
+    position: absolute;
+top: 0;
+left: 0;
 
 }
 
@@ -177,9 +188,9 @@ html, body {
 .arrive-btm{
     margin-top: 24px;
 }
-.drop-ctive{
+/* NOT USED?  .drop-ctive{
 	color: #fff !important;
-}
+} */
 .inner-banner{
 	position: relative
 }
@@ -208,29 +219,15 @@ html, body {
 
     .sidebar a {font-size: 18px;}
 
-    .btn-div{height:51px;}
+    .sidebar{height:50px;}
 
 }
 
 
 
-.btn-div{
-
-    position: fixed;
-
-    z-index: 999;
-
-    background: #4f3945;
-
-    width: 100%;
-
-    height:51px;
-    top:0;
 
 
-}
-
-p.dotted {border-style: dotted;}
+/* NOT USED? p.dotted {border-style: dotted;}
 
 p.dashed {border-style: dashed;}
 
@@ -250,10 +247,10 @@ p.none {border-style: none;}
 
 p.hidden {border-style: hidden;}
 
-p.mix {border-style: dotted dashed solid double;}
+p.mix {border-style: dotted dashed solid double;} */
 
 
-
+/*  NOT USED
 .d-arrive{
     position: relative;
 	width: 100%
@@ -271,7 +268,17 @@ justify-content: center;
 }
 .d-arrive-wrapper h6{
 	font-size: 13px
-}
+  .d-arrive-logo{
+  	width: 150px
+  }
+  .d-arrive-txt h1{
+  	padding-top: 20px;
+  	font-size: 30px;
+
+  }
+} */
+
+/*
 .dimond-txt-bg{
 	position: relative;
 	margin: 0px 0 24px;
@@ -290,18 +297,9 @@ justify-content: center;
 	font-size: 23px;
 	font-family: 'MontserratExtraBold';
 }
-.d-arrive-logo{
-	width: 150px
-}
-.d-arrive-txt h1{
-	padding-top: 20px;
-	font-size: 30px;
 
-}
 
 .border-only{
-
-
 
     padding: 4px;
 
@@ -330,13 +328,8 @@ justify-content: center;
 
 
 
-}
+} */
 
-.mobile-logo {
-
-    left:5px !important
-
-}
 
 .container-product{
 
@@ -461,46 +454,6 @@ body.compensate-for-scrollbar {
 
 }
 
-.type-price {
-
-    text-align: left;
-
-    color: #c36e00;
-
-    font-size: 16px;
-
-}
-
-.book-div {
-
-    display: flex;
-
-}
-
-.book-now {
-
-    background-color: #e2930e;
-
-    border: 0;
-
-    color: white;
-
-    padding: 0px 10px 0 10px;
-
-    font-weight: 500;
-
-}
-
-.small-text{
-
-    font-size: 10px;
-
-    margin: 0;
-
-    text-align: center;
-    text-transform: capitalize;
-
-}
 
 .card-body p {
 
@@ -518,12 +471,6 @@ body.compensate-for-scrollbar {
 
 }
 
-
-.related{
-
-
-
-}
 
 .related h3 {
 
@@ -560,22 +507,6 @@ body.compensate-for-scrollbar {
 }
 
 
-
-
-
-.logo-l-r {
-
-    padding-left: 25px;
-
-    padding-right: 25px;
-
-}
-
-.video-main{
-
-
-
-}
 
 #top-navbar a:hover {
 
@@ -908,25 +839,6 @@ cursor: pointer;
 
 
 
-@media only screen and (min-width: 1367px) {
-
-    .btn-div{
-        display: none;
-    }
-
-    #diamond, #gold, #new-arr, #collections{
-        padding-top: 48px;
-        padding-bottom: 62px;
-
-        scroll-margin-top: 35px;
-
-    }
-
-    #contact-us{
-        padding-top: 48px;
-    }
-
-}
 
 
 #gold, #collections, #pagebreak2, #pagebreak4{
@@ -949,18 +861,26 @@ cursor: pointer;
 
 }
 
+@media only screen and (min-width: 1367px) {
 
+    .sidebar, .mobile-header{
+        display: none;
+    }
 
+    #diamond, #gold, #new-arr, #collections{
+        padding-top: 48px;
+        padding-bottom: 62px;
 
+        scroll-margin-top: 35px;
 
+    }
 
-
-
-section {
-
-
+    #contact-us{
+        padding-top: 48px;
+    }
 
 }
+
 
 .py-5 {
 
@@ -1544,12 +1464,12 @@ margin: 0;
 }
 
 
-
+/*
 .mobile-logo{
 
     display: none;
 
-}
+} */
 
 img{
 
@@ -1886,27 +1806,7 @@ margin-bottom: 21px;
 		padding-bottom: 20px;
 
 	}
-	.mobile-logo {
 
-        width: 58px;
-
-        position: fixed;
-
-        display: block;
-
-        z-index: 999999;
-
-        right: 5px;
-
-        top: 0;
-
-    }
-
-    .mobile-logo img{
-
-        width: 100%;
-
-    }
 	.container-product{
 
     width: 100%;
@@ -2153,7 +2053,7 @@ margin-bottom: 0;
 
     }
 
-    #homepage, #newarrivalpage, #goldpage, #diamondpage, #antiquepage, #gemstonepage, #mangalsutrapage, #engagementpage,#templepage,#rhodiumpage{padding-top:95px !important;}
+    /* #homepage, #newarrivalpage, #goldpage, #diamondpage, #antiquepage, #gemstonepage, #mangalsutrapage, #engagementpage,#templepage,#rhodiumpage{padding-top:95px !important;} */
 
     #top-navbar p{
         padding-right: 0.5rem;
@@ -2207,8 +2107,10 @@ margin-bottom: 0;
     #mainNav .navbar-nav .nav-item .nav-link:not(#dropdownMenuButton):not(#kp-logo):hover::after{
         width: 80%;
     }
-
-
+    .sidebar, .mobile-header{
+        display: none;
+    }
+#homepage, #newarrivalpage, #goldpage, #diamondpage, #antiquepage, #gemstonepage, #mangalsutrapage, #engagementpage,#templepage,#rhodiumpage{padding-top:44px;}
 
     .navbar .navbar-nav .nav-item .nav-link:not(#dropdownMenuButton){
         position: relative;
@@ -2853,20 +2755,22 @@ iframe{
 }
 
 
-#homepage, #newarrivalpage, #goldpage, #diamondpage, #antiquepage, #gemstonepage, #mangalsutrapage, #engagementpage,#templepage,#rhodiumpage{padding-top:90.3px;}
+/* #homepage, #newarrivalpage, #goldpage, #diamondpage, #antiquepage, #gemstonepage, #mangalsutrapage, #engagementpage,#templepage,#rhodiumpage{padding-top:90.3px;} */
 
 
 @media  (max-width:992px){
-  #main{padding-top:51px;}
+
+  #main{padding-top:50px;}
 
   .flickity-container-gold .container-cell{
     width: 90%;
     opacity: 0.8;
     margin: 0px 20px;
-
-
-
 }
+    /* #homepage, #newarrivalpage, #goldpage, #diamondpage, #antiquepage, #gemstonepage, #mangalsutrapage, #engagementpage,#templepage,#rhodiumpage{padding-top:51px;} */
+
+
+
 
 .flickity-container-gold .is-selected{
     opacity: 1;
