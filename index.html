@@ -5,7 +5,6 @@
 <head>
 
   <meta charset="utf-8">
-  <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
@@ -15,24 +14,21 @@
   <link href="css/agency.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css" />
-  <link href="css/my-styles.css" rel="stylesheet">
-  <link href="css/owl.carousel.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
-  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
+    <link href="css/my-styles.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="css/animate.min.css"> -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/flickity.pkgd.min.js"></script>
+  <script src="js/flickity-fade.js"></script>
   <style>
-    /*Start Video Style*/
-
     header {
-
-      /* background: url(images/bg-video.jpg) black no-repeat center center scroll; */
 
       position: relative;
 
-      /* background-color: black; */
 
       height: 100vh;
 
@@ -98,19 +94,12 @@
 
       width: 100%;
 
-      /* background-color: black; */
-
       opacity: 0.5;
 
       z-index: 1;
 
     }
 
-
-      .slider-image {
-        /* max-height: 90vh; */
-      }
-    
 
 
 
@@ -180,23 +169,12 @@
 
       }
 
-      /* #landing-section {
-
-                    padding-top: 51px;
-
-                    padding-bottom: 31px;
-
-                } */
-
 
 
     }
 
 
 
-
-
-    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 
 
 
@@ -223,6 +201,8 @@
 
 
     /*End Video Style*/
+
+
   </style>
 
 </head>
@@ -230,12 +210,101 @@
 <script src="https://www.w3schools.com/lib/w3.js"></script>
 
 <body>
-
+  <script src="js/scrolling-nav.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/ScrollToPlugin.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
   <!-- Begin Constant Contact Active Forms -->
   <script> var _ctct_m = "a0858302d39649bd2d8b20aa7a94acb8"; </script>
   <script id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async
     defer></script>
   <!-- End Constant Contact Active Forms -->
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+<!-- <div class="container-fluid"> -->
+    <div class="row mx-auto" id="navbar-row">
+      <div class="col mx-auto" id="top-navbar">
+        <div>
+          <p><a style="color:#e4bab4" href="tel:781-229-9170"><i class="fa fa-phone" style="color:#e4bab4"></i> 781-229-9170</a></p>
+          <p><i class="bi bi-instagram"></i> kaypeejewelers </p>
+          <p> <a style="color:#e4bab4" href="https://goo.gl/maps/SpqAM3tbYXB2t5BdA" target="_blank" rel="noopener noreferrer"><i
+                class="bi bi-pin-map-fill"style="color:#e4bab4"></i> Burlington, MA</a></p>
+        </div>
+      </div>
+      <div class="w-100"></div>
+      <a href="#" onclick="changePage('#homepage')" class="navbar-brand"><img src="./images/logoplain.png"
+          class="img-fluid mr-auto" id="kp-logo-test"></a>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+
+
+
+
+
+
+        <ul class="navbar-nav justify-content-center text-uppercase">
+          <li class="nav-item"> <a class="nav-link single-line-link active" href="#"
+              onclick="changePage('#homepage')">Home</a> </li>
+
+
+          <li class="nav-item"> <a class="nav-link single-line-link" href="#"
+              onclick="changePage('#newarrivalpage')">New Arrivals</a> </li>
+          <li class="nav-item"> <a class="nav-link " href="#" onclick="changePage('#goldpage')">Gold Jewelry</a>
+          </li>
+          <li class="nav-item"> <a class="nav-link" href="#" onclick="changePage('#diamondpage')">Diamond Jewelry</a>
+          </li>
+
+
+          </li>
+
+          <li class="nav-item"> <a class="nav-link " href="#" onclick="changePage('#antiquepage')">Antique Jewelry</a>
+          </li>
+
+          <li class="nav-item"> <a class="nav-link " href="#" onclick="changePage('#gemstonepage')">Gemstone Jewelry</a>
+          </li>
+
+          <li class="dropdown nav-item" id="collectionsDropdown">
+
+            <a class="nav-link single-line-link dropdown-toggle" data-toggle="dropdown" id="dropdownMenuButton"
+              aria-haspopup="true" aria-expanded="false">collections</a>
+
+
+
+            <div class="dropdown-menu dropdown-menu-right collection-menu" aria-labelledby="dropdownMenuButton"
+              id="collectionsDropdownMenu">
+
+              <a class="dropdown-item" href="#" onclick="changePage('#mangalsutrapage')">Mangal Sutras</a>
+              <a class="dropdown-item" href="#" onclick="changePage('#engagementpage')">Engagement Rings and Wedding
+                Bands</a>
+              <a class="dropdown-item" href="#" onclick="changePage('#rhodiumpage')">Rhodium Bangles</a>
+              <a class="dropdown-item" href="#" onclick="changePage('#templepage')">Temple Jewelry</a>
+
+            </div>
+
+          </li>
+
+
+
+          <li class="nav-item"> <a id="contact-us-nav-link" class="nav-link single-line-link" href="#"
+              onclick="goToContactUs()">Contact Us</a> </li>
+
+        </ul>
+      </div>
+
+
+    </div>
+  <!-- </div> -->
+
+
+  </nav>
+
+  <div class="mobile-header">
+
+    <button class="openbtn" onClick="openNav()">☰</button>
+    <div class="mobile-logo">
+      <a href="index.html"><img src="images/logoplain.png"/></a>
+    </div>
+    </div>
 
   <div id="mySidebar" class="sidebar">
 
@@ -254,7 +323,7 @@
 
 
 
-      <div id="drop" class="dropdown-menu collection-menu d-none" aria-labelledby="dropdownMenuButton" style="left:4px">
+      <div id="drop" class="dropdown-menu collection-menu d-none" aria-labelledby="dropdownMenuButton" >
 
         <a class="dropdown-item link" href="stone.html">Precious Gemstone Jewelry</a>
         <a class="dropdown-item link" href="antique.html">Antique Jewelry</a>
@@ -274,115 +343,35 @@
 
 
 
-  <div id="main">
-
-    <div class="btn-div">
-
-      <button class="openbtn" onClick="openNav()">☰ </button>
-
-    </div>
 
 
-    <div class="mobile-logo">
-
-      <a href="index.html"><img src="images/KPlogo.webp" /></a>
-
-    </div>
-
-
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-
-      <!-- <div class="container"> -->
-        <div class="row mx-auto" id= "navbar-row">
-          <div class="col ml-auto" id="top-navbar">
-            <div><p><a href="tel:781-229-9170"><i class="fa fa-phone"></i> 781-229-9170</a></p> <p><i class="bi bi-instagram"></i> kaypeejewelers </p><p> <a href="https://goo.gl/maps/SpqAM3tbYXB2t5BdA" target="_blank" rel="noopener noreferrer"><i class="bi bi-pin-map-fill"></i> Burlington, MA</a></p></div>
-          </div>
-          <div class="w-100"></div>
-        <!-- <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> Menu </button> -->
-        <a href="index.html" class="navbar-brand"><img src="./images/KPlogo_test.webp" class="img-fluid mr-auto" id="kp-logo-test"></a>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-
-          
-
-            
-
-            
-            <!-- <div class="col mx-auto" style="width: 100%;"> -->
-          <ul class="navbar-nav justify-content-center text-uppercase">
-            <li class="nav-item"> <a class="nav-link single-line-link active" href="index.html">Home</a> </li>
-
-
-            <li class="nav-item"> <a class="nav-link single-line-link" href="new_arrivals.html">New Arrivals</a> </li>
-            <li class="nav-item"> <a class="nav-link " href="gold-jewelry.html">Gold Jewelry</a> </li>
-            <li class="nav-item"> <a class="nav-link" href="diamond.html">Diamond Jewelry</a> </li>
-
-
-            </li>
-
-            <li class="nav-item"> <a class="nav-link " href="antique.html">Antique Jewelry</a> </li>
-
-            <li class="nav-item"> <a class="nav-link " href="stone.html">Gemstone Jewelry</a> </li>
-
-            <li class="dropdown nav-item" id="collectionsDropdown">
-
-              <a class="nav-link single-line-link dropdown-toggle" data-toggle="dropdown" id="dropdownMenuButton"
-                aria-haspopup="true" aria-expanded="false">collections</a>
-
-
-
-              <div class="dropdown-menu dropdown-menu-right collection-menu" aria-labelledby="dropdownMenuButton"
-                id="collectionsDropdownMenu">
-
-                <a class="dropdown-item" href="mangalsutra.html">Mangal Sutras</a>
-                <a class="dropdown-item" href="rings.html">Engagement Rings and Wedding Bands</a>
-                <a class="dropdown-item" href="rings.html">Rhodium Bangles</a>
-                <a class="dropdown-item" href="rings.html">Temple Jewelry</a>
-
-              </div>
-
-            </li>
-
-
-
-            <li class="nav-item"> <a id="contact-us-nav-link" class="nav-link single-line-link" href="index.html#contact-us">Contact Us</a> </li>
-
-          </ul>
-        </div>
-
-
-          <!-- <ul class="navbar-nav ml-auto">
-            <li class="nav-item" style="width:100%;"> <a id="nav-link" class="nav-link" style="margin:0 !important;" href="index.html#contact-us"><i class="fa fa-phone"></i> 781-229-9170<br><i class="bi bi-instagram"></i> @kpjewels<br>Burlington, MA</a> </li>
-          </ul> -->
-
-
-        <!-- </div> -->
-        </div>
-
-      <!-- </div> -->
-
-    </nav>
-
-
+  <div id="homepage">
 
     <section id="landing-section">
 
       <div class="flickity-container-banner">
         <div class="container-cell">
           <img src="images/Banner/banner_test.webp" alt="Los Angeles" width="1100" height="500"
-          class="mobile-disable slider-image img-fluid">
+            class="mobile-disable slider-image img-fluid">
           <img src="images/Banner/banner_test.webp" alt="Los Angeles" width="1100" class="mobile-enable">
         </div>
         <div class="container-cell">
           <img src="images/Banner/banner_test_2.webp" alt="Chicago" width="1100" height="500"
-          class="mobile-disable slider-image img-fluid">
+            class="mobile-disable slider-image img-fluid">
 
-        <img src="images/Banner/banner_test_2.webp" alt="Los Angeles" width="1100" class="mobile-enable">
+          <img src="images/Banner/banner_test_2.webp" alt="Los Angeles" width="1100" class="mobile-enable">
         </div>
         <div class="container-cell">
           <img src="images/Banner/banner_test_3.webp" alt="Chicago" width="1100" height="500"
-          class="mobile-disable slider-image img-fluid"> 
+            class="mobile-disable slider-image img-fluid">
 
-        <img src="images/Banner/banner_test_3.webp" alt="Los Angeles" width="1100" class="mobile-enable">
+          <img src="images/Banner/banner_test_3.webp" alt="Los Angeles" width="1100" class="mobile-enable">
+        </div>
+        <div class="container-cell">
+          <img src="images/Banner/goldbanner.webp" alt="Chicago" width="1100" height="500"
+            class="mobile-disable slider-image img-fluid">
+
+          <img src="images/Banner/goldbanner.webp" alt="Los Angeles" width="1100" class="mobile-enable">
         </div>
       </div>
 
@@ -393,11 +382,11 @@
 
     </section>
 
-    <div id="special-hours">
+    <!-- <div id="special-hours">
       Christmas Hours: 12:00 - 18:00
       <br>
       New Years Hours: Closed
-    </div>
+    </div> -->
 
 
 
@@ -409,7 +398,7 @@
 
 
 
-        <h3 class="section-headers wow fadeIn" align="center">New Arrivals</h3>
+        <h3 class="section-headers  fadeIn" align="center">New Arrivals</h3>
 
 
 
@@ -426,14 +415,13 @@
 
                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
 
-                  <div class="new-arrive-product wow fadeInUp">
+                  <div class="new-arrive-product  ">
 
-                    <a data-fancybox data-src="images/img_1.jpg" data-caption="Gents and Ladies Matching Band"><img style="cursor: pointer;"
-                        src="images/img_1.jpg" width="100%;" /></a>
+                    <a data-fancybox data-src="images/Home-newarr/newarrivals1.webp" data-caption="Set of Meena Bangles"><img
+                         src="images/Home-newarr/newarrivals1.webp" width="100%;" /></a>
 
-                    <p><a>Elegant Antique Kara</a></p>
-
-                    <span>Collection: Antique</span>
+                    <p><a>Set of Meena Bangles | </a> <a class="new-arrival-collection-text"  href="#"
+                        onclick="changePage('#goldpage')"> Gold Collection</a></p>
 
 
 
@@ -445,14 +433,13 @@
 
                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
 
-                  <div class="new-arrive-product wow fadeInUp">
+                  <div class="new-arrive-product  ">
 
-                    <a data-fancybox data-src="images/img_2.jpg" data-caption="Gents and Ladies Matching Band"><img style="cursor: pointer;"
-                        src="images/img_2.jpg" width="100%;" /></a>
+                    <a data-fancybox data-src="images/Home-newarr/newarrivals2.webp" data-caption="Tri-color Necklace"><img
+                         src="images/Home-newarr/newarrivals2.webp" width="100%;" /></a>
 
-                    <p><a>Gulab Karas</a></p>
-
-                    <span> Collection: Gold Karas</span>
+                    <p><a>Tri-color Necklace | </a> <a class="new-arrival-collection-text"  href="#"
+                        onclick="changePage('#goldpage')"> Gold Collection</a></p>
 
                   </div>
 
@@ -460,14 +447,13 @@
 
                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
 
-                  <div class="new-arrive-product wow fadeInUp">
+                  <div class="new-arrive-product  ">
 
-                    <a data-fancybox data-src="images/img_1.jpg" data-caption="Gents and Ladies Matching Band"><img style="cursor: pointer;"
-                        src="images/img_1.jpg" width="100%;" /></a>
+                    <a data-fancybox data-src="images/Home-newarr/newarrivals3.webp" data-caption="Designer Peacock Ring"><img
+                         src="images/Home-newarr/newarrivals3.webp" width="100%;" /></a>
 
-                    <p><a>Lakshmi Necklace</a></p>
-
-                    <span>Collection: Temple Jewelry</span>
+                    <p><a>Designer Peacock Ring | </a> <a class="new-arrival-collection-text"  href="#"
+                        onclick="changePage('#goldpage')"> Gold Collection</a></p>
 
 
 
@@ -476,22 +462,21 @@
                 </div>
 
 
-                  <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
 
 
 
 
 
-                  <div class="new-arrive-product arrive-btm  wow fadeInUp">
+                  <div class="new-arrive-product arrive-btm   ">
 
 
 
-                    <a data-fancybox data-src="images/img_5.jpg" data-caption="Gents and Ladies Matching Band"><img style="cursor: pointer;"
-                        src="images/img_5.jpg" width="100%;" /></a>
+                    <a data-fancybox data-src="images/Home-newarr/newarrivals4.webp" data-caption="Trendy Wide Bangles"><img
+                         src="images/Home-newarr/newarrivals4.webp" width="100%;" /></a>
 
-                    <p><a>Trendy Rhodium Bangle</a></p>
-
-                    <span>Collection: Rhodium Bangle</span>
+                    <p><a>Trendy Wide Bangles | </a> <a class="new-arrival-collection-text"  href="#"
+                        onclick="changePage('#antiquepage')"> Gold Collection</a></p>
 
 
 
@@ -503,16 +488,15 @@
 
 
 
-                  <div class="new-arrive-product arrive-btm wow fadeInUp ">
+                  <div class="new-arrive-product arrive-btm   ">
 
 
 
-                    <a data-fancybox data-src="images/img_5.jpg" data-caption="Gents and Ladies Matching Band"><img style="cursor: pointer;"
-                        src="images/img_5.jpg" width="100%;" /></a>
+                    <a data-fancybox data-src="images/Home-newarr/newarrivals5.webp" data-caption="Antique Lakshmi Karas"><img
+                         src="images/Home-newarr/newarrivals5.webp" width="100%;" /></a>
 
-                    <p><a>Precious Peacock Emerald Bangles </a></p>
-
-                    <span>Collection: Gemstone Jewelry</span>
+                    <p><a>Antique Lakshmi Karas | </a> <a class="new-arrival-collection-text"  href="#"
+                        onclick="changePage('#templeepage')"> Temple Collection</a></p>
 
                   </div>
 
@@ -520,18 +504,17 @@
 
                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
 
-                  <div class="new-arrive-product arrive-btm  wow fadeInUp">
+                  <div class="new-arrive-product arrive-btm   ">
 
 
 
 
 
-                    <a data-fancybox data-src="images/img_5.jpg" data-caption="Gents and Ladies Matching Band"><img style="cursor: pointer;"
-                        src="images/img_5.jpg" width="100%;" /></a>
+                    <a data-fancybox data-src="images/Home-newarr/newarrivals6.webp" data-caption="Temple Kasu Karas"><img
+                         src="images/Home-newarr/newarrivals6.webp" width="100%;" /></a>
 
-                    <p><a>Precious Gemstone Oval Navratna Bangle</a></p>
-
-                    <span>Collection: Precious Gemstone Jewelry</span>
+                    <p><a>Temple Kasu Karas | </a> <a class="new-arrival-collection-text"  href="#"
+                        onclick="changePage('#templepage')"> Temple Collection</a></p>
 
                   </div>
 
@@ -541,162 +524,20 @@
 
             </div>
 
-            <!-- <div class="col-md-6 col-sm-12 wow fadeInUp">
 
-              <div class="border-only">
 
-                <a data-toggle="modal" data-target="#kpexampleModal7"><img src="images/Home-newarr/slide-1.png"
-                    d-arrive" />
-                  <div class="d-arrive-txt">
-										<div class="d-arrive-wrapper">
-										<img src="images/logoold.png" class="d-arrive-logo">
-										<h6>Elegant Fashion Design</h6>
-										<h1>Belle Diamond</h1>
-										<img src="images/divider2.png" class="divider2">
-										<p>Jewel that define you </p>
-										</div>
-									</div>
-                </a>
-              </div>
-            </div> -->
+
           </div>
         </div>
         <div class="col-md-12 text-center">
-          <a href="new_arrivals.html" class="kp-viewmore">View More</a>
+          <a href="#" onclick="changePage('#newarrivalpage')" class="kp-viewmore">View More</a>
         </div>
 
 
 
-      </div>
-
-
-      <div class="modal kp-modal fade" id="kpexampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog kp-modal-dialog">
-          <div class="modal-content kp-modal-content">
-            <div class="modal-header kp-modal-header">
-              <h5>Elegant Antique Kara</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body kp-modal-body">
-              <img src="images/Home-newarr/kara-big.jpg">
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="modal kp-modal fade" id="kpexampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog kp-modal-dialog">
-          <div class="modal-content kp-modal-content">
-            <div class="modal-header kp-modal-header">
-              <h5>Gulab Karas</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body kp-modal-body">
-              <img src="images/Home-newarr/gulab-big.jpg">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="modal kp-modal fade" id="kpexampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog kp-modal-dialog">
-          <div class="modal-content kp-modal-content">
-            <div class="modal-header kp-modal-header">
-              <h5>Lakshmi Necklace</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body kp-modal-body">
-              <img src="images/Home-newarr/lakshmi-big.jpg">
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="modal kp-modal fade" id="kpexampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog kp-modal-dialog">
-          <div class="modal-content kp-modal-content">
-            <div class="modal-header kp-modal-header">
-              <h5>Trendy Rhodium Bangle</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body kp-modal-body">
-              <img src="images/Home-newarr/rhodium-big.jpg">
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="modal kp-modal fade" id="kpexampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog kp-modal-dialog">
-          <div class="modal-content kp-modal-content">
-            <div class="modal-header kp-modal-header">
-              <h5>Peacock Emerald Bangles</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body kp-modal-body">
-              <img src="images/Home-newarr/emerald-big.jpg">
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="modal kp-modal fade" id="kpexampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog kp-modal-dialog">
-          <div class="modal-content kp-modal-content">
-            <div class="modal-header kp-modal-header">
-              <h5>Navratna Bangles</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body kp-modal-body">
-              <img src="images/Home-newarr/navratna-big.jpg">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="modal kp-modal fade" id="kpexampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog kp-modal-dialog">
-          <div class="modal-content kp-modal-content">
-            <div class="modal-header kp-modal-header">
-              <h5>New Arrivals</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body kp-modal-body">
-              <img src="images/Home-newarr/slide-1.png">
-            </div>
-
-          </div>
-        </div>
       </div>
 
     </section>
-
-    <img class="img-fluid" id="pagebreak1" src="images/page-break.png" style="height: 125px;"> <!-- NOTE 11-->
 
 
 
@@ -710,376 +551,143 @@
 
 
 
-        <h3 class="section-headers wow fadeInUp" align="center">Gold Jewelry</h3>
-
+        <h3 class="section-headers  " align="center">Gold Jewelry</h3>
+      <div class="container-fluid">
         <div class="row">
           <div class="col">
             <div class="flickity-container-gold">
               <div class="container-cell">
                 <div class="card">
-      
+
                   <div class="card-body">
 
-                    
-                    <a data-fancybox data-src="images/gold-jewelry/Band1.jpg" data-caption="Gents and Ladies Matching Band">
-                    <img src="images/gold-jewelry/Band1.jpg"
-                        width="100%" />
+
+                    <a data-fancybox data-src="images/gold-jewelry/gold_square.jpg"
+                      data-caption="Gents and Ladies Matching Band">
+                      <img src="images/gold-jewelry/gold_square.jpg" width="100%" />
                       <p class="gold-carousel-text">Gents and Ladies Matching Band</p>
                     </a>
-      
-      
-                    <!--<span>$90</span>-->
-      
+
+
                   </div>
-      
-      
-      
+
+
+
                 </div>
               </div>
               <div class="container-cell">
                 <div class="card">
-      
+
                   <div class="card-body">
-      
-                    <a data-fancybox data-src="images/gold-jewelry/Kara2.jpg" data-caption="Gulab Karas">
-                      <img src="images/gold-jewelry/Kara2.jpg"
+
+                    <a data-fancybox data-src="images/gold-jewelry/gold_square.jpg" data-caption="Gulab Karas">
+                      <img src="images/gold-jewelry/gold_square.jpg"
                       width="100%" />
                     <p class="gold-carousel-text">Gulab Karas</p>
                       </a>
-      
-      
+
+
                     <!--<span>$90</span>-->
-      
+
                   </div>
-      
-      
-      
+
+
+
                 </div>
               </div>
               <div class="container-cell">
                 <div class="card">
-      
+
                   <div class="card-body">
-      
-                    <a data-fancybox data-src="images/gold-jewelry/Kara1.jpg" data-caption="Ladies Meena Karas">
-                      <img src="images/gold-jewelry/Kara1.jpg"
+
+                    <a data-fancybox data-src="images/gold-jewelry/gold_square.jpg" data-caption="Ladies Meena Karas">
+                      <img src="images/gold-jewelry/gold_square.jpg"
                       width="100%" />
                     <p class="gold-carousel-text">Ladies Meena Karas</p>
                       </a>
-      
-      
+
+
                     <!--<span>$90</span>-->
-      
+
                   </div>
-      
-      
-      
+
+
+
                 </div>
               </div>
               <div class="container-cell">
                 <div class="card">
-      
+
                   <div class="card-body">
-      
-                    <a data-fancybox data-src="images/gold-jewelry/N1.jpg" data-caption="Pearl Necklace Set">
-                      <img src="images/gold-jewelry/N1.jpg"
+
+                    <a data-fancybox data-src="images/gold-jewelry/gold_square.jpg" data-caption="Pearl Necklace Set">
+                      <img src="images/gold-jewelry/gold_square.jpg"
                       width="100%" />
                     <p class="gold-carousel-text">Pearl Necklace Set</p>
                       </a>
-      
-      
+
+
                     <!--<span>$90</span>-->
-      
+
                   </div>
-      
-      
-      
+
+
+
                 </div>
               </div>
               <div class="container-cell">
                 <div class="card">
-      
+
                   <div class="card-body">
-      
-                    <a data-fancybox data-src="images/gold-jewelry/Kara3.jpg" data-caption="Handemade Filigree Karas">
-                      <img src="images/gold-jewelry/Kara3.jpg"
+
+                    <a data-fancybox data-src="images/gold-jewelry/gold_square.jpg" data-caption="Handemade Filigree Karas">
+                      <img src="images/gold-jewelry/gold_square.jpg"
                       width="100%" />
                     <p class="gold-carousel-text">Handemade Filigree Karas</p>
                       </a>
-      
-      
+
+
                     <!--<span>$90</span>-->
-      
+
                   </div>
-      
-      
-      
+
+
+
                 </div>
               </div>
               <div class="container-cell">
                 <div class="card">
-      
+
                   <div class="card-body">
-      
-                    <a data-fancybox data-src="images/gold-jewelry/Mens1.jpg" data-caption="Mens Kara">
-                      <img src="images/gold-jewelry/Mens1.jpg"
+
+                    <a data-fancybox data-src="images/gold-jewelry/gold_square.jpg" data-caption="Mens Kara">
+                      <img src="images/gold-jewelry/gold_square.jpg"
                       width="100%" />
                     <p class="gold-carousel-text">Mens Kara</p>
                       </a>
-      
-      
+
+
                     <!--<span>$90</span>-->
-      
+
                   </div>
-      
-      
-      
+
+
+
                 </div>
               </div>
             </div>
           </div>
         </div>
-  
 
-<!-- 
-        <div class="row">
-
-
-          <div class="owl-carousel owl-theme gold-slider">
-            <div class="item">
-              <div class="card">
-
-                <div class="card-body">
-
-                  <a data-toggle="modal" data-target="#kpexampleModal8"><img src="images/gold-jewelry/Band1.jpg"
-                      width="100%" />
-                    <p class="gold-carousel-text">Gents and Ladies Matching Band</p>
-                  </a>
-
-
-                 
-
-                </div>
-
-
-
-              </div>
-            </div>
-            <div class="item">
-
-
-              <div class="card">
-                <div class="card-body">
-
-                  <a data-toggle="modal" data-target="#kpexampleModal9"><img src="images/gold-jewelry/Kara2.jpg"
-                      width="100%" />
-                    <p class="gold-carousel-text">Gulab Karas</p>
-                  </a>
-
-
-
-                 
-
-                </div>
-              </div>
-
-
-
-
-            </div>
-            <div class="item">
-              <div class="card">
-                <div class="card-body">
-
-                  <a data-toggle="modal" data-target="#kpexampleModal10"><img src="images/gold-jewelry/Kara1.jpg"
-                      width="100%" />
-                    <p class="gold-carousel-text">Ladies Meena Karas</p>
-                  </a>
-
-
-
-                
-
-                </div>
-
-              </div>
-            </div>
-            <div class="item">
-              <div class="card">
-
-                <div class="card-body">
-
-                  <a data-toggle="modal" data-target="#kpexampleModal11"><img src="images/gold-jewelry/N1.jpg"
-                      width="100%" />
-                    <p class="gold-carousel-text">Pearl Necklace Set</p>
-                  </a>
-
-
-                  
-
-                </div>
-
-              </div>
-            </div>
-            <div class="item">
-              <div class="card">
-                <div class="card-body">
-
-                  <a data-toggle="modal" data-target="#kpexampleModal12"><img src="images/gold-jewelry/Kara3.jpg"
-                      width="100%" />
-                    <p class="gold-carousel-text">Handemade Filigree Karas</p>
-                  </a>
-
-
-
-                
-
-                </div>
-              </div>
-
-            </div>
-            <div class="item">
-              <div class="card">
-                <div class="card-body">
-
-                  <a data-toggle="modal" data-target="#kpexampleModal13"><img src="images/gold-jewelry/Mens1.jpg"
-                      width="100%" />
-                    <p class="gold-carousel-text">Mens Kara</p>
-                  </a>
-
-
-
-               
-
-                </div>
-
-              </div>
-            </div>
-
-          </div>
-
-        -->
-
-        </div>
-        <div class="col-md-12 text-center">
-          <a href="gold-jewelry.html" class="kp-viewmore">View More</a>
-        </div>
-
-
-        <!--
 
 
       </div>
-      <div class="modal kp-modal fade" id="kpexampleModal8" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog kp-modal-dialog">
-          <div class="modal-content kp-modal-content">
-            <div class="modal-header kp-modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body kp-modal-body">
-              <h5>Gents and Ladies Matching Band</h5>
-              <img src="images/gold-jewelry/Band1.jpg">
-            </div>
-
-          </div>
-        </div>
+      </div>
+      <div class="col-md-12 text-center">
+          <a href="#" onclick="changePage('#goldpage')" class="kp-viewmore">View More</a>
       </div>
 
-      <div class="modal kp-modal fade" id="kpexampleModal9" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog kp-modal-dialog">
-          <div class="modal-content kp-modal-content">
-            <div class="modal-header kp-modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body kp-modal-body">
-              <h5>Gulab Karas</h5>
-              <img src="images/gold-jewelry/Kara2.jpg">
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="modal kp-modal fade" id="kpexampleModal10" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog kp-modal-dialog">
-          <div class="modal-content kp-modal-content">
-            <div class="modal-header kp-modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body kp-modal-body">
-              <h5>Ladies Meena Karas</h5>
-              <img src="images/gold-jewelry/Kara1.jpg">
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="modal kp-modal fade" id="kpexampleModal11" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog kp-modal-dialog">
-          <div class="modal-content kp-modal-content">
-            <div class="modal-header kp-modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body kp-modal-body">
-              <h5>Pearl Necklace Set</h5>
-              <img src="images/gold-jewelry/N1.jpg">
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="modal kp-modal fade" id="kpexampleModal12" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog kp-modal-dialog">
-          <div class="modal-content kp-modal-content">
-            <div class="modal-header kp-modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body kp-modal-body">
-              <h5>Handemade Filigree Karas</h5>
-              <img src="images/gold-jewelry/Kara3.jpg">
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="modal kp-modal fade" id="kpexampleModal13" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog kp-modal-dialog">
-          <div class="modal-content kp-modal-content">
-            <div class="modal-header kp-modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body kp-modal-body">
-              <h5>Mens Kara</h5>
-              <img src="images/gold-jewelry/Mens1.jpg">
-            </div>
-
-          </div>
-        </div>
-      </div> -->
     </section>
-
-    <img class="img-fluid" id="pagebreak2" src="images/page-break.png" style="height: 125px;"> <!-- NOTE 11-->
 
     <section id="diamond">
 
@@ -1087,7 +695,7 @@
 
 
 
-        <h3 class="section-headers wow fadeInUp" align="center">Diamond Jewelry</h3>
+        <h3 class="section-headers  " align="center">Diamond Jewelry</h3>
 
 
 
@@ -1095,85 +703,117 @@
 
           <div class="row">
 
-            <div class="col-md-6 col-sm-12 wow fadeInUp">
+            <div class="col-lg-6 col-md-12 col-sm-12  " id="flickity-diamond-col">
 
-              <div class="right-row">
-
-                <div class="border-only-d">
-
-                  <a data-toggle="modal" data-target="#kpexampleModal-diamond1"><img src="images/diamond-side.jpg"
-                      class="d-arrive-d" /></a>
-
-
+              <div class="flickity-container-diamond">
+                <div class="container-cell">
+                  <a data-fancybox="diamond-gallery" data-src="images/dim3.webp" data-caption="3 in 1 Chandbali Jhumka">
+                    <img src="images/dim3.webp" width="100%" />
+                    <p>3 in 1 Chandbali Jhumka</p>
+                  </a>
                 </div>
-
+                <div class="container-cell">
+                  <a data-fancybox="diamond-gallery" data-src="images/dim4.webp" data-caption="Elegant Hanging Earrings">
+                    <img src="images/dim4.webp" width="100%" />
+                    <p>Elegant Hanging Earrings</p>
+                  </a>
+                </div>
+                <div class="container-cell">
+                  <a data-fancybox="diamond-gallery" data-src="images/dim5.webp" data-caption="Multi Layer Diamond Necklace">
+                    <img src="images/dim5.webp" width="100%" />
+                    <p>Multi Layer Diamond Necklace</p>
+                  </a>
+                </div>
+                <!-- <div class="container-cell">
+                  <a data-fancybox="diamond-gallery" data-src="images/dim3.webp" data-caption="Red diamond earrings">
+                    <img src="images/dim3.webp" width="100%" />
+                    <p>Red diamond earrings</p>
+                  </a>
+                </div> -->
               </div>
 
             </div>
 
-            <div class="col-md-6 col-sm-12 ">
-
-              <div class="left-row">
-
-                <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12 ">
 
 
 
-                  <div class="col-sm-12  wow fadeInUp">
-                    <div class="mb-13">
-
-                      <a data-toggle="modal" data-target="#kpexampleModal-diamond2">
-                        <img src="images/diamond_1_3.jpg" width="100%;" class="mt-mob dimond-txt-bg" />
-                        <div class="diamond-ban-text">
-                          <div class="diamond-ban-text-wrapper">
-                            <h6>20% off for all</h6>
-                            <h1>Diamond Lockets</h1>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
+              <div class="row">
 
 
 
-                  </div>
+                <div class="col-lg-4 col-sm-12   ">
 
-                  <div class="col-sm-12  wow fadeInUp">
-                    <div class="mb-13">
-                      <a data-toggle="modal" data-target="#kpexampleModal-diamond3"><img src="images/diamond_1_2.jpg"
-                          class="dimond-txt-bg" width="100%;" />
-                        <div class="diamond-ban-text">
-                          <div class="diamond-ban-text-wrapper">
-                            <h6>15% off for all</h6>
-                            <h1>Diamond Rings</h1>
-                          </div>
-                        </div>
-
-                      </a>
-                    </div>
+                  <a data-fancybox data-src="images/dim6.webp" data-caption="Solitaire Diamond Ring">
+                    <img src="images/dim6.webp" width="100%" />
+                    <p>Solitaire Diamond Ring</p>
+                  </a>
 
 
-                  </div>
-
-                  <div class="col-sm-12 wow fadeInUp">
-
-                    <a data-toggle="modal" data-target="#kpexampleModal-diamond4"><img src="images/diamond_1_4.jpg"
-                        width="100%;" class="dimond-txt-bg" />
-                      <div class="diamond-ban-text">
-                        <div class="diamond-ban-text-wrapper">
-                          <h6>15% off for all</h6>
-                          <h1>Diamond Ear Rings</h1>
-                        </div>
-                      </div>
-
-                    </a>
-
-
-
-                  </div>
 
                 </div>
 
+                <div class="col-lg-4 col-sm-12   ">
+
+                  <a data-fancybox data-src="images/dim7.webp" data-caption="Colorful Wedding Bands">
+                    <img src="images/dim7.webp" width="100%" />
+                    <p>Colorful Wedding Bands</p>
+                  </a>
+
+
+
+                </div>
+
+                <div class="col-lg-4 col-sm-12   ">
+
+                  <a data-fancybox data-src="images/dim8.webp" data-caption="Rose and White Cocktail Ring">
+                    <img src="images/dim8.webp" width="100%" />
+                    <p>Rose and White Cocktail Ring</p>
+                  </a>
+
+
+
+                </div>
+
+                <div class="w-100"></div>
+
+                <div class="col-lg-4 col-sm-12   ">
+
+                  <a data-fancybox data-src="images/dim1.webp" data-caption="Twist Halo Solitaire">
+                    <img src="images/dim1.webp" width="100%" />
+                    <p>Twist Halo Solitaire</p>
+                  </a>
+
+
+
+                </div>
+
+                <div class="col-lg-4 col-sm-12   ">
+
+                  <a data-fancybox data-src="images/dim1.webp" data-caption="Twist Halo Solitaire">
+                    <img src="images/dim1.webp" width="100%" />
+                    <p>Twist Halo Solitaire</p>
+                  </a>
+
+
+
+                </div>
+
+                <div class="col-lg-4 col-sm-12   ">
+
+                  <a data-fancybox data-src="images/dim2.webp" data-caption="Designer Trendy Necklace">
+                    <img src="images/dim2.webp" width="100%" />
+                    <p>Designer Trendy Necklace</p>
+                  </a>
+
+
+
+                </div>
+
+
               </div>
+
+
 
 
 
@@ -1186,7 +826,7 @@
         </div>
 
         <div class="col-md-12 text-center">
-          <a href="diamond.html" class="kp-viewmore">View More</a>
+            <a href="#" onclick="changePage('#diamondpage')"class="kp-viewmore">View More</a>
         </div>
 
 
@@ -1203,7 +843,7 @@
             </div>
             <div class="modal-body kp-modal-body">
               <h5>Diamond Jewelry</h5>
-              <img src="images/diamond-side.jpg">
+              <img src="images/Dia-Jew-Home-1.webp">
             </div>
 
           </div>
@@ -1266,8 +906,6 @@
 
     </section>
 
-    <img class="img-fluid" id="pagebreak3" src="images/page-break-white.png" style="height: 125px;"> <!-- NOTE 11-->
-
 
 
     <section id="collections">
@@ -1276,163 +914,120 @@
 
         <strong><br></strong>
 
-        <h3 class="section-headers wow fadeInUp" align="center">Collections</h3>
-
-
-
-
-        <div class="cover-div">
-
-          <div class="row">
-
-            <div class="col-sm-6 pb-2">
-
-              <a href="stone.html"><img src="images/stone-1-1.png" width="100%;" class="stone-bg" />
-                <div class="stone-txt">
-                  <h3>Precious Gemstone Jewelry</h3>
-                </div>
-
-              </a>
-
-
-
-
-
-            </div>
-
-            <div class="col-sm-6 pb-2">
-
-              <a href="antique.html" class=" wow fadeInUp"><img src="images/stone-1-2.png" width="100%;"
-                  class="stone-bg" />
-                <div class="stone-txt">
-                  <h3>Antique Jewelry</h3>
-                </div>
-
-
-              </a>
-
-
-
-
-            </div>
-
-            <div class="col-sm-6 pb-2">
-
-              <a href="mangalsutra.html" class="wow fadeInUp"><img src="images/stone-1-3.png" width="100%;"
-                  class="stone-bg" />
-                <div class="stone-txt">
-                  <h3>Mangal Sutras</h3>
-                </div>
-              </a>
-
-
-
-
-
-            </div>
-
-
-
-            <div class="col-sm-6">
-
-              <a href="rings.html" class="wow fadeInUp"><img src="images/stone-1-4.png" width="100%;" />
-                <div class="stone-txt">
-                  <h3>Engagement Rings and Wedding Bands</h3>
-                </div>
-              </a>
-
-
-
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <!-- <div class="col-md-12 text-center">
-                    <a href="stone.html" class="kp-viewmore">View More</a>
-                </div> -->
+        <h3 class="section-headers  " align="center">Collections</h3>
 
 
       </div>
 
 
-      <!--
 
-              <div class="modal kp-modal fade" id="kpexampleModal-stone1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog kp-modal-dialog">
-                  <div class="modal-content kp-modal-content">
-                    <div class="modal-header kp-modal-header">
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body kp-modal-body">
-                      <h5>Yellow Chimes Rich Designer A5 Grade Crystel Tennis Bracelet</h5>
-                        <img src="images/stone-1-1.png">
-                    </div>
+      <!-- <div class="col-md-12 text-center">
+                    <a href="stone.html" class="kp-viewmore">View More</a>
+                </div> -->
 
-                  </div>
-                </div>
-              </div>
 
-              <div class="modal kp-modal fade" id="kpexampleModal-stone2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog kp-modal-dialog">
-                  <div class="modal-content kp-modal-content">
-                    <div class="modal-header kp-modal-header">
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body kp-modal-body">
-                      <h5>Zaveri Pearls Cubical Style Kundan Necklace Set For Women</h5>
-                        <img src="images/stone-1-2.png">
-                    </div>
 
-                  </div>
-                </div>
-              </div>
+    <div class="container">
+      <div class="row collections-row-text-left" id="gemstone-collection-section">
+        <div class="collections-section-text col-sm-3">
+          <div class="row">
+            <div class="col-sm-12">
+              <h2> Precious Gemstone Jewelry </h2>
+            </div>
+            <div class="w-100"></div>
+            <div class="col-sm-12">
+                <a href="#" onclick="changePage('#diamondpage')"class="kp-viewmore">View More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <img src="images/gembangles1.webp">
+        </div>
+        <div class="col-sm-3">
+          <img src="images/gembangles2.webp">
+        </div>
+        <div class="col-sm-3">
+          <img src="images/gemnecklace1.webp">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row collections-row-text-right" id="antique-collection-section">
+        <div class="col-sm-3">
+          <img src="images/antiquebracelet1.webp">
+        </div>
+        <div class="col-sm-3">
+          <img src="images/antiquebracelet2.webp">
+        </div>
+        <div class="col-sm-3">
+          <img src="images/antiquebracelet3.webp">
+        </div>
+        <div class="collections-section-text col-sm-3">
+          <div class="row">
+            <div class="col-sm-12">
+              <h2> Antique Jewelry </h2>
+            </div>
+            <div class="w-100"></div>
+            <div class="col-sm-12">
+                <a href="#" onclick="changePage('#antiquepage')"class="kp-viewmore">View More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-              <div class="modal kp-modal fade" id="kpexampleModal-stone3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog kp-modal-dialog">
-                  <div class="modal-content kp-modal-content">
-                    <div class="modal-header kp-modal-header">
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body kp-modal-body">
-                      <h5> Necklace Jewellery Set </h5>
-                        <img src="images/stone-1-3.png">
-                    </div>
+    <div class="container">
+      <div class="row collections-row-text-left" id="mangalsutra-collection-section">
+        <div class="collections-section-text col-sm-3">
+          <div class="row">
+            <div class="col-sm-12">
+              <h2> Mangal Sutras </h2>
+            </div>
+            <div class="w-100"></div>
+            <div class="col-sm-12">
+                <a href="#" onclick="changePage('#mangalsutrapage')"class="kp-viewmore">View More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <img src="images/mangalsutra1.webp">
+        </div>
+        <div class="col-sm-3">
+          <img src="images/mangalsutra1.webp">
+        </div>
+        <div class="col-sm-3">
+          <img src="images/mangalsutra1.webp">
+        </div>
 
-                  </div>
-                </div>
-              </div>
-
-              <div class="modal kp-modal fade" id="kpexampleModal-stone4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog kp-modal-dialog">
-                  <div class="modal-content kp-modal-content">
-                    <div class="modal-header kp-modal-header">
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body kp-modal-body">
-                      <h5> Diva Pearl Necklace </h5>
-                        <img src="images/stone-1-4.png">
-                    </div>
-
-                  </div>
-                </div>
-              </div> -->
+      </div>
+    </div>
+    <div class="container">
+      <div class="row collections-row-text-right" id="engagement-collection-section">
+        <div class="col-sm-3">
+          <img src="images/engag.webp">
+        </div>
+        <div class="col-sm-3">
+          <img src="images/engag.webp">
+        </div>
+        <div class="col-sm-3">
+          <img src="images/engag.webp">
+        </div>
+        <div class="collections-section-text col-sm-3">
+          <div class="row">
+            <div class="col-sm-12">
+              <h2> Engagement Jewelry and Wedding Bands </h2>
+            </div>
+            <div class="w-100"></div>
+            <div class="col-sm-12">
+                <a href="#" onclick="changePage('#engagementpage')"class="kp-viewmore">View More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
     </section>
-
-
-    <img class="img-fluid" id="pagebreak4" src="images/page-break.png" style="height: 125px;"> <!-- NOTE 11-->
 
 
 
@@ -1452,7 +1047,7 @@
       <div class="container-90">
 
 
-        <h3 class="contact-arrivals wow fadeInUp" align="center">Contact Us</h3>
+        <h3 class="section-headers " align="center">Contact Us</h3>
 
 
         <div class="row pb-5">
@@ -1463,102 +1058,43 @@
 
               <form id="contact-form" name="contact-form" onsubmit="validateForm()">
 
-                <div class="modal-body" style="padding: 0;">
+                <div class="modal-body">
 
                   <div class="row">
 
-                    <div class="col-lg-6 col-md-6 col-sm-6" style="padding-bottom: 10px;">
-                      <!-- <div class="input-group">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-person-circle"></i></span>
-                          </div> -->
-                          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-                      <!-- </div> -->
-                      
+                    <div class="col-lg-6 col-md-6 col-sm-6 basic-form-input" >
+
+                      <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+
 
                     </div>
 
-                    <div class="col-lg-6 col-md-6 col-sm-6" style="padding-bottom: 10px;">
+                    <div class="col-lg-6 col-md-6 col-sm-6" >
 
                       <input class="form-control" id="number" name="number" type="tel" placeholder="Phone Number"
                         type="text" required>
 
                     </div>
 
-                    <!-- <div class="col-lg-6 col-md-6 col-sm-6" style="padding-bottom: 10px;"> -->
-                      <!-- <div class="input-group">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text" id="inputGroupPrepend2"><i class="bi bi-pin-map-fill"></i></span>
-                          </div> -->
-                          <!-- <input class="form-control" id="city" name="city" placeholder="City" type="text"> -->
-                      <!-- </div> -->
-                      
-
-                    <!-- </div> -->
 
                   </div>
 
-                  <!-- <div class="row">
-
-                    <div class="col-lg-6 col-md-6 col-sm-6" style="padding-bottom: 10px;">
-
-                      <input class="form-control" id="state" name="state" placeholder="State" type="text">
-
-                    </div>
-
-                    <div class="col-lg-6 col-md-6 col-sm-6" style="padding-bottom: 10px;">
-
-                      <input class="form-control" id="zip" name="zip" placeholder="Zip Code" type="text">
-
-                    </div>
-
-                  </div> -->
-
                   <div class="row">
 
-                    <div class="col-lg col-md col-sm" style="padding-bottom: 10px;">
+                    <div class="col-lg col-md col-sm" >
 
                       <input class="form-control" id="email" name="email" type="email" placeholder="E-mail" type="text"
                         required>
 
                     </div>
-
-                    <!-- <div class="col-lg-6 col-md-6 col-sm-6" style="padding-bottom: 10px;">
-
-                      <input class="form-control" id="number" name="number" type="tel" placeholder="Phone Number"
-                        type="text" required>
-
-                    </div> -->
-
                   </div>
-
-                  <!-- <div class="row">
-
-                    <div class="col-lg-12 col-md-12 col-sm-12" style="padding-bottom: 10px;">
-
-                      <input class="form-control" id="address" name="address" placeholder="Address" type="text">
-
-                    </div>
-
-                  </div> -->
 
                   <div class="row">
 
                     <div class="col-lg-12 col-md-12 col-sm-12">
 
-                      <textarea style="resize:vertical;" class="form-control" id="comment" placeholder="Message..."
+                      <textarea  class="form-control" id="comment" placeholder="Message..."
                         rows="6" name="comment" required></textarea>
-
-                    </div>
-
-                  </div>
-
-                  <div class="row" style="display: none;">
-
-                    <div class="col-lg-12 col-md-12 col-sm-12">
-
-                      <textarea style="resize:vertical;" class="form-control" id="comment2" placeholder="Message..."
-                        rows="6" name="comment"></textarea>
 
                     </div>
 
@@ -1571,9 +1107,8 @@
 
 
                       <input type="submit" id="contact-us-button" class="btn btn-success contact-btn" value="Send">
-                      <div id="contact-us-alert" class="alert hide fade contact-us-alert" style="" role="alert">
+                      <div id="contact-us-alert" class="alert hide fade contact-us-alert" role="alert">
                         Sending...</div>
-                      <!--<span class="glyphicon glyphicon-ok"></span>-->
 
                     </div>
 
@@ -1590,16 +1125,13 @@
 
           </div>
 
-
-
-          <div class="col-md-6 wow fadeInUp">
+          <!-- <div class="col-md-6  ">
 
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2940.168851887272!2d-71.20821954944634!3d42.53046777907358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3a01d6954e0ef%3A0x48400773408dda9b!2sKay%20Pee%20Jewelers!5e0!3m2!1sen!2sus!4v1672952094137!5m2!1sen!2sus"
-               style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
+               allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-          </div>
+          </div> -->
 
 
 
@@ -1616,30 +1148,411 @@
 
 
 
+    </section>
+
+  </div>
+
+  <div id="newarrivalpage" >
+
+
+
+
+
+
+
+    <section id="landing-section">
+
+
+      <div class="row no-gutters">
+
+        <div class="col-md-12">
+
+          <div class="healwithlove-new-arrivals" align="center">
+
+            <img loading="lazy" src="images/Side-2.jpg" class="mobile-disable inner-banner">
+            <img loading="lazy" src="images/new-arrive-mob.jpg" class="mobile-enable inner-banner">
+
+            <div class="inner-banner-text">
+              <h1>New Arrivals</h1>
+            </div>
+
+
+
+
+
+          </div>
+
+        </div>
+
+      </div>
 
 
 
     </section>
 
-    <div class="footer-sdr">
-
-      <!-- <h5 align="center" class="opening">Opening Hours: Tue-Sat 11:30 -7:00<br>
-
-        Sun 12:00 - 6:00<br> Monday: Closed</h5> -->
-
-      <div class="container-full">
 
 
 
-        <ul class="cover-con">
 
-          <li>
+    <section id="new-arr">
 
-            <div class="">
+      <div class="container-90 new-arr-container">
 
-              <h4><i class="fa fa-phone"></i>&nbsp; Talk to us</h4>
 
-              <p> <a href="tel:781-229-9170">781-229-9170</a></p>
+
+
+
+
+
+
+
+
+        <div class="cover-div d-flex">
+
+          <div class="row">
+
+            <div class="col-md-6 col-sm-12">
+
+              <div class="row left-row">
+
+
+
+                <div class="col-md-4 col-sm-6 col-6">
+
+                  <div class="new-arrive-product  ">
+
+                    <a data-toggle="modal" data-target="#kpexampleModal"><img loading="lazy" src="images/1.png"
+                        width="100%;" /></a>
+
+                    <p><a>White Gold Diamond Ring</a></p>
+
+                    <span>Brand: CaratLane</span>
+
+
+
+
+
+                  </div>
+
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-6">
+
+                  <div class="new-arrive-product  ">
+
+                    <a data-toggle="modal" data-target="#kpexampleModal2"><img loading="lazy" src="images/2.png"
+                        width="100%;" /></a>
+
+                    <p><a href="">Trendy copper Ring</a></p>
+
+                    <span> Brand: Tradino
+
+                  </div>
+
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-6">
+
+                  <div class="new-arrive-product  ">
+
+                    <a data-toggle="modal" data-target="#kpexampleModal3"><img loading="lazy" src="images/3.png"
+                        width="100%;" /></a>
+
+                    <p><a href="">Grooved Gold Ring</a></p>
+
+                    <span>Brand: CaratLane</span>
+
+
+
+                  </div>
+
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-6  ">
+
+
+
+
+
+                  <div class="new-arrive-product arrive-btm   ">
+
+
+
+                    <a data-toggle="modal" data-target="#kpexampleModal4"><img loading="lazy" src="images/4.png"
+                        width="100%;" /></a>
+
+                    <p><a href="">Classic Prong Set Ring</a></p>
+
+                    <span>Brand: CaratLane</span>
+
+
+
+                  </div>
+
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-6">
+
+
+
+                  <div class="new-arrive-product arrive-btm   ">
+
+
+
+                    <a data-toggle="modal" data-target="#kpexampleModal5"><img loading="lazy" src="images/5.png"
+                        width="100%;" /></a>
+
+                    <p><a href="">Solitaire Ring Mount</a></p>
+
+                    <span>Brand: Crocs</span>
+
+                  </div>
+
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-6">
+
+                  <div class="new-arrive-product arrive-btm   ">
+
+
+
+
+
+                    <a data-toggle="modal" data-target="#kpexampleModal6"><img loading="lazy" src="images/6.png"
+                        width="100%;" /></a>
+
+                    <p><a href="">Lush Ring Mount</a></p>
+
+                    <span>Brand: Glamr</span>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="col-md-6 col-sm-12  ">
+
+              <div class="border-only ">
+
+                <a data-toggle="modal" data-target="#kpexampleModal7"><img loading="lazy" src="images/slide-1.png"
+                    class="d-arrive " />
+                  <div class="d-arrive-txt">
+                    <div class="d-arrive-wrapper">
+                      <img loading="lazy" src="images/logoold.png" class="d-arrive-logo">
+                      <h6>Elegant Fashion Design</h6>
+                      <h1>Belle Diamond</h1>
+                      <img loading="lazy" src="images/divider2.png" class="divider2">
+                      <p>Jewel that define you </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+
+
+      <div class="modal kp-modal fade" id="kpexampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog kp-modal-dialog">
+          <div class="modal-content kp-modal-content">
+            <div class="modal-header kp-modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body kp-modal-body">
+              <h5>Barry Gold Bangle</h5>
+              <img loading="lazy" src="images/1.png">
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="modal kp-modal fade" id="kpexampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog kp-modal-dialog">
+          <div class="modal-content kp-modal-content">
+            <div class="modal-header kp-modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body kp-modal-body">
+              <h5>Trendy Copper Bangle</h5>
+              <img loading="lazy" src="images/2.png">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal kp-modal fade" id="kpexampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog kp-modal-dialog">
+          <div class="modal-content kp-modal-content">
+            <div class="modal-header kp-modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body kp-modal-body">
+              <h5>Grooved Gold Bangle</h5>
+              <img loading="lazy" src="images/3.png">
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="modal kp-modal fade" id="kpexampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog kp-modal-dialog">
+          <div class="modal-content kp-modal-content">
+            <div class="modal-header kp-modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body kp-modal-body">
+              <h5>Classic Prong Set Ring</h5>
+              <img loading="lazy" src="images/4.png">
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="modal kp-modal fade" id="kpexampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog kp-modal-dialog">
+          <div class="modal-content kp-modal-content">
+            <div class="modal-header kp-modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body kp-modal-body">
+              <h5>Solitaire Ring Mount</h5>
+              <img loading="lazy" src="images/5.png">
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="modal kp-modal fade" id="kpexampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog kp-modal-dialog">
+          <div class="modal-content kp-modal-content">
+            <div class="modal-header kp-modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body kp-modal-body">
+              <h5>Lush Ring Mount</h5>
+              <img loading="lazy" src="images/6.png">
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="modal kp-modal fade" id="kpexampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog kp-modal-dialog">
+          <div class="modal-content kp-modal-content">
+            <div class="modal-header kp-modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body kp-modal-body">
+              <h5>New Arrivals</h5>
+              <img loading="lazy" src="images/slide-1.png">
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <section id="stone">
+
+      <div class="container-90">
+
+        <strong><br></strong>
+
+        <h3 class="new-aarivals  " align="center">Stone Jewellery</h3>
+
+        <div class="divider-img"></div>
+
+
+
+        <div class="cover-div">
+
+          <div class="row">
+
+            <div class="col-sm-6 pb-2">
+
+              <a data-toggle="modal" data-target="#kpexampleModal-stone1"><img loading="lazy"
+                  vsrc="images/stone-1-1.png" width="100%;" class="stone-bg" />
+                <div class="stone-txt">
+                  <h1>Blue Chimes Rich Designer A5 Grade Crystal Tennis Bracelet</h1>
+                </div>
+
+              </a>
+
+
+
+
+
+            </div>
+
+            <div class="col-sm-6 pb-2">
+
+              <a data-toggle="modal" data-target="#kpexampleModal-stone2" class="  "><img loading="lazy"
+                  src="images/stone-1-2.png" width="100%;" class="stone-bg" />
+                <div class="stone-txt">
+                  <h1>Zaveri Pearls Cubical Style Kundan Necklace Set For Women</h1>
+                </div>
+
+
+              </a>
+
+
+
+
+            </div>
+
+            <div class="col-sm-6 pb-2">
+
+              <a data-toggle="modal" data-target="#kpexampleModal-stone3" class=" "><img loading="lazy"
+                  src="images/stone-1-3.png" width="100%;" class="stone-bg" />
+                <div class="stone-txt">
+                  <h1>Necklace Jewellery Set With Maang Tikka and Earrings </h1>
+                </div>
+              </a>
 
 
 
@@ -1649,83 +1562,1351 @@
 
 
 
-          </li>
+            <div class="col-sm-6">
 
-          <li>
+              <a data-toggle="modal" data-target="#kpexampleModal-stone4" class=" "><img loading="lazy"
+                  src="images/stone-1-4.png" width="100%;" />
+                <div class="stone-txt">
+                  <h1>Diva Pearl Necklace Jewellery set with Earrings</h1>
+                </div>
+              </a>
 
-
-
-            <div class="">
-
-
-
-              <h4><i class="bi bi-envelope-at-fill"></i> &nbsp; Email Us</h4>
-
-              <p>
-
-                <a title="" href="mailto:kaypeejewelers@gmail.com">kaypeejewelers@gmail.com</a>
-
-              </p>
 
 
 
             </div>
 
+          </div>
+
+        </div>
 
 
 
 
-          </li>
-
-          <li>
+      </div>
 
 
 
-            <div class="">
+
+      <div class="modal kp-modal fade" id="kpexampleModal-stone1" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog kp-modal-dialog">
+          <div class="modal-content kp-modal-content">
+            <div class="modal-header kp-modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body kp-modal-body">
+              <h5>Yellow Chimes Rich Designer A5 Grade Crystel Tennis Bracelet</h5>
+              <img loading="lazy" src="images/stone-1-1.png">
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="modal kp-modal fade" id="kpexampleModal-stone2" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog kp-modal-dialog">
+          <div class="modal-content kp-modal-content">
+            <div class="modal-header kp-modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body kp-modal-body">
+              <h5>Zaveri Pearls Cubical Style Kundan Necklace Set For Women</h5>
+              <img loading="lazy" src="images/stone-1-2.png">
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="modal kp-modal fade" id="kpexampleModal-stone3" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog kp-modal-dialog">
+          <div class="modal-content kp-modal-content">
+            <div class="modal-header kp-modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body kp-modal-body">
+              <h5> Necklace Jewellery Set </h5>
+              <img loading="lazy" src="images/stone-1-3.png">
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="modal kp-modal fade" id="kpexampleModal-stone4" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog kp-modal-dialog">
+          <div class="modal-content kp-modal-content">
+            <div class="modal-header kp-modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body kp-modal-body">
+              <h5> Diva Pearl Necklace </h5>
+              <img loading="lazy" src="images/stone-1-4.png">
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+    </section>
 
 
 
-              <h4><i class="bi bi-clock-fill"></i> &nbsp; Our Hours</h4>
 
-              <p>Tue-Sat 11:30AM - 07:00PM<br>
 
-                Sun 12:00PM - 06:00PM<br> Monday: Closed</p>
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  <div id="goldpage">
+
+    <section id="landing-section">
+
+      <div class="row no-gutters">
+
+        <div class="col-md-12">
+
+          <div class="healwithlove-gold" align="center">
+            <img loading="lazy" src="images/banner/goldpage.webp" class="mobile-disable inner-banner">
+            <img loading="lazy" src="images/banner/goldpage.webp" class="mobile-enable inner-banner">
+            <!-- <div class="inner-banner-text">
+              <h1 class="text-white">Gold Jewellery</h1>
+            </div> -->
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+    </section>
+
+
+
+    <section id="gold-necklece">
+      <div class="container-90 text-center my-3">
+
+
+
+        <div id="myBtnContainer">
+
+          <div id="home-active" class="btn" onClick="filterSelection('all')"> Show all</div>
+
+          <div class="btn" onClick="filterSelection('rings')"> Rings</div>
+
+          <div class="btn" onClick="filterSelection('necklace')"> Necklace</div>
+
+          <div class="btn" onClick="filterSelection('bangles')"> Bangles</div>
+
+          <div class="btn" onClick="filterSelection('bracelet')"> Bracelets</div>
+
+        </div>
+
+
+        <div class="row">
+
+
+
+          <div style="cursor:pointer" class="column col-md-4 mb-4 bangles scroll-move2" data-toggle="modal"
+            data-target="#myModal-1">
+
+            <img loading="lazy" class="" src="images/gold-page/bangles1.webp" />
+
+            <p class="type">Modern Checkered Bangles</p>
+
+          </div>
+
+
+          <div class="modal fade" id="myModal-1" role="dialog">
+
+            <div class="modal-dialog">
+
+
+              <div class="modal-content">
+
+                <div class="container-product">
+
+                  <div class="row">
+
+                    <div class="col-md-8">
+                      <div style="height: 80%;">
+                        <img class="" src="images/gold-page/bangles1.webp" />
+                      </div>
+
+
+
+                    </div>
+
+                    <div class="col-md-4">
+
+                      <div class="discri-div">
+
+                        <h3>alluring gold neckwear</h3>
+                        <h4>ABC Collection</h4>
+
+
+                        <p class="discri-about">
+
+                          Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print,
+                          graphic or web designs.
+
+                        </p>
+
+                        <h4 id="jewelry-modal-weight">Weight: 300g</h4>
+
+
+
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+
+
+                </div>
+
+                <div class="modal-footer">
+
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="column col-md-4 mb-4 bracelet scroll-move2">
+
+            <img loading="lazy" class="" src="images/gold-page/bracelet1.webp" />
+            <p class="type">Gold Bracelet with Pearls</p>
+
+          </div>
+
+
+
+
+
+
+          <div class="column col-md-4 mb-4 bracelet scroll-move2">
+
+            <img loading="lazy" class="" src="images/gold-page/bracelet2.webp" />
+
+            <p class="type">Gold Bracelet</p>
+
+          </div>
+
+
+
+          <div class="column col-md-4 mb-4 bracelet scroll-move2">
+
+            <img loading="lazy" class="" src="images/gold-page/bracelet3.webp" />
+
+            <p class="type">Ladies 22kt Ball Bracelet</p>
+
+          </div>
+
+
+
+          <div class="column col-md-4 mb-4 bracelet  scroll-move2">
+
+            <img loading="lazy" class="" src="images/gold-page/bracelet4.webp" />
+
+            <p class="type">Rhodium Ball Bracelet</p>
+
+          </div>
+
+          <div class="column col-md-4 mb-4 bangles scroll-move2">
+
+            <img loading="lazy" class="" src="images/gold-page/goldbangles1.webp" />
+
+            <p class="type">Set of 22kt Gold Meena Bangles</p>
+
+          </div>
+
+          <div class="column col-md-4 mb-4 bangles scroll-move2">
+
+            <img loading="lazy" class="" src="images/gold-page/karas1.webp" />
+
+            <p class="type">Pair of Ladies Gold Karas with Meena</p>
+
+          </div>
+
+        <!-- </div> -->
+
+
+
+      <!-- <div class="row"
+        style=" padding-right: 2%; padding-top: 2%; padding-left: 2%; background-color: rgb(138	66	81	);">
+ -->
+
+
+        <div class="column col-md-4 mb-4 bangles  scroll-move2">
+
+          <img loading="lazy" class="" src="images/gold-page/karas2.webp" />
+
+          <p class="type">Blue Meena Gold Karas</p>
+
+        </div>
+
+
+
+        <div class="column col-md-4 mb-4 bangles scroll-move2">
+
+          <img loading="lazy" class="" src="images/gold-page/karas3.webp" />
+
+          <p class="type">Meena Gold Karas</p>
+
+        </div>
+
+
+
+
+
+        <div class="column col-md-4 mb-4 bangles scroll-move2">
+
+          <img loading="lazy" class="" src="images/gold-page/karas4.webp" />
+
+          <p class="type">Wide Gold Wedding Karas</p>
+
+        </div>
+
+      <!-- </div> -->
+
+      <!-- <div class="row"
+        style=" padding-right: 2%; padding-top: 2%; padding-left: 2%; background-color: rgb(223	174	83);"> -->
+
+        <div class="column col-md-4 mb-4 necklace scroll-move2">
+
+        <img loading="lazy" class="" src="images/gold-page/necklace1.webp" />
+
+          <p class="type">Intricate Tri-color Gold layer Necklace</p>
+
+        </div>
+
+
+
+        <div class="column col-md-4 mb-4 rings scroll-move2">
+
+          <img loading="lazy" class="" src="images/gold-page/ring1.webp" />
+
+          <p class="type">Peacock Ring</p>
+
+        </div>
+
+
+
+        <div class="column col-md-4 mb-4 rings scroll-move2">
+
+          <img loading="lazy" class="" src="images/gold-page/ring2.webp" />
+
+          <p class="type">Gold Ring</p>
+
+        </div>
+
+        <div class="column col-md-4 mb-4 rings scroll-move2">
+
+          <img loading="lazy" class="" src="images/gold-page/ring3.webp" />
+
+          <p class="type">Rhdoium Gold Ring</p>
+
+        </div>
+
+        <div class="column col-md-4 mb-4 necklaces scroll-move2">
+
+          <img loading="lazy" class="" src="images/gold-page/goldnecklace2.webp" />
+
+          <p class="type">Elegant Gold Necklace set</p>
+
+        </div>
+
+        <div class="column col-md-4 mb-4 necklaces scroll-move2">
+
+          <img loading="lazy" class="" src="images/gold-page/goldnecklace3.webp" />
+
+          <p class="type">Gold Patta Set</p>
+
+        </div>
+
+      <!-- </div>
+ -->
+
+
+
+
+
+
+</div>
+
+
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  <div id="diamondpage" >
+    <section id="landing-section">
+
+
+
+      <div class="row no-gutters">
+
+        <div class="col-md-12">
+
+          <div class="healwithlove-diamond" align="center">
+
+
+            <img loading="lazy" src="images/banner/Diamondpage.webp" class="mobile-disable inner-banner">
+            <img loading="lazy" src="images/banner/Diamondpage.webp" class="mobile-enable inner-banner">
+            <!-- <div class="inner-banner-text">
+              <h1>Diamond Jewellery</h1>
+            </div> -->
+
+
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+    </section>
+
+
+
+
+
+    <section id="gold-necklece">
+
+
+
+
+
+
+
+      <div class="container-90 text-center my-3">
+
+
+        <div id="myBtnContainer">
+
+          <div class="btn" id="home-active" onClick="filterSelection('all')"> Show all</div>
+
+          <div class="btn" onClick="filterSelection('rings')"> Rings</div>
+
+          <div class="btn" onClick="filterSelection('necklace')"> Necklace</div>
+
+          <div class="btn" onClick="filterSelection('bangles')"> Bangles</div>
+          <div class="btn" onClick="filterSelection('earrings')"> Earrings</div>
+
+        </div>
+
+
+
+        <div class="row">
+
+
+
+          <div class="column col-md-3 mb-4 bangles scroll-move2" data-toggle="modal" data-target="#myModal-1">
+
+            <img loading="lazy" class="border-img" src="images/diamond-page/diamondbangles1.webp"/>
+
+            <p class="type">Dazzing Diamond Bangles</p>
+
+          </div>
+
+
+
+          <div class="modal fade" id="myModal-1" role="dialog">
+
+            <div class="modal-dialog">
+
+
+
+              <div class="modal-content">
+
+                <div class="container-product">
+
+                  <div class="row">
+
+                    <div class="col-md-6">
+
+                      <div class="inner-img-div">
+
+                        <img loading="lazy" src="images/diamond-page/diamondbangles1.webp" />
+
+                      </div>
+
+
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                      <div class="discri-div">
+
+                        <h3>Dazzling Diamond Bangles</h3>
+
+                        <p class="discri-about">
+
+                          Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print,
+                          graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century
+                          who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a
+                          type specimen book.
+
+                        </p>
+
+
+
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+                <div class="modal-footer">
+
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                </div>
+
+              </div>
 
 
 
             </div>
 
+          </div>
+
+
+
+          <div class="column col-md-3 mb-4 earrings scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/diamond-page/diamondearring1.webp"/>
+
+            <p class="type">Elegant Diamong Jhumkas</p>
+
+          </div>
+
+          <div class="modal fade" id="myModal-2" role="dialog">
+
+            <div class="modal-dialog">
+
+              <div class="modal-content">
+
+                <div class="row-custom">
+
+                  <div class="col-custom">
+
+                    <a class="carousel-control-prev text-dark" href="#myCarousel-2" role="button" data-slide="prev">
+
+                      <span class="fa fa-chevron-left" aria-hidden="true"></span>
+
+                      <span class="sr-only">Previous</span>
+
+                    </a>
+
+                    <a class="carousel-control-next text-dark" href="#myCarousel-2" role="button" data-slide="next">
+
+                      <span class="fa fa-chevron-right" aria-hidden="true"></span>
+
+                      <span class="sr-only">Next</span>
+
+                    </a>
+
+                  </div>
+
+                </div>
+
+                <div class="container-product">
+
+                  <div class="row">
+
+                    <div class="col-md-6">
+
+                      <div class="inner-img-div">
+
+                        <img loading="lazy" class="" src="images/gold-necklace/n2-1.jpg"
+                          onMouseOver="this.src='images/gold-necklace/n2-2.jpg'"
+                          onMouseOut="this.src='images/gold-necklace/n2-1.jpg'" />
+
+                      </div>
+
+
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                      <div class="discri-div">
+
+                        <h3>Gold Necklace 22Kt</h3>
+
+                        <p class="discri-about">
+
+                          Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print,
+                          graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century
+                          who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a
+                          type specimen book.
+
+                        </p>
 
 
 
 
-          </li>
+                      </div>
+
+                    </div>
+
+                  </div>
 
 
 
-          <li>
 
 
 
-            <div class="">
 
-              <h4><i class="fa fa-location-arrow"></i> &nbsp; Location</h4>
 
-              <p> <a href="https://goo.gl/maps/SpqAM3tbYXB2t5BdA" >85 Wilmington Road <br> Burlington, MA 01803</a><br></p>
+
+
+
+
+                </div>
+
+
+
+
+
+                <div class="modal-footer">
+
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                </div>
+
+              </div>
 
 
 
             </div>
 
+          </div>
+
+          <!-- Modal-2 -->
+
+
+
+          <div class="column col-md-3 mb-4 necklaces scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/diamond-page/diamondnecklace2.webp"/>
+
+            <p class="type">Rose and White Diamond Necklace</p>
+
+          </div>
+
+          <div class="column col-md-3 mb-4 rings  scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/diamond-page/diamondring1.webp" />
+
+            <p class="type">Natural Ruby and Diamond Ring</p>
+
+          </div>
 
 
 
 
-          </li>
+
+
+        </div>
 
 
 
-        </ul>
+      </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  <div id="antiquepage" >
+    <section id="landing-section">
+
+
+
+      <div class="row no-gutters">
+
+        <div class="col-md-12">
+
+          <div class="healwithlove-antique" align="center">
+
+            <img loading="lazy" src="images/antique-page/antiquepage.webp" class="mobile-disable inner-banner">
+            <img loading="lazy" src="images/antique-page/antiquepage.webp" class="mobile-enable inner-banner">
+
+
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+    </section>
+
+
+
+
+
+    <section id="gold-necklece">
+
+
+
+
+
+
+
+      <div class="container-90 text-center my-3">
+
+
+
+
+        <div id="myBtnContainer">
+
+          <div class="btn" id="home-active" onClick="filterSelection('all')"> Show all</div>
+
+          <div class="btn" onClick="filterSelection('rings')"> Rings</div>
+
+          <div class="btn" onClick="filterSelection('necklaces')"> Necklaces</div>
+
+          <div class="btn" onClick="filterSelection('bangles')"> Bangles</div>
+          <div class="btn" onClick="filterSelection('earrings')"> Earrings</div>
+
+        </div>
+
+
+
+        <div class="row">
+
+
+
+          <div class="column col-md-3 mb-4 necklaces scroll-move2" data-toggle="modal" data-target="#myModal-1">
+
+            <img loading="lazy" class="border-img" src="images/antique-page/antiqueset1.webp" />
+
+            <p class="type">Antique 22kt Necklace Set with haning beads</p>
+
+          </div>
+
+
+          <div class="modal fade" id="myModal-1" role="dialog">
+
+            <div class="modal-dialog">
+
+
+
+              <div class="modal-content">
+
+                <div class="container-product">
+
+                  <div class="row">
+
+                    <div class="col-md-6">
+
+                      <div class="inner-img-div">
+
+                        <img loading="lazy" class="" src="images/antique/a1.jpg" />
+
+                      </div>
+
+
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                      <div class="discri-div">
+
+                        <h3>Gold Pocket Watch</h3>
+
+
+                        <p class="discri-about">
+
+                          Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print,
+                          graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century
+                          who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a
+                          type specimen book.
+
+                        </p>
+
+
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+                <div class="modal-footer">
+
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                </div>
+
+              </div>
+
+
+
+            </div>
+
+          </div>
+
+
+
+
+          <div class="column col-md-3 mb-4 necklaces scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/antique-page/antiqueset2.webp" />
+            <p class="type">Pink Meena Antique Necklace Set</p>
+
+          </div>
+
+          <div class="column col-md-3 mb-4 necklaces scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/antique-page/antiqueset3.webp" />
+            <p class="type">Matte Finish Necklace Set</p>
+
+          </div>
+          <div class="column col-md-3 mb-4 necklaces scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/antique-page/antiqueset4.webp" />
+            <p class="type">Antique Patta Set</p>
+
+          </div>
+
+          <div class="column col-md-3 mb-4 necklaces scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/antique-page/antiqueset5.webp" />
+            <p class="type">Bridal Meena Necklace Set</p>
+
+          </div>
+
+          <div class="column col-md-3 mb-4 necklaces scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/antique-page/antiqueset6.webp" />
+            <p class="type">Purple Meena Antique Bridal Set</p>
+
+          </div>
+
+          <div class="column col-md-3 mb-4 necklaces scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/antique-page/antiqueset7.webp" />
+            <p class="type">Antique Neklace Set</p>
+
+          </div>
+
+          <div class="column col-md-3 mb-4 necklaces scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/antique-page/antiqueset8.webp" />
+            <p class="type">Antique Necklace Set</p>
+
+          </div>
+          <div class="column col-md-3 mb-4 necklaces scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/antique-page/antiqueset9.webp" />
+            <p class="type">Antique Necklace Set</p>
+
+          </div>
+          <div class="column col-md-3 mb-4 necklaces scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/antique-page/antiqueset10.webp" />
+            <p class="type">Antique Choker</p>
+
+          </div>
+          <div class="column col-md-3 mb-4 necklaces scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/antique-page/antiqueset11.webp" />
+            <p class="type">Antique Necklace Set</p>
+
+          </div>
+          <div class="column col-md-3 mb-4 necklaces scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/antique-page/antiqueset12.webp" />
+            <p class="type">Antique Necklace Set</p>
+
+          </div>
+
+          <div class="column col-md-3 mb-4 bangles scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/antique-page/antiquekaras1.webp" />
+            <p class="type">Antique Matte Finish Wide Karas</p>
+
+          </div>
+
+          <div class="column col-md-3 mb-4 bangles scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/antique-page/antiquekaras2.webp" />
+            <p class="type">Pair of Antique Karas</p>
+
+          </div>
+
+          <div class="column col-md-3 mb-4 earrings scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/antique-page/antiqueearrings1.webp" />
+            <p class="type">Kundan Earrings</p>
+
+          </div>
+
+          <div class="column col-md-3 mb-4 earrings scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/antique-page/antiqueearrings2.webp" />
+            <p class="type">Antique Pearl Jhumkas</p>
+
+          </div>
+
+          <div class="column col-md-3 mb-4 earrings scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/antique-page/antiqueearrings3.webp" />
+            <p class="type">Antique Earrings</p>
+
+          </div>
+
+          <div class="column col-md-3 mb-4 necklaces scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/antique-page/antiquechoker1.webp" />
+            <p class="type">Antique Temple Choker</p>
+
+          </div>
+
+          <div class="column col-md-3 mb-4 bracelets scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/antique-page/antiquebracelet1.webp" />
+            <p class="type">Antique Bracelet</p>
+
+          </div>
+
+          <div class="column col-md-3 mb-4 bracelets scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/antique-page/antiquebracelet2.webp" />
+            <p class="type">Pearl Antique Bracelet</p>
+
+          </div>
+
+
+
+
+      </div>
+
+
+
+  </div>
+
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  <div id="gemstonepage">
+
+
+
+
+
+    <section id="landing-section">
+
+      <div class="row no-gutters">
+
+        <div class="col-md-12">
+
+          <div class="healwithlove-gold" align="center">
+            <img loading="lazy" src="images/stone-mains.jpg">
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+    </section>
+
+
+
+    <section id="gold-necklece">
+
+
+
+
+
+
+
+      <div class="container-90 text-center my-3">
+
+
+
+        <div id="myBtnContainer">
+
+          <div class="btn" onClick="filterSelection('all')"> Show all</div>
+
+          <div class="btn" onClick="filterSelection('bangle')"> Bangles</div>
+
+          <div class="btn" onClick="filterSelection('necklace')"> Necklaces</div>
+
+          <div class="btn" onClick="filterSelection('earrings')"> Earrings</div>
+
+        </div>
+
+        <br />
+
+        <div class="row">
+
+
+
+          <div class="column col-md-4 mb-4 bangle scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/gemstone-page/gembangles1.webp"/>
+
+            <p class="type">Precious Stone Bangles</p>
+
+
+          </div>
+
+
+
+
+
+
+
+          <div class="column col-md-4 mb-4 bangle scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/gemstone-page/gembangles2.webp"/>
+
+            <p class="type">Navaratna Bangles</p>
+
+
+          </div>
+
+
+          <div class="modal fade" id="myModal-2" role="dialog">
+
+            <div class="modal-dialog">
+
+
+
+              <div class="modal-content">
+
+                <div class="row-custom">
+
+                  <div class="col-custom">
+
+                    <a class="carousel-control-prev text-dark" href="#myCarousel-2" role="button" data-slide="prev">
+
+                      <span class="fa fa-chevron-left" aria-hidden="true"></span>
+
+                      <span class="sr-only">Previous</span>
+
+                    </a>
+
+                    <a class="carousel-control-next text-dark" href="#myCarousel-2" role="button" data-slide="next">
+
+                      <span class="fa fa-chevron-right" aria-hidden="true"></span>
+
+                      <span class="sr-only">Next</span>
+
+                    </a>
+
+                  </div>
+
+                </div>
+
+                <div class="container-product">
+
+                  <div class="row">
+
+                    <div class="col-md-6">
+
+                      <div class="inner-img-div">
+
+                        <img loading="lazy" class="" src="images/gold-necklace/n2-1.jpg"/>
+
+                      </div>
+
+
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                      <div class="discri-div">
+
+                        <h3>Gold Necklace 22Kt</h3>
+
+                        <p class="discri-about">
+
+                          Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print,
+                          graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century
+                          who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a
+                          type specimen book.
+
+                        </p>
+
+
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+                <div class="modal-footer">
+
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                </div>
+
+              </div>
+
+
+
+            </div>
+
+          </div>
+
+
+
+
+          <div class="column col-md-4 mb-4 bangle scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/gemstone-page/gembangles3.webp"/>
+
+            <p class="type">Filigree Gold Precios Stone Bangles</p>
+
+          </div>
+
+
+
+          <div class="column col-md-4 bangle mb-4 scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/gemstone-page/gembangles4.webp"/>
+
+            <p class="type">Ruby and Emerald 22kt Gold Bangles</p>
+
+          </div>
+
+
+
+          <div class="column col-md-4 bangle mb-4 scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/gemstone-page/gembracelet1.webp" />
+
+            <p class="type">Emerald Gold Flower Bracelet</p>
+
+          </div>
+
+
+
+          <div class="column col-md-4 mb-4 bangle scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/gemstone-page/gembracelet2.webp" />
+
+            <p class="type">Delicate Ruby Bracelet</p>
+
+          </div>
+
+          <div class="column col-md-4 mb-4 bangle scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/gemstone-page/gembracelet3.webp" />
+
+            <p class="type">Delicate Emerald Bracelet</p>
+
+          </div>
+
+          <div class="column col-md-4 mb-4 earrings scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/gemstone-page/gemearrings1.webp" />
+
+            <p class="type">Ruby Jhumkas</p>
+
+          </div>
+
+          <div class="column col-md-4 mb-4 earrings scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/gemstone-page/gemearrings2.webp" />
+
+            <p class="type">Blue Sapphire Hanging Earrings</p>
+
+          </div>
+
+          <div class="column col-md-4 mb-4 necklace scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/gemstone-page/gemnecklace1.webp"/>
+
+            <p class="type">Ruby Delicate Necklace Set</p>
+
+          </div>
+
+          <div class="column col-md-4 mb-4 necklace scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/gemstone-page/gemnecklace2.webp" />
+
+            <p class="type">Polki and Ruby Necklace Set</p>
+
+          </div>
+
+
+
+
+
+
+
+
+
+        </div>
 
 
 
@@ -1733,18 +2914,1009 @@
 
       </div>
 
-      <!-- <h5 align="center" class="power">&copy; 2021, Powered by <a href="http://www.xorbium.com/" target="new">  XOrbium Technologies</a></h5> -->
+
+
+    </section>
+
+
+
+  </div>
+
+  <div id="mangalsutrapage">
+
+
+
+    <section id="landing-section">
+
+      <div class="row no-gutters">
+
+        <div class="col-md-12">
+
+          <div class="healwithlove-gold" align="center">
+            <img loading="lazy" src="images/">
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+    </section>
+
+
+
+    <section id="gold-necklece">
+
+
+
+
+
+
+
+      <div class="container-90 text-center my-3">
+
+
+
+        <div id="myBtnContainer">
+
+          <div class="btn" onClick="filterSelection('all')"> Show all</div>
+
+          <div class="btn" onClick="filterSelection('bangle')"> Bangles</div>
+
+          <div class="btn" onClick="filterSelection('necklace')"> Necklaces</div>
+
+          <div class="btn" onClick="filterSelection('earrings')"> Earrings</div>
+
+        </div>
+
+        <br />
+
+        <div class="row">
+
+
+
+          <div class="column col-md-4 mb-4 bangle scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/"/>
+
+            <p class="type">Stone Necklace</p>
+
+
+          </div>
+
+
+
+
+
+
+
+          <div class="column col-md-4 mb-4 bangle scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/"/>
+
+            <p class="type">Stone Ring</p>
+
+
+          </div>
+
+
+          <div class="modal fade" id="myModal-2" role="dialog">
+
+            <div class="modal-dialog">
+
+
+
+              <div class="modal-content">
+
+                <div class="row-custom">
+
+                  <div class="col-custom">
+
+                    <a class="carousel-control-prev text-dark" href="#myCarousel-2" role="button" data-slide="prev">
+
+                      <span class="fa fa-chevron-left" aria-hidden="true"></span>
+
+                      <span class="sr-only">Previous</span>
+
+                    </a>
+
+                    <a class="carousel-control-next text-dark" href="#myCarousel-2" role="button" data-slide="next">
+
+                      <span class="fa fa-chevron-right" aria-hidden="true"></span>
+
+                      <span class="sr-only">Next</span>
+
+                    </a>
+
+                  </div>
+
+                </div>
+
+                <div class="container-product">
+
+                  <div class="row">
+
+                    <div class="col-md-6">
+
+                      <div class="inner-img-div">
+
+                        <img loading="lazy" class="" src="images/gold-necklace/n2-1.jpg"/>
+
+                      </div>
+
+
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                      <div class="discri-div">
+
+                        <h3>Gold Necklace 22Kt</h3>
+
+                        <p class="discri-about">
+
+                          Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print,
+                          graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century
+                          who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a
+                          type specimen book.
+
+                        </p>
+
+
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+                <div class="modal-footer">
+
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                </div>
+
+              </div>
+
+
+
+            </div>
+
+          </div>
+
+
+
+
+          <div class="column col-md-4 mb-4 bangle scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/"/>
+
+            <p class="type">Stone bangles</p>
+
+          </div>
+
+
+
+
+
+        </div>
+
+
+
+
+
+      </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+  </div>
+
+  <div id="engagementpage">
+
+
+
+
+
+    <section id="landing-section">
+
+      <div class="row no-gutters">
+
+        <div class="col-md-12">
+
+          <div class="healwithlove-gold" align="center">
+            <img loading="lazy" src="images/">
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+    </section>
+
+
+
+    <section id="gold-necklece">
+
+
+
+
+
+
+
+      <div class="container-90 text-center my-3">
+
+
+
+        <div id="myBtnContainer">
+
+          <div class="btn" onClick="filterSelection('all')"> Show all</div>
+
+          <div class="btn" onClick="filterSelection('bangle')"> Bangles</div>
+
+          <div class="btn" onClick="filterSelection('necklace')"> Necklaces</div>
+
+          <div class="btn" onClick="filterSelection('earrings')"> Earrings</div>
+
+        </div>
+
+        <br />
+
+        <div class="row">
+
+
+
+          <div class="column col-md-4 mb-4 bangle scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/"/>
+
+            <p class="type">Stone Necklace</p>
+
+
+          </div>
+
+
+
+
+
+
+
+          <div class="column col-md-4 mb-4 bangle scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/"/>
+
+            <p class="type">Stone Ring</p>
+
+
+          </div>
+
+
+          <div class="modal fade" id="myModal-2" role="dialog">
+
+            <div class="modal-dialog">
+
+
+
+              <div class="modal-content">
+
+                <div class="row-custom">
+
+                  <div class="col-custom">
+
+                    <a class="carousel-control-prev text-dark" href="#myCarousel-2" role="button" data-slide="prev">
+
+                      <span class="fa fa-chevron-left" aria-hidden="true"></span>
+
+                      <span class="sr-only">Previous</span>
+
+                    </a>
+
+                    <a class="carousel-control-next text-dark" href="#myCarousel-2" role="button" data-slide="next">
+
+                      <span class="fa fa-chevron-right" aria-hidden="true"></span>
+
+                      <span class="sr-only">Next</span>
+
+                    </a>
+
+                  </div>
+
+                </div>
+
+                <div class="container-product">
+
+                  <div class="row">
+
+                    <div class="col-md-6">
+
+                      <div class="inner-img-div">
+
+                        <img loading="lazy" class="" src="images/gold-necklace/n2-1.jpg"/>
+
+                      </div>
+
+
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                      <div class="discri-div">
+
+                        <h3>Gold Necklace 22Kt</h3>
+
+                        <p class="discri-about">
+
+                          Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print,
+                          graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century
+                          who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a
+                          type specimen book.
+
+                        </p>
+
+
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+                <div class="modal-footer">
+
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                </div>
+
+              </div>
+
+
+
+            </div>
+
+          </div>
+
+
+
+
+          <div class="column col-md-4 mb-4 bangle scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/"/>
+
+            <p class="type">Stone bangles</p>
+
+          </div>
+
+
+
+
+
+        </div>
+
+
+
+
+
+      </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+  </div>
+
+  <div id="templepage">
+
+
+
+
+
+
+
+
+    <section id="landing-section">
+
+      <div class="row no-gutters">
+
+        <div class="col-md-12">
+
+          <div class="healwithlove-gold" align="center">
+            <img loading="lazy" src="images/">
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+    </section>
+
+
+
+    <section id="gold-necklece">
+
+
+
+
+
+
+
+      <div class="container-90 text-center my-3">
+
+
+
+        <div id="myBtnContainer">
+
+          <div class="btn" onClick="filterSelection('all')"> Show all</div>
+
+          <div class="btn" onClick="filterSelection('bangle')"> Bangles</div>
+
+          <div class="btn" onClick="filterSelection('necklace')"> Necklaces</div>
+
+          <div class="btn" onClick="filterSelection('earrings')"> Earrings</div>
+
+        </div>
+
+        <br />
+
+        <div class="row">
+
+
+
+          <div class="column col-md-4 mb-4 bangle scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/"/>
+
+            <p class="type">Stone Necklace</p>
+
+
+          </div>
+
+
+
+
+
+
+
+          <div class="column col-md-4 mb-4 bangle scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/"/>
+
+            <p class="type">Stone Ring</p>
+
+
+          </div>
+
+
+          <div class="modal fade" id="myModal-2" role="dialog">
+
+            <div class="modal-dialog">
+
+
+
+              <div class="modal-content">
+
+                <div class="row-custom">
+
+                  <div class="col-custom">
+
+                    <a class="carousel-control-prev text-dark" href="#myCarousel-2" role="button" data-slide="prev">
+
+                      <span class="fa fa-chevron-left" aria-hidden="true"></span>
+
+                      <span class="sr-only">Previous</span>
+
+                    </a>
+
+                    <a class="carousel-control-next text-dark" href="#myCarousel-2" role="button" data-slide="next">
+
+                      <span class="fa fa-chevron-right" aria-hidden="true"></span>
+
+                      <span class="sr-only">Next</span>
+
+                    </a>
+
+                  </div>
+
+                </div>
+
+                <div class="container-product">
+
+                  <div class="row">
+
+                    <div class="col-md-6">
+
+                      <div class="inner-img-div">
+
+                        <img loading="lazy" class="" src="images/gold-necklace/n2-1.jpg"/>
+
+                      </div>
+
+
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                      <div class="discri-div">
+
+                        <h3>Gold Necklace 22Kt</h3>
+
+                        <p class="discri-about">
+
+                          Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print,
+                          graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century
+                          who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a
+                          type specimen book.
+
+                        </p>
+
+
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+                <div class="modal-footer">
+
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                </div>
+
+              </div>
+
+
+
+            </div>
+
+          </div>
+
+
+
+
+          <div class="column col-md-4 mb-4 bangle scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/"/>
+
+            <p class="type">Stone bangles</p>
+
+          </div>
+
+
+
+
+
+        </div>
+
+
+
+
+
+      </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+  </div>
+
+  <div id="rhodiumpage">
+
+
+
+
+
+
+
+
+    <section id="landing-section">
+
+      <div class="row no-gutters">
+
+        <div class="col-md-12">
+
+          <div class="healwithlove-gold" align="center">
+            <img loading="lazy" src="images/">
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+    </section>
+
+
+
+    <section id="gold-necklece">
+
+
+
+
+
+
+
+      <div class="container-90 text-center my-3">
+
+
+
+        <div id="myBtnContainer">
+
+          <div class="btn" onClick="filterSelection('all')"> Show all</div>
+
+          <div class="btn" onClick="filterSelection('bangle')"> Bangles</div>
+
+          <div class="btn" onClick="filterSelection('necklace')"> Necklaces</div>
+
+          <div class="btn" onClick="filterSelection('earrings')"> Earrings</div>
+
+        </div>
+
+        <br />
+
+        <div class="row">
+
+
+
+          <div class="column col-md-4 mb-4 bangle scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/"/>
+
+            <p class="type">Stone Necklace</p>
+
+
+          </div>
+
+
+
+
+
+
+
+          <div class="column col-md-4 mb-4 bangle scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/"/>
+
+            <p class="type">Stone Ring</p>
+
+
+          </div>
+
+
+          <div class="modal fade" id="myModal-2" role="dialog">
+
+            <div class="modal-dialog">
+
+
+
+              <div class="modal-content">
+
+                <div class="row-custom">
+
+                  <div class="col-custom">
+
+                    <a class="carousel-control-prev text-dark" href="#myCarousel-2" role="button" data-slide="prev">
+
+                      <span class="fa fa-chevron-left" aria-hidden="true"></span>
+
+                      <span class="sr-only">Previous</span>
+
+                    </a>
+
+                    <a class="carousel-control-next text-dark" href="#myCarousel-2" role="button" data-slide="next">
+
+                      <span class="fa fa-chevron-right" aria-hidden="true"></span>
+
+                      <span class="sr-only">Next</span>
+
+                    </a>
+
+                  </div>
+
+                </div>
+
+                <div class="container-product">
+
+                  <div class="row">
+
+                    <div class="col-md-6">
+
+                      <div class="inner-img-div">
+
+                        <img loading="lazy" class="" src="images/gold-necklace/n2-1.jpg"/>
+
+                      </div>
+
+
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                      <div class="discri-div">
+
+                        <h3>Gold Necklace 22Kt</h3>
+
+                        <p class="discri-about">
+
+                          Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print,
+                          graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century
+                          who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a
+                          type specimen book.
+
+                        </p>
+
+
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+                <div class="modal-footer">
+
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                </div>
+
+              </div>
+
+
+
+            </div>
+
+          </div>
+
+
+
+
+          <div class="column col-md-4 mb-4 bangle scroll-move2">
+
+            <img loading="lazy" class="border-img" src="images/"/>
+
+            <p class="type">Stone bangles</p>
+
+          </div>
+
+
+
+
+
+        </div>
+
+
+
+
+
+      </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+  </div>
+
+  <div class="footer-sdr">
+
+    <div class="container-full">
+
+
+
+      <ul class="cover-con">
+
+        <li>
+
+          <div class="">
+
+            <h4><i class="fa fa-phone"></i>&nbsp; Talk To Us</h4>
+
+            <p> <a href="tel:781-229-9170">781-229-9170</a></p>
+
+
+
+
+
+          </div>
+
+
+
+        </li>
+
+        <li>
+
+
+
+          <div class="">
+
+
+
+            <h4><i class="bi bi-envelope-at-fill"></i> &nbsp; Email Us</h4>
+
+            <p>
+
+              <a title="" href="mailto:kaypeejewelers@gmail.com">kaypeejewelers@gmail.com</a>
+
+            </p>
+
+
+
+          </div>
+
+
+
+
+
+        </li>
+
+        <li>
+
+
+
+          <div class="">
+
+
+
+            <h4><i class="bi bi-clock-fill"></i> &nbsp; Our Hours</h4>
+
+            <p>Tue-Sat 11:30AM - 07:00PM<br>
+
+              Sun 12:00PM - 06:00PM<br> Monday: Closed</p>
+
+
+
+          </div>
+
+
+
+
+
+        </li>
+
+
+
+        <li>
+
+
+
+          <div class="">
+
+            <h4><i class="fa fa-location-arrow"></i> &nbsp; Location</h4>
+
+            <p> <a href="https://goo.gl/maps/SpqAM3tbYXB2t5BdA">85 Wilmington Road <br> Burlington, MA 01803</a><br></p>
+
+
+
+          </div>
+
+
+
+
+
+        </li>
+
+
+
+      </ul>
+
+
+
+
 
     </div>
 
   </div>
 
-
   <!-----Smooth Scroll------>
 
   <!-- <script src="js/TweenMax.min.js"></script> -->
 
-  <script src="js/ScrollToPlugin.min.js"></script>
+
 
   <!-----End Smooth Scroll------>
 
@@ -1752,7 +3924,7 @@
 
   <!-----Smooth Scroll 2------>
 
-  <script src="js/jquery-3.3.1.min.js"></script>
+
   <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script> -->
 
   <!--<script  src="css/index.js"></script>-->
@@ -1763,13 +3935,120 @@
 
   <!-----Click Menu Smooth Scroll------>
 
-  <script src="js/bootstrap.bundle.min.js"></script>
+
 
   <!-- <script src="vendor/jquery-easing/jquery.easing.min.js"></script> -->
 
 
-  <script src="js/scrolling-nav.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
+  <script>
+
+  filterSelection("all")
+
+  function filterSelection(c) {
+
+  var x, i;
+
+  x = document.getElementsByClassName("column");
+
+  if (c == "all") c = "";
+
+  for (i = 0; i < x.length; i++) {
+
+    w3RemoveClass(x[i], "show");
+
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+
+  }
+
+  }
+
+
+
+  function w3AddClass(element, name) {
+
+  var i, arr1, arr2;
+
+  arr1 = element.className.split(" ");
+
+  arr2 = name.split(" ");
+
+  for (i = 0; i < arr2.length; i++) {
+
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+
+  }
+
+  }
+
+
+
+  function w3RemoveClass(element, name) {
+
+  var i, arr1, arr2;
+
+  arr1 = element.className.split(" ");
+
+  arr2 = name.split(" ");
+
+  for (i = 0; i < arr2.length; i++) {
+
+    while (arr1.indexOf(arr2[i]) > -1) {
+
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+
+    }
+
+  }
+
+  element.className = arr1.join(" ");
+
+  }
+
+
+
+
+
+  // Add active class to the current button (highlight it)
+
+  var btnContainer = document.getElementById("myBtnContainer");
+
+  var btns = btnContainer.getElementsByClassName("btn");
+
+  for (var i = 0; i < btns.length; i++) {
+
+  btns[i].addEventListener("click", function(){
+
+    var current = document.getElementsByClassName("active");
+
+    current[0].className = current[0].className.replace(" active", "");
+
+    this.className += " active";
+
+  });
+
+  }
+
+  </script>
+
+
+
+  <script>
+    let pages = ['#homepage', '#goldpage', '#newarrivalpage', '#diamondpage', '#antiquepage', '#gemstonepage', '#mangalsutrapage', '#engagementpage','#rhodiumpage','#templepage'];
+    function changePage(page) {
+        filterSelection("all");
+      for (let i = 0; i < pages.length; i++) {
+        $(pages[i]).css("display", "none");
+      }
+      $(page).css("display", "block");
+    }
+    function goToContactUs() {
+      console.log("test");
+      changePage('#homepage');
+      $('html, body').animate({
+        scrollTop: $("#contact-us").offset().top - 110
+      }, 500);
+    }
+  </script>
 
   <!-----End Menu Smooth Scroll------>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
@@ -1813,10 +4092,10 @@
       $(".ctct-form-element").css("height", "40px");
       $(".ctct-form-element").css("background", "white");
       $(".ctct-form-element").attr("placeholder", "Enter Your Email Address");
-      $(".ctct-form-element").focusin(function(){
+      $(".ctct-form-element").focusin(function () {
         $(".ctct-form-element").attr("placeholder", "");
       })
-      $(".ctct-form-element").focusout(function(){
+      $(".ctct-form-element").focusout(function () {
         $(".ctct-form-element").attr("placeholder", "Enter Your Email Address");
       })
       // $(".ctct-form-element").css("text-align", "left");
@@ -1833,12 +4112,12 @@
       $(".ctct-form-button").css("cursor", "pointer");
       $(".ctct-form-button").attr("onclick", "subscribe()");
       //Subtext Stuff
-      $(`<p style="font-size: 11px;">
-                Receive exclusive offers, new releases and trend updates. Rest assured, we don't spam.
-            </p>`).insertAfter(".ctct-form-header");
+    //  $(`<p style="font-size: 11px;">
+              //  Receive exclusive offers, new releases and trend updates. Rest assured, we don't spam.
+          //  </p>`).insertAfter(".ctct-form-header");
       //Alert Stuff
-      $(`<div id="subscribe-success-alert" 
-            class="alert alert-success hide fade" 
+      $(`<div id="subscribe-success-alert"
+            class="alert alert-success hide fade"
             style="
                 margin-top: 0.3rem;
                 width: 275px;
@@ -1847,7 +4126,7 @@
                 margin-left: auto;
                 margin-right: auto;
                 margin-bottom: 0;
-                font-size: 15px;" 
+                font-size: 15px;"
             role="alert">
                 Successfully added to email list!
             </div>`).insertAfter(".ctct-form-button");
@@ -1860,12 +4139,12 @@
       $("#gdpr_text").css("display", "none");
       $(".ctct-form-footer").css("display", "none");
       $('.grecaptcha-badge').css("display", "none");
-  
+
     }
 
-    window.addEventListener('pageshow', function () {
-      setTimeout(ctctToKPSubscribe, 500)
-    }, false);
+    $(window).on("load", function () {
+      ctctToKPSubscribe();
+    });
 
 
   </script>
@@ -1951,10 +4230,10 @@
       document.getElementById("main").style.left = "250px";
 
       document.getElementById("main").style.position = "relative";
+      document.addEventListener("click", closeNavOnClick);
+
 
     }
-
-
 
     function closeNav() {
 
@@ -1963,13 +4242,13 @@
       document.getElementById("main").style.left = "0";
 
       document.getElementById("main").style.position = "relative";
-
-
-
-
-
     }
 
+    function closeNavOnClick(event) {
+      if (!event.target.closest('.sidebar') && !event.target.closest('.openbtn')) {
+        closeNav();
+      }
+    }
 
 
     $(document).mouseup(function (e) {
@@ -2036,44 +4315,15 @@
 
 
 
-    $(document).ready(function () {
-
-      $("#home-active").addClass('active')
-
-    });
-
-  </script>
-  <script defer>
-    $('.gold-slider').owlCarousel({
-      items: 4,
-      loop: true,
-      margin: 30,
-      autoplay: true,
-      autoplayTimeout: 3300,
-      smartSpeed: 1500,
-      autoplayHoverPause: true,
-      responsive: {
-        0: {
-          items: 1,
-          nav: true
-        },
-        767: {
-          items: 2,
-          nav: true
-        },
-        991: {
-          items: 3,
-          nav: true
-        },
-        1199: {
-          items: 4,
-          nav: true,
-          loop: true
-        }
-      }
-    })
+    // $(document).ready(function () {
+    //
+    //   $("#home-active").addClass('active')
+    //
+    // });
 
   </script>
+
+
 
   <script>
     var pad = $("#collections").css("padding-top").replace("px", "");
@@ -2086,13 +4336,29 @@
   </script>
 
   <script>
-    $(".dropdown-menu").hover(function () {
-      $(".dropdown-toggle").toggleClass("nav-link-force-hover");
-      console.log("Test");
-    }, function () {
-      console.log("Test2");
-      $(".dropdown-toggle").toggleClass("nav-link-force-hover");
+    // $("#goldpage.column").on("click", function(){
+    //   $("body").css("height", "100vh");
+    //   $("body").css("overflow", 'hidden');
+    //   $("body").css("position", "absolute");
+    // })
+  </script>
+
+  <script>
+    $(".dropdown-menu").hover(function (e) {
+      $(".dropdown-toggle").attr("aria-expanded", "true");
+      $(".dropdown-toggle").addClass("nav-link-force-hover");
+      console.log("trigger");
+    }, function (e) {
+      $(".dropdown-toggle").attr("aria-expanded", "false");
+      $(".dropdown-toggle").removeClass("nav-link-force-hover");
     });
+    // $(".dropdown-menu").hover(function () {
+    //   $(".dropdown-toggle").ho;
+    //   console.log("Test");
+    // }, function () {
+    //   console.log("Test2");
+    //   $(".dropdown-toggle").toggleClass("nav-link-force-hover");
+    // });
   </script>
 
   <!-----email validation---->
@@ -2147,22 +4413,22 @@
 
       $("#contact-us-button").attr("disabled", "true");
       document.getElementById("contact-us-alert").innerHTML = "Message Sent Successfully!";
-          $("#contact-us-alert").addClass("alert-success");
-          $("#contact-us-alert").css("display", "block");
-          $('#contact-us-alert').removeClass("hide");
-          $('#contact-us-alert').addClass("show");
-          $('#contact-us-alert').fadeIn();
+      $("#contact-us-alert").addClass("alert-success");
+      $("#contact-us-alert").css("display", "block");
+      $('#contact-us-alert').removeClass("hide");
+      $('#contact-us-alert').addClass("show");
+      $('#contact-us-alert').fadeIn();
       setTimeout(function () {
-            // $('#contact-us-alert').fadeOut();
-            $('#contact-us-alert').removeClass("show");
-            $('#contact-us-alert').addClass("hide");
-            // $("#contact-us-alert").css("display", "block");
-            $("#contact-us-button").removeAttr("disabled");
+        // $('#contact-us-alert').fadeOut();
+        $('#contact-us-alert').removeClass("show");
+        $('#contact-us-alert').addClass("hide");
+        // $("#contact-us-alert").css("display", "block");
+        $("#contact-us-button").removeAttr("disabled");
       }, 5000);
 
       console.log(formData);
 
-      if ($("#comment2").val()){
+      if ($("#comment2").val()) {
         return;
       }
 
@@ -2204,7 +4470,7 @@
       $("#dropdownMenuButton").trigger("mouseenter");
     })
   </script> -->
-<!-- 
+  <!--
   <script type="text/javascript">
     jQuery.browser = {};
     (function () {
@@ -2216,26 +4482,56 @@
         }
     })();
 </script> -->
-
-  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-  <script src="https://unpkg.com/flickity-fade@1/flickity-fade.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-  
 
 
-  <script defer>
-    $(".flickity-container-gold").flickity({
-      wrapAround: true
+
+
+  <script>
+    $(window).on("load", function () {
+      console.log("Loading Flickity");
+      $(".flickity-container-gold").flickity({
+        wrapAround: true,
+        'autoPlay': 'true',
+        pauseAutoPlayOnHover: false
+      });
+      $(".flickity-container-banner").flickity({
+        'fade': true,
+        wrapAround: true,
+        friction: 0.35,
+        pageDots: false,
+        'autoPlay': 4000,
+        pauseAutoPlayOnHover: false
+      });
+      $(".flickity-container-diamond").flickity({
+        wrapAround: true,
+        'autoPlay': 4000,
+        friction: 0.35,
+        pauseAutoPlayOnHover: false
+      });
     });
-    $(".flickity-container-banner").flickity({
-      'fade': true,
-      wrapAround: true,
-      friction: 0.35,
-      pageDots: false
-    });
+
   </script>
-  <script defer>
-  </script>
+
+
+<script>
+$(document).ready(function () {
+
+                  $("#home-active").addClass('active')
+
+              });
+
+              $('.btn').click(function (e) {
+                  $('#home-active').removeClass('active');
+         $('.btn').removeClass('active');
+         $(this).addClass('active');
+              });
+
+
+</script>
+
+<script> closeNav(); </script>
+
 </body>
 
 </html>

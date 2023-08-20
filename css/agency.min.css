@@ -157,12 +157,14 @@ img::-moz-selection {
     color:#fff;
 }
 
+/* NOTE 8*/
 .kp-modal-content{
 
     background: none;
     width: fit-content;
     border:none;
 	    width: auto;
+      background:#59464D;
 }
 .kp-modal-dialog{
     display: flex;
@@ -173,8 +175,9 @@ img::-moz-selection {
 
 .kp-modal-header{
     border: none;
+    background:#59464D;
     color:#fff;
-    
+
 }
 .kp-modal-header span{
     background: none !important;
