@@ -6,27 +6,26 @@ Sections:
 
 1) GLOBAL ELEMENT RULES
 2) NAVBAR
-3) HOME PAGE
-4) NEW ARRIVALS PAGE
-5) GOLD PAGE
-6) DIAMOND PAGE
-7) ANTIQUE PAGE
-8) GEMSTONE PAGE
-9) MANGALSUTRAS PAGE
-10) ENGAGEMENT PAGE
-11) RHODIUM PAGE
-12) TEMPLE PAGE
-13) MOBILE
-14) SHARED - TO REFACTOR
-15) EXTERNAL LIB CSS
-16) UNSORTED MEDIA QUERIES
+3) FOOTER
+4) HOME PAGE
+5) NEW ARRIVALS PAGE
+6) GOLD PAGE
+7) DIAMOND PAGE
+8) ANTIQUE PAGE
+9) GEMSTONE PAGE
+10) MANGALSUTRAS PAGE
+11) ENGAGEMENT PAGE
+12) RHODIUM PAGE
+13) TEMPLE PAGE
+14) MOBILE
+15) SHARED - TO REFACTOR
+16) EXTERNAL LIB CSS
+17) UNSORTED MEDIA QUERIES
 
 */
 
 
-/*#region*/
-
-/* GLOBAL ELEMENT RULES */
+/*#region GLOBAL ELEMENT RULES*/
 
 html,
 body {
@@ -98,7 +97,7 @@ button {
 
 /*#endregion*/
 
-/* NAVBAR */
+/*#region NAVBAR */
 
 /* Appears to only get rid of border on collections dropdown */
 .collection-menu {
@@ -261,7 +260,9 @@ button {
     background-color: rgb(230, 229, 229);
 }
 
-/* FOOTER */
+/*#endregion*/
+
+/*#region FOOTER */
 
 .cover-con li {
     list-style: none;
@@ -310,7 +311,9 @@ button {
     color: #e4bab4;
 }
 
-/* HOME PAGE */
+/*#endregion*/
+
+/*#region HOME PAGE */
 
 /* Looks like it has no effect */
 .new-arrive-product {
@@ -500,7 +503,27 @@ button {
     padding-bottom: 10px;
 }
 
-/* NEW ARRIVALS PAGE */
+.kp-viewmore {
+    border: 2px solid black;
+    padding: 6px 15px;
+    border-radius: 5px;
+    position: relative;
+    top: 43px;
+    font-weight: 700;
+    color: black;
+    transition: all .2s ease-in-out;
+    font-size: max(0.75vw, 1rem);
+}
+
+.kp-viewmore:hover {
+    background: black;
+    color: #fff;
+    text-decoration: none;
+}
+
+/*#endregion*/
+
+/*#region NEW ARRIVALS PAGE */
 
 /* New arrival banner text rules (current doesn't exist) */
 .inner-banner-text {
@@ -520,23 +543,41 @@ button {
     margin-bottom: 1rem;
 }
 
-/* GOLD PAGE */
+/*#endregion*/
 
-/* DIAMOND PAGE */
+/*#region GOLD PAGE */
 
-/* ANTIQUE PAGE */
+/*#endregion*/
 
-/* GEMSTONE PAGE */
+/*#region DIAMOND PAGE */
 
-/* MANGALSUTRAS PAGE */
+/*#endregion*/
 
-/* ENGAGEMENT PAGE */
+/*#region ANTIQUE PAGE */
 
-/* RHODIUM PAGE */
+/*#endregion*/
 
-/* TEMPLE PAGE */
+/*#region GEMSTONE PAGE */
 
-/* MOBILE */
+/*#endregion*/
+
+/*#region MANGALSUTRAS PAGE */
+
+/*#endregion*/
+
+/*#region ENGAGEMENT PAGE */
+
+/*#endregion*/
+
+/*#region RHODIUM PAGE */
+
+/*#endregion*/
+
+/*#region TEMPLE PAGE */
+
+/*#endregion*/
+
+/*#region MOBILE */
 
 .sidebar {
     height: 100%;
@@ -621,7 +662,9 @@ button {
     display: none
 }
 
-/* SHARED - TO REFACTOR */
+/*#endregion*/
+
+/*#region SHARED - TO REFACTOR */
 
 /* Only banners not on homepage, doesn't appear to do anything */
 .inner-banner {
@@ -872,7 +915,9 @@ button {
     align-items: center;
 }
 
-/* EXTERNAL LIB CSS */
+/*#endregion*/
+
+/*#region EXTERNAL LIB CSS */
 
 .btn {
     font-weight: 700
@@ -966,7 +1011,9 @@ body.compensate-for-scrollbar {
     border: solid 1px antiquewhite;
 }
 
-/* UNSORTED MEDIA QUERIES */
+/*#endregion*/
+
+/*#region UNSORTED MEDIA QUERIES */
 
 @media screen and (max-height: 450px) {
     .sidebar {
@@ -1773,7 +1820,9 @@ body.compensate-for-scrollbar {
     }
 }
 
-/* UNUSED? */
+/*#endregion*/
+
+/*#region UNUSED? */
 
 /* #new-arr {
 
@@ -1902,3 +1951,5 @@ header .overlay {
 body {
     font-family: 'Playfair Display', serif;
 }
+
+/*#endregion*/
