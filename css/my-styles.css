@@ -1,6 +1,32 @@
 @charset "utf-8";
 
+/*
 
+Sections:
+
+1) GLOBAL ELEMENT RULES
+2) NAVBAR
+3) HOME PAGE
+4) NEW ARRIVALS PAGE
+5) GOLD PAGE
+6) DIAMOND PAGE
+7) ANTIQUE PAGE
+8) GEMSTONE PAGE
+9) MANGALSUTRAS PAGE
+10) ENGAGEMENT PAGE
+11) RHODIUM PAGE
+12) TEMPLE PAGE
+13) MOBILE
+14) SHARED - TO REFACTOR
+15) EXTERNAL LIB CSS
+16) UNSORTED MEDIA QUERIES
+
+*/
+
+
+/*#region*/
+
+/* GLOBAL ELEMENT RULES */
 
 html,
 body {
@@ -23,26 +49,494 @@ body {
 }
 
 body {
-
     margin: 0;
-
     font-family: 'Montserrat', sans-serif;
-
     background-size: cover;
     background-repeat: no-repeat;
     background: rgb(248, 242, 240);
+}
+
+p {
+    line-height: 1.75
+}
+
+a {
+    color: #212529
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+iframe {
+
+    width: 100%;
+    height: 90%;
+    border: 0
+}
+
+::selection {
+    background-color: #ACCEF7;
+}
+
+img {
+    width: 100%;
+}
+
+span {
+    color: #fff;
+}
+
+button {
+    outline: 0 !important;
+}
+
+/*#endregion*/
+
+/* NAVBAR */
+
+/* Appears to only get rid of border on collections dropdown */
+.collection-menu {
+    background: rgb(253, 253, 253);
+    border: none;
+    border-radius: 0;
+}
+
+#mainNav {
+    background-color: #212529;
+    background: rgb(248, 242, 240);
+    background: linear-gradient(55deg, rgba(248, 242, 240, 1) 0%, rgba(79, 57, 69, 0.25) 24%, rgba(79, 57, 69, 0.5) 24%, rgba(79, 57, 69, 0.8) 55%, rgba(79, 57, 69, 0.8) 55%, rgba(79, 57, 69, 1) 80%);
+}
+
+#mainNav .navbar-brand {
+    color: #4CAF50;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link {
+    font-size: 90%;
+    font-weight: 600;
+    padding: .75em 0;
+    letter-spacing: 1px;
+    color: #000;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link.active,
+#mainNav .navbar-nav .nav-item .nav-link:hover {
+    color: rgb(167 99 5);
+}
+
+.navbar-nav {
+    display: inline-flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#navbar-row {
+    background-color: rgb(255, 255, 255);
+    padding-bottom: 5px;
+}
+
+#top-navbar {
+    width: 100%;
+    height: 28px;
+    padding: 0;
+}
+
+
+#navbar-row {
+    width: 100%;
+}
+
+#top-navbar a:hover {
+    color: indianred !important;
+    transition: all 100ms ease-in-out;
+    text-decoration: none;
+}
+
+.dropdown .dropdown-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+    -ms-transition: all 200ms ease-in;
+    -o-transition: all 200ms ease-in;
+    transition: all 200ms ease-in;
+    border-radius: 5px;
+    font-size: 1rem;
+
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.3);
+}
+
+#dropdownMenuButton:hover+.dropdown-menu,
+.dropdown-menu:hover {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+.dropdown-toggle:hover::after {
+    transform: rotate(180deg);
+}
+
+.dropdown-toggle[aria-expanded="true"]:after {
+    transform: rotate(180deg);
+}
+
+.dropdown-toggle:after {
+    transition: 0.7s;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link.active,
+#mainNav .navbar-nav .nav-item .nav-link:hover,
+.nav-link-force-hover {
+    color: #704a57 !important;
+    text-shadow: 0 0 0.35px #704a57;
+    transition: all 200ms ease-in;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link,
+.dropdown-item {
+    color: inherit;
+    font-family: 'Playfair Display', serif;
+    font-size: 85%;
+    font-weight: Bold;
+    letter-spacing: 0.5px;
+}
+
+#mainNav {
+    text-align: center !important;
+    vertical-align: middle !important;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 10px 10px rgb(0 0 0 / 10%);
+
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+}
+
+#top-navbar div {
+    padding-right: 0.5rem;
+    text-align: right;
+    background-color: #36384d;
 
 
 }
 
-html,
-body {
-
-    height: 100%;
-
-
-
+#collectionsDropdownMenu {
+    margin-top: 0px;
 }
+
+#top-navbar p {
+    display: inline;
+    border-left: solid;
+    padding-left: 5px;
+    font-family: 'Twentieth Century', serif;
+    letter-spacing: 0.5px;
+    color: #e4bab4 !important;
+}
+
+#mainNav .navbar-nav .nav-item {
+    /* width: 12.5%; */
+}
+
+.dropdown-item {
+    font-size: 1em;
+    letter-spacing: 0.5px;
+}
+
+.dropdown-item:hover {
+    color: #704a57;
+    text-shadow: #704a57;
+    text-shadow: 0 0 0.35px #704a57;
+    transition: all 50ms ease-in;
+    text-decoration: none;
+    background-color: rgb(230, 229, 229);
+}
+
+/* FOOTER */
+
+.cover-con li {
+    list-style: none;
+}
+
+.cover-con h4 {
+    font-size: 21px;
+    color: #e4bab4;
+    text-align: center;
+    font-weight: normal;
+}
+
+.cover-con p {
+    font-size: 16px;
+    color: #e4bab4;
+    text-align: center;
+}
+
+.cover-con {
+    padding-top: 2%;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #36384d;
+    font-family: 'Raleway,sans-serif';
+}
+
+.btn-success {
+    color: black;
+    background-color: white;
+    border-color: gray;
+}
+
+.btn-success:hover {
+    color: #333;
+    background-color: rgb(202, 245, 202);
+    border-color: rgb(202, 245, 202);
+}
+
+.footer-sdr {
+    background-color: #36384d;
+    color: #f8f2f0;
+}
+
+.footer-sdr a {
+    color: #e4bab4;
+}
+
+/* HOME PAGE */
+
+/* Looks like it has no effect */
+.new-arrive-product {
+    float: left;
+    width: 100%;
+}
+
+/* Bottom row of new arrivals on homepage margin from top row */
+.arrive-btm {
+    margin-top: 24px;
+}
+
+#gold p {
+    font-size: max(0.8vw, 1rem);
+    text-shadow: 0 0 0.1px black;
+    color: black;
+}
+
+.subscribe-input {
+    border: none;
+    width: 230px;
+    padding: 8px 13px;
+}
+
+.subscribe-btn {
+    border: none;
+    padding: 8px 13px;
+    background: #684f4f;
+    color: #fff;
+}
+
+.section-headers {
+    font-size: 35px;
+    padding-bottom: 4%;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1.5px;
+}
+
+.diamond-container img {
+    cursor: pointer;
+}
+
+#collections p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+#collections img {
+    border-radius: 5px;
+}
+
+#diamond span,
+#gold span,
+#collections span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #906337;
+    background-color: #f4f4f4;
+}
+
+#diamond h3 {
+    color: white;
+}
+
+#collections {
+    padding-bottom: 0 !important;
+}
+
+#diamond .row p {
+    text-align: center;
+    font-size: 1em;
+    background-color: black;
+    color: white;
+}
+
+.form-control {
+    /* border: #4D3643; */
+    background-color: rgba(255, 255, 255, 1);
+    /* border-radius: 0; */
+    color: black;
+    font-weight: 600;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 1);
+}
+
+#contact-us-form-section {
+    background-color: #4D3643;
+    padding-top: 20px;
+}
+
+#new-arr,
+#pagebreak1,
+#contact-us {
+    background-color: aliceblue;
+}
+
+.container {
+    max-width: fit-content;
+}
+
+#subscribe-success-alert {
+    margin-top: 0.3rem;
+    width: 342px;
+    height: 30px;
+    line-height: 7px;
+}
+
+#contact-us-alert {
+    margin-top: 0.5rem;
+    text-align: center;
+    transition: all 200ms ease;
+    font-size: 13px;
+    padding: 0.2rem 0;
+}
+
+.always-show {
+    display: block !important;
+}
+
+.never-show {
+    display: none !important;
+}
+
+#special-hours {
+    font-size: 1.2em;
+    background-color: gold;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: black;
+}
+
+.contact-btn {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.new-arrival-collection-text {
+    color: goldenrod;
+}
+
+.collections-row-text-left {
+    padding-bottom: 2%;
+    padding-right: 2%;
+    padding-top: 2%;
+}
+
+.collections-row-text-right {
+    padding-bottom: 2%;
+    padding-left: 2%;
+    padding-top: 2%;
+}
+
+.collections-section-text {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#gemstone-collection-section {
+    background-color: lightyellow;
+}
+
+#antique-collection-section {
+    background-color: rgb(157, 121, 118);
+}
+
+#mangalsutra-collection-section {
+    background-color: rgb(170, 183, 201);
+}
+
+#engagement-collection-section {
+    background-color: burlywood;
+}
+
+#contact-form .modal-body {
+    padding: 0;
+}
+
+.basic-form-input {
+    padding-bottom: 10px;
+}
+
+/* NEW ARRIVALS PAGE */
+
+/* New arrival banner text rules (current doesn't exist) */
+.inner-banner-text {
+    position: absolute;
+    right: 15%;
+    top: 50%;
+}
+
+/* New arrival banner text rules (current doesn't exist) */
+.inner-banner-text h1 {
+    color: #000;
+    text-transform: capitalize;
+    font-size: 52px;
+}
+
+#stone {
+    margin-bottom: 1rem;
+}
+
+/* GOLD PAGE */
+
+/* DIAMOND PAGE */
+
+/* ANTIQUE PAGE */
+
+/* GEMSTONE PAGE */
+
+/* MANGALSUTRAS PAGE */
+
+/* ENGAGEMENT PAGE */
+
+/* RHODIUM PAGE */
+
+/* TEMPLE PAGE */
+
+/* MOBILE */
 
 .sidebar {
     height: 100%;
@@ -75,301 +569,117 @@ body {
     padding: 5px;
 }
 
-
-
-
 .sidebar a {
-
     padding: 8px 8px 8px 32px;
-
     text-decoration: none;
-
     font-size: 14px;
-
     color: #ffffff;
-
     display: block;
-
     transition: 0.3s;
-
     text-transform: uppercase;
-
 }
 
 
 
 .sidebar a:hover {
-
     color: #f1f1f1;
-
 }
 
 
 
 .sidebar .closebtn {
-
     position: absolute;
-
     top: 0;
-
     right: 25px;
-
     font-size: 36px;
-
     margin-left: 50px;
-
 }
 
 
 
 .openbtn {
-
     font-size: 20px;
-
     cursor: pointer;
-
     background-color: #36384d;
-
     color: white;
-
     padding: 10px 15px;
-
     border: none;
     position: absolute;
     top: 0;
     left: 0;
-
 }
-
-
 
 .openbtn:hover {
-
     background-color: #444;
-
 }
 
-.new-arrive-product {
-    float: left;
-    width: 100%;
-
-
+.mobile-enable {
+    display: none
 }
 
-.arrive-btm {
-    margin-top: 24px;
+.mobile-enable {
+    display: none
 }
 
+/* SHARED - TO REFACTOR */
+
+/* Only banners not on homepage, doesn't appear to do anything */
 .inner-banner {
     position: relative
 }
 
-.inner-banner-text {
-    position: absolute;
-    right: 15%;
-    top: 50%;
-}
-
-.inner-banner-text h1 {
-    color: #000;
-    text-transform: capitalize;
-    font-size: 52px;
-}
-
-
-
-
-
-
-
-
-
-@media screen and (max-height: 450px) {
-
-    .sidebar {
-        padding-top: 15px;
-    }
-
-    .sidebar a {
-        font-size: 18px;
-    }
-
-    .sidebar {
-        height: 50px;
-    }
-
-}
-
-
+/* Modal of product in e.g gold page, not doing anything since modals disabled */
 .container-product {
-
-
-
-
     margin: auto;
-
-
     padding-right: 2%;
-
-
 }
 
 .container-product-page {
-
     width: 80%;
-
     margin: auto;
-
     padding-bottom: 5%;
-
     padding-top: 5%;
-
-}
-
-.btn {
-    text-transform: capitalize
-}
-
-
-
-.inner-img-div {
-
-    background-color: #f1f1f1;
-
-}
-
-.collection-menu {
-
-    background: rgb(253, 253, 253);
-    border: none;
-
-    /* top: 77px; */
-
-    border-radius: 0;
-
-
-
-
-
-}
-
-/* layout shift fancybox */
-body.compensate-for-scrollbar {
-    overflow: visible !important;
-}
-
-
-.compensate-for-scrollbar {
-    padding-right: 0px !important;
-
-}
-
-.dropdown-item {
-
-    font-size: 1em;
-
-
-
-    letter-spacing: 0.5px;
-
-}
-
-.inner-img-div img {
-
-    width: 55%;
-
-}
-
-.discri-div h3 {
-
-    text-align: left;
-
-    padding-top: 11%;
-
-    font-size: 22px;
-    text-transform: capitalize;
-
-}
-
-
-.card-body p {
-
-    text-align: center;
-    margin: 0;
-    text-transform: capitalize;
-    line-height: 15px;
-    min-height: 49px;
-    padding: 8px 0 7px;
-
-}
-
-.fancybox__caption {
-    font-size: 25px;
-
-}
-
-.modal-footer {
-
-    padding: 0rem;
-
-
-}
-
-.discri-about {
-
-    font-size: 12px;
-
-    text-align: left;
-
-}
-
-
-
-#top-navbar a:hover {
-
-    color: indianred !important;
-
-    transition: all 100ms ease-in-out;
-
-    text-decoration: none;
-
 }
 
 .row-custom {
-
     position: relative;
-
 }
 
-.subscribe-input {
-
-    border: none;
-
-    width: 230px;
-
-
-    padding: 8px 13px;
-
+/* Again inside product modal page like container product rule, not doing anything since modals disabled */
+.inner-img-div {
+    background-color: #f1f1f1;
 }
 
-.subscribe-btn {
-
-    border: none;
-
-
-
-    padding: 8px 13px;
-
-
-
-    background: #684f4f;
-
-
-
-    color: #fff;
-
+/* Footer of modal in each page first product */
+.modal-footer {
+    padding: 0rem;
 }
 
+/* Description of modal in each page first product */
+.discri-about {
+    font-size: 12px;
+    text-align: left;
+}
+
+.inner-img-div img {
+    width: 55%;
+}
+
+/* Header/Title of modal in each page first product */
+.discri-div h3 {
+    text-align: left;
+    padding-top: 11%;
+    font-size: 22px;
+    text-transform: capitalize;
+}
+
+/* Shared across multiple pages and in some areas of home page */
+.container-90 {
+    width: 95%;
+    margin: auto;
+}
+
+/* Currently unused it seems all three below */
 .collections-bg {
     position: relative
 }
@@ -386,173 +696,56 @@ body.compensate-for-scrollbar {
 
 .collections-txt h1 {
     font-size: 23px;
-
-
 }
 
-button {
-    outline: 0 !important;
-}
-
-#new-arr {
-
-    padding-top: 2%;
-
-    padding-bottom: 2px;
-
-}
-
-
-
-.section-headers {
-
-    font-size: 35px;
-    padding-bottom: 4%;
-    font-family: 'Playfair Display', serif;
-    letter-spacing: 1.5px;
-
-}
-
-
-
-.container-90 {
-
-    width: 95%;
-
-    margin: auto;
-
-}
-
+/* Both new arrival on homepage and new arrival page diamond section on homepage */
 .new-arr-container,
 .diamond-container {
-
-
     margin-top: 2px;
-
-
 }
 
-.diamond-container img {
-    cursor: pointer;
-}
-
+/* New Arrival and Diamond on Homepage and two sections on new arrival page */
 .cover-div {
-
     display: flex;
-
     justify-content: space-between;
-
 }
 
-.right-row {
 
-    width: 100%;
-
-}
-
-.right-row img {
-
-    width: 100%;
-
-
-}
-
-.diamond-txt {
-    position: absolute;
-    top: 0;
-    font-weight: bold;
-    top: 81px;
-    left: 100px;
-}
-
+/* Below is shared between new arrival on homepage and new arrival page */
 .left-row {
-
     width: 100%;
-
     margin-left: 0;
     margin-right: 0;
-
 }
 
 .left-row p {
-
     font-size: 17px;
-
     font-weight: bold;
-
     margin-block-end: 0;
     text-transform: capitalize;
     margin-bottom: 0;
-
 }
 
 .left-row span {
-
     font-size: 15px;
-
     font-weight: bold;
-
     color: #906337;
     margin-bottom: 18px;
     float: left;
-
 }
 
-#collections p {
-
-    font-size: 20px;
-
-    font-weight: bold;
-
-
-
-
-
-
-
-
-
-    margin-bottom: 0;
-
-    text-align: center;
-
-}
-
-#collections img {
-    border-radius: 5px;
-}
-
-#gold p {
-    font-size: max(0.8vw, 1rem);
-    text-shadow: 0 0 0.1px black;
-    color: black;
-}
-
-#diamond span,
-#gold span,
-#collections span {
-
-    font-size: 12px;
-
-    font-weight: bold;
-
-    color: #906337;
-
-    background-color: #f4f4f4;
-
-}
-
+/* Basically covers entirety of each page excluding banner outside of homepage */
 #gold-necklece {
     background: white;
 }
 
+/* Filter section of all pages with them */
 #myBtnContainer {
     padding: 25px 0 45px;
 }
 
-
-
 /* Create three equal columns that floats next to each other */
+/* For each product in each page outside of homepage */
 .column {
     float: left;
     width: 33.33%;
@@ -598,33 +791,20 @@ button {
     color: white;
 }
 
-#diamond,
-#gold,
-#collections,
-#new-arr {
-
-    padding: 0px 0;
-
-    scroll-margin-top: 62px;
-
+.modal-dialog {
+    max-width: 60%;
+    margin: 0.2rem auto;
 }
 
-
-
-
-
-
+.discri-div {
+    text-align: left;
+}
 
 #gold,
 #collections,
 #pagebreak2,
 #pagebreak4 {
     background-color: white !important;
-
-
-
-
-
 }
 
 #diamond,
@@ -632,8 +812,419 @@ button {
     background-color: black;
 }
 
-#diamond h3 {
+.btn {
+    border: none !important;
+    outline: none !important;
+    padding: 8px 7px !important;
+    cursor: pointer !important;
+    font-size: 16px !important;
+}
+
+#myBtnContainer {
+    padding: 15px 0;
+}
+
+/* Text for every product on the product pages */
+.type {
+    font-size: 16px !important;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 3px;
+    margin-bottom: 21px;
+    text-transform: capitalize;
+}
+
+/* Images on diamond page & onwards */
+.border-img {
+    border: 1px solid #d4d4d4;
+}
+
+.my-3 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.modal {
+    text-align: center;
+    padding: 0 !important;
+}
+
+/* New Arrival product images on homepage and on new arrival page */
+.new-arrive-product img {
+    cursor: pointer;
+}
+
+#newarrivalpage,
+#goldpage,
+#diamondpage,
+#antiquepage,
+#gemstonepage,
+#mangalsutrapage,
+#engagementpage,
+#templepage,
+#rhodiumpage {
+    display: none;
+}
+
+.kp-modal {
+    justify-content: center;
+    align-items: center;
+}
+
+/* EXTERNAL LIB CSS */
+
+.btn {
+    font-weight: 700
+}
+
+/* All buttons text to uppercase, not working/doing anything it seems */
+.btn {
+    text-transform: capitalize
+}
+
+/* layout shift fancybox */
+body.compensate-for-scrollbar {
+    overflow: visible !important;
+}
+
+
+.compensate-for-scrollbar {
+    padding-right: 0px !important;
+}
+
+.card-body p {
+    text-align: center;
+    margin: 0;
+    text-transform: capitalize;
+    line-height: 15px;
+    min-height: 49px;
+    padding: 8px 0 7px;
+}
+
+.fancybox__caption {
+    font-size: 25px;
+}
+
+.card-body {
+    padding: 0px !important;
+}
+
+.card {
+    border: 0px;
+    /* background-color: #59464D; */
+}
+
+.flickity-container-gold .container-cell {
+    width: 20%;
+    margin: 0px 20px;
+}
+
+.flickity-container-gold .container-cell img {
+    opacity: 0.85;
+}
+
+
+.flickity-container-gold .is-selected img {
+    opacity: 1;
+}
+
+.flickity-container-diamond .container-cell {
+    width: 100%;
+}
+
+#flickity-diamond-col {
+    display: grid;
+    align-items: center;
+}
+
+.flickity-container-diamond .container-cell p {
+    text-align: center;
+    font-size: 1.5em;
+    background-color: black;
     color: white;
+}
+
+.flickity-container-banner .flickity-button {
+    background-color: rgba(255, 255, 255, 0.4) !important;
+
+}
+
+.flickity-page-dots {
+    display: none;
+}
+
+.flickity-container-gold .flickity-button {
+    background-color: rgba(255, 255, 255, 0.25) !important;
+    color: black;
+    border: solid 1px black;
+}
+
+.flickity-container-diamond .flickity-button {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    color: antiquewhite;
+    border: solid 1px antiquewhite;
+}
+
+/* UNSORTED MEDIA QUERIES */
+
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+
+    .sidebar a {
+        font-size: 18px;
+    }
+
+    .sidebar {
+        height: 50px;
+    }
+}
+
+@media (max-width:576px) {
+    .kp-modal-body img {
+        width: 100%;
+    }
+
+    .related h3 {
+        font-size: 15px;
+    }
+
+    .inner-banner-text {
+        position: absolute;
+        right: 0;
+        top: auto;
+        bottom: 28px;
+        left: 0;
+    }
+
+    .related-slider .owl-nav {
+        position: absolute;
+        top: -38px;
+        right: 2px;
+    }
+
+    .inner-banner-text h1 {
+        font-size: 35px;
+    }
+
+
+    .kp-viewmore {
+        top: 20px;
+        font-size: 12px;
+        padding: 4px 14px;
+    }
+
+    #gold .kp-viewmore {
+        top: 0;
+    }
+
+    #diamond,
+    #new-arr {
+        padding: 58px 0 50px;
+    }
+
+    #collections,
+    #gold {
+        padding: 58px 0 50px;
+    }
+
+    #collections strong {
+        display: none
+    }
+
+
+    html {
+        /* overflow-x: hidden; */
+    }
+
+
+
+    .new-arrivals {
+        font-size: 22px;
+    }
+
+    .new-arrive-product {
+        margin-top: 6px;
+        visibility: visible !important;
+    }
+
+    .fadeInUp {
+        visibility: visible !important;
+    }
+
+    .left-row {
+        width: auto;
+    }
+
+    .gold-arrivals {
+        font-size: 22px;
+    }
+
+    .mobile-enable {
+        display: block;
+    }
+
+    .gold-mob img {
+        height: 250px;
+    }
+
+    .mobile-disable {
+        display: none;
+    }
+
+    .mt-mob {
+        margin-top: 11px
+    }
+
+    .healwithlove {
+        height: 250px !important;
+        background-size: cover;
+        background-position: center;
+        background-attachment: inherit;
+        padding-top: 17px;
+    }
+
+    .healwithlove p {
+        padding: 3px 9px;
+        font-size: 10px !important;
+    }
+
+    form .col-lg-6 {
+        padding-bottom: 4px !important
+    }
+
+    form .col-lg-12 {
+        padding-bottom: 4px !important
+    }
+
+    .subscribe-btn {
+        margin-top: 12px;
+    }
+
+    .contact-arrivals {
+        padding-top: 0;
+        font-size: 22px;
+    }
+
+    iframe {
+        height: 250px !important;
+    }
+
+    .cover-con {
+        padding-inline-start: 0px;
+        float: left;
+        width: 100%;
+        text-align: center;
+        padding-top: 7%;
+        padding-left: 0;
+    }
+
+    .collection-menu {
+        font-size: 15px;
+    }
+
+    #drop {
+        left: 7px !important;
+    }
+
+    .divider-img {
+        bottom: 9px;
+        width: 102px;
+        background-size: contain;
+        display: flex;
+        justify-content: center;
+        left: 34%;
+        position: relative
+    }
+
+    .panel-primary {
+        text-align: center;
+    }
+
+    .contact-btn {
+        margin-top: 4px;
+        margin-bottom: 30px;
+    }
+
+    textarea.form-control {
+        height: 141px;
+    }
+
+    .active {
+        color: #fff !important;
+    }
+
+    .column {
+        margin-bottom: 8px !important;
+    }
+
+    .dropdown-menu[x-placement^="bottom"],
+    .dropdown-menu[x-placement^="left"],
+    .dropdown-menu[x-placement^="right"],
+    .dropdown-menu[x-placement^="top"] {
+        display: block
+    }
+
+    .dropdown-item.active,
+    .dropdown-item:active {
+        color: #fff;
+        text-decoration: none;
+        background-color: #000;
+    }
+
+}
+
+@media(max-width:370px) {
+    .healwithlove-gold {
+        height: auto !important;
+    }
+
+    .btn {
+        border: none;
+        font-size: 14px !important;
+    }
+}
+
+@media (max-width:992px) {
+
+    #main {
+        padding-top: 50px;
+    }
+
+    .flickity-container-gold .container-cell {
+        width: 90%;
+        opacity: 0.8;
+        margin: 0px 20px;
+    }
+
+    .flickity-container-gold .is-selected {
+        opacity: 1;
+    }
+
+    .flickity-button {
+        display: none;
+    }
+
+    .flickity-page-dots {
+        display: block;
+    }
+
+    #flickity-diamond-col {
+        padding-bottom: 50px;
+    }
+
+    .flickity-container-diamond .flickity-page-dots .dot {
+        background: white;
+    }
+
+    .left-row span {
+        display: flex;
+        text-align: center;
+        padding-bottom: 5%;
+        float: initial;
+    }
 }
 
 @media only screen and (min-width: 1367px) {
@@ -649,9 +1240,7 @@ button {
     #collections {
         padding-top: 48px;
         padding-bottom: 62px;
-
         scroll-margin-top: 35px;
-
     }
 
     #contact-us {
@@ -660,407 +1249,117 @@ button {
 
 }
 
-.card-body {
-
-    padding: 0px !important;
-
-}
-
-span {
-
-    color: #fff;
-
-
-
-}
-
-.cover-con li {
-
-    list-style: none;
-
-}
-
-.cover-con h4 {
-    font-size: 21px;
-    color: #e4bab4;
-    text-align: center;
-    font-weight: normal;
-}
-
-.cover-con p {
-    font-size: 16px;
-    color: #e4bab4;
-    text-align: center;
-}
-
-.cover-con {
-
-    padding-top: 2%;
-
-    margin-bottom: 0;
-
-    display: flex;
-
-    justify-content: space-around;
-    background-color: #36384d;
-
-
-    font-family: 'Raleway,sans-serif';
-
-}
-
-
-.card {
-    border: 0px;
-    /* background-color: #59464D; */
-}
-
-.btn {
-    border: none !important;
-    outline: none !important;
-    padding: 8px 7px !important;
-    cursor: pointer !important;
-    font-size: 16px !important;
-}
-
-#myBtnContainer {
-    padding: 15px 0;
-}
-
-.btn-success {
-
-    color: black;
-
-    background-color: white;
-    border-color: gray;
-
-
-
-
-
-}
-
-.btn-success:hover {
-
-    color: #333;
-
-    background-color: rgb(202, 245, 202);
-
-    border-color: rgb(202, 245, 202);
-
-}
-
-.footer-sdr {
-
-
-    background-color: #36384d;
-
-    color: #f8f2f0;
-
-}
-
-.footer-sdr a {
-
-    color: #e4bab4;
-
-}
-
-.healwithlove {
-
-    padding-top: 45px;
-
-    padding-bottom: 40px;
-
-    width: 100%;
-
-    height: 235px;
-
-    margin-left: auto;
-
-    margin-right: auto;
-
-    margin-top: 35px;
-
-    margin-bottom: 20px;
-
-    background-repeat: no-repeat;
-
-    background-size: 150%;
-
-    background-position: 50%;
-
-    background-image: url(../images/subscribe-image.webp);
-
-    background-attachment: fixed;
-
-}
-
-.healwithlove h1 {
-
-    color: #333;
-
-    font-size: 32px;
-
-    padding-top: 1.5%;
-
-    text-transform: capitalize;
-    ;
-
-}
-
-.healwithlove img {
-
-    width: 8% !important;
-
-}
-
-.kp-viewmore {
-    border: 2px solid black;
-    padding: 6px 15px;
-    border-radius: 5px;
-    position: relative;
-    top: 43px;
-    font-weight: 700;
-    color: black;
-    transition: all .2s ease-in-out;
-    font-size: max(0.75vw, 1rem);
-}
-
-.kp-viewmore:hover {
-    background: black;
-    color: #fff;
-    text-decoration: none;
-}
-
-#diamond .kp-viewmore {
-    border: 2px solid white;
-    padding: 6px 15px;
-    border-radius: 6px;
-    position: relative;
-    top: 43px;
-    font-weight: 700;
-    color: white;
-
-}
-
-#diamond .kp-viewmore:hover {
-    background: white;
-    color: black;
-    text-decoration: none;
-}
-
-img {
-
-    width: 100%;
-
-}
-
-.mobile-enable {
-    display: none
-}
-
-.type {
-
-    font-size: 16px !important;
-
-    font-weight: 800;
-
-    text-align: center;
-
-    margin-bottom: 0;
-
-    margin-top: 3px;
-    margin-bottom: 21px;
-    text-transform: capitalize;
-
-}
-
-#collections {
-    padding-bottom: 0 !important;
-
-
-}
-
-.border-img {
-
-    border: 1px solid #d4d4d4;
-
-}
-
 @media only screen and (max-width: 600px) {
-
-
-
     .left-row p {
-
         text-align: center;
 
     }
 
     .left-row span {
-
         display: flex;
-
         justify-content: center;
-
         padding-bottom: 5%;
-
     }
 
     .discri-div h3 {
-
         text-align: center;
-
     }
 
     .type-price {
-
         text-align: center;
-
     }
 
     .book-div {
-
         display: flex;
-
         justify-content: center;
-
         padding-bottom: 5%;
-
     }
 
     .healwithlove-gold,
     .healwithlove-diamond,
     .healwithlove-stone,
     .healwithlove-new-arrivals {
-
-
-
         background-position-y: 12%;
-
     }
 
 
     .video-cover {
-
         height: 40vh;
-
     }
 
     #mainNav .navbar-nav .nav-item .nav-link {
-
         color: #fff;
-
     }
 
     .mitra-logo {
-
         display: none;
-
     }
 
     .display-3 {
-
         font-size: 2.5rem;
-
     }
 
     .left-row,
     .right-row {
-
         width: 100%;
-
     }
 
     .cover-div {
-
         display: inline-block;
-
         justify-content: space-between;
-
     }
 
     .left-about,
     .right-about {
-
         width: 100%;
-
     }
 
     .cover-about {
-
         display: inline-block;
-
         min-height: auto;
-
     }
 
     .right-about h3 {
-
         margin-top: 42%;
-
     }
 
     .burlington h3 {
-
         margin: 0;
-
     }
 
     .healwithlove h1 {
-
         font-size: 20px;
-
     }
 
     .cover-con {
-
         display: inline-block;
-
         padding-inline-start: 20px;
-
     }
-
 }
 
 @media only screen and (max-device-width: 812px) and (orientation: landscape) {
-
     .left-about,
     .right-about {
-
         width: 100%;
-
     }
 
     #mainNav .navbar-nav .nav-item .nav-link {
-
         color: #fff;
-
     }
 
     .cover-about {
-
         display: inline-block;
-
         min-height: auto;
-
     }
 
     .right-about h3 {
-
         margin-top: 42%;
-
     }
 
     .burlington h3 {
-
         margin: 0;
-
     }
-
 }
-
-
 
 @media(max-width:1600px) {
     .dimond-txt-bg {
@@ -1070,8 +1369,6 @@ img {
     .type {
         font-size: 13px !important;
     }
-
-
 }
 
 @media(max-width:1440px) {
@@ -1082,21 +1379,16 @@ img {
     .type {
         font-size: 12px !important;
     }
-
 }
 
 @media (max-width:1366px) {
-
-
     #diamond,
     #gold,
     #collections,
     #new-arr {
         padding-top: 85px;
         padding-bottom: 123px;
-
         scroll-margin-top: 35px;
-
     }
 
     #collections {
@@ -1131,8 +1423,6 @@ img {
 }
 
 @media(max-width:1280px) {
-
-
     .diamond-ban-text h1 {
         font-size: 20px;
     }
@@ -1161,7 +1451,6 @@ img {
     .related-slider .owl-nav {
         right: 11px;
     }
-
 }
 
 
@@ -1182,11 +1471,8 @@ img {
     }
 
     .container-product {
-
         width: 100%;
-
         margin: auto;
-
         padding-top: 5%;
         height: 516px;
         overflow: scroll;
@@ -1209,7 +1495,6 @@ img {
     .healwithlove-polki {}
 
     .healwithlove-new-arrivals {
-
         margin-top: 11px !important;
     }
 
@@ -1354,111 +1639,20 @@ img {
 }
 
 @media(max-width:330px) {
-
     .container-product {
-
         height: 447px;
     }
 }
 
-
-
-
-#stone {
-    margin-bottom: 1rem;
-}
-
-.dropdown .dropdown-menu {
-    display: block;
-    opacity: 0;
-    visibility: hidden;
-    opacity: 0;
-    -webkit-transition: all 200ms ease-in;
-    -moz-transition: all 200ms ease-in;
-    -ms-transition: all 200ms ease-in;
-    -o-transition: all 200ms ease-in;
-    transition: all 200ms ease-in;
-    border-radius: 5px;
-    font-size: 1rem;
-
-    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.3);
-}
-
-#dropdownMenuButton:hover+.dropdown-menu,
-.dropdown-menu:hover {
-    display: block;
-    visibility: visible;
-    opacity: 1;
-}
-
-.dropdown-toggle:hover::after {
-    transform: rotate(180deg);
-}
-
-.dropdown-toggle[aria-expanded="true"]:after {
-    transform: rotate(180deg);
-}
-
-.dropdown-toggle:after {
-    transition: 0.7s;
-}
-
-
-
-
-
-
-
-#mainNav .navbar-nav .nav-item .nav-link.active,
-#mainNav .navbar-nav .nav-item .nav-link:hover,
-.nav-link-force-hover {
-    color: #704a57 !important;
-    text-shadow: 0 0 0.35px #704a57;
-    transition: all 200ms ease-in;
-}
-
-#mainNav .navbar-nav .nav-item .nav-link,
-.dropdown-item {
-
-    color: inherit;
-    font-family: 'Playfair Display', serif;
-    font-size: 85%;
-    font-weight: Bold;
-
-    letter-spacing: 0.5px;
-}
-
-#mainNav {
-
-    text-align: center !important;
-    vertical-align: middle !important;
-    background: rgb(255, 255, 255);
-    box-shadow: 0 10px 10px rgb(0 0 0 / 10%);
-
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 0;
-}
-
-
-
 @media screen and (max-width: 1450px) {
 
     #mainNav .navbar-nav .nav-item .nav-link {
-
         margin: 0.5rem 1.2vw 0rem 1.2vw !important;
-
     }
-
-
-
     #top-navbar p {
         padding-right: 0.5rem;
         text-align: right;
         font-size: 1.1vw;
-
-
-
     }
 
     #kp-logo-test {
@@ -1475,15 +1669,7 @@ img {
     .dropdown-item {
         font-size: 1vw
     }
-
-
-
 }
-
-::selection {
-    background-color: #ACCEF7;
-}
-
 
 @media screen and (min-width: 992px) {
     #mainNav .navbar-nav .nav-item .nav-link:not(#dropdownMenuButton)::after {
@@ -1525,9 +1711,6 @@ img {
         position: relative;
     }
 
-
-
-
     #mainNav .navbar-nav .nav-item {
         /* width: 12.5%; */
     }
@@ -1545,131 +1728,9 @@ img {
         -webkit-transition: all .3s;
         transition: all .3s
     }
-
-
-
-}
-
-.flickity-container-gold .container-cell {
-    width: 20%;
-    margin: 0px 20px;
-}
-
-.flickity-container-gold .container-cell img {
-    opacity: 0.85;
-}
-
-
-.flickity-container-gold .is-selected img {
-    opacity: 1;
-}
-
-.flickity-container-diamond .container-cell {
-    width: 100%;
-
-
-
-
-
-}
-
-#flickity-diamond-col {
-    display: grid;
-    align-items: center;
-}
-
-.flickity-container-diamond .container-cell p {
-    text-align: center;
-    font-size: 1.5em;
-    background-color: black;
-    color: white;
-}
-
-#diamond .row p {
-    text-align: center;
-    font-size: 1em;
-    background-color: black;
-    color: white;
-}
-
-.flickity-container-banner .flickity-button {
-    background-color: rgba(255, 255, 255, 0.4) !important;
-
-}
-
-.flickity-page-dots {
-    display: none;
-}
-
-.flickity-container-gold .flickity-button {
-    background-color: rgba(255, 255, 255, 0.25) !important;
-    color: black;
-    border: solid 1px black;
-}
-
-.flickity-container-diamond .flickity-button {
-    background-color: rgba(0, 0, 0, 0.1) !important;
-    color: antiquewhite;
-    border: solid 1px antiquewhite;
-}
-
-.form-control {
-    /* border: #4D3643; */
-
-    background-color: rgba(255, 255, 255, 1);
-    /* border-radius: 0; */
-    color: black;
-    font-weight: 600;
-}
-
-.form-control:focus {
-    box-shadow: none;
-    border-color: rgb(255, 255, 255);
-    background-color: rgba(255, 255, 255, 1);
-}
-
-#contact-us-form-section {
-    background-color: #4D3643;
-    padding-top: 20px;
-}
-
-#top-navbar div {
-    padding-right: 0.5rem;
-    text-align: right;
-    background-color: #36384d;
-
-
-}
-
-#new-arr,
-#pagebreak1,
-#contact-us {
-    background-color: aliceblue;
-}
-
-#collectionsDropdownMenu {
-    margin-top: 0px;
-}
-
-#top-navbar p {
-    display: inline;
-    border-left: solid;
-    padding-left: 5px;
-    font-family: 'Twentieth Century', serif;
-    letter-spacing: 0.5px;
-    color: #e4bab4 !important;
-}
-
-.container {
-    max-width: fit-content;
-}
-
-#mainNav .navbar-nav .nav-item {
-    /* width: 12.5%; */
 }
 
 @media screen and (min-width: 1450px) {
-
     #kp-logo-test {
         height: 29px;
         width: 200px;
@@ -1693,8 +1754,6 @@ img {
         font-size: min(0.9vw, 1rem)
     }
 
-
-
     .single-line-link {
         /* line-height: 43px; */
     }
@@ -1712,537 +1771,134 @@ img {
         transition: all 200ms ease;
         font-size: 17px;
     }
-
 }
 
-#subscribe-success-alert {
-    margin-top: 0.3rem;
-    width: 342px;
-    height: 30px;
-    line-height: 7px;
-}
+/* UNUSED? */
 
-#contact-us-alert {
-    margin-top: 0.5rem;
-    text-align: center;
-    transition: all 200ms ease;
-    font-size: 13px;
-    padding: 0.2rem 0;
-}
+/* #new-arr {
 
-.always-show {
-    display: block !important;
-}
+    padding-top: 2%;
 
-.never-show {
-    display: none !important;
-}
+    padding-bottom: 2px;
 
-.navbar-nav {
-    display: inline-flex;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-}
+} */
 
-#navbar-row {
-    background-color: rgb(255, 255, 255);
-    padding-bottom: 5px;
-}
-
-#top-navbar {
-    width: 100%;
-    height: 28px;
-    padding: 0;
-
-}
-
-
-#navbar-row {
+.right-row {
     width: 100%;
 }
 
-#special-hours {
-    font-size: 1.2em;
-    background-color: gold;
-    text-align: center;
-    font-family: 'Playfair Display', serif;
-    color: black;
-}
-
-.mobile-enable {
-    display: none
-}
-
-iframe {
-
+.right-row img {
     width: 100%;
-    height: 90%;
-    border: 0
 }
 
-.contact-btn {
+.diamond-txt {
+    position: absolute;
+    top: 0;
+    font-weight: bold;
+    top: 81px;
+    left: 100px;
+}
 
+/* #diamond,
+#gold,
+#collections,
+#new-arr {
+
+    padding: 0px 0;
+
+    scroll-margin-top: 62px;
+
+} */
+
+header {
+    position: relative;
+    height: 100vh;
+    min-height: 25rem;
     width: 100%;
-
-    margin-top: 15px;
-
-}
-
-.dropdown-item:hover {
-    color: #704a57;
-    text-shadow: #704a57;
-    text-shadow: 0 0 0.35px #704a57;
-    transition: all 50ms ease-in;
-    text-decoration: none;
-    background-color: rgb(230, 229, 229);
+    overflow: hidden;
 }
 
 
 
-@media (max-width:576px) {
-    .kp-modal-body img {
+header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+    position: relative;
+    z-index: 2;
+}
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+@media (max-width:992px) {
+    .navbar {
+        display: none !important;
+    }
+    .dropdown-menu {
         width: 100%;
+        background: #1e0f0b;
     }
 
-    .related h3 {
-        font-size: 15px;
-    }
-
-    .inner-banner-text {
-        position: absolute;
-        right: 0;
-        top: auto;
-        bottom: 28px;
-        left: 0;
-    }
-
-    .related-slider .owl-nav {
-        position: absolute;
-        top: -38px;
-        right: 2px;
-    }
-
-    .inner-banner-text h1 {
-        font-size: 35px;
-    }
-
-
-    .kp-viewmore {
-        top: 20px;
-        font-size: 12px;
-        padding: 4px 14px;
-    }
-
-    #gold .kp-viewmore {
-        top: 0;
-    }
-
-    #diamond,
-    #new-arr {
-
-        padding: 58px 0 50px;
-
-
-    }
-
-    #collections,
-    #gold {
-
-        padding: 58px 0 50px;
-
-    }
-
-    #collections strong {
-        display: none
-    }
-
-
-    html {
-
-        /* overflow-x: hidden; */
-
-
-    }
-
-
-
-    .new-arrivals {
-
-        font-size: 22px;
-
-    }
-
-    .new-arrive-product {
-
-        margin-top: 6px;
-        visibility: visible !important;
-
-    }
-
-    .fadeInUp {
-        visibility: visible !important;
-    }
-
-    .left-row {
-
-        width: auto;
-
-    }
-
-    .gold-arrivals {
-
-        font-size: 22px;
-
-    }
-
-    .mobile-enable {
-
-        display: block;
-
-
-
-
-
-    }
-
-    .gold-mob img {
-
-        height: 250px;
-
-    }
-
-    .mobile-disable {
-        display: none;
-    }
-
-    .mt-mob {
-
-        margin-top: 11px
-    }
-
-    .healwithlove {
-
-        height: 250px !important;
-
-        background-size: cover;
-
-        background-position: center;
-
-        background-attachment: inherit;
-
-        padding-top: 17px;
-
-    }
-
-    .healwithlove p {
-
-        padding: 3px 9px;
-        font-size: 10px !important;
-
-    }
-
-    form .col-lg-6 {
-        padding-bottom: 4px !important
-    }
-
-    form .col-lg-12 {
-        padding-bottom: 4px !important
-    }
-
-    .subscribe-btn {
-
-        margin-top: 12px;
-
-    }
-
-    .contact-arrivals {
-
-        padding-top: 0;
-
-        font-size: 22px;
-
-
-
-    }
-
-    iframe {
-
-        height: 250px !important;
-
-    }
-
-    .cover-con {
-
-
-
-        padding-inline-start: 0px;
-        float: left;
-        width: 100%;
-        text-align: center;
-        padding-top: 7%;
-        padding-left: 0;
-
-    }
-
-    .collection-menu {
-
-        font-size: 15px;
-
-    }
-
-    #drop {
-
-        left: 7px !important;
-
-    }
-
-    .divider-img {
-        bottom: 9px;
-        width: 102px;
-        background-size: contain;
-        display: flex;
-        justify-content: center;
-        left: 34%;
-        position: relative
-    }
-
-    .panel-primary {
-
-        text-align: center;
-    }
-
-    .contact-btn {
-
-
-
-        margin-top: 4px;
-
-        margin-bottom: 30px;
-
-    }
-
-    textarea.form-control {
-        height: 141px;
+    .dropdown-item:hover {
+        background: #000;
     }
 
     .active {
-
         color: #fff !important;
-
-    }
-
-    .column {
-        margin-bottom: 8px !important;
-    }
-
-    .dropdown-menu[x-placement^="bottom"],
-    .dropdown-menu[x-placement^="left"],
-    .dropdown-menu[x-placement^="right"],
-    .dropdown-menu[x-placement^="top"] {
-        display: block
-    }
-
-    .dropdown-item.active,
-    .dropdown-item:active {
-        color: #fff;
-        text-decoration: none;
-        background-color: #000;
-    }
-
-}
-
-@media(max-width:370px) {
-    .healwithlove-gold {
-        height: auto !important;
-
-    }
-
-    .btn {
-        border: none;
-
-        font-size: 14px !important;
-    }
-}
-
-
-
-@media (max-width:992px) {
-
-    #main {
-        padding-top: 50px;
-    }
-
-    .flickity-container-gold .container-cell {
-        width: 90%;
-        opacity: 0.8;
-        margin: 0px 20px;
-    }
-
-
-
-
-
-    .flickity-container-gold .is-selected {
         opacity: 1;
-
-
     }
+}
 
-    .flickity-button {
+@media (max-width:768px) {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    body::-webkit-scrollbar {
         display: none;
     }
-
-    .flickity-page-dots {
-        display: block;
+    /* Hide scrollbar for IE, Edge and Firefox */
+    body {
+        -ms-overflow-style: none;
+        /* IE and Edge */
     }
-
-    #flickity-diamond-col {
-        padding-bottom: 50px;
+    body {
+        overflow-x: hidden;
     }
+}
 
-    .flickity-container-diamond .flickity-page-dots .dot {
-        background: white;
-    }
-
-    .left-row span {
-
-        display: flex;
-
+@media (max-width:576px) {
+    .footer-sdr {
         text-align: center;
-
-        padding-bottom: 5%;
-
-        float: initial;
-
     }
-
-
 }
 
-
-
-
-
-.my-3 {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
+@media (pointer: coarse) and (hover: none) {
+    header {
+        background: url(images/bg-video.jpg) black no-repeat center center scroll;
+    }
+    header video {
+        display: none;
+    }
 }
 
-
-.modal {
-    text-align: center;
-    padding: 0 !important;
-}
-
-.new-arrive-product img {
-    cursor: pointer;
-}
-
-.new-arrival-collection-text {
-    color: goldenrod;
-}
-
-.collections-row-text-left {
-    padding-bottom: 2%;
-    padding-right: 2%;
-    padding-top: 2%;
-}
-
-.collections-row-text-right {
-    padding-bottom: 2%;
-    padding-left: 2%;
-    padding-top: 2%;
-}
-
-.collections-section-text {
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#gemstone-collection-section {
-    background-color: lightyellow;
-}
-
-#antique-collection-section {
-    background-color: rgb(157, 121, 118);
-}
-
-#mangalsutra-collection-section {
-    background-color: rgb(170, 183, 201);
-}
-
-#engagement-collection-section {
-    background-color: burlywood;
-}
-
-#contact-form .modal-body {
-    padding: 0;
-}
-
-.basic-form-input {
-    padding-bottom: 10px;
-}
-
-#newarrivalpage,
-#goldpage,
-#diamondpage,
-#antiquepage,
-#gemstonepage,
-#mangalsutrapage,
-#engagementpage,
-#templepage,
-#rhodiumpage {
-    display: none;
-}
-
-p {
-    line-height: 1.75
-}
-
-a {
-    color: #212529
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: 700;
-}
-
-.btn {
-    font-weight: 700
-}
-
-#mainNav {
-    background-color: #212529;
-    background: rgb(248, 242, 240);
-    background: linear-gradient(55deg, rgba(248, 242, 240, 1) 0%, rgba(79, 57, 69, 0.25) 24%, rgba(79, 57, 69, 0.5) 24%, rgba(79, 57, 69, 0.8) 55%, rgba(79, 57, 69, 0.8) 55%, rgba(79, 57, 69, 1) 80%);
-}
-
-#mainNav .navbar-brand {
-    color: #4CAF50;
-}
-
-.kp-modal {
-    justify-content: center;
-    align-items: center;
-}
-
-#mainNav .navbar-nav .nav-item .nav-link {
-    font-size: 90%;
-    font-weight: 600;
-    padding: .75em 0;
-    letter-spacing: 1px;
-    color: #000;
-}
-
-#mainNav .navbar-nav .nav-item .nav-link.active,
-#mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: rgb(167 99 5);
+body {
+    font-family: 'Playfair Display', serif;
 }
