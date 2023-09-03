@@ -1,7 +1,6 @@
 @charset "utf-8";
 
 /*
-
 Sections:
 
 1) GLOBAL ELEMENT RULES
@@ -21,21 +20,10 @@ Sections:
 15) SHARED - TO REFACTOR
 16) EXTERNAL LIB CSS
 17) UNSORTED MEDIA QUERIES
-
 */
 
 
 /*#region GLOBAL ELEMENT RULES*/
-
-html,
-body {
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    /* overflow-x:hidden;  scrollbar goes underneath header */
-    /* overflow-x:clip; issue with flexbox */
-}
 
 @font-face {
     font-family: 'MontserratExtraBold';
@@ -49,20 +37,19 @@ body {
 
 body {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Playfair Display', serif;
     background-size: cover;
     background-repeat: no-repeat;
-    background: rgb(248, 242, 240);
+    background: white;
 }
 
+/* Gives p elements a fixed line height so elements aren't too close above and below */
 p {
     line-height: 1.75
 }
 
-a {
-    color: #212529
-}
-
+/* Boldens header texts for readability */
 h1,
 h2,
 h3,
@@ -72,25 +59,22 @@ h6 {
     font-weight: 700;
 }
 
-iframe {
-
-    width: 100%;
-    height: 90%;
-    border: 0
-}
-
+/* Makes highlight the right color */
 ::selection {
     background-color: #ACCEF7;
 }
 
+/* Necessary to allow images to occupy space correctly, otherwise they are stretched it seems */
 img {
     width: 100%;
 }
 
+/* Appears to be unused, span elements only in embedded stuff and old example modals */
 span {
     color: #fff;
 }
 
+/* Again, only old example modal usage it seems */
 button {
     outline: 0 !important;
 }
@@ -99,23 +83,18 @@ button {
 
 /*#region NAVBAR */
 
-/* Appears to only get rid of border on collections dropdown */
-.collection-menu {
-    background: rgb(253, 253, 253);
-    border: none;
-    border-radius: 0;
-}
-
+/* mainNav refers to the entire navbar both top and the links */ 
 #mainNav {
-    background-color: #212529;
-    background: rgb(248, 242, 240);
-    background: linear-gradient(55deg, rgba(248, 242, 240, 1) 0%, rgba(79, 57, 69, 0.25) 24%, rgba(79, 57, 69, 0.5) 24%, rgba(79, 57, 69, 0.8) 55%, rgba(79, 57, 69, 0.8) 55%, rgba(79, 57, 69, 1) 80%);
+    text-align: center !important;
+    vertical-align: middle !important;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 10px 10px rgb(0 0 0 / 10%);
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
 }
 
-#mainNav .navbar-brand {
-    color: #4CAF50;
-}
-
+/* Main styles for each link in navbar */
 #mainNav .navbar-nav .nav-item .nav-link {
     font-size: 90%;
     font-weight: 600;
@@ -124,11 +103,32 @@ button {
     color: #000;
 }
 
+/* Colors the text of each nav link after hovering or clicked, currently overriden by !important */
 #mainNav .navbar-nav .nav-item .nav-link.active,
 #mainNav .navbar-nav .nav-item .nav-link:hover {
     color: rgb(167 99 5);
 }
 
+/* Hovering over any link in the navbar text color and boldness animation */
+#mainNav .navbar-nav .nav-item .nav-link.active,
+#mainNav .navbar-nav .nav-item .nav-link:hover,
+.nav-link-force-hover {
+    color: #704a57 !important;
+    text-shadow: 0 0 0.35px #704a57;
+    transition: all 200ms ease-in;
+}
+
+/* Style for each link in collections dropdown */
+#mainNav .navbar-nav .nav-item .nav-link,
+.dropdown-item {
+    color: inherit;
+    font-family: 'Playfair Display', serif;
+    font-size: 85%;
+    font-weight: Bold;
+    letter-spacing: 0.5px;
+}
+
+/* Keeps the navbar elements center aligned and in the centre of the viewport. Only links and not brand */
 .navbar-nav {
     display: inline-flex;
     align-items: center;
@@ -136,28 +136,45 @@ button {
     margin-right: auto;
 }
 
+/* Applies to both the top navbar and the navbar with all the links, color and is padded enough to look seamless between it and rest of page */
 #navbar-row {
     background-color: rgb(255, 255, 255);
     padding-bottom: 5px;
+    width: 100%;
 }
 
+/* Just to the top section of navbar for phone no., insta and address, gives the right height and takes width */
 #top-navbar {
     width: 100%;
     height: 28px;
     padding: 0;
 }
 
-
-#navbar-row {
-    width: 100%;
-}
-
+/* Hovering over each link in the top section of navbar color transition */
 #top-navbar a:hover {
     color: indianred !important;
     transition: all 100ms ease-in-out;
     text-decoration: none;
 }
 
+/* div present in the top navbar, keeps the links aligned to the right, bg color and slightly off the right end */
+#top-navbar div {
+    padding-right: 0.5rem;
+    text-align: right;
+    background-color: #36384d;
+}
+
+/* Text element styling in top nav */
+#top-navbar p {
+    display: inline;
+    border-left: solid;
+    padding-left: 5px;
+    font-family: 'Twentieth Century', serif;
+    letter-spacing: 0.5px;
+    color: #e4bab4 !important;
+}
+
+/* All styles for dropdown collection menu like animation, visibility/display is nothing prior to hover, anchored to navbar, etc.. */
 .dropdown .dropdown-menu {
     display: block;
     opacity: 0;
@@ -170,10 +187,12 @@ button {
     transition: all 200ms ease-in;
     border-radius: 5px;
     font-size: 1rem;
-
+    border: none;
     box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 0px;
 }
 
+/* Styles for dropdown collection menu and hovering. Lets it be visible after hovering over the link */
 #dropdownMenuButton:hover+.dropdown-menu,
 .dropdown-menu:hover {
     display: block;
@@ -181,76 +200,28 @@ button {
     opacity: 1;
 }
 
+/* For little caret next to dropdown to rotate after closing */
 .dropdown-toggle:hover::after {
     transform: rotate(180deg);
 }
 
+/* For little caret next to dropdown to rotate after opening */
 .dropdown-toggle[aria-expanded="true"]:after {
     transform: rotate(180deg);
 }
 
+/* For little caret next to dropdown to rotate smoothly */
 .dropdown-toggle:after {
     transition: 0.7s;
 }
 
-#mainNav .navbar-nav .nav-item .nav-link.active,
-#mainNav .navbar-nav .nav-item .nav-link:hover,
-.nav-link-force-hover {
-    color: #704a57 !important;
-    text-shadow: 0 0 0.35px #704a57;
-    transition: all 200ms ease-in;
-}
-
-#mainNav .navbar-nav .nav-item .nav-link,
-.dropdown-item {
-    color: inherit;
-    font-family: 'Playfair Display', serif;
-    font-size: 85%;
-    font-weight: Bold;
-    letter-spacing: 0.5px;
-}
-
-#mainNav {
-    text-align: center !important;
-    vertical-align: middle !important;
-    background: rgb(255, 255, 255);
-    box-shadow: 0 10px 10px rgb(0 0 0 / 10%);
-
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 0;
-}
-
-#top-navbar div {
-    padding-right: 0.5rem;
-    text-align: right;
-    background-color: #36384d;
-
-
-}
-
-#collectionsDropdownMenu {
-    margin-top: 0px;
-}
-
-#top-navbar p {
-    display: inline;
-    border-left: solid;
-    padding-left: 5px;
-    font-family: 'Twentieth Century', serif;
-    letter-spacing: 0.5px;
-    color: #e4bab4 !important;
-}
-
-#mainNav .navbar-nav .nav-item {
-    /* width: 12.5%; */
-}
-
+/* Each link in the dropdown style */
 .dropdown-item {
     font-size: 1em;
     letter-spacing: 0.5px;
 }
 
+/* Each link in the dropdown style after hovering*/
 .dropdown-item:hover {
     color: #704a57;
     text-shadow: #704a57;
@@ -264,10 +235,12 @@ button {
 
 /*#region FOOTER */
 
+/* cover-con refers to list inside footer div. this gets rid of dots for list items */
 .cover-con li {
     list-style: none;
 }
 
+/*  Top text i.e "Our Hours" */
 .cover-con h4 {
     font-size: 21px;
     color: #e4bab4;
@@ -275,76 +248,32 @@ button {
     font-weight: normal;
 }
 
-.cover-con p {
+/* Anything underneath the top texts i.e the address */
+.cover-con p, .cover-con a {
     font-size: 16px;
     color: #e4bab4;
     text-align: center;
 }
 
+/* Styling the actual list, making sure each element is evenly spaced and it is horizontal(not vertical) etc.. */
 .cover-con {
     padding-top: 2%;
     margin-bottom: 0;
     display: flex;
-    justify-content: space-around;
-    background-color: #36384d;
+    justify-content: space-evenly;
     font-family: 'Raleway,sans-serif';
 }
 
-.btn-success {
-    color: black;
-    background-color: white;
-    border-color: gray;
-}
-
-.btn-success:hover {
-    color: #333;
-    background-color: rgb(202, 245, 202);
-    border-color: rgb(202, 245, 202);
-}
-
+/* Entirety of footer, not just list of stuff */
 .footer-sdr {
     background-color: #36384d;
-    color: #f8f2f0;
-}
-
-.footer-sdr a {
-    color: #e4bab4;
 }
 
 /*#endregion*/
 
 /*#region HOME PAGE */
 
-/* Looks like it has no effect */
-.new-arrive-product {
-    float: left;
-    width: 100%;
-}
-
-/* Bottom row of new arrivals on homepage margin from top row */
-.arrive-btm {
-    margin-top: 24px;
-}
-
-#gold p {
-    font-size: max(0.8vw, 1rem);
-    text-shadow: 0 0 0.1px black;
-    color: black;
-}
-
-.subscribe-input {
-    border: none;
-    width: 230px;
-    padding: 8px 13px;
-}
-
-.subscribe-btn {
-    border: none;
-    padding: 8px 13px;
-    background: #684f4f;
-    color: #fff;
-}
-
+/* Section headers like new arrivals, gold, etc.. at top of every section */
 .section-headers {
     font-size: 35px;
     padding-bottom: 4%;
@@ -352,97 +281,33 @@ button {
     letter-spacing: 1.5px;
 }
 
-.diamond-container img {
-    cursor: pointer;
-}
-
-#collections p {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 0;
-    text-align: center;
-}
-
-#collections img {
-    border-radius: 5px;
-}
-
-#diamond span,
-#gold span,
-#collections span {
-    font-size: 12px;
-    font-weight: bold;
-    color: #906337;
-    background-color: #f4f4f4;
-}
-
-#diamond h3 {
-    color: white;
-}
-
+/* Gives white background to both gold and collections sections on homepage */
+#gold,
 #collections {
-    padding-bottom: 0 !important;
+    background-color: white !important;
 }
 
-#diamond .row p {
-    text-align: center;
-    font-size: 1em;
-    background-color: black;
-    color: white;
-}
-
-.form-control {
-    /* border: #4D3643; */
-    background-color: rgba(255, 255, 255, 1);
-    /* border-radius: 0; */
+/* View more buttons at the end of each section */
+.kp-viewmore {
+    border: 2px solid black;
+    padding: 6px 15px;
+    border-radius: 5px;
+    position: relative;
+    top: 43px;
+    font-weight: 700;
     color: black;
-    font-weight: 600;
+    transition: all .2s ease-in-out;
+    font-size: max(0.75vw, 1rem);
 }
 
-.form-control:focus {
-    box-shadow: none;
-    border-color: rgb(255, 255, 255);
-    background-color: rgba(255, 255, 255, 1);
+/* View more buttons, hover effect, at the end of each section */
+.kp-viewmore:hover {
+    background: black;
+    color: #fff;
+    text-decoration: none;
 }
 
-#contact-us-form-section {
-    background-color: #4D3643;
-    padding-top: 20px;
-}
-
-#new-arr,
-#pagebreak1,
-#contact-us {
-    background-color: aliceblue;
-}
-
-.container {
-    max-width: fit-content;
-}
-
-#subscribe-success-alert {
-    margin-top: 0.3rem;
-    width: 342px;
-    height: 30px;
-    line-height: 7px;
-}
-
-#contact-us-alert {
-    margin-top: 0.5rem;
-    text-align: center;
-    transition: all 200ms ease;
-    font-size: 13px;
-    padding: 0.2rem 0;
-}
-
-.always-show {
-    display: block !important;
-}
-
-.never-show {
-    display: none !important;
-}
-
+/* Special hours div/banner, currently hidden */
 #special-hours {
     font-size: 1.2em;
     background-color: gold;
@@ -451,27 +316,81 @@ button {
     color: black;
 }
 
-.contact-btn {
-    width: 100%;
-    margin-top: 15px;
-}
-
+/* In new arrivals section, each product has collection associated */
 .new-arrival-collection-text {
     color: goldenrod;
 }
 
+/* Bottom row of new arrivals on homepage margin from top row */
+.arrive-btm {
+    margin-top: 24px;
+}
+
+/* Full horizontal section new arrivals and "contact us" */
+#new-arr,
+#contact-us {
+    background-color: aliceblue;
+}
+
+/* New arrival and each row in collections just to take up entire width */
+.container {
+    max-width: fit-content;
+}
+
+/* Text on gold flickity carousel */
+#gold p {
+    font-size: max(0.8vw, 1rem);
+    text-shadow: 0 0 0.1px black;
+    color: black;
+}
+
+/* Every image in diamond section */
+.diamond-container img {
+    cursor: pointer;
+}
+
+#diamond{
+    background-color: black;
+}
+
+/* Specifically diamond section header for contrasting color */
+#diamond h3 {
+    color: white;
+}
+
+/* Diamond section each text(not fancybox) */
+#diamond .row p {
+    text-align: center;
+    font-size: 1em;
+    background-color: black;
+    color: white;
+}
+
+/* No padding at bottom of collections section for direct transition to footer */
+#collections {
+    padding-bottom: 0 !important;
+}
+
+/* Every image in collections section */
+#collections img {
+    border-radius: 5px;
+}
+
+/* The collections section, specifically those rows that have the text on the left */
 .collections-row-text-left {
     padding-bottom: 2%;
     padding-right: 2%;
     padding-top: 2%;
 }
 
+/* The collections section, specifically those rows that have the text on the right */
 .collections-row-text-right {
     padding-bottom: 2%;
     padding-left: 2%;
     padding-top: 2%;
 }
 
+/* All text in collections section outside of the header */
 .collections-section-text {
     text-align: center;
     display: flex;
@@ -495,30 +414,89 @@ button {
     background-color: burlywood;
 }
 
+/* Newsletter subscribe text input */
+.subscribe-input {
+    border: none;
+    width: 230px;
+    padding: 8px 13px;
+}
+
+/* Newsletter subscribe button */
+.subscribe-btn {
+    border: none;
+    padding: 8px 13px;
+    background: #684f4f;
+    color: #fff;
+}
+
+/* Success alert after subscribing to newsletter */
+#subscribe-success-alert {
+    margin-top: 0.3rem;
+    width: 342px;
+    height: 30px;
+    line-height: 7px;
+}
+
+/* Important styles for forced stylization of ctct form */
+.always-show {
+    display: block !important;
+}
+
+/* Important styles for forced stylization of ctct form */
+.never-show {
+    display: none !important;
+}
+
+/* Contact us form each input */
+.form-control {
+    /* border: #4D3643; */
+    background-color: rgba(255, 255, 255, 1);
+    /* border-radius: 0; */
+    color: black;
+    font-weight: 600;
+}
+
+/* Contact us form each input after clicking*/
+.form-control:focus {
+    box-shadow: none;
+    border-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/* Area around/containing contact us form only, not entire horizontal space */
+#contact-us-form-section {
+    background-color: #4D3643;
+    padding-top: 20px;
+}
+
+/* Lets the actual form elements take up the space in the contact us form section */
 #contact-form .modal-body {
     padding: 0;
 }
 
-.basic-form-input {
-    padding-bottom: 10px;
-}
-
-.kp-viewmore {
-    border: 2px solid black;
-    padding: 6px 15px;
-    border-radius: 5px;
-    position: relative;
-    top: 43px;
-    font-weight: 700;
+/* Contact form submit button */
+.contact-btn {
+    width: 100%;
+    margin-top: 15px;
     color: black;
-    transition: all .2s ease-in-out;
-    font-size: max(0.75vw, 1rem);
+    background-color: white;
+    border-color: gray;
 }
 
-.kp-viewmore:hover {
-    background: black;
-    color: #fff;
-    text-decoration: none;
+/* Contact form submit button hover over effects*/
+.contact-btn:hover{
+    color: #333;
+    background-color: rgb(202, 245, 202);
+    border-color: rgb(202, 245, 202);
+}
+
+/* Success alert after submitting contact us form */
+#contact-us-alert {
+    margin-top: 0.5rem;
+    text-align: center;
+    transition: all 200ms ease;
+    font-size: 13px;
+    padding: 0.2rem 0;
 }
 
 /*#endregion*/
@@ -541,6 +519,14 @@ button {
 
 #stone {
     margin-bottom: 1rem;
+}
+
+.left-row span {
+    font-size: 15px;
+    font-weight: bold;
+    color: #906337;
+    margin-bottom: 18px;
+    float: left;
 }
 
 /*#endregion*/
@@ -666,46 +652,9 @@ button {
 
 /*#region SHARED - TO REFACTOR */
 
-/* Only banners not on homepage, doesn't appear to do anything */
-.inner-banner {
-    position: relative
-}
-
-/* Modal of product in e.g gold page, not doing anything since modals disabled */
-.container-product {
-    margin: auto;
-    padding-right: 2%;
-}
-
-.container-product-page {
-    width: 80%;
-    margin: auto;
-    padding-bottom: 5%;
-    padding-top: 5%;
-}
-
-.row-custom {
-    position: relative;
-}
-
-/* Again inside product modal page like container product rule, not doing anything since modals disabled */
-.inner-img-div {
-    background-color: #f1f1f1;
-}
-
-/* Footer of modal in each page first product */
-.modal-footer {
-    padding: 0rem;
-}
-
-/* Description of modal in each page first product */
-.discri-about {
-    font-size: 12px;
+/* All description text on modal */
+.discri-div {
     text-align: left;
-}
-
-.inner-img-div img {
-    width: 55%;
 }
 
 /* Header/Title of modal in each page first product */
@@ -716,47 +665,20 @@ button {
     text-transform: capitalize;
 }
 
+/* Description of modal in each page first product, just <p> element and not headers */
+.discri-about {
+    font-size: 12px;
+    text-align: left;
+}
+
 /* Shared across multiple pages and in some areas of home page */
 .container-90 {
     width: 95%;
     margin: auto;
 }
 
-/* Currently unused it seems all three below */
-.collections-bg {
-    position: relative
-}
-
-.collections-txt {
-    position: absolute;
-    right: 57%;
-    left: 53px;
-    top: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-}
-
-.collections-txt h1 {
-    font-size: 23px;
-}
-
-/* Both new arrival on homepage and new arrival page diamond section on homepage */
-.new-arr-container,
-.diamond-container {
-    margin-top: 2px;
-}
-
-/* New Arrival and Diamond on Homepage and two sections on new arrival page */
-.cover-div {
-    display: flex;
-    justify-content: space-between;
-}
-
-
 /* Below is shared between new arrival on homepage and new arrival page */
 .left-row {
-    width: 100%;
     margin-left: 0;
     margin-right: 0;
 }
@@ -766,25 +688,6 @@ button {
     font-weight: bold;
     margin-block-end: 0;
     text-transform: capitalize;
-    margin-bottom: 0;
-}
-
-.left-row span {
-    font-size: 15px;
-    font-weight: bold;
-    color: #906337;
-    margin-bottom: 18px;
-    float: left;
-}
-
-/* Basically covers entirety of each page excluding banner outside of homepage */
-#gold-necklece {
-    background: white;
-}
-
-/* Filter section of all pages with them */
-#myBtnContainer {
-    padding: 25px 0 45px;
 }
 
 /* Create three equal columns that floats next to each other */
@@ -802,20 +705,24 @@ button {
     display: table;
     clear: both;
 }
-
-/* Content */
-.content {
-    background-color: white;
-    padding: 10px;
-}
-
 /* The "show" class is added to the filtered elements */
 .show {
     display: block;
 }
 
-/* Style the buttons */
-.btn {
+/* Buttons in filter section of all pages with them */
+#myBtnContainer {
+    padding: 15px 0;
+}
+
+/*
+#myBtnContainer {
+    padding: 25px 0 45px;
+}
+*/
+
+/* Filter button basic style */
+#myBtnContainer .btn {
     border: none;
     outline: none;
     padding: 12px 16px;
@@ -823,51 +730,18 @@ button {
     cursor: pointer;
 }
 
-/* Add a grey background color on mouse-over */
-.btn:hover {
+/* Add a grey background color on mouse-over on filter button */
+#myBtnContainer .btn:hover {
     background-color: #ddd;
 }
 
-/* Add a dark background color to the active button */
-.btn.active {
+/* Add a dark background color to the active filter button */
+#myBtnContainer .btn.active {
     background-color: #666;
     color: white;
 }
 
-.modal-dialog {
-    max-width: 60%;
-    margin: 0.2rem auto;
-}
-
-.discri-div {
-    text-align: left;
-}
-
-#gold,
-#collections,
-#pagebreak2,
-#pagebreak4 {
-    background-color: white !important;
-}
-
-#diamond,
-#pagebreak3 {
-    background-color: black;
-}
-
-.btn {
-    border: none !important;
-    outline: none !important;
-    padding: 8px 7px !important;
-    cursor: pointer !important;
-    font-size: 16px !important;
-}
-
-#myBtnContainer {
-    padding: 15px 0;
-}
-
-/* Text for every product on the product pages */
+/* Text for every product on the product pages underneath images */
 .type {
     font-size: 16px !important;
     font-weight: 800;
@@ -878,19 +752,26 @@ button {
     text-transform: capitalize;
 }
 
-/* Images on diamond page & onwards */
-.border-img {
-    border: 1px solid #d4d4d4;
-}
-
+/* Keeps gold section on homepage and entire gold page content(outside of banner) centered vertically */
 .my-3 {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
 }
 
+/* Every modal, including gold first one in product pages */
 .modal {
     text-align: center;
     padding: 0 !important;
+}
+
+/* Footer of modal in each page first product */
+.modal-footer {
+    padding: 0rem;
+}
+
+/* Modal of product in e.g gold page, not doing anything since modals disabled */
+.container-product {
+    padding-right: 2%;
 }
 
 /* New Arrival product images on homepage and on new arrival page */
@@ -898,6 +779,7 @@ button {
     cursor: pointer;
 }
 
+/* Keeps every other page hidden to simulate SPA */
 #newarrivalpage,
 #goldpage,
 #diamondpage,
@@ -910,22 +792,28 @@ button {
     display: none;
 }
 
+/* unused modals again */
 .kp-modal {
     justify-content: center;
     align-items: center;
 }
 
+.modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+
+
+
 /*#endregion*/
 
 /*#region EXTERNAL LIB CSS */
 
+/* All buttons text to uppercase and bold */
 .btn {
-    font-weight: 700
-}
-
-/* All buttons text to uppercase, not working/doing anything it seems */
-.btn {
-    text-transform: capitalize
+    font-weight: 700;
+    text-transform: capitalize;
 }
 
 /* layout shift fancybox */
@@ -933,11 +821,11 @@ body.compensate-for-scrollbar {
     overflow: visible !important;
 }
 
-
 .compensate-for-scrollbar {
     padding-right: 0px !important;
 }
 
+/* Flickity slider text on each card */
 .card-body p {
     text-align: center;
     margin: 0;
@@ -947,42 +835,49 @@ body.compensate-for-scrollbar {
     padding: 8px 0 7px;
 }
 
+/* Text inside fancybox */
 .fancybox__caption {
     font-size: 25px;
 }
 
+/* Default padding makes the cards very small so this lets them fill up the room*/
 .card-body {
     padding: 0px !important;
 }
 
+/* Default card comes with grey border */
 .card {
     border: 0px;
-    /* background-color: #59464D; */
 }
 
+/* Keeps the gold sliders with 5 cards visible(hence 20% each) and keeps them separated well enough */
 .flickity-container-gold .container-cell {
     width: 20%;
     margin: 0px 20px;
 }
 
+/* Side cards are little faded to show not centered */
 .flickity-container-gold .container-cell img {
     opacity: 0.85;
 }
 
-
+/* Center card is full opacity to show it is the centered one */
 .flickity-container-gold .is-selected img {
     opacity: 1;
 }
 
+/* Doesn't appear to do anything */
 .flickity-container-diamond .container-cell {
     width: 100%;
 }
 
+/* Centers diamond flickity slider vertically in its section */
 #flickity-diamond-col {
     display: grid;
     align-items: center;
 }
 
+/* All text in diamond section on images(not inside fancybox) */
 .flickity-container-diamond .container-cell p {
     text-align: center;
     font-size: 1.5em;
@@ -990,21 +885,24 @@ body.compensate-for-scrollbar {
     color: white;
 }
 
+/* Flickity top banner on each page buttons for left and right */
 .flickity-container-banner .flickity-button {
     background-color: rgba(255, 255, 255, 0.4) !important;
-
 }
 
+/* Flickity dots on bottom of each slider, only enabled on mobile */
 .flickity-page-dots {
     display: none;
 }
 
+/* Flickity gold section on home page buttons for left and right */
 .flickity-container-gold .flickity-button {
     background-color: rgba(255, 255, 255, 0.25) !important;
     color: black;
     border: solid 1px black;
 }
 
+/* Flickity diamond section on home page buttons for left and right */
 .flickity-container-diamond .flickity-button {
     background-color: rgba(0, 0, 0, 0.1) !important;
     color: antiquewhite;
@@ -1014,6 +912,16 @@ body.compensate-for-scrollbar {
 /*#endregion*/
 
 /*#region UNSORTED MEDIA QUERIES */
+
+/* For future reference: 
+
+For Mobile Devices – 320px — 480px
+iPads and Tablets – 481px — 768px
+Laptops and small screen – 769px — 1024px
+Large screens and Desktops – 1025px — 1200px
+TV and Extra Large Screens – 1201px and more
+
+*/
 
 @media screen and (max-height: 450px) {
     .sidebar {
@@ -1948,8 +1856,20 @@ header .overlay {
     }
 }
 
+html,
 body {
-    font-family: 'Playfair Display', serif;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    /* overflow-x:hidden;  scrollbar goes underneath header */
+    /* overflow-x:clip; issue with flexbox */
+}
+
+/* Looks like it has no effect */
+.new-arrive-product {
+    float: left;
+    width: 100%;
 }
 
 /*#endregion*/
