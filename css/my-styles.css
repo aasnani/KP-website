@@ -1616,9 +1616,9 @@ TV and Extra Large Screens – 1201px and more
         margin: 0.5rem 0rem 0.5rem 1.5rem;
     }
 
-    .container {
+    /* .container {
         max-width: 1120px;
-    }
+    } */
 
     #mainNav .navbar-nav .nav-item .nav-link,
     .dropdown-item {
