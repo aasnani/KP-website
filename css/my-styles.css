@@ -83,7 +83,7 @@ button {
 
 /*#region NAVBAR */
 
-/* mainNav refers to the entire navbar both top and the links */ 
+/* mainNav refers to the entire navbar both top and the links */
 #mainNav {
     text-align: center !important;
     vertical-align: middle !important;
@@ -913,7 +913,7 @@ body.compensate-for-scrollbar {
 
 /*#region UNSORTED MEDIA QUERIES */
 
-/* For future reference: 
+/* For future reference:
 
 For Mobile Devices – 320px — 480px
 iPads and Tablets – 481px — 768px
@@ -1873,3 +1873,80 @@ body {
 }
 
 /*#endregion*/
+
+/*#region TEST */
+
+.banner-copy {
+    position:absolute;
+    top: 30%;
+    left: 10%;
+}
+
+.banner-copy h1{
+    font-size: 3rem;
+}
+
+#top-navbar {
+    display: none !important;
+}
+
+.separator{
+    position: relative;
+    border-color: #000;
+    border-style: solid;
+    border-width: 2px;
+    border-bottom: none;
+    width: 50px;
+    margin-top: 10px;
+}
+
+#new-arrival-first {
+    margin-bottom: 30px;
+}
+
+#new-arrival-first h1 {
+    margin-top: 35px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-kerning: none;
+    color: #5e5c5c;
+
+}
+
+#new-arrival-first .image-separator {
+    text-align: center;
+}
+
+#new-arrival-first .image-separator img{
+    width: auto;
+    margin-bottom: 15px;
+}
+
+#new-arrival-first .polki-img{
+    outline: 2px solid #d9b481	;
+}
+
+#new-arrival-first .polki-text{
+    font-kerning: none;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#new-arrival-first .polki-link{
+    text-align: center;
+    margin-top: 30px;
+
+}
+
+#new-arrival-first .polki-link a{
+    font-size: 1.1rem;
+    font-kerning: none;
+    padding: 5px 10px;
+    border: 1px solid #d9b481;
+}
+
+#new-arrival-first .polki-link a:hover{
+    background-color:  #d9b481;
+    cursor: pointer;
+}
+/*#endregion */
