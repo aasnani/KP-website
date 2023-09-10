@@ -212,7 +212,7 @@
 
     <section id="new-arr">
 
-      <div class="container new-arr-container">
+      <div class="container-max new-arr-container">
 
 
 
@@ -747,7 +747,7 @@
 
 
 
-    <div class="container">
+    <div class="container-max">
       <div class="row collections-row-text-left" id="gemstone-collection-section">
         <div class="collections-section-text col-sm-3">
           <div class="row">
@@ -771,7 +771,7 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container-max">
       <div class="row collections-row-text-right" id="antique-collection-section">
         <div class="col-sm-3">
           <img src="images/antiquebracelet1.webp">
@@ -796,7 +796,7 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container-max">
       <div class="row collections-row-text-left" id="mangalsutra-collection-section">
         <div class="collections-section-text col-sm-3">
           <div class="row">
@@ -821,7 +821,7 @@
 
       </div>
     </div>
-    <div class="container">
+    <div class="container-max">
       <div class="row collections-row-text-right" id="engagement-collection-section">
         <div class="col-sm-3">
           <img src="images/engag.webp">
@@ -864,13 +864,62 @@
 
 
 
-      <div class="container-90">
+      <div class="container">
 
 
         <h3 class="section-headers " align="center">Contact Us</h3>
+        <div class="row">
+          <div class="col-sm-12">
+            <form id="contact-us-form">
+              <div class="row" id="contact-us-input-row">
+                <div class="col-sm-4">
+                  <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                </div>
+                <div class="col-sm-4">
+                  <input class="form-control" id="name" name="name" placeholder="Email" type="text" required>
+                </div>
+                <div class="col-sm-4">
+                  <input class="form-control" id="name" name="name" placeholder="Number" type="text" required>
+                </div>
+              </div>
+              <div class="w-100">
+              </div>
+              <div class="row">
+                <div class="col-sm-10">
+                  <textarea  class="form-control" id="comment" placeholder="Message..."
+                  rows="3" name="comment" required></textarea>
+                </div>
+                <div class="col-sm-2">
+                  <input type="submit" id="contact-us-button" class="btn btn-success contact-btn" value="Submit">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
 
+        <h4> Reach Out To Us</h4>
 
-        <div class="row pb-5">
+        <div class="image-separator">
+          <img src="images/test-divider-5.png">
+        </div>
+
+        <div class="row" id="reach-out-row">
+          <div class="col-sm-3">
+            <p><a href="tel:781-229-9170"><i class="fa fa-phone"></i> 781-229-9170</a></p>
+          </div>
+          <div class="col-sm-3">
+            <p><a href="https://www.google.com"><i class="bi bi-instagram"></i> kaypeejewelers </a></p>
+          </div>
+          <div class="col-sm-3">
+            <p> <a href="https://goo.gl/maps/SpqAM3tbYXB2t5BdA" target="_blank" rel="noopener noreferrer"><i
+              class="bi bi-pin-map-fill"></i> Burlington, MA</a></p>
+          </div>
+          <div class="col-sm-3">
+            <p><a href="mailto:kaypeejewelers@gmail.com"><i class="bi bi-envelope"></i> kaypeejewelers@gmail.com </a></p>
+          </div>
+        </div>
+
+        <!-- <div class="row pb-5">
 
           <div class="col-md-6" id="contact-us-form-section">
 
@@ -945,17 +994,9 @@
 
           </div>
 
-          <!-- <div class="col-md-6  ">
-
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2940.168851887272!2d-71.20821954944634!3d42.53046777907358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3a01d6954e0ef%3A0x48400773408dda9b!2sKay%20Pee%20Jewelers!5e0!3m2!1sen!2sus!4v1672952094137!5m2!1sen!2sus"
-               allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-          </div> -->
 
 
-
-        </div>
+        </div> -->
 
       </div>
 
@@ -4182,7 +4223,7 @@
   </script>
 
   <!-----email validation---->
-  <script>
+  <!-- <script>
     $("#contact-form").submit(function (e) {
       e.preventDefault();
     });
@@ -4281,7 +4322,7 @@
       });
 
     }
-  </script>
+  </script> -->
   <!----end email validation---->
 
   <!-- <script>

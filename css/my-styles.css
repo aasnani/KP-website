@@ -83,7 +83,7 @@ button {
 
 /*#region NAVBAR */
 
-/* mainNav refers to the entire navbar both top and the links */ 
+/* mainNav refers to the entire navbar both top and the links */
 #mainNav {
     text-align: center !important;
     vertical-align: middle !important;
@@ -333,7 +333,7 @@ button {
 }
 
 /* New arrival and each row in collections just to take up entire width */
-.container {
+.container-max {
     max-width: fit-content;
 }
 
@@ -442,25 +442,74 @@ button {
     display: block !important;
 }
 
+/* Entire contact us section, just gives more padding between all elements and footer */
+#contact-us {
+    padding-bottom: 20px;
+}
+
+#contact-us-input-row {
+    padding-bottom: 20px;
+}
+
 /* Important styles for forced stylization of ctct form */
 .never-show {
     display: none !important;
 }
 
+#contact-us .image-separator{
+    text-align: center;
+}
+
+#contact-us .image-separator img {
+    width: auto;
+    height: 50px;
+    margin-top: -15px;
+}
+
+#contact-us h4 {
+    padding-top: 30px;
+    text-align: center;
+}
+
+#contact-us p {
+    font-family: 'Twentieth Century', serif;
+}
+
+#reach-out-row {
+    text-align: center;
+}
+
+#reach-out-row a {
+    color: black;
+    font-size: 19px;
+}
+
+#reach-out-row a:hover {
+    color: tan;
+    text-decoration: none;
+}
+
+#reach-out-row i {
+    padding-right: 7px;
+}
+
 /* Contact us form each input */
-.form-control {
-    /* border: #4D3643; */
-    background-color: rgba(255, 255, 255, 1);
-    /* border-radius: 0; */
+#contact-us .form-control {
+    border: solid 1px black;
+    background-color: aliceblue;
+    border-radius: 0;
     color: black;
     font-weight: 600;
 }
 
 /* Contact us form each input after clicking*/
-.form-control:focus {
+#contact-us .form-control:focus {
+    border: solid 1px black;
+    background-color: aliceblue;
+    border-radius: 0;
+    color: black;
+    font-weight: 600;
     box-shadow: none;
-    border-color: rgb(255, 255, 255);
-    background-color: rgba(255, 255, 255, 1);
 }
 
 /* Area around/containing contact us form only, not entire horizontal space */
@@ -475,20 +524,21 @@ button {
 }
 
 /* Contact form submit button */
-.contact-btn {
+#contact-us-button {
     width: 100%;
-    margin-top: 15px;
-    color: black;
-    background-color: white;
+    margin-top: 20px;
+    color: white;
+    background-color: rgb(31, 58, 82);
     border-color: gray;
+    border-radius: 0;
 }
 
 /* Contact form submit button hover over effects*/
-.contact-btn:hover{
+/* #contact-us-button:hover{
     color: #333;
     background-color: rgb(202, 245, 202);
     border-color: rgb(202, 245, 202);
-}
+} */
 
 /* Success alert after submitting contact us form */
 #contact-us-alert {
@@ -913,7 +963,7 @@ body.compensate-for-scrollbar {
 
 /*#region UNSORTED MEDIA QUERIES */
 
-/* For future reference: 
+/* For future reference:
 
 For Mobile Devices – 320px — 480px
 iPads and Tablets – 481px — 768px
