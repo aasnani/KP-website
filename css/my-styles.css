@@ -83,7 +83,7 @@ button {
 
 /*#region NAVBAR */
 
-/* mainNav refers to the entire navbar both top and the links */ 
+/* mainNav refers to the entire navbar both top and the links */
 #mainNav {
     text-align: center !important;
     vertical-align: middle !important;
@@ -333,7 +333,7 @@ button {
 }
 
 /* New arrival and each row in collections just to take up entire width */
-.container {
+.container-max {
     max-width: fit-content;
 }
 
@@ -913,7 +913,7 @@ body.compensate-for-scrollbar {
 
 /*#region UNSORTED MEDIA QUERIES */
 
-/* For future reference: 
+/* For future reference:
 
 For Mobile Devices – 320px — 480px
 iPads and Tablets – 481px — 768px
