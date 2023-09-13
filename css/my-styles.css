@@ -333,7 +333,7 @@ button {
 }
 
 /* New arrival and each row in collections just to take up entire width */
-.container {
+.container-max {
     max-width: fit-content;
 }
 
