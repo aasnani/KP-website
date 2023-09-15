@@ -511,22 +511,150 @@ button {
 }
 
 /* New arrival banner text rules (current doesn't exist) */
-.inner-banner-text h1 {
-    color: #000;
-    text-transform: capitalize;
-    font-size: 52px;
+
+.banner-copy {
+    position:absolute;
+    top: 30%;
+    left: 10%;
+    width: 30%;
 }
 
-#stone {
-    margin-bottom: 1rem;
+.banner-copy h1{
+    font-size: 3.6rem;
+    font-weight: normal;
 }
 
-.left-row span {
-    font-size: 15px;
-    font-weight: bold;
-    color: #906337;
-    margin-bottom: 18px;
-    float: left;
+.banner-copy p{
+    padding-top: 15px;
+    text-align: start;
+}
+
+.separator{
+    position: relative;
+    border-color: #000;
+    border-style: solid;
+    border-width: 2px;
+    border-bottom: none;
+    width: 75px;
+    margin-top: 10px;
+}
+
+#new-arrival-first {
+    margin-bottom: 50px;
+}
+
+#new-arrival-first h1 {
+    margin-top: 35px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-kerning: none;
+    color: #5e5c5c;
+
+}
+
+#new-arrival-first .image-separator {
+    text-align: center;
+}
+
+#new-arrival-first .image-separator img{
+    width: auto;
+    margin-bottom: 15px;
+}
+
+#new-arrival-first .polki-img{
+    outline: 2px solid #d9b481	;
+}
+
+#new-arrival-first .polki-text{
+    font-kerning: none;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#new-arrival-first #polki-link{
+    text-align: center;
+    margin-top: 30px;
+
+}
+
+#new-arrival-first #polki-link a{
+    font-size: 1.3rem;
+    font-kerning: none;
+    padding: 5px 10px;
+    border: 1px solid #d9b481;
+    transition: 300ms;
+}
+
+#new-arrival-first #polki-link a:hover{
+    background-color:  #d9b481;
+    cursor: pointer;
+}
+
+#new-arrival-second {
+    padding-bottom: 50px;
+}
+
+#new-arrival-second .card {
+    width: 100%;
+    text-align: center;
+    border-radius: 0.5rem;
+    border: none;
+    font-kerning: none;
+}
+
+#new-arrival-second .card-shadow {
+    box-shadow: 0px 0px 0.55rem 0px rgba(51, 51, 51, 0.19);
+}
+
+#new-arrival-second #text-description-card {
+    background-color: lightblue;
+    color: rgb(75, 75, 75);
+}
+
+#new-arrival-second #text-description-card .card-title {
+    font-weight: normal;
+    padding-top: 40px;
+}
+
+#new-arrival-second #text-description-card .card-body {
+    align-content: center;
+    align-items: center;
+}
+
+#new-arrival-second #text-description-card .card-text {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#new-arrival-second #text-description-card a {
+    border-radius: 0;
+    background-color: white;
+    color: black;
+    border: 1px solid white;
+    transition: 0.3s;
+}
+
+#new-arrival-second #text-description-card a:hover {
+    cursor: pointer;
+    background-color: rgb(236, 236, 236);
+    border: 1px solid rgb(236, 236, 236);
+    /* box-shadow: 0px 4px 6px 2px rgba(51, 51, 51, 0.1); */
+}
+
+.flickity-container-new-arr-second .container-cell{
+    width: 50%;
+    /* margin: 0px 10px; */
+}
+
+.flickity-container-new-arr-second .card-body {
+    padding: 0rem;
+    padding-left: 0.6rem;
+    padding-right: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.flickity-container-new-arr-second img {
+    border-radius: 0.5rem;
 }
 
 /*#endregion*/
@@ -1875,149 +2003,4 @@ body {
 /*#endregion*/
 
 /*#region TEST */
-
-.banner-copy {
-    position:absolute;
-    top: 30%;
-    left: 10%;
-    width: 30%;
-}
-
-.banner-copy h1{
-    font-size: 3.6rem;
-    font-weight: normal;
-}
-
-.banner-copy p{
-    padding-top: 15px;
-    text-align: start;
-}
-
-.separator{
-    position: relative;
-    border-color: #000;
-    border-style: solid;
-    border-width: 2px;
-    border-bottom: none;
-    width: 75px;
-    margin-top: 10px;
-}
-
-#new-arrival-first {
-    margin-bottom: 50px;
-}
-
-#new-arrival-first h1 {
-    margin-top: 35px;
-    text-align: center;
-    margin-bottom: 10px;
-    font-kerning: none;
-    color: #5e5c5c;
-
-}
-
-#new-arrival-first .image-separator {
-    text-align: center;
-}
-
-#new-arrival-first .image-separator img{
-    width: auto;
-    margin-bottom: 15px;
-}
-
-#new-arrival-first .polki-img{
-    outline: 2px solid #d9b481	;
-}
-
-#new-arrival-first .polki-text{
-    font-kerning: none;
-    margin-top: 20px;
-    text-align: center;
-}
-
-#new-arrival-first #polki-link{
-    text-align: center;
-    margin-top: 30px;
-
-}
-
-#new-arrival-first #polki-link a{
-    font-size: 1.3rem;
-    font-kerning: none;
-    padding: 5px 10px;
-    border: 1px solid #d9b481;
-    transition: 300ms;
-}
-
-#new-arrival-first #polki-link a:hover{
-    background-color:  #d9b481;
-    cursor: pointer;
-}
-
-#new-arrival-second {
-    padding-bottom: 50px;
-}
-
-#new-arrival-second .card {
-    width: 100%;
-    text-align: center;
-    border-radius: 0.5rem;
-    border: none;
-    font-kerning: none;
-}
-
-#new-arrival-second .card-shadow {
-    box-shadow: 0px 0px 0.55rem 0px rgba(51, 51, 51, 0.19);
-}
-
-#new-arrival-second #text-description-card {
-    background-color: lightblue;
-    color: rgb(75, 75, 75);
-}
-
-#new-arrival-second #text-description-card .card-title {
-    font-weight: normal;
-    padding-top: 40px;
-}
-
-#new-arrival-second #text-description-card .card-body {
-    align-content: center;
-    align-items: center;
-}
-
-#new-arrival-second #text-description-card .card-text {
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-
-#new-arrival-second #text-description-card a {
-    border-radius: 0;
-    background-color: white;
-    color: black;
-    border: 1px solid white;
-    transition: 0.3s;
-}
-
-#new-arrival-second #text-description-card a:hover {
-    cursor: pointer;
-    background-color: rgb(236, 236, 236);
-    border: 1px solid rgb(236, 236, 236);
-    /* box-shadow: 0px 4px 6px 2px rgba(51, 51, 51, 0.1); */
-}
-
-.flickity-container-new-arr-second .container-cell{
-    width: 50%;
-    /* margin: 0px 10px; */
-}
-
-.flickity-container-new-arr-second .card-body {
-    padding: 0rem;
-    padding-left: 0.6rem;
-    padding-right: 0.5rem;
-    border-radius: 0.5rem;
-}
-
-.flickity-container-new-arr-second img {
-    border-radius: 0.5rem;
-}
 /*#endregion */
