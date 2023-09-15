@@ -987,7 +987,7 @@
             <div class="banner-copy">
               <h1 class="animate__animated animate__fadeInLeft">New Arrivals</h1>
               <div class="separator animate__animated animate__fadeInLeft animate__slow"></div>
-              <p class="animate__animated animate__fadeInLeft"> Explore the latest and greatest from our selection.</p>
+              <p class="animate__animated animate__fadeInLeft">Explore contemporary elegance with our latest jewelry arrivals. From captivating gemstones to delicate designs, our curated collection offers style for every occasion. Immerse yourself in the artistry behind each handcrafted piece and elevate your jewelry collection today.</p>
             </div>
 
             <img loading="lazy" src="images/test_banner.jpg" class="mobile-disable inner-banner">
@@ -1017,9 +1017,6 @@
             <div class="polki-text">
               <h3> POLKI A</h3>
             </div>
-            <div class="polki-link">
-              <a> Explore Collection </a>
-            </div>
 
           </div>
           <div class="col-sm-4">
@@ -1027,23 +1024,119 @@
             <div class="polki-text">
               <h3> POLKI B</h3>
             </div>
-            <div class="polki-link">
-              <a> Explore Collection </a>
-            </div>
           </div>
           <div class="col-sm-4">
             <img class="polki-img" src="images/Archive/polki/p3.jpg" />
             <div class="polki-text">
               <h3> POLKI C</h3>
             </div>
-            <div class="polki-link">
-              <a> Explore Collection </a>
-            </div>
           </div>
+        </div>
+        <div id="polki-link">
+          <a> Explore Collection </a>
         </div>
       </div>
 
 
+    </section>
+
+    <section id="new-arrival-second">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4 d-flex">
+            <div id="text-description-card" class="card card-shadow">
+              <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+              <div class="card-body">
+                <h1 class="card-title">DIAMOND BANGLES</h1>
+                <p class="card-text">Adorn your wrist with the timeless brilliance of diamond bangles, a statement of elegance and sophistication.</p>
+                <a href="google.com" class="btn btn-primary">Discover</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-8">
+            <!-- <div class="card card-shadow"> -->
+            <div class="flickity-container-new-arr-second">
+              <div class="container-cell">
+                <div class="card">
+
+                  <div class="card-body">
+
+
+                    <a data-fancybox data-src="images/diamond-page/diamondbangles1.webp"
+                      data-caption="Diamond Bangles 1">
+                      <img src="images/diamond-page/diamondbangles1.webp" width="100%" />
+                      <p>Diamond Bangles 1</p>
+                    </a>
+
+
+                  </div>
+
+
+
+                </div>
+              </div>
+              <div class="container-cell">
+                <div class="card">
+
+                  <div class="card-body">
+
+
+                    <a data-fancybox data-src="images/diamond-page/diamondbangles1.webp"
+                      data-caption="Diamond Bangles 1">
+                      <img src="images/diamond-page/diamondbangles1.webp" width="100%" />
+                      <p>Diamond Bangles 1</p>
+                    </a>
+
+
+                  </div>
+
+
+
+                </div>
+              </div>
+              <div class="container-cell">
+                <div class="card">
+
+                  <div class="card-body">
+
+
+                    <a data-fancybox data-src="images/diamond-page/diamondbangles1.webp"
+                      data-caption="Diamond Bangles 1">
+                      <img src="images/diamond-page/diamondbangles1.webp" width="100%" />
+                      <p>Diamond Bangles 1</p>
+                    </a>
+
+
+                  </div>
+
+
+
+                </div>
+              </div>
+              <div class="container-cell">
+                <div class="card">
+
+                  <div class="card-body">
+
+
+                    <a data-fancybox data-src="images/diamond-page/diamondbangles1.webp"
+                      data-caption="Diamond Bangles 1">
+                      <img src="images/diamond-page/diamondbangles1.webp" width="100%" />
+                      <p>Diamond Bangles 1</p>
+                    </a>
+
+
+                  </div>
+
+
+
+                </div>
+              </div>
+            </div>
+          <!-- </div> -->
+        </div>
+      </div>
+      </div>
     </section>
 
 
@@ -3424,6 +3517,18 @@
         $(pages[i]).css("display", "none");
       }
       $(page).css("display", "block");
+      if(page === '#newarrivalpage'){
+        console.log("Here");
+        $(".flickity-container-new-arr-second").flickity({
+        wrapAround: true,
+        'autoPlay': 'true',
+        pauseAutoPlayOnHover: false,
+        pageDots: true,
+        prevNextButtons: false,
+        cellAlign: 'left',
+        autoPlay: '3500'
+      });
+      }
     }
     function goToContactUs() {
       console.log("test");
