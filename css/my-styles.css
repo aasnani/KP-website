@@ -591,7 +591,7 @@ button {
 }
 
 #new-arrival-second {
-    padding-bottom: 50px;
+    margin-bottom: 70px;
 }
 
 #new-arrival-second .card {
@@ -655,6 +655,51 @@ button {
 
 .flickity-container-new-arr-second img {
     border-radius: 0.5rem;
+}
+
+#new-arrival-third {
+    margin-bottom: 50px;
+}
+
+#new-arrival-third #text-description-col {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#new-arrival-third #text-description-col h1 {
+    font-kerning: none;
+    font-weight: normal;
+}
+
+#new-arrival-third #engagement-images-col{
+    text-align: center;
+}
+
+#new-arrival-third img {
+    width: 33%;
+    height: auto;
+    position: relative;
+    box-shadow: 0px 0px 5px 0px rgba(51, 51, 51, 0.5)
+}
+
+#new-arrival-third #img-1 {
+    width: 28%;
+    left: 3%;
+    z-index: 1;
+}
+
+#new-arrival-third #img-2 {
+    width: auto;
+    border-image: 1px solid steelblue;
+    border-image-source: inherit;
+}
+
+#new-arrival-third #img-3 {
+    width: 28%;
+    right: 3%;
+    z-index: 1;
 }
 
 /*#endregion*/
