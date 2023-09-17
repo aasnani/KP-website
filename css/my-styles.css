@@ -512,8 +512,9 @@ button {
 }
 
 #landing-section .banner-copy h1{
-    font-size: 3.6rem;
+    font-size: 3.1rem;
     font-weight: normal;
+    font-kerning: none;
 }
 
 #landing-section .banner-copy p{
@@ -541,7 +542,7 @@ button {
     margin-bottom: 10px;
     font-kerning: none;
     color: #5e5c5c;
-
+    font-weight: normal;
 }
 
 #new-arrival-first .image-separator {
@@ -570,15 +571,18 @@ button {
 }
 
 #new-arrival-first #polki-link a{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-kerning: none;
     padding: 5px 10px;
-    border: 1px solid #d9b481;
     transition: 300ms;
+    border-radius: 0;
+    background-color: #d9b481;
+    border: none;
+    box-shadow: 0px 5px 5px 0px rgba(51, 51, 51, 0.1);
 }
 
 #new-arrival-first #polki-link a:hover{
-    background-color:  #d9b481;
+    background-color:  #f8ce94;
     cursor: pointer;
 }
 
@@ -619,11 +623,13 @@ button {
 }
 
 #new-arrival-second #text-description-card a {
+    font-size: 1.1rem;
     border-radius: 0;
     background-color: white;
     color: black;
     border: 1px solid white;
     transition: 0.3s;
+    box-shadow: 0px 5px 5px 0px rgba(51, 51, 51, 0.1);
 }
 
 #new-arrival-second #text-description-card a:hover {
@@ -665,6 +671,11 @@ button {
     font-weight: normal;
 }
 
+#new-arrival-third #text-description-col p {
+    font-kerning: none;
+    padding: 8px 0px;
+}
+
 #new-arrival-third #engagement-images-col{
     text-align: center;
 }
@@ -673,7 +684,7 @@ button {
     width: 33%;
     height: auto;
     position: relative;
-    box-shadow: 0px 0px 5px 0px rgba(51, 51, 51, 0.5)
+    box-shadow: 0px 0px 8px 0px rgba(51, 51, 51, 0.75);
 }
 
 #new-arrival-third #img-1 {
@@ -694,6 +705,24 @@ button {
     z-index: 1;
 }
 
+#new-arrival-third a {
+    border-radius: 0;
+    background-color: rgba(6, 6, 6, 1);
+    
+    color: white;
+    border: 1px solid black;
+    transition: 0.3s;
+    box-shadow: 0px 5px 5px 0px rgba(51, 51, 51, 0.1);
+    font-size: 1.1rem;
+}
+
+#new-arrival-third a:hover {
+    cursor: pointer;
+    color: white;
+    background-color: rgba(6, 6, 6, 0.844);
+    /* box-shadow: 0px 4px 6px 2px rgba(51, 51, 51, 0.1); */
+}
+
 #new-arrival-fourth {
     margin-bottom: 50px;
 }
@@ -711,12 +740,13 @@ button {
 }
 
 #new-arrival-fourth .banner-copy a {
-    padding: 7px 10px;
+    font-size: 1.1rem;
     border-radius: 0;
     background-color: white;
-    color: black;
     border: 1px solid white;
-    transition: 0.3s;
+    color: black;
+    transition: 0.15s;
+    box-shadow: 0px 0px 7px 0px rgba(231, 231, 231, 0.2);
 }
 
 #new-arrival-fourth .banner-copy a:hover {
