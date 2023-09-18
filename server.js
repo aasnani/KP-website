@@ -10,7 +10,6 @@ const __dirname = path.resolve();
 const options = {
     headers: {
         'Authorization': 'Bearer ' + process.env.ACCESS_TOKEN,
-        'Accept': 'application/json',
         'Content-Type': 'application/json',
     },
     method: 'POST'
@@ -19,7 +18,7 @@ const options = {
 // Initialise Express
 let app = express();
 // Render static files
-app.use(express.json()) 
+app.use(express.json());
 app.use(express.static('index.html'));
 app.use('/css', express.static('css'));
 app.use('/fonts', express.static('fonts'));
@@ -31,19 +30,26 @@ app.get('/', (req,res) => {
 })
 
 app.post('/addToEmailList', (req, res) => {
-    let email = req.body.email_address;
+    let email = req.query.email_address;
     let body = JSON.stringify({
+        'create_source': 'Contact',
         'email_address': email,
         'list_memberships': [process.env.MAIN_EMAIL_LIST]
     });
     options.body = body;
-    
+
+    console.log(options);
     fetch('https://api.cc.email/v3/contacts/sign_up_form', options).then(api_response => {
         console.log(api_response);
+        res.json({
+            'status': 'success'
+        });
     }).catch(error => {
         console.log(error);
+        res.json({
+            'status': 'fail'
+        });
     })
-
 })
 
 // Port website will run on

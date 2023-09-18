@@ -440,7 +440,7 @@ button {
 }
 
 /* Newsletter subscribe text input */
-.subscribe-input {
+#subscribe-input {
     border: solid 1px black;
     width: 30%;
     padding: 8px 13px;
@@ -448,7 +448,7 @@ button {
 }
 
 /* Newsletter subscribe button */
-.subscribe-btn {
+#subscribe-btn {
     font-weight: normal;
     font-kerning: none;
     width: 10%;

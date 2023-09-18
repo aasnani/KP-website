@@ -854,8 +854,8 @@
       <div id="subscribe-div">
         <h1 class="section-headers">NEWSLETTER</h1>
         <p>Stay adorned with our newsletter for exclusive jewelry updates and offers.</p>
-        <input type="text" id="subscribe-form" class="subscribe-input" placeholder="Enter Your Email Address">
-        <button class="subscribe-btn">SUBSCRIBE</button>
+        <input type="text" id="subscribe-input" placeholder="Enter Your Email Address">
+        <button onclick="subscribe()" id="subscribe-btn">SUBSCRIBE</button>
       </div>
     </section>
 
@@ -3931,12 +3931,25 @@
 
   <script>
     function subscribe() {
-      $("#subscribe-success-alert").addClass("show");
-      $("#subscribe-success-alert").removeClass("hide");
-      setTimeout(() => {
-        $("#subscribe-success-alert").removeClass("show");
-        $("#subscribe-success-alert").addClass("hide");
-      }, 5000)
+      var email = $("#subscribe-input").val();
+      if (email != ""){
+        $.ajax({
+        url : `/addToEmailList?email_address=${email}`,
+        type: "POST",
+        contentType: "application/json; charset=utf-8",
+        dataType   : "json",
+        success    : function(){
+            alert("Success");
+        }
+        })
+      }
+      // jQuery.post("/addToEmailList")
+      // $("#subscribe-success-alert").addClass("show");
+      // $("#subscribe-success-alert").removeClass("hide");
+      // setTimeout(() => {
+      //   $("#subscribe-success-alert").removeClass("show");
+      //   $("#subscribe-success-alert").addClass("hide");
+      // }, 5000)
     }
   </script>
 
