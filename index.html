@@ -3939,17 +3939,19 @@
         contentType: "application/json; charset=utf-8",
         dataType   : "json",
         success    : function(){
-            alert("Success");
+          console.log("Success");
         }
         })
       }
-      // jQuery.post("/addToEmailList")
-      // $("#subscribe-success-alert").addClass("show");
-      // $("#subscribe-success-alert").removeClass("hide");
-      // setTimeout(() => {
-      //   $("#subscribe-success-alert").removeClass("show");
-      //   $("#subscribe-success-alert").addClass("hide");
-      // }, 5000)
+
+      $("#subscribe-input").val("");
+      $("#subscribe-btn").css("background-color", "#4ecd65");
+      $("#subscribe-btn").html("SUBSCRIBED!");
+      setTimeout(() => {
+        $("#subscribe-btn").css("background-color", "#684f4f");
+        $("#subscribe-btn").html("SUBSCRIBE");
+        $("#subscribe-btn").removeAttr("style");
+      }, 1500);
     }
   </script>
 

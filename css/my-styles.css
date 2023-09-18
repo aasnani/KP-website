@@ -457,6 +457,13 @@ button {
     background: #684f4f;
     color: #fff;
     font-size: 1rem;
+    transition: .2s;
+    /* transition: 2s; */
+}
+
+#subscribe-btn:hover {
+    background: #7e6060;
+    border: 1px solid #7e6060;
 }
 
 /* Success alert after subscribing to newsletter */
