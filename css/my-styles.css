@@ -452,7 +452,7 @@ button {
     font-weight: normal;
     font-kerning: none;
     width: 10%;
-    border: none;
+    border: 1px solid #684f4f;
     padding: 8px 13px;
     background: #684f4f;
     color: #fff;
