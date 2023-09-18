@@ -279,6 +279,8 @@ button {
     padding-bottom: 4%;
     font-family: 'Playfair Display', serif;
     letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-kerning: none;
 }
 
 /* Gives white background to both gold and collections sections on homepage */
@@ -414,19 +416,47 @@ button {
     background-color: burlywood;
 }
 
+#subscribe {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: rgb(255, 255, 244);
+}
+
+#subscribe #subscribe-div {
+    text-align: center;
+}
+
+#subscribe #subscribe-div h1 {
+    font-weight: normal;
+    font-kerning: none;
+    letter-spacing: 1.5px;
+    padding-bottom: 0;
+}
+
+#subscribe #subscribe-div p {
+    font-weight: normal;
+    font-kerning: none;
+    padding: 1% 0;
+}
+
 /* Newsletter subscribe text input */
 .subscribe-input {
-    border: none;
-    width: 230px;
+    border: solid 1px black;
+    width: 30%;
     padding: 8px 13px;
+    background: transparent;
 }
 
 /* Newsletter subscribe button */
 .subscribe-btn {
+    font-weight: normal;
+    font-kerning: none;
+    width: 10%;
     border: none;
     padding: 8px 13px;
     background: #684f4f;
     color: #fff;
+    font-size: 1rem;
 }
 
 /* Success alert after subscribing to newsletter */
