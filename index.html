@@ -877,23 +877,23 @@
         <h3 class="section-headers " align="center">Contact Us</h3>
         <div class="row">
           <div class="col-sm-12">
-            <form id="contact-us-form">
+            <form id="contact-us-form" onsubmit="submitContactForm(); return false">
               <div class="row" id="contact-us-input-row">
                 <div class="col-sm-4">
-                  <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                  <input class="form-control" id="contact-us-name" name="name" placeholder="Name" type="text" required>
                 </div>
                 <div class="col-sm-4">
-                  <input class="form-control" id="name" name="name" placeholder="Email" type="text" required>
+                  <input class="form-control" id="contact-us-email" name="email" placeholder="Email" type="text" required>
                 </div>
                 <div class="col-sm-4">
-                  <input class="form-control" id="name" name="name" placeholder="Number" type="text" required>
+                  <input class="form-control" id="contact-us-number" name="name" placeholder="Number" type="text" required>
                 </div>
               </div>
               <div class="w-100">
               </div>
               <div class="row">
                 <div class="col-sm-10">
-                  <textarea  class="form-control" id="comment" placeholder="Message..."
+                  <textarea  class="form-control" id="contact-us-message" placeholder="Message..."
                   rows="3" name="comment" required></textarea>
                 </div>
                 <div class="col-sm-2">
@@ -3953,6 +3953,37 @@
         $("#subscribe-btn").removeAttr("style");
       }, 1500);
     }
+  </script>
+
+  <script>
+
+    function submitContactForm(){
+      var name = $("#contact-us-name").val();
+      var email = $("#contact-us-email").val();
+      var phone = $("#contact-us-number").val();
+      var message = $("#contact-us-message").val();
+      var data = {
+        'name': name,
+        'email': email,
+        'phone': phone,
+        'message': message
+      }
+      data = JSON.stringify(data);
+      console.log(data);
+
+      $.ajax({
+          url : `/sendContactUs`,
+          type: "POST",
+          contentType: "application/json; charset=utf-8",
+          dataType   : "json",
+          processData: true,
+          data: data,
+          success    : function(){
+            console.log("Success");
+          }
+          })
+    }
+
   </script>
 
   <script>

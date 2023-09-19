@@ -3,6 +3,7 @@ import fetch from 'node-fetch';
 dotenv.config()
 // Load Node modules
 import express from 'express';
+import nodemailer from 'nodemailer';
 
 import path from 'path';
 const __dirname = path.resolve();
@@ -14,6 +15,28 @@ const options = {
     },
     method: 'POST'
 }
+
+const transporter = nodemailer.createTransport({
+  name: process.env.HOST,
+  host: process.env.HOST,
+  port: 465,
+  secure: true,
+  auth: {
+    user: process.env.CONTACT_US_EMAIL,
+    pass: process.env.CONTACT_US_PW,
+  },
+});
+
+transporter.verify(function (error, success) {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log("Server is ready to take our messages");
+  }
+});
+
+const SUBJECT_FORMAT = "Contact Us Form: "
+
 
 // Initialise Express
 let app = express();
@@ -50,6 +73,32 @@ app.post('/addToEmailList', (req, res) => {
             'status': 'fail'
         });
     })
+})
+
+app.post('/sendContactUs', (req, res) => {
+  let name = req.body.name;
+  let email = req.body.email;
+  let phone = req.body.phone;
+  let message = req.body.message;
+
+  const mail = {
+    from: process.env.CONTACT_US_EMAIL,
+    to: process.env.CONTACT_US_DESTINATION,
+    subject: SUBJECT_FORMAT + name,
+    text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`,
+  };
+
+  console.log(mail);
+
+  transporter.sendMail(mail, (err, data) => {
+    if (err) {
+      console.log(err);
+      res.status(500).send("Something went wrong.");
+    } else {
+      res.status(200).send("Email successfully sent to recipient!");
+      console.log("Success");
+    }
+  });
 })
 
 // Port website will run on
