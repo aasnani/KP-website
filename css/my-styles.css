@@ -503,13 +503,19 @@ button {
     margin-top: -15px;
 }
 
+#contact-us .form-control{
+    font-variant-numeric: lining-nums;
+    font-kerning: none;
+}
+
 #contact-us h4 {
     padding-top: 30px;
     text-align: center;
 }
 
 #contact-us p {
-    font-family: 'Twentieth Century', serif;
+    font-family: 'Playfair Display', serif;
+    font-variant-numeric: lining-nums;
 }
 
 #reach-out-row {
@@ -518,11 +524,11 @@ button {
 
 #reach-out-row a {
     color: black;
-    font-size: 19px;
+    font-size: 1.1rem;
 }
 
 #reach-out-row a:hover {
-    color: tan;
+    color: rgb(201, 74, 52);
     text-decoration: none;
 }
 
