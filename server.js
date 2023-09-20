@@ -8,13 +8,7 @@ import nodemailer from 'nodemailer';
 import path from 'path';
 const __dirname = path.resolve();
 
-const options = {
-    headers: {
-        'Authorization': 'Bearer ' + process.env.ACCESS_TOKEN,
-        'Content-Type': 'application/json',
-    },
-    method: 'POST'
-}
+global.options = {}
 
 const transporter = nodemailer.createTransport({
   name: process.env.HOST,
@@ -37,6 +31,14 @@ transporter.verify(function (error, success) {
 
 const SUBJECT_FORMAT = "Contact Us Form: "
 
+const refresh_options = {
+    headers: {
+        'Authorization': 'Basic ' + process.env.BASE64_ENCODE,
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Accept': 'application/json'
+    },
+    method: 'POST'
+}
 
 // Initialise Express
 let app = express();
@@ -52,6 +54,30 @@ app.get('/', (req,res) => {
     res.sendFile(__dirname + '/index.html');
 })
 
+function refreshToken() {
+    global.options = {
+        headers: {
+            'Authorization': 'Bearer ' + process.env.ACCESS_TOKEN,
+            'Content-Type': 'application/json',
+        },
+        method: 'POST'
+    };
+    fetch(`https://authz.constantcontact.com/oauth2/default/v1/token?refresh_token=${process.env.REFRESH_TOKEN}&grant_type=refresh_token`, refresh_options).then(response => {
+        let o2 = Object.assign({}, options);
+        // console.log(response);
+        response.json().then(json => {
+            o2.headers['Authorization'] = 'Bearer ' + json['access_token'];
+            console.log("Here");
+            global.options = o2;
+            console.log("ready");
+        });
+    }).catch(err => {
+        console.log(err);
+    })
+}
+
+refreshToken();
+
 app.post('/addToEmailList', (req, res) => {
     let email = req.query.email_address;
     let body = JSON.stringify({
@@ -59,9 +85,9 @@ app.post('/addToEmailList', (req, res) => {
         'email_address': email,
         'list_memberships': [process.env.MAIN_EMAIL_LIST]
     });
-    options.body = body;
+    global.options.body = body;
 
-    console.log(options);
+    console.log(global.options);
     fetch('https://api.cc.email/v3/contacts/sign_up_form', options).then(api_response => {
         console.log(api_response);
         res.json({
@@ -72,6 +98,8 @@ app.post('/addToEmailList', (req, res) => {
         res.json({
             'status': 'fail'
         });
+    }).finally(() => {
+        options.body = null;
     })
 })
 
