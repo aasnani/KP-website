@@ -71,7 +71,7 @@ img {
 
 /* Appears to be unused, span elements only in embedded stuff and old example modals */
 span {
-    color: #fff;
+    /* color: #fff; */
 }
 
 /* Again, only old example modal usage it seems */
@@ -531,40 +531,153 @@ button {
 
 /*#endregion*/
 
-/*#region GOLD PAGE */
+/*#region PRODUCT PAGES */
 
-#gold-necklece img {
+#gold-necklece .img-shadow {
     /* box-shadow: 0px 3px 5px 3px rgb(0,0,0,0.2); */
     filter: drop-shadow(2px 3px 5px rgb(0,0,0,0.7));
 }
 
 /*#endregion*/
+.modal-dialog {
+    max-width: 70%;
+}
 
-/*#region DIAMOND PAGE */
+.modal-content {
+    background-color: antiquewhite;
+    /* background: transparent; */
+}
 
-/*#endregion*/
+.modal-body {
+    padding-top: 0;
+}
 
-/*#region ANTIQUE PAGE */
+.modal-header {
+    padding: 0.5rem 1rem;
+    border-bottom: none;
+}
 
-/*#endregion*/
+.modal-footer {
+    display: block;
+    padding: 0;
+    border-top: 0.5px solid black;
+}
 
-/*#region GEMSTONE PAGE */
+.modal-footer .row {
+    margin: 0;
+}
 
-/*#endregion*/
+.modal-footer #title {
+    font-size: 1.15rem;
+}
 
-/*#region MANGALSUTRAS PAGE */
+.modal-footer p {
+    padding: 0.5rem;
+    margin: 0;
+    font-kerning: none;
+}
 
-/*#endregion*/
+.modal-footer .col-left{
+    padding-right: 0;
+    /* border-right: 0.25px solid black; */
+}
 
-/*#region ENGAGEMENT PAGE */
+.modal-footer .col-right{
+    padding-left: 0;
+    border-left: 0.5px solid black;
+}
 
-/*#endregion*/
 
-/*#region RHODIUM PAGE */
+.modal-footer .row-top{
+    border-bottom: 0.5px solid black;
+}
 
-/*#endregion*/
+.modal-footer .row-mid{
+    border-bottom: 0.5px solid black;
+}
 
-/*#region TEMPLE PAGE */
+.modal-body {
+    display: block;
+    padding: 0;
+    padding-bottom: 1rem;
+    /* border-top: 0.5px solid black; */
+}
+
+.modal-body .container-fluid {
+    padding-right: 0;
+}
+
+.modal-body .row {
+    margin: 0;
+}
+
+.modal-body .col-img {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.modal-body .col-text {
+    /* padding-left: 0; */
+    /* padding-right: 0; */
+
+}
+
+.modal-body #title {
+    border-top: 0.5px solid black;
+    font-size: 1.3rem;
+}
+
+.modal-body .col-top, .modal-body .col-bot {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.modal-body p {
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    margin: 0;
+    font-kerning: none;
+}
+
+.modal-body .col-left{
+    padding: 0;
+    /* border-right: 0.25px solid black; */
+}
+
+.modal-body .col-right{
+    padding: 0;
+    border-left: 0.5px solid black;
+}
+
+.modal-body .row-top{
+    border-bottom: 0.5px solid black;
+}
+
+.modal-body .row-mid{
+    border-bottom: 0.5px solid black;
+}
+
+.modal-body .row-bot{
+    border-bottom: 0.5px solid black;
+}
+
+/* .modal-footer #p1{
+    border: 1px solid black;
+    border-top: none;
+    box-shadow: 0px 0px 5px 1px rgb(0,0,0,0.25);
+}
+
+.modal-footer #p2{
+    border: 1px solid black;
+    border-top: none;
+    box-shadow: 0px 0px 5px 1px rgb(0,0,0,0.25);
+}
+
+.modal-footer #p3{
+    border: 1px solid black;
+    border-top: none;
+    box-shadow: 0px 0px 5px 1px rgb(0,0,0,0.25);
+} */
 
 /*#endregion*/
 
@@ -769,11 +882,6 @@ button {
     padding: 0 !important;
 }
 
-/* Footer of modal in each page first product */
-.modal-footer {
-    padding: 0rem;
-}
-
 /* Modal of product in e.g gold page, not doing anything since modals disabled */
 .container-product {
     padding-right: 2%;
@@ -798,16 +906,6 @@ button {
 }
 
 /* unused modals again */
-.kp-modal {
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-dialog {
-    display: inline-block;
-    text-align: left;
-    vertical-align: middle;
-}
 
 
 
@@ -1509,9 +1607,6 @@ TV and Extra Large Screens – 1201px and more
 }
 
 @media(max-width:576px) {
-    .modal-dialog {
-        max-width: 94%;
-    }
 
     .healwithlove {
         padding: 17px 64px;
