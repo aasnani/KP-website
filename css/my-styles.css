@@ -1644,6 +1644,15 @@ TV and Extra Large Screens – 1201px and more
         width: 80%;
     }
 
+    #mainNav .active-item {
+        color: #704a57 !important;
+        text-shadow: 0 0 0.35px #704a57;
+    }
+
+    #mainNav .active-item::after{
+        width: 80% !important;
+    }
+
     .sidebar,
     .mobile-header {
         display: none;

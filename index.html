@@ -3862,27 +3862,34 @@
       }
       for (let j = 0; j < page_nav_links.length; j++) {
         $(page_nav_links[j]).removeClass("active");
+        $(page_nav_links[j]).removeClass("active-item");
       }
 
       switch(page){
         case "#homepage":
           $("#home-page-navlink").addClass("active");
+          $("#home-page-navlink").addClass("active-item");
           break;
         case "#newarrivalpage":
         console.log("Here");
           $("#newarrival-page-navlink").addClass("active");
+          $("#newarrival-page-navlink").addClass("active-item");
           break;
         case "#goldpage":
           $("#gold-page-navlink").addClass("active");
+          $("#gold-page-navlink").addClass("active-item");
           break;
         case "#diamondpage":
           $("#diamond-page-navlink").addClass("active");
+          $("#diamond-page-navlink").addClass("active-item");
           break;
         case "#antiquepage":
           $("#antique-page-navlink").addClass("active");
+          $("#antique-page-navlink").addClass("active-item");
           break;
         case "#gemstonepage":
           $("#gemstone-page-navlink").addClass("active");
+          $("#gemstone-page-navlink").addClass("active-item");
           break;
         case "#mangalsutrapage":
           $("#dropdownMenuButton").addClass("active");
