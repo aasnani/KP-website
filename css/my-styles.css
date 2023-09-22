@@ -533,6 +533,11 @@ button {
 
 /*#region GOLD PAGE */
 
+#gold-necklece img {
+    /* box-shadow: 0px 3px 5px 3px rgb(0,0,0,0.2); */
+    filter: drop-shadow(2px 3px 5px rgb(0,0,0,0.7));
+}
+
 /*#endregion*/
 
 /*#region DIAMOND PAGE */
@@ -743,13 +748,13 @@ button {
 
 /* Text for every product on the product pages underneath images */
 .type {
-    font-size: 16px !important;
-    font-weight: 800;
+    font-size: 1.05rem;
+    font-weight: normal;
+    font-kerning: none;
     text-align: center;
     margin-bottom: 0;
     margin-top: 3px;
     margin-bottom: 21px;
-    text-transform: capitalize;
 }
 
 /* Keeps gold section on homepage and entire gold page content(outside of banner) centered vertically */
@@ -1320,10 +1325,6 @@ TV and Extra Large Screens – 1201px and more
     .dimond-txt-bg {
         margin: 0px 0 22px;
     }
-
-    .type {
-        font-size: 13px !important;
-    }
 }
 
 @media(max-width:1440px) {
@@ -1331,9 +1332,6 @@ TV and Extra Large Screens – 1201px and more
         margin: 0px 0 21px;
     }
 
-    .type {
-        font-size: 12px !important;
-    }
 }
 
 @media (max-width:1366px) {
@@ -1371,10 +1369,6 @@ TV and Extra Large Screens – 1201px and more
         padding-top: 27px;
     }
 
-    .type {
-        font-size: 11px !important;
-    }
-
 }
 
 @media(max-width:1280px) {
@@ -1397,10 +1391,6 @@ TV and Extra Large Screens – 1201px and more
 
     .modal-dialog {
         padding-top: 7px;
-    }
-
-    .type {
-        font-size: 10px !important;
     }
 
     .related-slider .owl-nav {
