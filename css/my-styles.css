@@ -42,6 +42,8 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background: white;
+    font-variant-numeric: lining-nums;
+    font-kerning: none;
 }
 
 /* Gives p elements a fixed line height so elements aren't too close above and below */
