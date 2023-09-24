@@ -602,29 +602,256 @@ button {
 /*#region NEW ARRIVALS PAGE */
 
 /* New arrival banner text rules (current doesn't exist) */
-.inner-banner-text {
-    position: absolute;
-    right: 15%;
-    top: 50%;
+#landing-section .banner-copy {
+    position:absolute;
+    top: 30%;
+    left: 10%;
+    width: 30%;
 }
 
-/* New arrival banner text rules (current doesn't exist) */
-.inner-banner-text h1 {
-    color: #000;
-    text-transform: capitalize;
-    font-size: 52px;
+#landing-section .banner-copy h1{
+    font-size: 3.1rem;
+    font-weight: normal;
+    font-kerning: none;
 }
 
-#stone {
-    margin-bottom: 1rem;
+#landing-section .banner-copy p{
+    padding-top: 15px;
+    text-align: start;
 }
 
-.left-row span {
-    font-size: 15px;
-    font-weight: bold;
-    color: #906337;
-    margin-bottom: 18px;
-    float: left;
+#landing-section .separator{
+    position: relative;
+    border-color: #000;
+    border-style: solid;
+    border-width: 2px;
+    border-bottom: none;
+    width: 75px;
+    margin-top: 10px;
+}
+
+#new-arrival-first {
+    margin-bottom: 50px;
+}
+
+#new-arrival-first h1 {
+    margin-top: 35px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-kerning: none;
+    color: #5e5c5c;
+    font-weight: normal;
+}
+
+#new-arrival-first .image-separator {
+    text-align: center;
+}
+
+#new-arrival-first .image-separator img{
+    width: auto;
+    margin-bottom: 15px;
+}
+
+#new-arrival-first .polki-img{
+    outline: 2px solid #d9b481	;
+}
+
+#new-arrival-first .polki-text{
+    font-kerning: none;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#new-arrival-first #polki-link{
+    text-align: center;
+    margin-top: 30px;
+
+}
+
+#new-arrival-first #polki-link a{
+    font-size: 1.2rem;
+    font-kerning: none;
+    padding: 5px 10px;
+    transition: 300ms;
+    border-radius: 0;
+    background-color: #d9b481;
+    border: none;
+    box-shadow: 0px 5px 5px 0px rgba(51, 51, 51, 0.1);
+}
+
+#new-arrival-first #polki-link a:hover{
+    background-color:  #f8ce94;
+    cursor: pointer;
+}
+
+#new-arrival-second {
+    margin-bottom: 70px;
+}
+
+#new-arrival-second .card {
+    width: 100%;
+    text-align: center;
+    border-radius: 0.5rem;
+    border: none;
+    font-kerning: none;
+}
+
+#new-arrival-second .card-shadow {
+    box-shadow: 0px 0px 0.55rem 0px rgba(51, 51, 51, 0.19);
+}
+
+#new-arrival-second #text-description-card {
+    background-color: lightblue;
+    color: rgb(75, 75, 75);
+}
+
+#new-arrival-second #text-description-card .card-title {
+    font-weight: normal;
+    padding-top: 40px;
+}
+
+#new-arrival-second #text-description-card .card-body {
+    align-content: center;
+    align-items: center;
+}
+
+#new-arrival-second #text-description-card .card-text {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#new-arrival-second #text-description-card a {
+    font-size: 1.1rem;
+    border-radius: 0;
+    background-color: white;
+    color: black;
+    border: 1px solid white;
+    transition: 0.3s;
+    box-shadow: 0px 5px 5px 0px rgba(51, 51, 51, 0.1);
+}
+
+#new-arrival-second #text-description-card a:hover {
+    cursor: pointer;
+    background-color: rgb(236, 236, 236);
+    border: 1px solid rgb(236, 236, 236);
+    /* box-shadow: 0px 4px 6px 2px rgba(51, 51, 51, 0.1); */
+}
+
+.flickity-container-new-arr-second .container-cell{
+    width: 50%;
+    /* margin: 0px 10px; */
+}
+
+.flickity-container-new-arr-second .card-body {
+    padding: 0rem;
+    padding-left: 0.6rem;
+    padding-right: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.flickity-container-new-arr-second img {
+    border-radius: 0.5rem;
+}
+
+#new-arrival-third {
+    margin-bottom: 50px;
+}
+
+#new-arrival-third #text-description-col {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#new-arrival-third #text-description-col h1 {
+    font-kerning: none;
+    font-weight: normal;
+}
+
+#new-arrival-third #text-description-col p {
+    font-kerning: none;
+    padding: 8px 0px;
+}
+
+#new-arrival-third #engagement-images-col{
+    text-align: center;
+}
+
+#new-arrival-third img {
+    width: 33%;
+    height: auto;
+    position: relative;
+    box-shadow: 0px 0px 8px 0px rgba(51, 51, 51, 0.75);
+}
+
+#new-arrival-third #img-1 {
+    width: 28%;
+    left: 3%;
+    z-index: 1;
+}
+
+#new-arrival-third #img-2 {
+    width: auto;
+    border-image: 1px solid steelblue;
+    border-image-source: inherit;
+}
+
+#new-arrival-third #img-3 {
+    width: 28%;
+    right: 3%;
+    z-index: 1;
+}
+
+#new-arrival-third a {
+    border-radius: 0;
+    background-color: rgba(6, 6, 6, 1);
+    
+    color: white;
+    border: 1px solid black;
+    transition: 0.3s;
+    box-shadow: 0px 5px 5px 0px rgba(51, 51, 51, 0.1);
+    font-size: 1.1rem;
+}
+
+#new-arrival-third a:hover {
+    cursor: pointer;
+    color: white;
+    background-color: rgba(6, 6, 6, 0.844);
+    /* box-shadow: 0px 4px 6px 2px rgba(51, 51, 51, 0.1); */
+}
+
+#new-arrival-fourth {
+    margin-bottom: 50px;
+}
+
+#new-arrival-fourth .banner-copy {
+    position:absolute;
+    top: 30%;
+    left: 5%;
+    width: 30%;
+    color: white;
+}
+
+#new-arrival-fourth .banner-copy  p{
+    padding: 15px 0px;
+}
+
+#new-arrival-fourth .banner-copy a {
+    font-size: 1.1rem;
+    border-radius: 0;
+    background-color: white;
+    border: 1px solid white;
+    color: black;
+    transition: 0.15s;
+    box-shadow: 0px 0px 7px 0px rgba(231, 231, 231, 0.2);
+}
+
+#new-arrival-fourth .banner-copy a:hover {
+    cursor: pointer;
+    background-color: rgb(236, 236, 236);
+    border: 1px solid rgb(236, 236, 236);
+    /* box-shadow: 0px 4px 6px 2px rgba(51, 51, 51, 0.1); */
 }
 
 /*#endregion*/
@@ -924,7 +1151,7 @@ body.compensate-for-scrollbar {
 }
 
 /* Flickity slider text on each card */
-.card-body p {
+.flickity-container-gold .card-body p {
     text-align: center;
     margin: 0;
     text-transform: capitalize;
@@ -939,12 +1166,12 @@ body.compensate-for-scrollbar {
 }
 
 /* Default padding makes the cards very small so this lets them fill up the room*/
-.card-body {
+.flickity-container-gold .card-body {
     padding: 0px !important;
 }
 
 /* Default card comes with grey border */
-.card {
+.flickity-container-gold .card {
     border: 0px;
 }
 
@@ -990,7 +1217,7 @@ body.compensate-for-scrollbar {
 
 /* Flickity dots on bottom of each slider, only enabled on mobile */
 .flickity-page-dots {
-    display: none;
+    /* display: none; */
 }
 
 /* Flickity gold section on home page buttons for left and right */
@@ -1488,7 +1715,7 @@ TV and Extra Large Screens – 1201px and more
         font-size: 17px;
     }
 
-    .card-body p {
+    .flickity-container-gold .card-body p {
         min-height: 66px;
         padding: 8px 10px 7px;
     }
@@ -1766,7 +1993,7 @@ TV and Extra Large Screens – 1201px and more
     #engagementpage,
     #templepage,
     #rhodiumpage {
-        padding-top: 44px;
+        padding-top: 85px;
     }
 
     .navbar .navbar-nav .nav-item .nav-link:not(#dropdownMenuButton) {
@@ -1980,3 +2207,6 @@ body {
 }
 
 /*#endregion*/
+
+/*#region TEST */
+/*#endregion */
