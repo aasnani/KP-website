@@ -522,6 +522,11 @@ button {
     text-align: center;
 }
 
+#reach-out-row p {
+    color: black;
+    font-size: 1.1rem;
+}
+
 #reach-out-row a {
     color: black;
     font-size: 1.1rem;
