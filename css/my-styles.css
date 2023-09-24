@@ -279,6 +279,8 @@ button {
     padding-bottom: 4%;
     font-family: 'Playfair Display', serif;
     letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-kerning: none;
 }
 
 /* Gives white background to both gold and collections sections on homepage */
@@ -414,19 +416,54 @@ button {
     background-color: burlywood;
 }
 
+#subscribe {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: rgb(255, 255, 244);
+}
+
+#subscribe #subscribe-div {
+    text-align: center;
+}
+
+#subscribe #subscribe-div h1 {
+    font-weight: normal;
+    font-kerning: none;
+    letter-spacing: 1.5px;
+    padding-bottom: 0;
+}
+
+#subscribe #subscribe-div p {
+    font-weight: normal;
+    font-kerning: none;
+    padding: 1% 0;
+}
+
 /* Newsletter subscribe text input */
-.subscribe-input {
-    border: none;
-    width: 230px;
+#subscribe-input {
+    border: solid 1px black;
+    width: 30%;
     padding: 8px 13px;
+    background: transparent;
 }
 
 /* Newsletter subscribe button */
-.subscribe-btn {
-    border: none;
+#subscribe-btn {
+    font-weight: normal;
+    font-kerning: none;
+    width: 10%;
+    border: 1px solid #684f4f;
     padding: 8px 13px;
     background: #684f4f;
     color: #fff;
+    font-size: 1rem;
+    transition: .2s;
+    /* transition: 2s; */
+}
+
+#subscribe-btn:hover {
+    background: #7e6060;
+    border: 1px solid #7e6060;
 }
 
 /* Success alert after subscribing to newsletter */
@@ -442,25 +479,85 @@ button {
     display: block !important;
 }
 
+/* Entire contact us section, just gives more padding between all elements and footer */
+#contact-us {
+    padding-bottom: 20px;
+}
+
+#contact-us-input-row {
+    padding-bottom: 20px;
+}
+
 /* Important styles for forced stylization of ctct form */
 .never-show {
     display: none !important;
 }
 
+#contact-us .image-separator{
+    text-align: center;
+}
+
+#contact-us .image-separator img {
+    width: auto;
+    height: 50px;
+    margin-top: -15px;
+}
+
+#contact-us .form-control{
+    font-variant-numeric: lining-nums;
+    font-kerning: none;
+}
+
+#contact-us h4 {
+    padding-top: 30px;
+    text-align: center;
+}
+
+#contact-us p {
+    font-family: 'Playfair Display', serif;
+    font-variant-numeric: lining-nums;
+}
+
+#reach-out-row {
+    text-align: center;
+}
+
+#reach-out-row p {
+    color: black;
+    font-size: 1.1rem;
+}
+
+#reach-out-row a {
+    color: black;
+    font-size: 1.1rem;
+}
+
+#reach-out-row a:hover {
+    color: rgb(201, 74, 52);
+    text-decoration: none;
+}
+
+#reach-out-row i {
+    padding-right: 7px;
+}
+
 /* Contact us form each input */
-.form-control {
-    /* border: #4D3643; */
-    background-color: rgba(255, 255, 255, 1);
-    /* border-radius: 0; */
+#contact-us .form-control {
+    border: solid 1px black;
+    background-color: aliceblue;
+    border-radius: 0;
     color: black;
     font-weight: 600;
 }
 
 /* Contact us form each input after clicking*/
-.form-control:focus {
+#contact-us .form-control:focus {
+    border: solid 1px black;
+    background-color: aliceblue;
+    border-radius: 0;
+    color: black;
+    font-weight: 600;
     box-shadow: none;
-    border-color: rgb(255, 255, 255);
-    background-color: rgba(255, 255, 255, 1);
 }
 
 /* Area around/containing contact us form only, not entire horizontal space */
@@ -475,20 +572,21 @@ button {
 }
 
 /* Contact form submit button */
-.contact-btn {
+#contact-us-button {
     width: 100%;
-    margin-top: 15px;
-    color: black;
-    background-color: white;
+    margin-top: 20px;
+    color: white;
+    background-color: rgb(31, 58, 82);
     border-color: gray;
+    border-radius: 0;
 }
 
 /* Contact form submit button hover over effects*/
-.contact-btn:hover{
+/* #contact-us-button:hover{
     color: #333;
     background-color: rgb(202, 245, 202);
     border-color: rgb(202, 245, 202);
-}
+} */
 
 /* Success alert after submitting contact us form */
 #contact-us-alert {
@@ -1862,7 +1960,7 @@ body {
     height: 100%;
     margin: 0px;
     padding: 0px;
-    /* overflow-x:hidden;  scrollbar goes underneath header */
+    overflow-x:hidden;
     /* overflow-x:clip; issue with flexbox */
 }
 

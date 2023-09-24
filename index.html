@@ -850,27 +850,86 @@
     </section>
 
 
+    <section id="subscribe">
+      <div id="subscribe-div">
+        <h1 class="section-headers">NEWSLETTER</h1>
+        <p>Stay adorned with our newsletter for exclusive jewelry updates and offers.</p>
+        <input type="text" id="subscribe-input" placeholder="Enter Your Email Address">
+        <button onclick="subscribe()" id="subscribe-btn">SUBSCRIBE</button>
+      </div>
+    </section>
 
 
 
-
-    <div class="ctct-wrapper">
-      <!-- Begin Constant Contact Inline Form Code -->
+    <!-- <div class="ctct-wrapper">
+      Begin Constant Contact Inline Form Code
       <div class="ctct-inline-form" data-form-id="b22eb75b-642f-41b1-a04b-12b6fe2ba109"></div>
-    </div>
+    </div> -->
 
 
     <section id="contact-us">
 
 
 
-      <div class="container-90">
+      <div class="container">
 
 
         <h3 class="section-headers " align="center">Contact Us</h3>
+        <div class="row">
+          <div class="col-sm-12">
+            <form id="contact-us-form" onsubmit="submitContactForm(); return false">
+              <div class="row" id="contact-us-input-row">
+                <div class="col-sm-4">
+                  <input class="form-control" id="contact-us-name" name="name" placeholder="Name" type="text" required>
+                </div>
+                <div class="col-sm-4">
+                  <input class="form-control" id="contact-us-email" name="email" placeholder="Email" type="text" required>
+                </div>
+                <div class="col-sm-4">
+                  <input class="form-control" id="contact-us-number" name="name" placeholder="Number" type="text" required>
+                </div>
+              </div>
+              <div class="w-100">
+              </div>
+              <div class="row">
+                <div class="col-sm-10">
+                  <textarea  class="form-control" id="contact-us-message" placeholder="Message..."
+                  rows="3" name="comment" required></textarea>
+                </div>
+                <div class="col-sm-2">
+                  <input type="submit" id="contact-us-button" class="btn btn-success contact-btn" value="Submit">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
 
 
-        <div class="row pb-5">
+        <h4> REACH OUT </h4>
+
+        <div class="image-separator">
+          <img src="images/test-divider-5.png">
+        </div>
+
+        <div class="row" id="reach-out-row">
+          <div class="col-sm-3">
+            <p><a href="tel:781-229-9170"><i class="fa fa-phone"></i> Talk To Us <br> 781-229-9170</a></p>
+          </div>
+          <div class="col-sm-3">
+            <p><i class="bi bi-clock-fill"></i> Our Hours <br>  Tue-Sat 11:30AM - 07:00PM<br>
+
+              Sun 12:00PM - 06:00PM<br> Monday: Closed</p>
+          </div>
+          <div class="col-sm-3">
+            <p> <a href="https://goo.gl/maps/SpqAM3tbYXB2t5BdA" target="_blank" rel="noopener noreferrer"><i
+              class="bi bi-pin-map-fill"></i> Find Us <br> 85 Wilmington Road <br> Burlington, MA 01803</a></p>
+          </div>
+          <div class="col-sm-3">
+            <p><a href="mailto:kaypeejewelers@gmail.com"><i class="bi bi-envelope-fill"></i>Start A Conversation<br> kaypeejewelers@gmail.com </a></p>
+          </div>
+        </div>
+
+        <!-- <div class="row pb-5">
 
           <div class="col-md-6" id="contact-us-form-section">
 
@@ -945,17 +1004,9 @@
 
           </div>
 
-          <!-- <div class="col-md-6  ">
-
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2940.168851887272!2d-71.20821954944634!3d42.53046777907358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3a01d6954e0ef%3A0x48400773408dda9b!2sKay%20Pee%20Jewelers!5e0!3m2!1sen!2sus!4v1672952094137!5m2!1sen!2sus"
-               allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-          </div> -->
 
 
-
-        </div>
+        </div> -->
 
       </div>
 
@@ -3883,89 +3934,58 @@
 
   <script>
     function subscribe() {
-      $("#subscribe-success-alert").addClass("show");
-      $("#subscribe-success-alert").removeClass("hide");
+      var email = $("#subscribe-input").val();
+      if (email != ""){
+        $.ajax({
+        url : `/addToEmailList?email_address=${email}`,
+        type: "POST",
+        contentType: "application/json; charset=utf-8",
+        dataType   : "json",
+        success    : function(){
+          console.log("Success");
+        }
+        })
+      }
+
+      $("#subscribe-input").val("");
+      $("#subscribe-btn").css("background-color", "#4ecd65");
+      $("#subscribe-btn").html("SUBSCRIBED!");
       setTimeout(() => {
-        $("#subscribe-success-alert").removeClass("show");
-        $("#subscribe-success-alert").addClass("hide");
-      }, 5000)
+        $("#subscribe-btn").css("background-color", "#684f4f");
+        $("#subscribe-btn").html("SUBSCRIBE");
+        $("#subscribe-btn").removeAttr("style");
+      }, 1500);
     }
   </script>
 
   <script>
 
-    function ctctToKPSubscribe() {
-      // Note 7
-      $(".ctct-form-defaults").css("padding", "0");
-      $(".ctct-form-defaults").css("background-color", "rgb(247, 242, 240)");
-      //Overarching/inherited stuff
-      $(".ctct-form-custom").addClass("healwithlove");
-      $(".ctct-form-custom").css("font-family", "Monsterrat"); //Font family for whole thing
-      $(".ctct-form-custom").css("text-align", "center");
-      $(".ctct-form-custom").css("padding-top", "15px");
-      $(".ctct-form-custom").css("padding-bottom", "15px");
-      $(".ctct-form-custom").css("height", "200px");
-      //Input Stuff
-      $(".ctct-form-element").css("all", "unset");
-      $(".ctct-form-element").addClass("subscribe-input");
-      $(".ctct-form-element").css("width", "230px");
-      $(".ctct-form-element").css("height", "40px");
-      $(".ctct-form-element").css("background", "white");
-      $(".ctct-form-element").attr("placeholder", "Enter Your Email Address");
-      $(".ctct-form-element").focusin(function () {
-        $(".ctct-form-element").attr("placeholder", "");
-      })
-      $(".ctct-form-element").focusout(function () {
-        $(".ctct-form-element").attr("placeholder", "Enter Your Email Address");
-      })
-      // $(".ctct-form-element").css("text-align", "left");
-      $("#email_address_field_0").css("text-align", "center");
-      //Button Stuff
-      $(".ctct-form-button").appendTo("#email_address_field_0");
-      $(".ctct-form-button").css("all", "unset");
-      $(".ctct-form-button").addClass("subscribe-btn");
-      $(".ctct-form-button").css("background", "#684f4f");
-      $(".ctct-form-button").css("color", "white");
-      $(".ctct-form-button").css("height", "40px");
-      $(".ctct-form-button").css("margin-top", "0.5rem");
-      $(".ctct-form-button").css("width", "105px");
-      $(".ctct-form-button").css("cursor", "pointer");
-      $(".ctct-form-button").attr("onclick", "subscribe()");
-      //Subtext Stuff
-    //  $(`<p style="font-size: 11px;">
-              //  Receive exclusive offers, new releases and trend updates. Rest assured, we don't spam.
-          //  </p>`).insertAfter(".ctct-form-header");
-      //Alert Stuff
-      $(`<div id="subscribe-success-alert"
-            class="alert alert-success hide fade"
-            style="
-                margin-top: 0.3rem;
-                width: 275px;
-                height: 25px;
-                line-height:0px;
-                margin-left: auto;
-                margin-right: auto;
-                margin-bottom: 0;
-                font-size: 15px;"
-            role="alert">
-                Successfully added to email list!
-            </div>`).insertAfter(".ctct-form-button");
-      //Removal
-      $(".ctct-form-custom").addClass("always-show");
-      $(".ctct-form-success").addClass("never-show");
-      $(".ctct-form-errorMessage").remove();
-      // $(".g-recaptcha").remove();
-      $(".ctct-form-label").css("display", "none");
-      $("#gdpr_text").css("display", "none");
-      $(".ctct-form-footer").css("display", "none");
-      $('.grecaptcha-badge').css("display", "none");
+    function submitContactForm(){
+      var name = $("#contact-us-name").val();
+      var email = $("#contact-us-email").val();
+      var phone = $("#contact-us-number").val();
+      var message = $("#contact-us-message").val();
+      var data = {
+        'name': name,
+        'email': email,
+        'phone': phone,
+        'message': message
+      }
+      data = JSON.stringify(data);
+      console.log(data);
 
+      $.ajax({
+          url : `/sendContactUs`,
+          type: "POST",
+          contentType: "application/json; charset=utf-8",
+          dataType   : "json",
+          processData: true,
+          data: data,
+          success    : function(){
+            console.log("Success");
+          }
+          })
     }
-
-    $(window).on("load", function () {
-      ctctToKPSubscribe();
-    });
-
 
   </script>
 
@@ -4156,14 +4176,6 @@
   </script>
 
   <script>
-    // $("#goldpage.column").on("click", function(){
-    //   $("body").css("height", "100vh");
-    //   $("body").css("overflow", 'hidden');
-    //   $("body").css("position", "absolute");
-    // })
-  </script>
-
-  <script>
     $(".dropdown-menu").hover(function (e) {
       $(".dropdown-toggle").attr("aria-expanded", "true");
       $(".dropdown-toggle").addClass("nav-link-force-hover");
@@ -4172,136 +4184,8 @@
       $(".dropdown-toggle").attr("aria-expanded", "false");
       $(".dropdown-toggle").removeClass("nav-link-force-hover");
     });
-    // $(".dropdown-menu").hover(function () {
-    //   $(".dropdown-toggle").ho;
-    //   console.log("Test");
-    // }, function () {
-    //   console.log("Test2");
-    //   $(".dropdown-toggle").toggleClass("nav-link-force-hover");
-    // });
   </script>
 
-  <!-----email validation---->
-  <script>
-    $("#contact-form").submit(function (e) {
-      e.preventDefault();
-    });
-    function validateForm() {
-      // var name = document.getElementById('name').value;
-      // if (name == "") {
-      //   //document.querySelector('.status').innerHTML = "Name cannot be empty";
-      //   return false;
-      // }
-      // var email = document.getElementById('email').value;
-      // if (email == "") {
-      //   //document.querySelector('.status').innerHTML = "Email cannot be empty";
-      //   return false;
-      // } else {
-      //   var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      //   // if (!re.test(email)) {
-      //   //   // document.querySelector('.status').innerHTML = "Email format invalid";
-      //   //   return false;
-      //   // }
-      //   return false;
-      // }
-      // var message = document.getElementById('comment').value;
-      // if (message == "") {
-      //   //document.querySelector('.status').innerHTML = "Message cannot be empty";
-      //   return false;
-      // }
-      // var number = document.getElementById('number').value;
-      // if (number == "") {
-      //   //document.querySelector('.status').innerHTML = "Message cannot be empty";
-      //   return false;
-      // }
-      // var re = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
-      //   if (!re.test(number)) {
-      //     // document.querySelector('.status').innerHTML = "Email format invalid";
-      //     return false;
-      //   }
-
-      formData = {
-        'name': $('input[name=name]').val(),
-        // 'city': $('input[name=city]').val(),
-        // 'state': $('input[name=state]').val(),
-        // 'zip': $('input[name=zip]').val(),
-        'email': $('input[name=email]').val(),
-        'number': $('input[name=number]').val(),
-        // 'address': $('input[name=address]').val(),
-        'comment': $('#comment').val()
-      };
-
-      $("#contact-us-button").attr("disabled", "true");
-      document.getElementById("contact-us-alert").innerHTML = "Message Sent Successfully!";
-      $("#contact-us-alert").addClass("alert-success");
-      $("#contact-us-alert").css("display", "block");
-      $('#contact-us-alert').removeClass("hide");
-      $('#contact-us-alert').addClass("show");
-      $('#contact-us-alert').fadeIn();
-      setTimeout(function () {
-        // $('#contact-us-alert').fadeOut();
-        $('#contact-us-alert').removeClass("show");
-        $('#contact-us-alert').addClass("hide");
-        // $("#contact-us-alert").css("display", "block");
-        $("#contact-us-button").removeAttr("disabled");
-      }, 5000);
-
-      console.log(formData);
-
-      if ($("#comment2").val()) {
-        return;
-      }
-
-
-      $.ajax({
-        url: "mail.php",
-        type: "POST",
-        data: formData,
-        complete: function (data) {
-          console.log(data);
-          var form = document.getElementById("contact-form").reset();
-        },
-        error: function (data) {
-          console.log(data);
-          $('#contact-us-alert').fadeOut();
-          document.getElementById("contact-us-alert").innerHTML = "Error Sending Message";
-          $('#contact-us-alert').removeClass("alert-secondary");
-          $('#contact-us-alert').removeClass("alert-success");
-          $("#contact-us-alert").addClass("alert-danger");
-          $('#contact-us-alert').fadeIn();
-          $('#contact-us-alert').removeClass("hide");
-          $('#contact-us-alert').addClass("show");
-          setTimeout(function () {
-            // $('#contact-us-alert').fadeOut();
-            $('#contact-us-alert').removeClass("show");
-            $('#contact-us-alert').addClass("hide");
-          }, 3000);
-
-        }
-      });
-
-    }
-  </script>
-  <!----end email validation---->
-
-  <!-- <script>
-    $(".dropdown-menu").hover(function (){
-      $(".dropdown-menu").css("display", "block");
-      $("#dropdownMenuButton").trigger("mouseenter");
-    })
-  </script> -->
-  <!--
-  <script type="text/javascript">
-    jQuery.browser = {};
-    (function () {
-        jQuery.browser.msie = false;
-        jQuery.browser.version = 0;
-        if (navigator.userAgent.match(/MSIE ([0-9]+)\./)) {
-            jQuery.browser.msie = true;
-            jQuery.browser.version = RegExp.$1;
-        }
-    })();
-</script> -->
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 
 
@@ -4333,24 +4217,6 @@
 
   </script>
 
-
-<script>
-$(document).ready(function () {
-
-                  $("#home-active").addClass('active')
-
-              });
-
-              $('.btn').click(function (e) {
-                  $('#home-active').removeClass('active');
-         $('.btn').removeClass('active');
-         $(this).addClass('active');
-              });
-
-
-</script>
-
-<script> closeNav(); </script>
 
 </body>
 
