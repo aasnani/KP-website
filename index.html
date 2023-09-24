@@ -63,24 +63,24 @@
 
 
         <ul class="navbar-nav justify-content-center text-uppercase">
-          <li class="nav-item"> <a class="nav-link single-line-link active" href="#"
+          <li class="nav-item"> <a id="home-page-navlink" class="nav-link single-line-link active" href="#"
               onclick="changePage('#homepage')">Home</a> </li>
 
 
-          <li class="nav-item"> <a class="nav-link single-line-link" href="#"
+          <li class="nav-item"> <a id="newarrival-page-navlink" class="nav-link single-line-link" href="#"
               onclick="changePage('#newarrivalpage')">New Arrivals</a> </li>
-          <li class="nav-item"> <a class="nav-link " href="#" onclick="changePage('#goldpage')">Gold Jewelry</a>
+          <li class="nav-item"> <a id="gold-page-navlink" class="nav-link " href="#" onclick="changePage('#goldpage')">Gold Jewelry</a>
           </li>
-          <li class="nav-item"> <a class="nav-link" href="#" onclick="changePage('#diamondpage')">Diamond Jewelry</a>
-          </li>
-
-
+          <li class="nav-item"> <a id="diamond-page-navlink" class="nav-link" href="#" onclick="changePage('#diamondpage')">Diamond Jewelry</a>
           </li>
 
-          <li class="nav-item"> <a class="nav-link " href="#" onclick="changePage('#antiquepage')">Antique Jewelry</a>
+
           </li>
 
-          <li class="nav-item"> <a class="nav-link " href="#" onclick="changePage('#gemstonepage')">Gemstone Jewelry</a>
+          <li class="nav-item"> <a id="antique-page-navlink" class="nav-link " href="#" onclick="changePage('#antiquepage')">Antique Jewelry</a>
+          </li>
+
+          <li class="nav-item"> <a id="gemstone-page-navlink" class="nav-link " href="#" onclick="changePage('#gemstonepage')">Gemstone Jewelry</a>
           </li>
 
           <li class="dropdown nav-item" id="collectionsDropdown">
@@ -3904,11 +3904,56 @@
 
 
   <script>
-    let pages = ['#homepage', '#goldpage', '#newarrivalpage', '#diamondpage', '#antiquepage', '#gemstonepage', '#mangalsutrapage', '#engagementpage','#rhodiumpage','#templepage'];
+    let pages = ['#homepage', '#newarrivalpage', '#goldpage', '#diamondpage', '#antiquepage', '#gemstonepage', '#mangalsutrapage', '#engagementpage','#rhodiumpage','#templepage'];
+    let page_nav_links = ["#home-page-navlink", "#newarrival-page-navlink", "#gold-page-navlink", "#diamond-page-navlink", "#antique-page-navlink", "#gemstone-page-navlink"];
     function changePage(page) {
         filterSelection("all");
       for (let i = 0; i < pages.length; i++) {
         $(pages[i]).css("display", "none");
+      }
+      for (let j = 0; j < page_nav_links.length; j++) {
+        $(page_nav_links[j]).removeClass("active");
+        $(page_nav_links[j]).removeClass("active-item");
+      }
+
+      switch(page){
+        case "#homepage":
+          $("#home-page-navlink").addClass("active");
+          $("#home-page-navlink").addClass("active-item");
+          break;
+        case "#newarrivalpage":
+        console.log("Here");
+          $("#newarrival-page-navlink").addClass("active");
+          $("#newarrival-page-navlink").addClass("active-item");
+          break;
+        case "#goldpage":
+          $("#gold-page-navlink").addClass("active");
+          $("#gold-page-navlink").addClass("active-item");
+          break;
+        case "#diamondpage":
+          $("#diamond-page-navlink").addClass("active");
+          $("#diamond-page-navlink").addClass("active-item");
+          break;
+        case "#antiquepage":
+          $("#antique-page-navlink").addClass("active");
+          $("#antique-page-navlink").addClass("active-item");
+          break;
+        case "#gemstonepage":
+          $("#gemstone-page-navlink").addClass("active");
+          $("#gemstone-page-navlink").addClass("active-item");
+          break;
+        case "#mangalsutrapage":
+          $("#dropdownMenuButton").addClass("active");
+          break;
+        case "#engagementpage":
+          $("#dropdownMenuButton").addClass("active");
+          break;
+        case "#rhodiumpage":
+          $("#dropdownMenuButton").addClass("active");
+          break;
+        case "#templepage":
+          $("#dropdownMenuButton").addClass("active");
+          break;
       }
       $(page).css("display", "block");
     }
