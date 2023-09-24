@@ -1277,7 +1277,7 @@
 
         <div id="myBtnContainer">
 
-          <div id="home-active" class="btn" onClick="filterSelection('all')"> Show all</div>
+          <!-- <div id="home-active" class="btn" onClick="filterSelection('all')"> Show all</div>
 
           <div class="btn" onClick="filterSelection('rings')"> Rings</div>
 
@@ -1285,7 +1285,13 @@
 
           <div class="btn" onClick="filterSelection('bangles')"> Bangles</div>
 
-          <div class="btn" onClick="filterSelection('bracelet')"> Bracelets</div>
+          <div class="btn" onClick="filterSelection('bracelet')"> Bracelets</div> -->
+
+          <a class="filter-all" onclick="filterSelection('all')">Show All</a>
+          <a class="filter-rings" onclick="filterSelection('rings')">Rings</a>
+          <a class="filter-bangles" onclick="filterSelection('bangles')">Bangles</a>
+          <a class="filter-bracelets" onclick="filterSelection('bracelet')">Bracelets</a>
+          <a class="filter-necklaces" onclick="filterSelection('necklace')">Necklaces</a>
 
         </div>
 
@@ -1295,133 +1301,383 @@
 
 
           <div style="cursor:pointer" class="column col-md-4 mb-4 bangles scroll-move2" data-toggle="modal"
-            data-target="#myModal-1">
+            data-target="#gold-modal-1">
 
-            <img loading="lazy" class="" src="images/gold-page/bangles1.webp" />
+            <img loading="lazy" class="img-shadow" src="images/gold-page/bangles1.webp" />
 
             <p class="type">Modern Checkered Bangles</p>
 
           </div>
 
-
-          <div class="modal fade" id="myModal-1" role="dialog">
-
-            <div class="modal-dialog">
-
-
+          <div class="modal fade" id="gold-modal-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
-
-                <div class="container-product">
-
-                  <div class="row">
-
-                    <div class="col-md-8">
-                      <div style="height: 80%;">
-                        <img class="" src="images/gold-page/bangles1.webp" />
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-img col-sm-8">
+                        <img src="images/gold-page/bangles1.webp">
                       </div>
-
-
-
-                    </div>
-
-                    <div class="col-md-4">
-
-                      <div class="discri-div">
-
-                        <h3>alluring gold neckwear</h3>
-                        <h4>ABC Collection</h4>
-
-
-                        <p class="discri-about">
-
-                          Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print,
-                          graphic or web designs.
-
-                        </p>
-
-                        <h4 id="jewelry-modal-weight">Weight: 300g</h4>
-
-
-
-
+                      <div class="col-text col-sm-4">
+                        <div class="row row-top">
+                          <div class="col col-sm-12 col-top">
+                            <p id="title"> Modern Checkered Bangles </p>
+                          </div>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="row row-mid">
+                          <div class="col col-left col-sm-8">
+                            <p > ABC Collection </p>
+                          </div>
+                          <div class="col col-right col-sm-4">
+                            <p> 300g </p>
+                          </div>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="row row-bot">
+                          <div class="col col-sm-12 col-bot">
+                            <p > These bangles feature an elegant checkered pattern on the outer surface, accentuated by delicate dimples at the corners, adding a touch of sophistication to your style. </p>
+                          </div>
+                        </div>
                       </div>
-
                     </div>
-
                   </div>
-
-
-
+                  
                 </div>
-
-                <div class="modal-footer">
-
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-
-                </div>
-
               </div>
-
             </div>
-
           </div>
 
 
 
-          <div class="column col-md-4 mb-4 bracelet scroll-move2">
 
-            <img loading="lazy" class="" src="images/gold-page/bracelet1.webp" />
+          <div style="cursor:pointer" class="column col-md-4 mb-4 bracelet scroll-move2" data-toggle="modal"
+          data-target="#gold-modal-2">
+
+            <img loading="lazy" class="img-shadow" src="images/gold-page/bracelet1.webp" />
             <p class="type">Gold Bracelet with Pearls</p>
 
           </div>
 
+          <div class="modal fade" id="gold-modal-2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-img col-sm-8">
+                        <img src="images/gold-page/bracelet1.webp">
+                      </div>
+                      <div class="col-text col-sm-4">
+                        <div class="row row-top">
+                          <div class="col col-sm-12 col-top">
+                            <p id="title"> Gold Bracelet with Pearls </p>
+                          </div>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="row row-mid">
+                          <div class="col col-left col-sm-8">
+                            <p > ABC Collection </p>
+                          </div>
+                          <div class="col col-right col-sm-4">
+                            <p> 300g </p>
+                          </div>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="row row-bot">
+                          <div class="col col-sm-12 col-bot">
+                            <p > These bangles feature an elegant checkered pattern on the outer surface, accentuated by delicate dimples at the corners, adding a touch of sophistication to your style. </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
 
 
 
 
+          <div style="cursor:pointer" class="column col-md-4 mb-4 bracelet scroll-move2" data-toggle="modal"
+          data-target="#gold-modal-3">
 
-          <div class="column col-md-4 mb-4 bracelet scroll-move2">
-
-            <img loading="lazy" class="" src="images/gold-page/bracelet2.webp" />
+            <img loading="lazy" class="img-shadow" src="images/gold-page/bracelet2.webp" />
 
             <p class="type">Gold Bracelet</p>
 
           </div>
 
+          <div class="modal fade" id="gold-modal-3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-img col-sm-8">
+                        <img src="images/gold-page/bracelet2.webp">
+                      </div>
+                      <div class="col-text col-sm-4">
+                        <div class="row row-top">
+                          <div class="col col-sm-12 col-top">
+                            <p id="title"> Gold Bracelet </p>
+                          </div>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="row row-mid">
+                          <div class="col col-left col-sm-8">
+                            <p > ABC Collection </p>
+                          </div>
+                          <div class="col col-right col-sm-4">
+                            <p> 300g </p>
+                          </div>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="row row-bot">
+                          <div class="col col-sm-12 col-bot">
+                            <p > These bangles feature an elegant checkered pattern on the outer surface, accentuated by delicate dimples at the corners, adding a touch of sophistication to your style. </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
 
 
-          <div class="column col-md-4 mb-4 bracelet scroll-move2">
 
-            <img loading="lazy" class="" src="images/gold-page/bracelet3.webp" />
+          <div style="cursor:pointer" class="column col-md-4 mb-4 bracelet scroll-move2" data-toggle="modal"
+          data-target="#gold-modal-4">
+
+            <img loading="lazy" class="img-shadow" src="images/gold-page/bracelet3.webp" />
 
             <p class="type">Ladies 22kt Ball Bracelet</p>
 
           </div>
 
+          <div class="modal fade" id="gold-modal-4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-img col-sm-8">
+                        <img src="images/gold-page/bracelet3.webp">
+                      </div>
+                      <div class="col-text col-sm-4">
+                        <div class="row row-top">
+                          <div class="col col-sm-12 col-top">
+                            <p id="title"> Ladies 22kt Ball Bracelet </p>
+                          </div>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="row row-mid">
+                          <div class="col col-left col-sm-8">
+                            <p > ABC Collection </p>
+                          </div>
+                          <div class="col col-right col-sm-4">
+                            <p> 300g </p>
+                          </div>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="row row-bot">
+                          <div class="col col-sm-12 col-bot">
+                            <p > These bangles feature an elegant checkered pattern on the outer surface, accentuated by delicate dimples at the corners, adding a touch of sophistication to your style. </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
 
 
-          <div class="column col-md-4 mb-4 bracelet  scroll-move2">
 
-            <img loading="lazy" class="" src="images/gold-page/bracelet4.webp" />
+          <div style="cursor:pointer" class="column col-md-4 mb-4 bracelet scroll-move2" data-toggle="modal"
+          data-target="#gold-modal-5">
+
+            <img loading="lazy" class="img-shadow" src="images/gold-page/bracelet4.webp" />
 
             <p class="type">Rhodium Ball Bracelet</p>
 
           </div>
 
-          <div class="column col-md-4 mb-4 bangles scroll-move2">
+          <div class="modal fade" id="gold-modal-5" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-img col-sm-8">
+                        <img src="images/gold-page/bracelet4.webp">
+                      </div>
+                      <div class="col-text col-sm-4">
+                        <div class="row row-top">
+                          <div class="col col-sm-12 col-top">
+                            <p id="title"> Rhodium Ball Bracelet </p>
+                          </div>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="row row-mid">
+                          <div class="col col-left col-sm-8">
+                            <p > ABC Collection </p>
+                          </div>
+                          <div class="col col-right col-sm-4">
+                            <p> 300g </p>
+                          </div>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="row row-bot">
+                          <div class="col col-sm-12 col-bot">
+                            <p > These bangles feature an elegant checkered pattern on the outer surface, accentuated by delicate dimples at the corners, adding a touch of sophistication to your style. </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
 
-            <img loading="lazy" class="" src="images/gold-page/goldbangles1.webp" />
+          <div style="cursor:pointer" class="column col-md-4 mb-4 bangles scroll-move2" data-toggle="modal"
+          data-target="#gold-modal-6">
+
+            <img loading="lazy" class="img-shadow" src="images/gold-page/goldbangles1.webp" />
 
             <p class="type">Set of 22kt Gold Meena Bangles</p>
 
           </div>
 
-          <div class="column col-md-4 mb-4 bangles scroll-move2">
+          <div class="modal fade" id="gold-modal-6" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-img col-sm-8">
+                        <img src="images/gold-page/goldbangles1.webp">
+                      </div>
+                      <div class="col-text col-sm-4">
+                        <div class="row row-top">
+                          <div class="col col-sm-12 col-top">
+                            <p id="title"> Set of 22kt Gold Meena Bangles </p>
+                          </div>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="row row-mid">
+                          <div class="col col-left col-sm-8">
+                            <p > ABC Collection </p>
+                          </div>
+                          <div class="col col-right col-sm-4">
+                            <p> 300g </p>
+                          </div>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="row row-bot">
+                          <div class="col col-sm-12 col-bot">
+                            <p > These bangles feature an elegant checkered pattern on the outer surface, accentuated by delicate dimples at the corners, adding a touch of sophistication to your style. </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
 
-            <img loading="lazy" class="" src="images/gold-page/karas1.webp" />
+          <div style="cursor:pointer" class="column col-md-4 mb-4 bangles scroll-move2" data-toggle="modal"
+          data-target="#gold-modal-7">
+
+            <img loading="lazy" class="img-shadow" src="images/gold-page/karas1.webp" />
 
             <p class="type">Pair of Ladies Gold Karas with Meena</p>
 
+          </div>
+
+          <div class="modal fade" id="gold-modal-7" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-img col-sm-8">
+                        <img src="images/gold-page/karas1.webp">
+                      </div>
+                      <div class="col-text col-sm-4">
+                        <div class="row row-top">
+                          <div class="col col-sm-12 col-top">
+                            <p id="title"> Pair of Ladies Gold Karas with Meena </p>
+                          </div>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="row row-mid">
+                          <div class="col col-left col-sm-8">
+                            <p > ABC Collection </p>
+                          </div>
+                          <div class="col col-right col-sm-4">
+                            <p> 300g </p>
+                          </div>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="row row-bot">
+                          <div class="col col-sm-12 col-bot">
+                            <p > These bangles feature an elegant checkered pattern on the outer surface, accentuated by delicate dimples at the corners, adding a touch of sophistication to your style. </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
           </div>
 
         <!-- </div> -->
@@ -1433,34 +1689,169 @@
  -->
 
 
-        <div class="column col-md-4 mb-4 bangles  scroll-move2">
+        <div style="cursor:pointer" class="column col-md-4 mb-4 bangles scroll-move2" data-toggle="modal"
+          data-target="#gold-modal-8">
 
-          <img loading="lazy" class="" src="images/gold-page/karas2.webp" />
+          <img loading="lazy" class="img-shadow" src="images/gold-page/karas2.webp" />
 
           <p class="type">Blue Meena Gold Karas</p>
 
         </div>
 
+        <div class="modal fade" id="gold-modal-8" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-img col-sm-8">
+                      <img src="images/gold-page/karas2.webp">
+                    </div>
+                    <div class="col-text col-sm-4">
+                      <div class="row row-top">
+                        <div class="col col-sm-12 col-top">
+                          <p id="title"> Blue Meena Gold Karas </p>
+                        </div>
+                      </div>
+                      <div class="w-100"></div>
+                      <div class="row row-mid">
+                        <div class="col col-left col-sm-8">
+                          <p > ABC Collection </p>
+                        </div>
+                        <div class="col col-right col-sm-4">
+                          <p> 300g </p>
+                        </div>
+                      </div>
+                      <div class="w-100"></div>
+                      <div class="row row-bot">
+                        <div class="col col-sm-12 col-bot">
+                          <p > These bangles feature an elegant checkered pattern on the outer surface, accentuated by delicate dimples at the corners, adding a touch of sophistication to your style. </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
 
 
-        <div class="column col-md-4 mb-4 bangles scroll-move2">
 
-          <img loading="lazy" class="" src="images/gold-page/karas3.webp" />
+        <div style="cursor:pointer" class="column col-md-4 mb-4 bangles scroll-move2" data-toggle="modal"
+          data-target="#gold-modal-9">
+
+          <img loading="lazy" class="img-shadow" src="images/gold-page/karas3.webp" />
 
           <p class="type">Meena Gold Karas</p>
 
+        </div>
+
+        <div class="modal fade" id="gold-modal-9" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-img col-sm-8">
+                      <img src="images/gold-page/karas3.webp">
+                    </div>
+                    <div class="col-text col-sm-4">
+                      <div class="row row-top">
+                        <div class="col col-sm-12 col-top">
+                          <p id="title"> Meena Gold Karas </p>
+                        </div>
+                      </div>
+                      <div class="w-100"></div>
+                      <div class="row row-mid">
+                        <div class="col col-left col-sm-8">
+                          <p > ABC Collection </p>
+                        </div>
+                        <div class="col col-right col-sm-4">
+                          <p> 300g </p>
+                        </div>
+                      </div>
+                      <div class="w-100"></div>
+                      <div class="row row-bot">
+                        <div class="col col-sm-12 col-bot">
+                          <p > These bangles feature an elegant checkered pattern on the outer surface, accentuated by delicate dimples at the corners, adding a touch of sophistication to your style. </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
         </div>
 
 
 
 
 
-        <div class="column col-md-4 mb-4 bangles scroll-move2">
+        <div style="cursor:pointer" class="column col-md-4 mb-4 bangles scroll-move2" data-toggle="modal"
+          data-target="#gold-modal-10">
 
-          <img loading="lazy" class="" src="images/gold-page/karas4.webp" />
+          <img loading="lazy" class="img-shadow" src="images/gold-page/karas4.webp" />
 
           <p class="type">Wide Gold Wedding Karas</p>
 
+        </div>
+
+        <div class="modal fade" id="gold-modal-10" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-img col-sm-8">
+                      <img src="images/gold-page/karas4.webp">
+                    </div>
+                    <div class="col-text col-sm-4">
+                      <div class="row row-top">
+                        <div class="col col-sm-12 col-top">
+                          <p id="title"> Wide Gold Wedding Karas </p>
+                        </div>
+                      </div>
+                      <div class="w-100"></div>
+                      <div class="row row-mid">
+                        <div class="col col-left col-sm-8">
+                          <p > ABC Collection </p>
+                        </div>
+                        <div class="col col-right col-sm-4">
+                          <p> 300g </p>
+                        </div>
+                      </div>
+                      <div class="w-100"></div>
+                      <div class="row row-bot">
+                        <div class="col col-sm-12 col-bot">
+                          <p > These bangles feature an elegant checkered pattern on the outer surface, accentuated by delicate dimples at the corners, adding a touch of sophistication to your style. </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
         </div>
 
       <!-- </div> -->
@@ -1468,56 +1859,325 @@
       <!-- <div class="row"
         style=" padding-right: 2%; padding-top: 2%; padding-left: 2%; background-color: rgb(223	174	83);"> -->
 
-        <div class="column col-md-4 mb-4 necklace scroll-move2">
+        <div style="cursor:pointer" class="column col-md-4 mb-4 necklace scroll-move2" data-toggle="modal"
+          data-target="#gold-modal-11">
 
-        <img loading="lazy" class="" src="images/gold-page/necklace1.webp" />
+        <img loading="lazy" class="img-shadow" src="images/gold-page/necklace1.webp" />
 
           <p class="type">Intricate Tri-color Gold layer Necklace</p>
 
         </div>
 
+        <div class="modal fade" id="gold-modal-11" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-img col-sm-8">
+                      <img src="images/gold-page/necklace1.webp">
+                    </div>
+                    <div class="col-text col-sm-4">
+                      <div class="row row-top">
+                        <div class="col col-sm-12 col-top">
+                          <p id="title"> Intricate Tri-color Gold layer Necklace </p>
+                        </div>
+                      </div>
+                      <div class="w-100"></div>
+                      <div class="row row-mid">
+                        <div class="col col-left col-sm-8">
+                          <p > ABC Collection </p>
+                        </div>
+                        <div class="col col-right col-sm-4">
+                          <p> 300g </p>
+                        </div>
+                      </div>
+                      <div class="w-100"></div>
+                      <div class="row row-bot">
+                        <div class="col col-sm-12 col-bot">
+                          <p > These bangles feature an elegant checkered pattern on the outer surface, accentuated by delicate dimples at the corners, adding a touch of sophistication to your style. </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
 
 
-        <div class="column col-md-4 mb-4 rings scroll-move2">
+        <div style="cursor:pointer" class="column col-md-4 mb-4 rings scroll-move2" data-toggle="modal"
+          data-target="#gold-modal-12">
 
-          <img loading="lazy" class="" src="images/gold-page/ring1.webp" />
+          <img loading="lazy" class="img-shadow" src="images/gold-page/ring1.webp" />
 
           <p class="type">Peacock Ring</p>
 
         </div>
 
 
+        <div class="modal fade" id="gold-modal-12" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-img col-sm-8">
+                      <img src="images/gold-page/ring1.webp">
+                    </div>
+                    <div class="col-text col-sm-4">
+                      <div class="row row-top">
+                        <div class="col col-sm-12 col-top">
+                          <p id="title"> Peacock Ring </p>
+                        </div>
+                      </div>
+                      <div class="w-100"></div>
+                      <div class="row row-mid">
+                        <div class="col col-left col-sm-8">
+                          <p > ABC Collection </p>
+                        </div>
+                        <div class="col col-right col-sm-4">
+                          <p> 300g </p>
+                        </div>
+                      </div>
+                      <div class="w-100"></div>
+                      <div class="row row-bot">
+                        <div class="col col-sm-12 col-bot">
+                          <p > These bangles feature an elegant checkered pattern on the outer surface, accentuated by delicate dimples at the corners, adding a touch of sophistication to your style. </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <div class="column col-md-4 mb-4 rings scroll-move2">
+        <div style="cursor:pointer" class="column col-md-4 mb-4 rings scroll-move2" data-toggle="modal"
+          data-target="#gold-modal-13">
 
-          <img loading="lazy" class="" src="images/gold-page/ring2.webp" />
+          <img loading="lazy" class="img-shadow" src="images/gold-page/ring2.webp" />
 
           <p class="type">Gold Ring</p>
 
         </div>
 
-        <div class="column col-md-4 mb-4 rings scroll-move2">
 
-          <img loading="lazy" class="" src="images/gold-page/ring3.webp" />
+        <div class="modal fade" id="gold-modal-13" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-img col-sm-8">
+                      <img src="images/gold-page/ring2.webp">
+                    </div>
+                    <div class="col-text col-sm-4">
+                      <div class="row row-top">
+                        <div class="col col-sm-12 col-top">
+                          <p id="title"> Gold Ring </p>
+                        </div>
+                      </div>
+                      <div class="w-100"></div>
+                      <div class="row row-mid">
+                        <div class="col col-left col-sm-8">
+                          <p > ABC Collection </p>
+                        </div>
+                        <div class="col col-right col-sm-4">
+                          <p> 300g </p>
+                        </div>
+                      </div>
+                      <div class="w-100"></div>
+                      <div class="row row-bot">
+                        <div class="col col-sm-12 col-bot">
+                          <p > These bangles feature an elegant checkered pattern on the outer surface, accentuated by delicate dimples at the corners, adding a touch of sophistication to your style. </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="cursor:pointer" class="column col-md-4 mb-4 rings scroll-move2" data-toggle="modal"
+          data-target="#gold-modal-14">
+
+          <img loading="lazy" class="img-shadow" src="images/gold-page/ring3.webp" />
 
           <p class="type">Rhdoium Gold Ring</p>
 
         </div>
 
-        <div class="column col-md-4 mb-4 necklaces scroll-move2">
+        <div class="modal fade" id="gold-modal-14" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-img col-sm-8">
+                      <img src="images/gold-page/ring3.webp">
+                    </div>
+                    <div class="col-text col-sm-4">
+                      <div class="row row-top">
+                        <div class="col col-sm-12 col-top">
+                          <p id="title"> Rhdoium Gold Ring </p>
+                        </div>
+                      </div>
+                      <div class="w-100"></div>
+                      <div class="row row-mid">
+                        <div class="col col-left col-sm-8">
+                          <p > ABC Collection </p>
+                        </div>
+                        <div class="col col-right col-sm-4">
+                          <p> 300g </p>
+                        </div>
+                      </div>
+                      <div class="w-100"></div>
+                      <div class="row row-bot">
+                        <div class="col col-sm-12 col-bot">
+                          <p > These bangles feature an elegant checkered pattern on the outer surface, accentuated by delicate dimples at the corners, adding a touch of sophistication to your style. </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
 
-          <img loading="lazy" class="" src="images/gold-page/goldnecklace2.webp" />
+        <div style="cursor:pointer" class="column col-md-4 mb-4 necklace scroll-move2" data-toggle="modal"
+          data-target="#gold-modal-15">
+
+          <img loading="lazy" class="img-shadow" src="images/gold-page/goldnecklace2.webp" />
 
           <p class="type">Elegant Gold Necklace set</p>
 
         </div>
 
-        <div class="column col-md-4 mb-4 necklaces scroll-move2">
+        <div class="modal fade" id="gold-modal-15" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-img col-sm-8">
+                      <img src="images/gold-page/goldnecklace2.webp">
+                    </div>
+                    <div class="col-text col-sm-4">
+                      <div class="row row-top">
+                        <div class="col col-sm-12 col-top">
+                          <p id="title"> Elegant Gold Necklace set </p>
+                        </div>
+                      </div>
+                      <div class="w-100"></div>
+                      <div class="row row-mid">
+                        <div class="col col-left col-sm-8">
+                          <p > ABC Collection </p>
+                        </div>
+                        <div class="col col-right col-sm-4">
+                          <p> 300g </p>
+                        </div>
+                      </div>
+                      <div class="w-100"></div>
+                      <div class="row row-bot">
+                        <div class="col col-sm-12 col-bot">
+                          <p > These bangles feature an elegant checkered pattern on the outer surface, accentuated by delicate dimples at the corners, adding a touch of sophistication to your style. </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
 
-          <img loading="lazy" class="" src="images/gold-page/goldnecklace3.webp" />
+        <div style="cursor:pointer" class="column col-md-4 mb-4 necklace scroll-move2" data-toggle="modal"
+          data-target="#gold-modal-16">
+
+          <img loading="lazy" class="img-shadow" src="images/gold-page/goldnecklace3.webp" />
 
           <p class="type">Gold Patta Set</p>
 
+        </div>
+
+        <div class="modal fade" id="gold-modal-16" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-img col-sm-8">
+                      <img src="images/gold-page/goldnecklace3.webp">
+                    </div>
+                    <div class="col-text col-sm-4">
+                      <div class="row row-top">
+                        <div class="col col-sm-12 col-top">
+                          <p id="title"> Gold Patta Set </p>
+                        </div>
+                      </div>
+                      <div class="w-100"></div>
+                      <div class="row row-mid">
+                        <div class="col col-left col-sm-8">
+                          <p > ABC Collection </p>
+                        </div>
+                        <div class="col col-right col-sm-4">
+                          <p> 300g </p>
+                        </div>
+                      </div>
+                      <div class="w-100"></div>
+                      <div class="row row-bot">
+                        <div class="col col-sm-12 col-bot">
+                          <p > These bangles feature an elegant checkered pattern on the outer surface, accentuated by delicate dimples at the corners, adding a touch of sophistication to your style. </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
         </div>
 
       <!-- </div>
@@ -3505,19 +4165,34 @@
 
   function filterSelection(c) {
 
-  var x, i;
+    var buttonClasses = [".filter-all", ".filter-rings", ".filter-bangles", ".filter-bracelets", ".filter-necklaces"];
+    var mapping = {
+      "all": ".filter-all",
+      "rings": ".filter-rings",
+      "bracelet": ".filter-bracelets",
+      "necklace": ".filter-necklaces",
+      "bangles": ".filter-bangles"
+    }
 
-  x = document.getElementsByClassName("column");
+    for(i=0; i<buttonClasses.length; i++) {
+      $(buttonClasses[i]).removeClass("active-filter-btn");
+    }
 
-  if (c == "all") c = "";
+    $(mapping[c]).addClass("active-filter-btn");
 
-  for (i = 0; i < x.length; i++) {
+    var x, i;
 
-    w3RemoveClass(x[i], "show");
+    x = document.getElementsByClassName("column");
 
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    if (c == "all") c = "";
 
-  }
+    for (i = 0; i < x.length; i++) {
+
+      w3RemoveClass(x[i], "show");
+
+      if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+
+    }
 
   }
 
@@ -3569,23 +4244,23 @@
 
   // Add active class to the current button (highlight it)
 
-  var btnContainer = document.getElementById("myBtnContainer");
+  // var btnContainer = document.getElementById("myBtnContainer");
 
-  var btns = btnContainer.getElementsByClassName("btn");
+  // var btns = btnContainer.getElementsByClassName("btn");
 
-  for (var i = 0; i < btns.length; i++) {
+  // for (var i = 0; i < btns.length; i++) {
 
-  btns[i].addEventListener("click", function(){
+  // btns[i].addEventListener("click", function(){
 
-    var current = document.getElementsByClassName("active");
+  //   var current = document.getElementsByClassName("active");
 
-    current[0].className = current[0].className.replace(" active", "");
+  //   current[0].className = current[0].className.replace(" active", "");
 
-    this.className += " active";
+  //   this.className += " active";
 
-  });
+  // });
 
-  }
+  // }
 
   </script>
 
