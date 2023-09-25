@@ -877,30 +877,34 @@
       <div class="container">
 
 
-        <h3 class="section-headers " align="center">Contact Us</h3>
+        <h3 class="section-headers ">Contact Us</h3>
         <div class="row">
           <div class="col-sm-12">
-            <form id="contact-us-form" onsubmit="submitContactForm(); return false">
-              <div class="row" id="contact-us-input-row">
+            <form id="contact-us-form" class="needs-validation" onsubmit="submitContactUs(); return false" novalidate>
+              <div class="row" id="contact-us-details-row">
                 <div class="col-sm-4">
                   <input class="form-control" id="contact-us-name" name="name" placeholder="Name" type="text" required>
+                  <div class="invalid-feedback">Please enter a name</div>
                 </div>
                 <div class="col-sm-4">
-                  <input class="form-control" id="contact-us-email" name="email" placeholder="Email" type="text" required>
+                  <input class="form-control" id="contact-us-email" name="email" placeholder="Email" type="email" required>
+                  <div class="invalid-feedback">Please enter a valid email address</div>
                 </div>
                 <div class="col-sm-4">
-                  <input class="form-control" id="contact-us-number" name="name" placeholder="Number" type="text" required>
+                  <input class="form-control" id="contact-us-number" name="name" placeholder="Number" type="number">
                 </div>
               </div>
               <div class="w-100">
               </div>
-              <div class="row">
+              <div class="row" id="contact-us-message-row">
                 <div class="col-sm-10">
                   <textarea  class="form-control" id="contact-us-message" placeholder="Message..."
                   rows="3" name="comment" required></textarea>
+                  <div class="invalid-feedback">Please enter a message</div>
                 </div>
+                
                 <div class="col-sm-2">
-                  <input type="submit" id="contact-us-button" class="btn btn-success contact-btn" value="Submit">
+                  <button type="submit" id="contact-us-button" class="btn btn-success contact-btn" >SUBMIT</button>
                 </div>
               </div>
             </form>
@@ -4160,6 +4164,27 @@
 
 
   <script>
+    (() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+  </script>
+
+  <script>
 
   filterSelection("all")
 
@@ -4380,11 +4405,23 @@
 
   <script>
 
-    function submitContactForm(){
+    function submitContactUs() {
+
+      var form = document.getElementById("contact-us-form");
+
+      if(!form.checkValidity()) {
+        return;
+      }
+
       var name = $("#contact-us-name").val();
       var email = $("#contact-us-email").val();
       var phone = $("#contact-us-number").val();
       var message = $("#contact-us-message").val();
+
+      if(name == "" || email == "" || message == "") {
+        return;
+      }
+
       var data = {
         'name': name,
         'email': email,
@@ -4405,6 +4442,13 @@
             console.log("Success");
           }
           })
+
+      
+
+        $('form :input').val('');
+        $("#contact-us-form").removeClass("was-validated");
+
+        return false;
     }
 
   </script>
