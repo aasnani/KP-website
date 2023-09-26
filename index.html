@@ -854,12 +854,26 @@
 
 
     <section id="subscribe">
-      <div id="subscribe-div">
-        <h1 class="section-headers">NEWSLETTER</h1>
-        <p>Stay adorned with our newsletter for exclusive jewelry updates and offers.</p>
-        <input type="text" id="subscribe-input" placeholder="Enter Your Email Address">
-        <button onclick="subscribe()" id="subscribe-btn">SUBSCRIBE</button>
+      <div class="container">
+        <div id="subscribe-div">
+          <h1 class="section-headers">NEWSLETTER</h1>
+          <p>Stay adorned with our newsletter for exclusive jewelry updates and offers.</p>
+          <form id="subscribe-form" class="needs-validation" onsubmit="subscribe(); return false;" novalidate>
+            <div class="row" id="input-row">
+              <div class="col-sm-12 mx-auto" id="subscribe-form-col">
+                <input class="form-control" id="subscribe-input" name="email" placeholder="Enter Your Email Address" type="email" required>
+                <button onclick="subscribe()" id="subscribe-btn">SUBSCRIBE</button>
+                <div class="invalid-feedback">Please enter a valid email address</div>
+              </div>
+              <div class="w-100"></div>
+              
+            </div>
+            <!-- <input type="email" id="subscribe-input" placeholder="Enter Your Email Address"> -->
+
+          </form>
+        </div>
       </div>
+
     </section>
 
 
@@ -880,7 +894,7 @@
         <h3 class="section-headers ">Contact Us</h3>
         <div class="row">
           <div class="col-sm-12">
-            <form id="contact-us-form" class="needs-validation" onsubmit="submitContactUs(); return false" novalidate>
+            <form id="contact-us-form" class="needs-validation" onsubmit="submitContactUs(); return false;" novalidate>
               <div class="row" id="contact-us-details-row">
                 <div class="col-sm-4">
                   <input class="form-control" id="contact-us-name" name="name" placeholder="Name" type="text" required>
@@ -891,7 +905,7 @@
                   <div class="invalid-feedback">Please enter a valid email address</div>
                 </div>
                 <div class="col-sm-4">
-                  <input class="form-control" id="contact-us-number" name="name" placeholder="Number" type="number">
+                  <input class="form-control" id="contact-us-number" name="number" placeholder="Number" type="number">
                 </div>
               </div>
               <div class="w-100">
@@ -4164,7 +4178,7 @@
 
 
   <script>
-    (() => {
+(() => {
   'use strict'
 
   // Fetch all the forms we want to apply custom Bootstrap validation styles to
@@ -4178,7 +4192,11 @@
         event.stopPropagation()
       }
 
-      form.classList.add('was-validated')
+      form.classList.add('was-validated');
+      if (form.checkValidity()) {
+        form.classList.remove('was-validated');
+        form.reset();
+      }      
     }, false)
   })
 })()
@@ -4379,6 +4397,18 @@
 
   <script>
     function subscribe() {
+
+      var form = document.getElementById("subscribe-form");
+
+      if(!form.checkValidity()) {
+        return;
+      }
+
+      var email = $("#subscribe-input").val();
+      if (email == "") {
+        return;
+      }
+
       var email = $("#subscribe-input").val();
       if (email != ""){
         $.ajax({
@@ -4392,14 +4422,16 @@
         })
       }
 
-      $("#subscribe-input").val("");
       $("#subscribe-btn").css("background-color", "#4ecd65");
       $("#subscribe-btn").html("SUBSCRIBED!");
+      $("#subscribe-btn").attr("disabled", true);
       setTimeout(() => {
-        $("#subscribe-btn").css("background-color", "#684f4f");
         $("#subscribe-btn").html("SUBSCRIBE");
         $("#subscribe-btn").removeAttr("style");
+        $("#subscribe-btn").attr("disabled", false);
       }, 1500);
+
+      return false;
     }
   </script>
 
@@ -4444,9 +4476,16 @@
           })
 
       
+        $("#contact-us-button").css("background-color", "#4ecd65");
+        $("#contact-us-button").html("SUBMITTED!");
+        $("#contact-us-button").attr("disabled", true);
+        setTimeout(() => {
+          $("#contact-us-button").html("SUBMIT");
+          $("#contact-us-button").removeAttr("style");
+          $("#contact-us-button").attr("disabled", false);
+      }, 1500);
 
-        $('form :input').val('');
-        $("#contact-us-form").removeClass("was-validated");
+        
 
         return false;
     }
