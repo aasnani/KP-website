@@ -271,6 +271,63 @@ button {
     background-color: #36384d;
 }
 
+#footer {
+    background-color: rgb(254, 241, 229);
+    padding-top:25px;
+    padding-bottom:25px;
+}
+
+#footer .footer-row:not(:last-child) {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: solid 1px rgba(0,0,0,0.4);
+}
+
+#footer .footer-row ul {
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 0;
+}
+
+#footer .footer-row ul li{
+    display: inline;
+    padding: 0px 8px;
+}
+
+#footer .footer-row ul li:not(:last-child){
+    border-right: solid 1px rgba(0,0,0,0.4);
+}
+
+#footer .footer-row ul li a {
+    /* letter-spacing: 0.5px; */
+    color: rgba(0,0,0,0.6);
+    font-size: 15px;
+}
+
+#footer #footer-text-row {
+    text-align: center;
+}
+
+#footer .footer-row p {
+    display: inline;
+}
+
+#footer .footer-row #footer-text-left {
+    float: left;
+}
+
+#footer .footer-row #footer-text-right {
+    float: right;
+}
+
+#footer .footer-row #symbol {
+    font-size: 20px;
+}
+
+/* *{ border: 1px solid red; } */
+
 /*#endregion*/
 
 /*#region HOME PAGE */
