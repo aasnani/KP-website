@@ -38,7 +38,7 @@ Sections:
 body {
     margin: 0;
     /* font-family: 'Montserrat', sans-serif; */
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', sans-serif;
     background-size: cover;
     background-repeat: no-repeat;
     background: white;
@@ -98,11 +98,7 @@ button {
 
 /* Main styles for each link in navbar */
 #mainNav .navbar-nav .nav-item .nav-link {
-    font-size: 90%;
-    font-weight: 600;
     padding: .75em 0;
-    letter-spacing: 1px;
-    color: #000;
 }
 
 /* Colors the text of each nav link after hovering or clicked, currently overriden by !important */
@@ -124,9 +120,7 @@ button {
 #mainNav .navbar-nav .nav-item .nav-link,
 .dropdown-item {
     color: inherit;
-    font-family: 'Playfair Display', serif;
     font-size: 85%;
-    font-weight: Bold;
     letter-spacing: 0.5px;
 }
 
@@ -808,7 +802,7 @@ button {
 #new-arrival-third a {
     border-radius: 0;
     background-color: rgba(6, 6, 6, 1);
-    
+
     color: white;
     border: 1px solid black;
     transition: 0.3s;
@@ -1190,7 +1184,7 @@ button {
 }
 
 #myBtnContainer .active-filter-btn::after {
-    
+
     position: absolute;
     bottom: 0;
     left: 0;
@@ -1200,7 +1194,7 @@ button {
     width: 70%;
     content: "";
     height: 1px;
-    transition: all 0.5s;   
+    transition: all 0.5s;
 }
 
 #myBtnContainer a::after {
@@ -1213,7 +1207,7 @@ button {
     width: 0%;
     content: "";
     height: 1px;
-    transition: all 0.5s;   
+    transition: all 0.5s;
 }
 
 #myBtnContainer a:hover::after {
