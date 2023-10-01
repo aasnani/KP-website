@@ -4,6 +4,7 @@ import express from 'express';
 import nodemailer from 'nodemailer';
 import path from 'path';
 import pino from 'pino';
+import moment from 'moment';
 
 dotenv.config();
 
@@ -12,6 +13,8 @@ const __DIRNAME = path.resolve();
 
 const ENV_LEVEL = process.env.NODE_ENV;
 const LOG_LEVEL = process.env.LOG_LEVEL;
+
+const date_string = moment().format("YYYY-MM-DD HH:mm:ss");
 
 const NODEMAILER_EMAIL_SETTINGS = { 
   name: process.env.HOST,
@@ -83,8 +86,22 @@ const get_options_object = (method, body) => {
 };
 
 //Set-up
-
-const logger = pino({ level: LOG_LEVEL });
+const transport = pino.transport({
+  targets: [
+    {
+      target: 'pino/file',
+      options: { 
+        destination: `${__DIRNAME}/logs/app-${date_string}.log` 
+      },
+      level: LOG_LEVEL
+    },
+    {
+      target: 'pino-pretty',
+      level: LOG_LEVEL
+    },
+  ],
+});
+const logger = pino({ level: LOG_LEVEL}, transport);
 logger.info("Logging started!");
 
 const transporter = nodemailer.createTransport(NODEMAILER_EMAIL_SETTINGS);
