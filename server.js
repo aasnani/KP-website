@@ -53,6 +53,9 @@ app.use('/js', express.static('js'));
 app.get('/', (req,res) => {
     res.sendFile(__dirname + '/index.html');
 })
+app.get('/gold', (req,res) => {
+  res.sendFile(__dirname + '/gold.html');
+})
 
 function refreshToken() {
     global.options = {
