@@ -326,6 +326,26 @@ button {
     font-size: 20px;
 }
 
+#footer #extended-footer-homepage-only {
+    text-align: center;
+}
+
+#footer #extended-footer-homepage-only h3, #footer #extended-footer-homepage-only #footer-brand-name{
+    padding-top: 1.5rem;
+    letter-spacing: 1px;
+}
+
+#footer #extended-footer-homepage-only #footer-brand-motto {
+    padding-top:0.5rem;
+    letter-spacing: 1px;
+}
+
+
+
+#footer #extended-footer-homepage-only p{
+    padding-top: 0.5rem;
+}
+
 /* *{ border: 1px solid red; } */
 
 /*#endregion*/
@@ -922,7 +942,7 @@ button {
     filter: drop-shadow(2px 3px 5px rgb(0,0,0,0.7));
 }
 
-/*#endregion*/
+
 .modal-dialog {
     max-width: 70%;
 }
