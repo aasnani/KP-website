@@ -38,7 +38,8 @@ Sections:
 body {
     margin: 0;
     /* font-family: 'Montserrat', sans-serif; */
-    font-family: 'Playfair Display', serif;
+    font-family: 'PT Serif', serif;
+    /* font-family: 'Playfair Display', serif; */
     background-size: cover;
     background-repeat: no-repeat;
     background: white;
@@ -58,7 +59,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: 700;
+    /* font-weight: 700; */
 }
 
 /* Makes highlight the right color */
@@ -98,11 +99,7 @@ button {
 
 /* Main styles for each link in navbar */
 #mainNav .navbar-nav .nav-item .nav-link {
-    font-size: 90%;
-    font-weight: 600;
     padding: .75em 0;
-    letter-spacing: 1px;
-    color: #000;
 }
 
 /* Colors the text of each nav link after hovering or clicked, currently overriden by !important */
@@ -124,9 +121,7 @@ button {
 #mainNav .navbar-nav .nav-item .nav-link,
 .dropdown-item {
     color: inherit;
-    font-family: 'Playfair Display', serif;
-    font-size: 85%;
-    font-weight: Bold;
+    font-size: 1rem;
     letter-spacing: 0.5px;
 }
 
@@ -356,10 +351,11 @@ button {
 .section-headers {
     font-size: 35px;
     padding-bottom: 4%;
-    font-family: 'Playfair Display', serif;
+    /* font-family: 'Playfair Display', serif; */
     letter-spacing: 1.5px;
     text-transform: uppercase;
     font-kerning: none;
+    text-align: center;
 }
 
 /* Gives white background to both gold and collections sections on homepage */
@@ -375,7 +371,7 @@ button {
     border-radius: 5px;
     position: relative;
     top: 43px;
-    font-weight: 700;
+    /* font-weight: 700; */
     color: black;
     transition: all .2s ease-in-out;
     font-size: max(0.75vw, 1rem);
@@ -420,8 +416,8 @@ button {
 
 /* Text on gold flickity carousel */
 #gold p {
-    font-size: max(0.8vw, 1rem);
-    text-shadow: 0 0 0.1px black;
+    font-size: 1.1rem;
+    /* text-shadow: 0 0 0.1px black; */
     color: black;
 }
 
@@ -518,21 +514,31 @@ button {
     padding: 1% 0;
 }
 
+#subscribe-form-col {
+    max-width: 50%;
+}
+
 /* Newsletter subscribe text input */
 #subscribe-input {
     border: solid 1px black;
-    width: 30%;
+    width: 75%;
     padding: 8px 13px;
     background: transparent;
+    border-radius: 0;
+    display: inline;
+}
+
+#subscribe-input:focus {
+    box-shadow: none;
 }
 
 /* Newsletter subscribe button */
 #subscribe-btn {
     font-weight: normal;
     font-kerning: none;
-    width: 10%;
+    width: 24%;
     border: 1px solid #684f4f;
-    padding: 8px 13px;
+    padding: 6px 13px;
     background: #684f4f;
     color: #fff;
     font-size: 1rem;
@@ -541,7 +547,7 @@ button {
 }
 
 #subscribe-btn:hover {
-    background: #7e6060;
+    background: #9c7777;
     border: 1px solid #7e6060;
 }
 
@@ -551,6 +557,17 @@ button {
     width: 342px;
     height: 30px;
     line-height: 7px;
+}
+
+#subscribe .invalid-feedback{
+    text-align: left;
+    height: 0px;
+    margin: 0;
+    padding-left: 0.5%;
+} 
+
+#subscribe .form-control, #subscribe-btn {
+    margin-bottom: 5px;
 }
 
 /* Important styles for forced stylization of ctct form */
@@ -563,8 +580,29 @@ button {
     padding-bottom: 20px;
 }
 
-#contact-us-input-row {
-    padding-bottom: 20px;
+#contact-us-details-row {
+    padding-bottom: 15px;
+}
+
+#contact-us .form-control {
+    margin-bottom: 5px;
+}
+
+#contact-us .form-control:invalid {
+    background-image: none;
+}
+
+#contact-us .form-control:valid {
+    background-image: none;
+}
+
+#contact-us .invalid-feedback{
+    height: 0px;
+    margin: 0;
+} 
+
+#contact-us-message-row {
+    margin-top: 20px;
 }
 
 /* Important styles for forced stylization of ctct form */
@@ -588,12 +626,13 @@ button {
 }
 
 #contact-us h4 {
+    letter-spacing: 1.5px;
     padding-top: 30px;
     text-align: center;
 }
 
 #contact-us p {
-    font-family: 'Playfair Display', serif;
+    /* font-family: 'Playfair Display', serif; */
     font-variant-numeric: lining-nums;
 }
 
@@ -626,7 +665,7 @@ button {
     background-color: aliceblue;
     border-radius: 0;
     color: black;
-    font-weight: 600;
+    /* font-weight: 600; */
 }
 
 /* Contact us form each input after clicking*/
@@ -658,6 +697,16 @@ button {
     background-color: rgb(31, 58, 82);
     border-color: gray;
     border-radius: 0;
+    transition: 300ms;
+}
+
+#contact-us-button:hover{
+    /* background-color: rgb(73, 214, 106); */
+    background-color: rgb(74, 139, 196);
+}
+
+#contact-us-button:focus {
+    box-shadow: none;
 }
 
 /* Contact form submit button hover over effects*/
@@ -689,7 +738,7 @@ button {
 }
 
 #landing-section .banner-copy h1{
-    font-size: 3.1rem;
+    font-size: 3.3rem;
     font-weight: normal;
     font-kerning: none;
 }
@@ -697,6 +746,7 @@ button {
 #landing-section .banner-copy p{
     padding-top: 15px;
     text-align: start;
+    font-size: 1.3em;
 }
 
 #landing-section .separator{
@@ -885,7 +935,7 @@ button {
 #new-arrival-third a {
     border-radius: 0;
     background-color: rgba(6, 6, 6, 1);
-    
+
     color: white;
     border: 1px solid black;
     transition: 0.3s;
@@ -942,7 +992,13 @@ button {
     filter: drop-shadow(2px 3px 5px rgb(0,0,0,0.7));
 }
 
-
+.modal {
+    overflow-y: auto;
+   }
+   
+   .modal-open {
+    overflow: auto;
+   }
 .modal-dialog {
     max-width: 70%;
 }
@@ -1206,8 +1262,8 @@ button {
 }
 
 .left-row p {
-    font-size: 17px;
-    font-weight: bold;
+    font-size: 1.1rem;
+    /* font-weight: bold; */
     margin-block-end: 0;
     text-transform: capitalize;
 }
@@ -1267,7 +1323,7 @@ button {
 }
 
 #myBtnContainer .active-filter-btn::after {
-    
+
     position: absolute;
     bottom: 0;
     left: 0;
@@ -1277,7 +1333,7 @@ button {
     width: 70%;
     content: "";
     height: 1px;
-    transition: all 0.5s;   
+    transition: all 0.5s;
 }
 
 #myBtnContainer a::after {
@@ -1290,7 +1346,7 @@ button {
     width: 0%;
     content: "";
     height: 1px;
-    transition: all 0.5s;   
+    transition: all 0.5s;
 }
 
 #myBtnContainer a:hover::after {
@@ -1363,10 +1419,6 @@ button {
 /*#region EXTERNAL LIB CSS */
 
 /* All buttons text to uppercase and bold */
-.btn {
-    font-weight: 700;
-    text-transform: capitalize;
-}
 
 /* layout shift fancybox */
 body.compensate-for-scrollbar {
@@ -2238,7 +2290,7 @@ TV and Extra Large Screens – 1201px and more
     #top-navbar p {
         padding-right: 0.5rem;
         text-align: right;
-        font-size: min(1vw, 1.2rem)
+        /* font-size: min(1vw, 1.2rem) */
     }
 
     #mainNav .navbar-nav .nav-item .nav-link {
@@ -2249,7 +2301,7 @@ TV and Extra Large Screens – 1201px and more
 
     #mainNav .navbar-nav .nav-item .nav-link,
     .dropdown-item {
-        font-size: min(0.9vw, 1rem)
+        /* font-size: min(0.9vw, 1rem) */
     }
 
     .single-line-link {

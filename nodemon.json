@@ -15,7 +15,6 @@
       "server.js"
     ],
     "env": {
-      "NODE_ENV": "development"
     },
     "ext": "js,json,css, png, webp, jpg, jpeg"
   }
