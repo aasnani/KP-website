@@ -59,7 +59,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: 700;
+    /* font-weight: 700; */
 }
 
 /* Makes highlight the right color */
@@ -121,7 +121,7 @@ button {
 #mainNav .navbar-nav .nav-item .nav-link,
 .dropdown-item {
     color: inherit;
-    font-size: 85%;
+    font-size: 1rem;
     letter-spacing: 0.5px;
 }
 
@@ -274,7 +274,7 @@ button {
 .section-headers {
     font-size: 35px;
     padding-bottom: 4%;
-    font-family: 'Playfair Display', serif;
+    /* font-family: 'Playfair Display', serif; */
     letter-spacing: 1.5px;
     text-transform: uppercase;
     font-kerning: none;
@@ -293,7 +293,7 @@ button {
     border-radius: 5px;
     position: relative;
     top: 43px;
-    font-weight: 700;
+    /* font-weight: 700; */
     color: black;
     transition: all .2s ease-in-out;
     font-size: max(0.75vw, 1rem);
@@ -338,8 +338,8 @@ button {
 
 /* Text on gold flickity carousel */
 #gold p {
-    font-size: max(0.8vw, 1rem);
-    text-shadow: 0 0 0.1px black;
+    font-size: 1.1rem;
+    /* text-shadow: 0 0 0.1px black; */
     color: black;
 }
 
@@ -511,7 +511,7 @@ button {
 }
 
 #contact-us p {
-    font-family: 'Playfair Display', serif;
+    /* font-family: 'Playfair Display', serif; */
     font-variant-numeric: lining-nums;
 }
 
@@ -544,7 +544,7 @@ button {
     background-color: aliceblue;
     border-radius: 0;
     color: black;
-    font-weight: 600;
+    /* font-weight: 600; */
 }
 
 /* Contact us form each input after clicking*/
@@ -607,7 +607,7 @@ button {
 }
 
 #landing-section .banner-copy h1{
-    font-size: 3.1rem;
+    font-size: 3.3rem;
     font-weight: normal;
     font-kerning: none;
 }
@@ -615,6 +615,7 @@ button {
 #landing-section .banner-copy p{
     padding-top: 15px;
     text-align: start;
+    font-size: 1.3em;
 }
 
 #landing-section .separator{
@@ -1124,8 +1125,8 @@ button {
 }
 
 .left-row p {
-    font-size: 17px;
-    font-weight: bold;
+    font-size: 1.1rem;
+    /* font-weight: bold; */
     margin-block-end: 0;
     text-transform: capitalize;
 }
@@ -1281,10 +1282,6 @@ button {
 /*#region EXTERNAL LIB CSS */
 
 /* All buttons text to uppercase and bold */
-.btn {
-    font-weight: 700;
-    text-transform: capitalize;
-}
 
 /* layout shift fancybox */
 body.compensate-for-scrollbar {
@@ -2156,7 +2153,7 @@ TV and Extra Large Screens – 1201px and more
     #top-navbar p {
         padding-right: 0.5rem;
         text-align: right;
-        font-size: min(1vw, 1.2rem)
+        /* font-size: min(1vw, 1.2rem) */
     }
 
     #mainNav .navbar-nav .nav-item .nav-link {
@@ -2167,7 +2164,7 @@ TV and Extra Large Screens – 1201px and more
 
     #mainNav .navbar-nav .nav-item .nav-link,
     .dropdown-item {
-        font-size: min(0.9vw, 1rem)
+        /* font-size: min(0.9vw, 1rem) */
     }
 
     .single-line-link {
