@@ -853,12 +853,26 @@
 
 
     <section id="subscribe">
-      <div id="subscribe-div">
-        <h1 class="section-headers">NEWSLETTER</h1>
-        <p>Stay adorned with our newsletter for exclusive jewelry updates and offers.</p>
-        <input type="text" id="subscribe-input" placeholder="Enter Your Email Address">
-        <button onclick="subscribe()" id="subscribe-btn">SUBSCRIBE</button>
+      <div class="container">
+        <div id="subscribe-div">
+          <h1 class="section-headers">NEWSLETTER</h1>
+          <p>Stay adorned with our newsletter for exclusive jewelry updates and offers.</p>
+          <form id="subscribe-form" class="needs-validation" onsubmit="subscribe(); return false;" novalidate>
+            <div class="row" id="input-row">
+              <div class="col-sm-12 mx-auto" id="subscribe-form-col">
+                <input class="form-control" id="subscribe-input" name="email" placeholder="Enter Your Email Address" type="email" required>
+                <button type="submit" id="subscribe-btn">SUBSCRIBE</button>
+                <div class="invalid-feedback">Please enter a valid email address</div>
+              </div>
+              <div class="w-100"></div>
+
+            </div>
+            <!-- <input type="email" id="subscribe-input" placeholder="Enter Your Email Address"> -->
+
+          </form>
+        </div>
       </div>
+
     </section>
 
 
@@ -876,30 +890,34 @@
       <div class="container">
 
 
-        <h3 class="section-headers " align="center">Contact Us</h3>
+        <h3 class="section-headers ">Contact Us</h3>
         <div class="row">
           <div class="col-sm-12">
-            <form id="contact-us-form" onsubmit="submitContactForm(); return false">
-              <div class="row" id="contact-us-input-row">
+            <form id="contact-us-form" class="needs-validation" onsubmit="submitContactUs(); return false;" novalidate>
+              <div class="row" id="contact-us-details-row">
                 <div class="col-sm-4">
                   <input class="form-control" id="contact-us-name" name="name" placeholder="Name" type="text" required>
+                  <div class="invalid-feedback">Please enter a name</div>
                 </div>
                 <div class="col-sm-4">
-                  <input class="form-control" id="contact-us-email" name="email" placeholder="Email" type="text" required>
+                  <input class="form-control" id="contact-us-email" name="email" placeholder="Email" type="email" required>
+                  <div class="invalid-feedback">Please enter a valid email address</div>
                 </div>
                 <div class="col-sm-4">
-                  <input class="form-control" id="contact-us-number" name="name" placeholder="Number" type="text" required>
+                  <input class="form-control" id="contact-us-number" name="phone" placeholder="Number" type="tel" onInput="this.value = phoneFormat(this.value)">
                 </div>
               </div>
               <div class="w-100">
               </div>
-              <div class="row">
+              <div class="row" id="contact-us-message-row">
                 <div class="col-sm-10">
                   <textarea  class="form-control" id="contact-us-message" placeholder="Message..."
                   rows="3" name="comment" required></textarea>
+                  <div class="invalid-feedback">Please enter a message</div>
                 </div>
+
                 <div class="col-sm-2">
-                  <input type="submit" id="contact-us-button" class="btn btn-success contact-btn" value="Submit">
+                  <button type="submit" id="contact-us-button" class="btn btn-success contact-btn" >SUBMIT</button>
                 </div>
               </div>
             </form>
@@ -4159,6 +4177,32 @@
 
 
   <script>
+(() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated');
+      if (form.checkValidity()) {
+        form.classList.remove('was-validated');
+        form.reset();
+        console.log("tests");
+      }
+    }, false)
+  })
+})()
+  </script>
+
+  <script>
 
   filterSelection("all")
 
@@ -4353,6 +4397,19 @@
 
   <script>
     function subscribe() {
+
+      var form = document.getElementById("subscribe-form");
+
+      if(!form.checkValidity()) {
+        console.log("test");
+        return;
+      }
+
+      var email = $("#subscribe-input").val();
+      if (email == "") {
+        return;
+      }
+
       var email = $("#subscribe-input").val();
       if (email != ""){
         $.ajax({
@@ -4366,24 +4423,38 @@
         })
       }
 
-      $("#subscribe-input").val("");
       $("#subscribe-btn").css("background-color", "#4ecd65");
       $("#subscribe-btn").html("SUBSCRIBED!");
+      $("#subscribe-btn").attr("disabled", true);
       setTimeout(() => {
-        $("#subscribe-btn").css("background-color", "#684f4f");
         $("#subscribe-btn").html("SUBSCRIBE");
         $("#subscribe-btn").removeAttr("style");
-      }, 1500);
+        $("#subscribe-btn").attr("disabled", false);
+      }, 6000);
+
+      return false;
     }
   </script>
 
   <script>
 
-    function submitContactForm(){
+    function submitContactUs() {
+
+      var form = document.getElementById("contact-us-form");
+
+      if(!form.checkValidity()) {
+        return;
+      }
+
       var name = $("#contact-us-name").val();
       var email = $("#contact-us-email").val();
       var phone = $("#contact-us-number").val();
       var message = $("#contact-us-message").val();
+
+      if(name == "" || email == "" || message == "") {
+        return;
+      }
+
       var data = {
         'name': name,
         'email': email,
@@ -4404,6 +4475,20 @@
             console.log("Success");
           }
           })
+
+
+        $("#contact-us-button").css("background-color", "#4ecd65");
+        $("#contact-us-button").html("SUBMITTED!");
+        $("#contact-us-button").attr("disabled", true);
+        setTimeout(() => {
+          $("#contact-us-button").html("SUBMIT");
+          $("#contact-us-button").removeAttr("style");
+          $("#contact-us-button").attr("disabled", false);
+      }, 6000);
+
+
+
+        return false;
     }
 
   </script>
@@ -4580,6 +4665,17 @@
     //
     // });
 
+  </script>
+
+  <script>
+    function phoneFormat(input) {
+    input = input.replace(/\D/g,'');
+    var size = input.length;
+    if (size>0) {input="("+input}
+    if (size>3) {input=input.slice(0,4)+") "+input.slice(4,11)}
+    if (size>6) {input=input.slice(0,9)+"-" +input.slice(9)}
+    return input;
+}
   </script>
 
 

@@ -278,6 +278,7 @@ button {
     letter-spacing: 1.5px;
     text-transform: uppercase;
     font-kerning: none;
+    text-align: center;
 }
 
 /* Gives white background to both gold and collections sections on homepage */
@@ -436,21 +437,31 @@ button {
     padding: 1% 0;
 }
 
+#subscribe-form-col {
+    max-width: 50%;
+}
+
 /* Newsletter subscribe text input */
 #subscribe-input {
     border: solid 1px black;
-    width: 30%;
+    width: 75%;
     padding: 8px 13px;
     background: transparent;
+    border-radius: 0;
+    display: inline;
+}
+
+#subscribe-input:focus {
+    box-shadow: none;
 }
 
 /* Newsletter subscribe button */
 #subscribe-btn {
     font-weight: normal;
     font-kerning: none;
-    width: 10%;
+    width: 24%;
     border: 1px solid #684f4f;
-    padding: 8px 13px;
+    padding: 6px 13px;
     background: #684f4f;
     color: #fff;
     font-size: 1rem;
@@ -459,7 +470,7 @@ button {
 }
 
 #subscribe-btn:hover {
-    background: #7e6060;
+    background: #9c7777;
     border: 1px solid #7e6060;
 }
 
@@ -469,6 +480,17 @@ button {
     width: 342px;
     height: 30px;
     line-height: 7px;
+}
+
+#subscribe .invalid-feedback{
+    text-align: left;
+    height: 0px;
+    margin: 0;
+    padding-left: 0.5%;
+} 
+
+#subscribe .form-control, #subscribe-btn {
+    margin-bottom: 5px;
 }
 
 /* Important styles for forced stylization of ctct form */
@@ -481,8 +503,29 @@ button {
     padding-bottom: 20px;
 }
 
-#contact-us-input-row {
-    padding-bottom: 20px;
+#contact-us-details-row {
+    padding-bottom: 15px;
+}
+
+#contact-us .form-control {
+    margin-bottom: 5px;
+}
+
+#contact-us .form-control:invalid {
+    background-image: none;
+}
+
+#contact-us .form-control:valid {
+    background-image: none;
+}
+
+#contact-us .invalid-feedback{
+    height: 0px;
+    margin: 0;
+} 
+
+#contact-us-message-row {
+    margin-top: 20px;
 }
 
 /* Important styles for forced stylization of ctct form */
@@ -506,6 +549,7 @@ button {
 }
 
 #contact-us h4 {
+    letter-spacing: 1.5px;
     padding-top: 30px;
     text-align: center;
 }
@@ -576,6 +620,16 @@ button {
     background-color: rgb(31, 58, 82);
     border-color: gray;
     border-radius: 0;
+    transition: 300ms;
+}
+
+#contact-us-button:hover{
+    /* background-color: rgb(73, 214, 106); */
+    background-color: rgb(74, 139, 196);
+}
+
+#contact-us-button:focus {
+    box-shadow: none;
 }
 
 /* Contact form submit button hover over effects*/
