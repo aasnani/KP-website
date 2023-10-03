@@ -494,7 +494,7 @@ button {
     padding-left: 0.5%;
 } 
 
-#subscribe .form-control {
+#subscribe .form-control, #subscribe-btn {
     margin-bottom: 5px;
 }
 
