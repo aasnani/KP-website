@@ -865,6 +865,14 @@ button {
     filter: drop-shadow(2px 3px 5px rgb(0,0,0,0.7));
 }
 
+.modal {
+    overflow-y: auto;
+   }
+   
+   .modal-open {
+    overflow: auto;
+   }
+
 /*#endregion*/
 .modal-dialog {
     max-width: 70%;
