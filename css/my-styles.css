@@ -47,6 +47,17 @@ body {
     font-kerning: none;
 }
 
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x:hidden;
+    overflow-y:auto !important;
+    /* overflow-x:clip; issue with flexbox */
+}
+
 /* Gives p elements a fixed line height so elements aren't too close above and below */
 p {
     line-height: 1.75
@@ -80,6 +91,10 @@ span {
 /* Again, only old example modal usage it seems */
 button {
     outline: 0 !important;
+}
+
+a {
+    text-decoration: none;
 }
 
 /*#endregion*/
@@ -729,6 +744,10 @@ button {
 
 /*#region NEW ARRIVALS PAGE */
 
+.image-text-overlay {
+    position: relative;
+}
+
 /* New arrival banner text rules (current doesn't exist) */
 #landing-section .banner-copy {
     position:absolute;
@@ -798,6 +817,7 @@ button {
 }
 
 #new-arrival-first #polki-link a{
+    color: black;
     font-size: 1.2rem;
     font-kerning: none;
     padding: 5px 10px;
@@ -993,12 +1013,9 @@ button {
 }
 
 .modal {
-    overflow-y: auto;
-   }
-   
-   .modal-open {
-    overflow: auto;
-   }
+    overflow: hidden;
+}
+
 .modal-dialog {
     max-width: 70%;
 }
@@ -1013,7 +1030,7 @@ button {
 }
 
 .modal-header {
-    padding: 0.5rem 1rem;
+    padding: 1rem 1rem;
     border-bottom: none;
 }
 
@@ -1511,6 +1528,10 @@ body.compensate-for-scrollbar {
     background-color: rgba(0, 0, 0, 0.1) !important;
     color: antiquewhite;
     border: solid 1px antiquewhite;
+}
+
+nav .row > * {
+    width: unset;
 }
 
 /*#endregion*/
@@ -2276,7 +2297,7 @@ TV and Extra Large Screens – 1201px and more
     #mainNav .navbar-brand {
         font-size: 1.75em;
         -webkit-transition: all .3s;
-        transition: all .3s
+        transition: all .3s;
     }
 }
 
@@ -2449,16 +2470,6 @@ header .overlay {
     header video {
         display: none;
     }
-}
-
-html,
-body {
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x:hidden;
-    /* overflow-x:clip; issue with flexbox */
 }
 
 /* Looks like it has no effect */
