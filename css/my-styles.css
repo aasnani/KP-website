@@ -97,6 +97,27 @@ a {
     text-decoration: none;
 }
 
+.reach-out-section {
+    padding: 1rem 0rem;
+    background-color: aliceblue;
+    text-align: center;
+}
+
+.reach-out-section h4 {
+    letter-spacing: 1.5px;
+    font-size: 1.75rem;
+}
+
+.reach-out-section .image-separator{
+    text-align: center;
+}
+
+.reach-out-section .image-separator img {
+    width: auto;
+    height: 4rem;
+    margin-top: -15px;
+}
+
 /*#endregion*/
 
 /*#region NAVBAR */
