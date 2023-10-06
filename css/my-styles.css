@@ -466,6 +466,7 @@ a {
 /* Every image in collections section */
 #collections img {
     border-radius: 5px;
+    width: 100%;
 }
 
 /* The collections section, specifically those rows that have the text on the left */
