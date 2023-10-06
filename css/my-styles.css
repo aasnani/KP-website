@@ -615,6 +615,7 @@ a {
 /* Entire contact us section, just gives more padding between all elements and footer */
 #contact-us {
     padding-bottom: 20px;
+    scroll-margin-top: 55px;
 }
 
 #contact-us-details-row {
