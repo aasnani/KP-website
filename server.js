@@ -136,7 +136,7 @@ app.get('/', (req,res) => {
 })
 
 app.get('/new-arrivals', (req,res) => {
-  res.sendFile(__DIRNAME + '/new-arrivals.html');
+  res.sendFile(__DIRNAME + '/pages/new-arrivals.html');
 })
 
 app.post('/addToEmailList', (req, res) => {
