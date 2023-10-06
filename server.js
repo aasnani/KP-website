@@ -162,13 +162,13 @@ app.post('/addToEmailList', (req, res) => {
       }
     } 
     else {
-      logger.info(`/addToEmailList - CC Request handled - Status:${response.status}`);
-      logger.debug({response}, "Response body of successful CC request");
+      logger.info(`/addToEmailList - CC Request handled - Status:${api_response.status}`);
+      logger.debug({api_response}, "Response body of successful CC request");
       res.status(201).json({'status': 'success'});
     }
   }).catch(async error => {
-    logger.error(`/addToEmailList - CC Request failed to be handled - Status:${response.status}`);
-    logger.debug({response}, "Response body of failed CC request");
+    logger.error(`/addToEmailList - CC Request failed to be handled - Status:${error.status}`);
+    logger.debug({error}, "Response body of failed CC request");
     res.status(500).json({'status': 'failure'});
   })
 });

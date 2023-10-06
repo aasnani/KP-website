@@ -780,7 +780,6 @@
           if (form.checkValidity()) {
             form.classList.remove('was-validated');
             form.reset();
-            console.log("tests");
           }
         }, false)
       })
@@ -800,7 +799,6 @@
     function subscribe() {
       var form = document.getElementById("subscribe-form");
       if (!form.checkValidity()) {
-        console.log("test");
         return;
       }
 
@@ -817,7 +815,6 @@
           contentType: "application/json; charset=utf-8",
           dataType: "json",
           success: function () {
-            console.log("Success");
           }
         })
       }
@@ -859,7 +856,6 @@
         'message': message
       }
       data = JSON.stringify(data);
-      console.log(data);
 
       $.ajax({
         url: `/sendContactUs`,
@@ -869,7 +865,6 @@
         processData: true,
         data: data,
         success: function () {
-          console.log("Success");
         }
       })
 
@@ -911,7 +906,6 @@
     $(".dropdown-menu").hover(function (e) {
       $(".dropdown-toggle").attr("aria-expanded", "true");
       $(".dropdown-toggle").addClass("nav-link-force-hover");
-      console.log("trigger");
     }, function (e) {
       $(".dropdown-toggle").attr("aria-expanded", "false");
       $(".dropdown-toggle").removeClass("nav-link-force-hover");
@@ -920,7 +914,6 @@
 
   <script>
     $(window).on("load", function () {
-      console.log("Loading Flickity");
       $(".flickity-container-gold").flickity({
         wrapAround: true,
         'autoPlay': 'true',
