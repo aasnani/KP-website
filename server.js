@@ -135,6 +135,10 @@ app.get('/', (req,res) => {
   res.sendFile(__DIRNAME + '/index.html');
 })
 
+app.get('/new-arrivals', (req,res) => {
+  res.sendFile(__DIRNAME + '/new-arrivals.html');
+})
+
 app.post('/addToEmailList', (req, res) => {
   logger.info("/addToEmailList - Request received");
   let email = req.query.email_address;

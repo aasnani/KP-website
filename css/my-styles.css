@@ -770,6 +770,10 @@ a {
     position: relative;
 }
 
+.image-text-overlay img {
+    width: 100%;
+}
+
 /* New arrival banner text rules (current doesn't exist) */
 #landing-section .banner-copy {
     position:absolute;
@@ -1437,7 +1441,6 @@ a {
 }
 
 /* Keeps every other page hidden to simulate SPA */
-#newarrivalpage,
 #goldpage,
 #diamondpage,
 #antiquepage,
