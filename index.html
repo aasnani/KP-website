@@ -25,7 +25,6 @@
   <link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
   <link href="css/my-styles.css" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="css/animate.min.css"> -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="js/flickity.pkgd.min.js"></script>
@@ -35,7 +34,8 @@
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-    <!-- <div class="container-fluid"> -->
+    <div class="container-fluid g-0">
+
     <div class="row mx-auto" id="navbar-row">
       <div class="col mx-auto" id="top-navbar">
         <div>
@@ -54,7 +54,7 @@
 
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav justify-content-center text-uppercase">
-          <li class="nav-item"> <a id="home-page-navlink" class="nav-link single-line-link active" href="#"
+          <li class="nav-item"> <a id="home-page-navlink" class="nav-link single-line-link active active-item" href="#"
               onclick="changePage('#homepage')">Home</a>
           </li>
           <li class="nav-item"> <a id="newarrival-page-navlink" class="nav-link single-line-link" href="#"
@@ -91,6 +91,7 @@
         </ul>
       </div>
     </div>
+  </div>
   </nav>
 
   <div class="mobile-header">

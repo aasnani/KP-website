@@ -690,7 +690,7 @@ a {
     background-color: aliceblue;
     border-radius: 0;
     color: black;
-    font-weight: 600;
+    /* font-weight: 600; */
     box-shadow: none;
 }
 
