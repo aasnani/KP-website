@@ -302,19 +302,19 @@ a {
     background-color: #36384d;
 }
 
-#footer {
+footer {
     background-color: rgb(254, 241, 229);
     padding-top:25px;
     padding-bottom:25px;
 }
 
-#footer .footer-row:not(:last-child) {
+footer .footer-row:not(:last-child) {
     margin-bottom: 15px;
     padding-bottom: 15px;
     border-bottom: solid 1px rgba(0,0,0,0.4);
 }
 
-#footer .footer-row ul {
+footer .footer-row ul {
     margin-bottom: 0;
     display: flex;
     justify-content: center;
@@ -322,59 +322,57 @@ a {
     padding-left: 0;
 }
 
-#footer .footer-row ul li{
+footer .footer-row ul li{
     display: inline;
     padding: 0px 8px;
 }
 
-#footer .footer-row ul li:not(:last-child){
+footer .footer-row ul li:not(:last-child){
     border-right: solid 1px rgba(0,0,0,0.4);
 }
 
-#footer .footer-row ul li a {
+footer .footer-row ul li a {
     /* letter-spacing: 0.5px; */
     color: rgba(0,0,0,0.6);
     font-size: 15px;
 }
 
-#footer #footer-text-row {
+footer #footer-text-row {
     text-align: center;
 }
 
-#footer .footer-row p {
+footer .footer-row p {
     display: inline;
 }
 
-#footer .footer-row #footer-text-left {
+footer .footer-row #footer-text-left {
     float: left;
 }
 
-#footer .footer-row #footer-text-right {
+footer .footer-row #footer-text-right {
     float: right;
 }
 
-#footer .footer-row #symbol {
+footer .footer-row #symbol {
     font-size: 20px;
 }
 
-#footer #extended-footer-homepage-only {
+footer #extended-footer-homepage-only {
     text-align: center;
     padding-top: 2rem;
 }
 
-#footer #extended-footer-homepage-only h3, #footer #extended-footer-homepage-only #footer-brand-name{
+footer #extended-footer-homepage-only h3, footer #extended-footer-homepage-only #footer-brand-name{
     padding-top: 1.5rem;
     letter-spacing: 1px;
 }
 
-#footer #extended-footer-homepage-only #footer-brand-motto {
+footer #extended-footer-homepage-only #footer-brand-motto {
     padding-top:0.5rem;
     letter-spacing: 1px;
 }
 
-
-
-#footer #extended-footer-homepage-only p{
+footer #extended-footer-homepage-only p{
     padding-top: 0.5rem;
 }
 
