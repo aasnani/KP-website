@@ -466,7 +466,7 @@ footer #extended-footer-homepage-only p{
 }
 
 /* Specifically diamond section header for contrasting color */
-#diamond h3 {
+#diamond h2 {
     color: white;
 }
 
@@ -537,7 +537,7 @@ footer #extended-footer-homepage-only p{
     text-align: center;
 }
 
-#subscribe #subscribe-div h1 {
+#subscribe #subscribe-div h2 {
     font-weight: normal;
     font-kerning: none;
     letter-spacing: 1.5px;
