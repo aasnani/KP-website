@@ -29,6 +29,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
   <script src="https://www.w3schools.com/lib/w3.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  <script>history.scrollRestoration = "manual"</script>
 </head>
 
 
@@ -479,13 +480,7 @@
       return input;
     }
   </script>
-
-  <script>
-    $(window).on('beforeunload', function() {
-      $(window).scrollTop(0);
-    });
-  </script>
-
+  
   <script>
     $(".dropdown-menu").hover(function (e) {
       $(".dropdown-toggle").attr("aria-expanded", "true");
