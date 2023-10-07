@@ -128,9 +128,9 @@
       <div class="healwithlove-gold image-text-overlay" align="center">
 
         <div class="banner-copy">
-          <h1 class="animate__animated animate__fadeInLeft">NEW ARRIVALS</h1>
-          <div class="separator animate__animated animate__fadeInLeft animate__slow"></div>
-          <p class="animate__animated animate__fadeInLeft">Explore contemporary elegance with our latest jewelry
+          <h1 class="wow animate__animated animate__fadeInLeft">NEW ARRIVALS</h1>
+          <div class="separator wow animate__animated animate__fadeInLeft animate__slow"></div>
+          <p class="wow animate__animated animate__fadeInLeft">Explore contemporary elegance with our latest jewelry
             arrivals. From captivating gemstones to delicate designs, our curated collection offers style for every
             occasion.</p>
         </div>
@@ -143,12 +143,12 @@
     <section id="new-arrival-first">
       <div class="container">
 
-        <h1 class="animate__animated animate__fadeInUp">POLKI COLLECTION</h1>
+        <h1 class="wow animate__animated animate__fadeInUp">POLKI COLLECTION</h1>
 
-        <div class="image-separator animate__animated animate__fadeInUp"><img src="images/test-divider.png" /></div>
+        <div class="image-separator wow animate__animated animate__fadeInUp"><img src="images/test-divider.png" /></div>
         <div class="row">
 
-          <div class="col-sm-4 animate__animated animate__fadeInUp">
+          <div class="col-sm-4 wow animate__animated animate__fadeInUp">
             <img class="polki-img" src="images/Archive/polki/p1.jpg" />
             <div class="polki-text">
               <h3> Polki A</h3>
@@ -156,14 +156,14 @@
 
           </div>
 
-          <div class="col-sm-4 animate__animated animate__fadeInUp">
+          <div class="col-sm-4 wow animate__animated animate__fadeInUp">
             <img class="polki-img" src="images/Archive/polki/p2.jpg" />
             <div class="polki-text">
               <h3> Polki B</h3>
             </div>
           </div>
 
-          <div class="col-sm-4 animate__animated animate__fadeInUp">
+          <div class="col-sm-4 wow animate__animated animate__fadeInUp">
             <img class="polki-img" src="images/Archive/polki/p3.jpg" />
             <div class="polki-text">
               <h3> Polki C</h3>
@@ -172,7 +172,7 @@
 
         </div>
 
-        <div id="polki-link" class="animate__animated animate__fadeInUp">
+        <div id="polki-link" class="wow animate__animated animate__fadeInUp">
           <a class="btn btn-primary"> Explore Collection </a>
         </div>
 
@@ -183,7 +183,7 @@
       <div class="container">
         <div class="row">
 
-          <div class="col-sm-4 d-flex animate__animated animate__fadeInLeft">
+          <div class="col-sm-4 d-flex wow animate__animated animate__fadeInLeft">
             <div id="text-description-card" class="card card-shadow">
               <div class="card-body">
                 <h1 class="card-title">DIAMOND BANGLES</h1>
@@ -194,7 +194,7 @@
             </div>
           </div>
 
-          <div class="col-sm-8 animate__animated animate__fadeInRight">
+          <div class="col-sm-8 wow animate__animated animate__fadeInRight">
             <div class="flickity-container-new-arr-second">
 
               <div class="container-cell">
@@ -252,20 +252,20 @@
     </section>
 
     <section id="new-arrival-third">
-      <div class=" container-max">
+      <div class="container-max">
         <div class="row">
 
-          <div id="engagement-images-col" class="col-lg-9">
+          <div id="engagement-images-col" class="col-lg-9 wow animate__animated animate__fadeInLeft">
             <img src="images/engagement-rings/1.jpg" id="img-1">
             <img src="images/engagement-rings/7.jpg" id="img-2">
             <img src="images/engagement-rings/10.jpg" id="img-3">
           </div>
 
-          <div id="text-description-col" class="col-lg-3">
+          <div id="text-description-col" class="col-lg-3 wow animate__animated animate__fadeInRight">
             <div>
               <h1>DIAMOND ENGAGEMENT</h1>
               <p>Elevate your love story with our exquisite collection of diamond engagement jewelry.</p>
-              <a class="btn btn-primary animate__animated animate__fadeInLeft">Find Your Forever</a>
+              <a class="btn btn-primary ">Find Your Forever</a>
             </div>
           </div>
 
@@ -276,12 +276,12 @@
 
     <section id="new-arrival-fourth">
       <div class="image-text-overlay">
-        <div class="banner-copy">
-          <h1 class="animate__animated animate__fadeInLeft">TEMPLE JEWELRY</h1>
-          <div class="separator animate__animated animate__fadeInLeft animate__slow"></div>
-          <p class="animate__animated animate__fadeInLeft">Evoke the enchanting beauty of Indian traditions with our
+        <div class="banner-copy wow animate__animated animate__fadeInLeft">
+          <h1>TEMPLE JEWELRY</h1>
+          <div class="separator"></div>
+          <p>Evoke the enchanting beauty of Indian traditions with our
             stunning collection of temple jewelry.</p>
-          <a class="btn btn-primary animate__animated animate__fadeInLeft">Browse Our Treasures</a>
+          <a class="btn btn-primary">Browse Our Treasures</a>
         </div>
 
         <img loading="lazy" src="images/Jewelry_D_3.jpg" class="mobile-disable inner-banner">
@@ -386,6 +386,15 @@
 
 <!-- Scripts -->
 
+<script>
+  wow = new WOW(
+      {
+          animateClass: 'animate__animated' //updated default animate 4.+
+      }
+  )
+  wow.init();
+</script>
+
   <script>
     $(document).ready(function () {
       $(".link").click(function () {
@@ -396,8 +405,6 @@
   </script>
 
   <script>
-    new WOW().init();
-
     $.ready(function () {
       $('a[href*=#]').bind('click', function (e) {
         e.preventDefault(); // prevent hard jump, the default behavior
@@ -474,12 +481,8 @@
   </script>
 
   <script>
-    var pad = $("#collections").css("padding-top").replace("px", "");
-    $('.dropdown-toggle').click(function (event) {
-      $('body, html').animate({
-        scrollTop: $("#collections").offset().top - pad
-      }, 600);
-
+    $(window).on('beforeunload', function() {
+      $(window).scrollTop(0);
     });
   </script>
 

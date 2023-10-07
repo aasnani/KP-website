@@ -53,8 +53,8 @@ body {
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x:hidden;
-    overflow-y:auto !important;
+    /* overflow-x:hidden;
+    overflow-y:auto !important; */
     /* overflow-x:clip; issue with flexbox */
 }
 
