@@ -1,12 +1,10 @@
-import dotenv from 'dotenv';
-import fetch from 'node-fetch';
-import express from 'express';
-import nodemailer from 'nodemailer';
-import path from 'path';
-import pino from 'pino';
-import moment from 'moment';
-
-dotenv.config();
+require('dotenv').config()
+const fetch = require('node-fetch');
+const express = require('express');
+const nodemailer = require('nodemailer');
+const path = require('path');
+const pino = require('pino');
+const moment = require('moment');
 
 //Definitions
 const __DIRNAME = path.resolve();

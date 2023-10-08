@@ -20,14 +20,13 @@
   "homepage": "https://github.com/aasnani/KP-website#readme",
   "dependencies": {
     "css-minify": "^2.0.0",
-    "dotenv": "^16.0.3",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "moment": "^2.29.4",
-    "node-fetch": "^3.3.1",
+    "node-fetch": "^2.7.0",
     "nodemailer": "^6.9.5",
     "nodemon": "^2.0.21",
     "pino": "^8.15.1",
     "pino-pretty": "^10.2.0"
-  },
-  "type": "module"
+  }
 }
