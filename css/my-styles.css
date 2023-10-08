@@ -207,6 +207,10 @@ a {
     color: #e4bab4 !important;
 }
 
+.navbar-collapse {
+    padding: 0;
+}
+
 /* All styles for dropdown collection menu like animation, visibility/display is nothing prior to hover, anchored to navbar, etc.. */
 .dropdown .dropdown-menu {
     display: block;
@@ -444,6 +448,11 @@ footer #extended-footer-homepage-only p{
     background-color: aliceblue;
 }
 
+#new-arr img {
+    width: 100%;
+    height: auto;
+}
+
 /* New arrival and each row in collections just to take up entire width */
 .container-max {
     max-width: fit-content;
@@ -463,6 +472,11 @@ footer #extended-footer-homepage-only p{
 
 #diamond{
     background-color: black;
+}
+
+#diamond img {
+    width: 100%;
+    height: auto;
 }
 
 /* Specifically diamond section header for contrasting color */
@@ -487,6 +501,7 @@ footer #extended-footer-homepage-only p{
 #collections img {
     border-radius: 5px;
     width: 100%;
+    height: auto;
 }
 
 /* The collections section, specifically those rows that have the text on the left */
@@ -1509,6 +1524,8 @@ body.compensate-for-scrollbar {
 /* Side cards are little faded to show not centered */
 .flickity-container-gold .container-cell img {
     opacity: 0.85;
+    width: 100%;
+    height: auto;
 }
 
 /* Center card is full opacity to show it is the centered one */
