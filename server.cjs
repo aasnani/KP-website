@@ -121,7 +121,6 @@ let app = express();
 // Render static files
 app.use(express.json());
 app.use(express.static('home.html'));
-app.use('/pages', express.static('pages'));
 app.use('/css', express.static('css'));
 app.use('/fonts', express.static('fonts'));
 app.use('/images', express.static('images'));
@@ -131,11 +130,11 @@ app.use('/js', express.static('js'));
 //Routes
 
 app.get('/', (req,res) => {
-  res.sendFile(__DIRNAME + '/pages/home.html');
+  res.sendFile(__DIRNAME + '/home.html');
 })
 
 app.get('/new-arrivals', (req,res) => {
-  res.sendFile(__DIRNAME + '/pages/new-arrivals.html');
+  res.sendFile(__DIRNAME + '/new-arrivals.html');
 })
 
 app.post('/addToEmailList', (req, res) => {
