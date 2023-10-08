@@ -27,12 +27,13 @@ Sections:
 
 @font-face {
     font-family: 'MontserratExtraBold';
+    font-display: swap;
     src: url('../fonts/MontserratExtraBold.eot');
     src: url('../fonts/MontserratExtraBold.eot') format('embedded-opentype'),
         url('../fonts/MontserratExtraBold.woff2') format('woff2'),
         url('../fonts/MontserratExtraBold.woff') format('woff'),
         url('../fonts/MontserratExtraBold.ttf') format('truetype'),
-        url('../fonts/MontserratExtraBold.svg#MontserratExtraBold') format('svg');
+        url('../fonts/MontserratExtraBold.svg#MontserratExtraBold') format('svg');  
 }
 
 body {
