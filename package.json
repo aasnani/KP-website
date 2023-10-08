@@ -2,7 +2,7 @@
   "name": "kp-website",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "server.cjs",
   "scripts": {
     "dev": "NODE_ENV=dev LOG_LEVEL=debug nodemon server.cjs",
     "prod": "NODE_ENV=prod LOG_LEVEL=info node server.cjs",
