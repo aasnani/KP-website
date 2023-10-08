@@ -4,8 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "dev": "NODE_ENV=dev LOG_LEVEL=debug nodemon server.js",
-    "prod": "NODE_ENV=prod LOG_LEVEL=info node server.js",
+    "dev": "NODE_ENV=dev LOG_LEVEL=debug nodemon server.cjs",
+    "prod": "NODE_ENV=prod LOG_LEVEL=info node server.cjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
