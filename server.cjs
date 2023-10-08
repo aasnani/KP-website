@@ -120,7 +120,8 @@ let app = express();
 
 // Render static files
 app.use(express.json());
-app.use(express.static('index.html'));
+app.use(express.static('home.html'));
+app.use('/pages', express.static('pages'));
 app.use('/css', express.static('css'));
 app.use('/fonts', express.static('fonts'));
 app.use('/images', express.static('images'));
