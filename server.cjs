@@ -131,7 +131,7 @@ app.use('/js', express.static('js'));
 //Routes
 
 app.get('/', (req,res) => {
-  res.sendFile(__DIRNAME + '/index.html');
+  res.sendFile(__DIRNAME + '/pages/home.html');
 })
 
 app.get('/new-arrivals', (req,res) => {
