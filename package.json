@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/aasnani/KP-website#readme",
   "dependencies": {
+    "css-minify": "^2.0.0",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "moment": "^2.29.4",

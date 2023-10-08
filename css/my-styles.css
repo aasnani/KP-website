@@ -26,14 +26,9 @@ Sections:
 /*#region GLOBAL ELEMENT RULES*/
 
 @font-face {
-    font-family: 'MontserratExtraBold';
+    font-family: 'Math', serif;
     font-display: swap;
-    src: url('../fonts/MontserratExtraBold.eot');
-    src: url('../fonts/MontserratExtraBold.eot') format('embedded-opentype'),
-        url('../fonts/MontserratExtraBold.woff2') format('woff2'),
-        url('../fonts/MontserratExtraBold.woff') format('woff'),
-        url('../fonts/MontserratExtraBold.ttf') format('truetype'),
-        url('../fonts/MontserratExtraBold.svg#MontserratExtraBold') format('svg');  
+    src: local('Math');
 }
 
 body {
