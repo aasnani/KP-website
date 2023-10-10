@@ -34,69 +34,81 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="mainNav">
     <div class="container-fluid g-0">
 
-    <div class="row mx-auto" id="navbar-row">
-      <div class="col mx-auto" id="top-navbar">
-        <div>
-          <p><a style="color:#e4bab4" href="tel:781-229-9170"><i class="fa fa-phone" style="color:#e4bab4"></i>
-              781-229-9170</a></p>
-          <p><i class="bi bi-instagram"></i> kaypeejewelers </p>
-          <p> <a style="color:#e4bab4" href="https://goo.gl/maps/SpqAM3tbYXB2t5BdA" target="_blank"
-              rel="noopener noreferrer"><i class="bi bi-pin-map-fill" style="color:#e4bab4"></i> Burlington, MA</a></p>
+      <div class="row mx-auto" id="navbar-row">
+        <!-- <div class="col mx-auto" id="top-navbar">
+          <div>
+            <p><a style="color:#e4bab4" href="tel:781-229-9170"><i class="fa fa-phone" style="color:#e4bab4"></i>
+                781-229-9170</a></p>
+            <p><i class="bi bi-instagram"></i> kaypeejewelers </p>
+            <p> <a style="color:#e4bab4" href="https://goo.gl/maps/SpqAM3tbYXB2t5BdA" target="_blank"
+                rel="noopener noreferrer"><i class="bi bi-pin-map-fill" style="color:#e4bab4"></i> Burlington, MA</a>
+            </p>
+          </div>
+        </div> -->
+
+        <div class="w-100"></div>
+
+        <a href="/" class="navbar-brand"><img src="./images/logoplain.webp" class="img-fluid mr-auto" id="kp-logo-test"
+            aria-label="Go to home page" alt="Kaypee Jewelers Logo"></a>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+
+          <ul class="navbar-nav nav-fill justify-content-center text-uppercase">
+            <li class="nav-item"> <a id="home-page-navlink" class="nav-link single-line-link active active-item"
+                href="/">Home</a>
+            </li>
+            <li class="nav-item"> <a id="newarrival-page-navlink" class="nav-link single-line-link"
+                href="/new-arrivals">New Arrivals</a>
+            </li>
+            <li class="nav-item"> <a id="gold-page-navlink" class="nav-link " href="#"
+                onclick="changePage('#goldpage')">Gold Jewelry</a>
+            </li>
+            <li class="nav-item"> <a id="diamond-page-navlink" class="nav-link" href="#"
+                onclick="changePage('#diamondpage')">Diamond Jewelry</a>
+            </li>
+            </li>
+            <li class="nav-item"> <a id="antique-page-navlink" class="nav-link " href="#"
+                onclick="changePage('#antiquepage')">Antique Jewelry</a>
+            </li>
+            <li class="nav-item"> <a id="gemstone-page-navlink" class="nav-link " href="#"
+                onclick="changePage('#gemstonepage')">Gemstone Jewelry</a>
+            </li>
+            <li class="dropdown nav-item" id="collectionsDropdown">
+              <a class="nav-link single-line-link dropdown-toggle" data-toggle="dropdown"
+                id="dropdownMenuButton">collections</a>
+              <div class="dropdown-menu dropdown-menu-right collection-menu" aria-labelledby="dropdownMenuButton"
+                id="collectionsDropdownMenu">
+                <a class="dropdown-item" href="#" onclick="changePage('#mangalsutrapage')">Mangal Sutras</a>
+                <a class="dropdown-item" href="#" onclick="changePage('#engagementpage')">Engagement Rings and Wedding
+                  Bands</a>
+                <a class="dropdown-item" href="#" onclick="changePage('#rhodiumpage')">Rhodium Bangles</a>
+                <a class="dropdown-item" href="#" onclick="changePage('#templepage')">Temple Jewelry</a>
+              </div>
+            </li>
+            <li class="nav-item"> <a id="contact-us-nav-link" class="nav-link single-line-link"
+                href="/#contact-us">Contact Us</a>
+            </li>
+          </ul>
+          <span class="navbar-text" id="nav-contact">
+            <a href="tel:781-229-9170"><i class="fa fa-phone"></i>781-229-9170</a>
+            <a><i class="bi bi-instagram"></i> kaypeejewelers</a>
+            <a href="https://goo.gl/maps/SpqAM3tbYXB2t5BdA" target="_blank" rel="noopener noreferrer"><i
+                class="bi bi-pin-map-fill"></i> Burlington, MA</a>
+          </span>
         </div>
       </div>
-
-      <div class="w-100"></div>
-
-      <a href="/" class="navbar-brand"><img src="./images/logoplain.webp"
-          class="img-fluid mr-auto" id="kp-logo-test" aria-label="Go to home page" alt="Kaypee Jewelers Logo"></a>
-
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav justify-content-center text-uppercase">
-          <li class="nav-item"> <a id="home-page-navlink" class="nav-link single-line-link active active-item" href="/">Home</a>
-          </li>
-          <li class="nav-item"> <a id="newarrival-page-navlink" class="nav-link single-line-link" href="/new-arrivals">New Arrivals</a>
-          </li>
-          <li class="nav-item"> <a id="gold-page-navlink" class="nav-link " href="#"
-              onclick="changePage('#goldpage')">Gold Jewelry</a>
-          </li>
-          <li class="nav-item"> <a id="diamond-page-navlink" class="nav-link" href="#"
-              onclick="changePage('#diamondpage')">Diamond Jewelry</a>
-          </li>
-          </li>
-          <li class="nav-item"> <a id="antique-page-navlink" class="nav-link " href="#"
-              onclick="changePage('#antiquepage')">Antique Jewelry</a>
-          </li>
-          <li class="nav-item"> <a id="gemstone-page-navlink" class="nav-link " href="#"
-              onclick="changePage('#gemstonepage')">Gemstone Jewelry</a>
-          </li>
-          <li class="dropdown nav-item" id="collectionsDropdown">
-            <a class="nav-link single-line-link dropdown-toggle" data-toggle="dropdown" id="dropdownMenuButton"
-              >collections</a>
-            <div class="dropdown-menu dropdown-menu-right collection-menu" aria-labelledby="dropdownMenuButton"
-              id="collectionsDropdownMenu">
-              <a class="dropdown-item" href="#" onclick="changePage('#mangalsutrapage')">Mangal Sutras</a>
-              <a class="dropdown-item" href="#" onclick="changePage('#engagementpage')">Engagement Rings and Wedding
-                Bands</a>
-              <a class="dropdown-item" href="#" onclick="changePage('#rhodiumpage')">Rhodium Bangles</a>
-              <a class="dropdown-item" href="#" onclick="changePage('#templepage')">Temple Jewelry</a>
-            </div>
-          </li>
-          <li class="nav-item"> <a id="contact-us-nav-link" class="nav-link single-line-link" href="/#contact-us">Contact Us</a>
-          </li>
-        </ul>
-      </div>
     </div>
-  </div>
   </nav>
 
   <div class="mobile-header">
 
     <button class="openbtn" onClick="openNav()">☰</button>
     <div class="mobile-logo">
-      <a href="index.html" aria-label="Visit Home Page"><img class="mobile-enable" alt="Kaypee Jewelers Logo" width="300" height="50" src="images/logoplain.webp" /></a>
+      <a href="index.html" aria-label="Visit Home Page"><img class="mobile-enable" alt="Kaypee Jewelers Logo"
+          width="300" height="50" src="images/logoplain.webp" /></a>
     </div>
   </div>
 
@@ -129,81 +141,37 @@
       <div class="flickity-container-banner">
         <div class="container-cell">
           <picture>
-            <source
-              srcset="images/Banner/xlarge/banner_test.webp"
-              media="(min-width: 1200px)"
-            />
-            <source
-            srcset="images/Banner/large/banner_test.webp"
-            media="(min-width: 992px)"
-            />
-            <img
-              class="img-fluid slider-image mobile-disable"
-              width="2960"
-              height="1300"
-              src="images/Banner/banner_test.webp"
-              alt="Describe picture literally in short"
-            />
+            <source srcset="images/Banner/xlarge/banner_test.webp" media="(min-width: 1200px)" />
+            <source srcset="images/Banner/large/banner_test.webp" media="(min-width: 992px)" />
+            <img class="img-fluid slider-image mobile-disable" width="2960" height="1300"
+              src="images/Banner/banner_test.webp" alt="Describe picture literally in short" />
           </picture>
           <!-- <img src="images/Banner/xlarge/banner_test.webp" alt="Los Angeles" width="1100" class="mobile-enable"> -->
         </div>
         <div class="container-cell">
           <picture>
-            <source
-              srcset="images/Banner/xlarge/banner_test_2.webp"
-              media="(min-width: 1200px)"
-            />
-            <source
-            srcset="images/Banner/large/banner_test_2.webp"
-            media="(min-width: 992px)"
-            />
-            <img
-              class="img-fluid slider-image mobile-disable"
-              width="2960"
-              height="1300"
-              src="images/Banner/banner_test_2.webp"
-              alt="Describe picture literally in short"
-            />
+            <source srcset="images/Banner/xlarge/banner_test_2.webp" media="(min-width: 1200px)" />
+            <source srcset="images/Banner/large/banner_test_2.webp" media="(min-width: 992px)" />
+            <img class="img-fluid slider-image mobile-disable" width="2960" height="1300"
+              src="images/Banner/banner_test_2.webp" alt="Describe picture literally in short" />
           </picture>
           <!-- <img src="images/Banner/xlarge/banner_test_2.webp" alt="Los Angeles" width="1100" class="mobile-enable"> -->
         </div>
         <div class="container-cell">
           <picture>
-            <source
-              srcset="images/Banner/xlarge/banner_test_3.webp"
-              media="(min-width: 1200px)"
-            />
-            <source
-            srcset="images/Banner/large/banner_test_3.webp"
-            media="(min-width: 992px)"
-            />
-            <img
-              class="img-fluid slider-image mobile-disable"
-              width="2960"
-              height="1300"
-              src="images/Banner/xlarge/banner_test_3.webp"
-              alt="Describe picture literally in short"
-            />
+            <source srcset="images/Banner/xlarge/banner_test_3.webp" media="(min-width: 1200px)" />
+            <source srcset="images/Banner/large/banner_test_3.webp" media="(min-width: 992px)" />
+            <img class="img-fluid slider-image mobile-disable" width="2960" height="1300"
+              src="images/Banner/xlarge/banner_test_3.webp" alt="Describe picture literally in short" />
           </picture>
           <!-- <img src="images/Banner/banner_test_3.webp" alt="Los Angeles" width="1100" class="mobile-enable"> -->
         </div>
         <div class="container-cell">
           <picture>
-            <source
-              srcset="images/Banner/xlarge/goldbanner.webp"
-              media="(min-width: 1200px)"
-            />
-            <source
-            srcset="images/Banner/large/goldbanner.webp"
-            media="(min-width: 992px)"
-            />
-            <img
-              class="img-fluid slider-image mobile-disable"
-              width="2960"
-              height="1300"
-              src="images/Banner/xlarge/goldbanner.webp"
-              alt="Describe picture literally in short"
-            />
+            <source srcset="images/Banner/xlarge/goldbanner.webp" media="(min-width: 1200px)" />
+            <source srcset="images/Banner/large/goldbanner.webp" media="(min-width: 992px)" />
+            <img class="img-fluid slider-image mobile-disable" width="2960" height="1300"
+              src="images/Banner/xlarge/goldbanner.webp" alt="Describe picture literally in short" />
           </picture>
           <!-- <img src="images/Banner/goldbanner.webp" alt="Los Angeles" width="1100" class="mobile-enable"> -->
         </div>
@@ -229,20 +197,10 @@
                     <a data-fancybox data-src="images/Home-newarr/newarrivals1.webp"
                       data-caption="Set of Meena Bangles">
                       <picture>
-                        <source
-                          srcset="images/Home-newarr/xlarge/newarrivals1.webp"
-                          media="(min-width: 1200px)"
-                        />
-                        <source
-                        srcset="images/Home-newarr/large/newarrivals1.webp"
-                        media="(min-width: 992px)"
-                        />
-                        <img
-                          width="750"
-                          height="750"
-                          src="images/Home-newarr/xlarge/newarrivals1.webp"
-                          alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus"
-                        />
+                        <source srcset="images/Home-newarr/xlarge/newarrivals1.webp" media="(min-width: 1200px)" />
+                        <source srcset="images/Home-newarr/large/newarrivals1.webp" media="(min-width: 992px)" />
+                        <img width="750" height="750" src="images/Home-newarr/xlarge/newarrivals1.webp"
+                          alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus" />
                       </picture>
                     </a>
                     <p>
@@ -254,23 +212,12 @@
 
                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                   <div class="new-arrive-product  ">
-                    <a data-fancybox data-src="images/Home-newarr/newarrivals2.webp"
-                      data-caption="Tri-color Necklace">
+                    <a data-fancybox data-src="images/Home-newarr/newarrivals2.webp" data-caption="Tri-color Necklace">
                       <picture>
-                        <source
-                          srcset="images/Home-newarr/xlarge/newarrivals2.webp"
-                          media="(min-width: 1200px)"
-                        />
-                        <source
-                        srcset="images/Home-newarr/large/newarrivals2.webp"
-                        media="(min-width: 992px)"
-                        />
-                        <img
-                          width="750"
-                          height="750"
-                          src="images/Home-newarr/xlarge/newarrivals2.webp"
-                          alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus"
-                        />
+                        <source srcset="images/Home-newarr/xlarge/newarrivals2.webp" media="(min-width: 1200px)" />
+                        <source srcset="images/Home-newarr/large/newarrivals2.webp" media="(min-width: 992px)" />
+                        <img width="750" height="750" src="images/Home-newarr/xlarge/newarrivals2.webp"
+                          alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus" />
                       </picture>
                     </a>
                     <p>
@@ -285,20 +232,10 @@
                     <a data-fancybox data-src="images/Home-newarr/newarrivals3.webp"
                       data-caption="Designer Peacock Ring">
                       <picture>
-                        <source
-                          srcset="images/Home-newarr/xlarge/newarrivals3.webp"
-                          media="(min-width: 1200px)"
-                        />
-                        <source
-                        srcset="images/Home-newarr/large/newarrivals3.webp"
-                        media="(min-width: 992px)"
-                        />
-                        <img
-                          width="750"
-                          height="750"
-                          src="images/Home-newarr/xlarge/newarrivals3.webp"
-                          alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus"
-                        />
+                        <source srcset="images/Home-newarr/xlarge/newarrivals3.webp" media="(min-width: 1200px)" />
+                        <source srcset="images/Home-newarr/large/newarrivals3.webp" media="(min-width: 992px)" />
+                        <img width="750" height="750" src="images/Home-newarr/xlarge/newarrivals3.webp"
+                          alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus" />
                       </picture>
                     </a>
                     <p><a>Designer Peacock Ring | </a> <a class="new-arrival-collection-text" href="#"
@@ -308,23 +245,12 @@
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                   <div class="new-arrive-product arrive-btm   ">
-                    <a data-fancybox data-src="images/Home-newarr/newarrivals4.webp"
-                      data-caption="Trendy Wide Bangles">
+                    <a data-fancybox data-src="images/Home-newarr/newarrivals4.webp" data-caption="Trendy Wide Bangles">
                       <picture>
-                        <source
-                          srcset="images/Home-newarr/xlarge/newarrivals4.webp"
-                          media="(min-width: 1200px)"
-                        />
-                        <source
-                        srcset="images/Home-newarr/large/newarrivals4.webp"
-                        media="(min-width: 992px)"
-                        />
-                        <img
-                          width="750"
-                          height="750"
-                          src="images/Home-newarr/xlarge/newarrivals4.webp"
-                          alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus"
-                        />
+                        <source srcset="images/Home-newarr/xlarge/newarrivals4.webp" media="(min-width: 1200px)" />
+                        <source srcset="images/Home-newarr/large/newarrivals4.webp" media="(min-width: 992px)" />
+                        <img width="750" height="750" src="images/Home-newarr/xlarge/newarrivals4.webp"
+                          alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus" />
                       </picture>
                     </a>
                     <p><a>Trendy Wide Bangles | </a> <a class="new-arrival-collection-text" href="#"
@@ -337,20 +263,10 @@
                     <a data-fancybox data-src="images/Home-newarr/newarrivals5.webp"
                       data-caption="Antique Lakshmi Karas">
                       <picture>
-                        <source
-                          srcset="images/Home-newarr/xlarge/newarrivals5.webp"
-                          media="(min-width: 1200px)"
-                        />
-                        <source
-                        srcset="images/Home-newarr/large/newarrivals5.webp"
-                        media="(min-width: 992px)"
-                        />
-                        <img
-                          width="750"
-                          height="750"
-                          src="images/Home-newarr/xlarge/newarrivals5.webp"
-                          alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus"
-                        />
+                        <source srcset="images/Home-newarr/xlarge/newarrivals5.webp" media="(min-width: 1200px)" />
+                        <source srcset="images/Home-newarr/large/newarrivals5.webp" media="(min-width: 992px)" />
+                        <img width="750" height="750" src="images/Home-newarr/xlarge/newarrivals5.webp"
+                          alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus" />
                       </picture>
                     </a>
                     <p><a>Antique Lakshmi Karas | </a> <a class="new-arrival-collection-text" href="#"
@@ -360,23 +276,12 @@
 
                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                   <div class="new-arrive-product arrive-btm   ">
-                    <a data-fancybox data-src="images/Home-newarr/newarrivals6.webp"
-                      data-caption="Temple Kasu Karas">
+                    <a data-fancybox data-src="images/Home-newarr/newarrivals6.webp" data-caption="Temple Kasu Karas">
                       <picture>
-                        <source
-                          srcset="images/Home-newarr/xlarge/newarrivals6.webp"
-                          media="(min-width: 1200px)"
-                        />
-                        <source
-                        srcset="images/Home-newarr/large/newarrivals6.webp"
-                        media="(min-width: 992px)"
-                        />
-                        <img
-                          width="750"
-                          height="750"
-                          src="images/Home-newarr/xlarge/newarrivals6.webp"
-                          alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus"
-                        />
+                        <source srcset="images/Home-newarr/xlarge/newarrivals6.webp" media="(min-width: 1200px)" />
+                        <source srcset="images/Home-newarr/large/newarrivals6.webp" media="(min-width: 992px)" />
+                        <img width="750" height="750" src="images/Home-newarr/xlarge/newarrivals6.webp"
+                          alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus" />
                       </picture>
                     </a>
                     <p><a>Temple Kasu Karas | </a> <a class="new-arrival-collection-text" href="#"
@@ -411,20 +316,10 @@
                       <a data-fancybox data-src="images/gold-jewelry/gold_square.webp"
                         data-caption="Gents and Ladies Matching Band">
                         <picture>
-                          <source
-                            srcset="images/gold-jewelry/xlarge/gold_square.webp"
-                            media="(min-width: 1200px)"
-                          />
-                          <source
-                          srcset="images/gold-jewelry/large/gold_square.webp"
-                          media="(min-width: 992px)"
-                          />
-                          <img
-                            width="500"
-                            height="500"
-                            src="images/gold-jewelry/xlarge/gold_square.webp"
-                            alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus"
-                          />
+                          <source srcset="images/gold-jewelry/xlarge/gold_square.webp" media="(min-width: 1200px)" />
+                          <source srcset="images/gold-jewelry/large/gold_square.webp" media="(min-width: 992px)" />
+                          <img width="500" height="500" src="images/gold-jewelry/xlarge/gold_square.webp"
+                            alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus" />
                         </picture>
                       </a>
                     </div>
@@ -437,20 +332,10 @@
                     <div class="card-body">
                       <a data-fancybox data-src="images/gold-jewelry/gold_square.webp" data-caption="Gulab Karas">
                         <picture>
-                          <source
-                            srcset="images/gold-jewelry/xlarge/gold_square.webp"
-                            media="(min-width: 1200px)"
-                          />
-                          <source
-                          srcset="images/gold-jewelry/large/gold_square.webp"
-                          media="(min-width: 992px)"
-                          />
-                          <img
-                            width="500"
-                            height="500"
-                            src="images/gold-jewelry/xlarge/gold_square.webp"
-                            alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus"
-                          />
+                          <source srcset="images/gold-jewelry/xlarge/gold_square.webp" media="(min-width: 1200px)" />
+                          <source srcset="images/gold-jewelry/large/gold_square.webp" media="(min-width: 992px)" />
+                          <img width="500" height="500" src="images/gold-jewelry/xlarge/gold_square.webp"
+                            alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus" />
                         </picture>
                       </a>
                     </div>
@@ -461,22 +346,13 @@
                 <div class="container-cell">
                   <div class="card">
                     <div class="card-body">
-                      <a data-fancybox data-src="images/gold-jewelry/gold_square.webp" data-caption="Ladies Meena Karas">
+                      <a data-fancybox data-src="images/gold-jewelry/gold_square.webp"
+                        data-caption="Ladies Meena Karas">
                         <picture>
-                          <source
-                            srcset="images/gold-jewelry/xlarge/gold_square.webp"
-                            media="(min-width: 1200px)"
-                          />
-                          <source
-                          srcset="images/gold-jewelry/large/gold_square.webp"
-                          media="(min-width: 992px)"
-                          />
-                          <img
-                            width="500"
-                            height="500"
-                            src="images/gold-jewelry/xlarge/gold_square.webp"
-                            alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus"
-                          />
+                          <source srcset="images/gold-jewelry/xlarge/gold_square.webp" media="(min-width: 1200px)" />
+                          <source srcset="images/gold-jewelry/large/gold_square.webp" media="(min-width: 992px)" />
+                          <img width="500" height="500" src="images/gold-jewelry/xlarge/gold_square.webp"
+                            alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus" />
                         </picture>
                       </a>
                     </div>
@@ -487,22 +363,13 @@
                 <div class="container-cell">
                   <div class="card">
                     <div class="card-body">
-                      <a data-fancybox data-src="images/gold-jewelry/gold_square.webp" data-caption="Pearl Necklace Set">
+                      <a data-fancybox data-src="images/gold-jewelry/gold_square.webp"
+                        data-caption="Pearl Necklace Set">
                         <picture>
-                          <source
-                            srcset="images/gold-jewelry/xlarge/gold_square.webp"
-                            media="(min-width: 1200px)"
-                          />
-                          <source
-                          srcset="images/gold-jewelry/large/gold_square.webp"
-                          media="(min-width: 992px)"
-                          />
-                          <img
-                            width="500"
-                            height="500"
-                            src="images/gold-jewelry/xlarge/gold_square.webp"
-                            alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus"
-                          />
+                          <source srcset="images/gold-jewelry/xlarge/gold_square.webp" media="(min-width: 1200px)" />
+                          <source srcset="images/gold-jewelry/large/gold_square.webp" media="(min-width: 992px)" />
+                          <img width="500" height="500" src="images/gold-jewelry/xlarge/gold_square.webp"
+                            alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus" />
                         </picture>
                       </a>
                     </div>
@@ -516,20 +383,10 @@
                       <a data-fancybox data-src="images/gold-jewelry/gold_square.webp"
                         data-caption="Handemade Filigree Karas">
                         <picture>
-                          <source
-                            srcset="images/gold-jewelry/xlarge/gold_square.webp"
-                            media="(min-width: 1200px)"
-                          />
-                          <source
-                          srcset="images/gold-jewelry/large/gold_square.webp"
-                          media="(min-width: 992px)"
-                          />
-                          <img
-                            width="500"
-                            height="500"
-                            src="images/gold-jewelry/xlarge/gold_square.webp"
-                            alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus"
-                          />
+                          <source srcset="images/gold-jewelry/xlarge/gold_square.webp" media="(min-width: 1200px)" />
+                          <source srcset="images/gold-jewelry/large/gold_square.webp" media="(min-width: 992px)" />
+                          <img width="500" height="500" src="images/gold-jewelry/xlarge/gold_square.webp"
+                            alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus" />
                         </picture>
                       </a>
                     </div>
@@ -542,20 +399,10 @@
                     <div class="card-body">
                       <a data-fancybox data-src="images/gold-jewelry/gold_square.webp" data-caption="Mens Kara">
                         <picture>
-                          <source
-                            srcset="images/gold-jewelry/xlarge/gold_square.webp"
-                            media="(min-width: 1200px)"
-                          />
-                          <source
-                          srcset="images/gold-jewelry/large/gold_square.webp"
-                          media="(min-width: 992px)"
-                          />
-                          <img
-                            width="500"
-                            height="500"
-                            src="images/gold-jewelry/xlarge/gold_square.webp"
-                            alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus"
-                          />
+                          <source srcset="images/gold-jewelry/xlarge/gold_square.webp" media="(min-width: 1200px)" />
+                          <source srcset="images/gold-jewelry/large/gold_square.webp" media="(min-width: 992px)" />
+                          <img width="500" height="500" src="images/gold-jewelry/xlarge/gold_square.webp"
+                            alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus" />
                         </picture>
                       </a>
                     </div>
@@ -589,20 +436,10 @@
                 <div class="container-cell">
                   <a data-fancybox="diamond-gallery" data-src="images/dim3.webp" data-caption="3 in 1 Chandbali Jhumka">
                     <picture>
-                      <source
-                        srcset="images/xlarge/dim3.webp"
-                        media="(min-width: 1200px)"
-                      />
-                      <source
-                      srcset="images/large/dim3.webp"
-                      media="(min-width: 992px)"
-                      />
-                      <img
-                        width="100"
-                        height="667"
-                        src="images/xlarge/dim3.webp"
-                        alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus"
-                      />
+                      <source srcset="images/xlarge/dim3.webp" media="(min-width: 1200px)" />
+                      <source srcset="images/large/dim3.webp" media="(min-width: 992px)" />
+                      <img width="100" height="667" src="images/xlarge/dim3.webp"
+                        alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus" />
                     </picture>
                   </a>
                   <p>3 in 1 Chandbali Jhumka</p>
@@ -612,20 +449,10 @@
                   <a data-fancybox="diamond-gallery" data-src="images/dim4.webp"
                     data-caption="Elegant Hanging Earrings">
                     <picture>
-                      <source
-                        srcset="images/xlarge/dim4.webp"
-                        media="(min-width: 1200px)"
-                      />
-                      <source
-                      srcset="images/large/dim4.webp"
-                      media="(min-width: 992px)"
-                      />
-                      <img
-                        width="100"
-                        height="667"
-                        src="images/xlarge/dim4.webp"
-                        alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus"
-                      />
+                      <source srcset="images/xlarge/dim4.webp" media="(min-width: 1200px)" />
+                      <source srcset="images/large/dim4.webp" media="(min-width: 992px)" />
+                      <img width="100" height="667" src="images/xlarge/dim4.webp"
+                        alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus" />
                     </picture>
                   </a>
                   <p>Elegant Hanging Earrings</p>
@@ -635,20 +462,10 @@
                   <a data-fancybox="diamond-gallery" data-src="images/dim5.webp"
                     data-caption="Multi Layer Diamond Necklace">
                     <picture>
-                      <source
-                        srcset="images/xlarge/dim5.webp"
-                        media="(min-width: 1200px)"
-                      />
-                      <source
-                      srcset="images/large/dim5.webp"
-                      media="(min-width: 992px)"
-                      />
-                      <img
-                        width="100"
-                        height="667"
-                        src="images/xlarge/dim5.webp"
-                        alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus"
-                      />
+                      <source srcset="images/xlarge/dim5.webp" media="(min-width: 1200px)" />
+                      <source srcset="images/large/dim5.webp" media="(min-width: 992px)" />
+                      <img width="100" height="667" src="images/xlarge/dim5.webp"
+                        alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus" />
                     </picture>
                   </a>
                   <p>Multi Layer Diamond Necklace</p>
@@ -662,36 +479,24 @@
 
                 <div class="col-lg-4 col-sm-12">
                   <a data-fancybox data-src="images/dim6.webp" data-caption="Solitaire Diamond Ring">
-                    <img 
-                      src="images/dim6.webp" 
-                      width="525" 
-                      height="700"
-                      alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus"
-                    />
+                    <img src="images/dim6.webp" width="525" height="700"
+                      alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus" />
                   </a>
                   <p>Solitaire Diamond Ring</p>
                 </div>
 
                 <div class="col-lg-4 col-sm-12">
                   <a data-fancybox data-src="images/dim7.webp" data-caption="Colorful Wedding Bands">
-                    <img 
-                    src="images/dim7.webp" 
-                    width="525" 
-                    height="700"
-                    alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus"
-                  />
+                    <img src="images/dim7.webp" width="525" height="700"
+                      alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus" />
                   </a>
                   <p>Colorful Wedding Bands</p>
                 </div>
 
                 <div class="col-lg-4 col-sm-12">
                   <a data-fancybox data-src="images/dim8.webp" data-caption="Rose and White Cocktail Ring">
-                    <img 
-                    src="images/dim8.webp" 
-                    width="525" 
-                    height="700"
-                    alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus"
-                  />
+                    <img src="images/dim8.webp" width="525" height="700"
+                      alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus" />
                   </a>
                   <p>Rose and White Cocktail Ring</p>
                 </div>
@@ -700,36 +505,24 @@
 
                 <div class="col-lg-4 col-sm-12">
                   <a data-fancybox data-src="images/dim6.webp" data-caption="Twist Halo Solitaire">
-                    <img 
-                    src="images/dim6.webp" 
-                    width="525" 
-                    height="700"
-                    alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus"
-                  />
+                    <img src="images/dim6.webp" width="525" height="700"
+                      alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus" />
                   </a>
                   <p>Twist Halo Solitaire</p>
                 </div>
 
                 <div class="col-lg-4 col-sm-12">
                   <a data-fancybox data-src="images/dim7.webp" data-caption="Twist Halo Solitaire">
-                    <img 
-                    src="images/dim7.webp" 
-                    width="525" 
-                    height="700"
-                    alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus"
-                  />
+                    <img src="images/dim7.webp" width="525" height="700"
+                      alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus" />
                   </a>
                   <p>Twist Halo Solitaire</p>
                 </div>
 
                 <div class="col-lg-4 col-sm-12">
                   <a data-fancybox data-src="images/dim7.webp" data-caption="Designer Trendy Necklace">
-                    <img 
-                    src="images/dim8.webp" 
-                    width="525" 
-                    height="700"
-                    alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus"
-                  />
+                    <img src="images/dim8.webp" width="525" height="700"
+                      alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus" />
                   </a>
                   <p>Designer Trendy Necklace</p>
                 </div>
@@ -769,56 +562,26 @@
           </div>
           <div class="col-sm-3">
             <picture>
-              <source
-                srcset="images/xlarge/gembangles1.webp"
-                media="(min-width: 1200px)"
-              />
-              <source
-              srcset="images/large/gembangles1.webp"
-              media="(min-width: 992px)"
-              />
-              <img
-                width="600"
-                height="600"
-                src="images/xlarge/gembangles1.webp"
-                alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus"
-              />
+              <source srcset="images/xlarge/gembangles1.webp" media="(min-width: 1200px)" />
+              <source srcset="images/large/gembangles1.webp" media="(min-width: 992px)" />
+              <img width="600" height="600" src="images/xlarge/gembangles1.webp"
+                alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus" />
             </picture>
           </div>
           <div class="col-sm-3">
             <picture>
-              <source
-                srcset="images/xlarge/gembangles2.webp"
-                media="(min-width: 1200px)"
-              />
-              <source
-              srcset="images/large/gembangles2.webp"
-              media="(min-width: 992px)"
-              />
-              <img
-                width="600"
-                height="600"
-                src="images/xlarge/gembangles2.webp"
-                alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus"
-              />
+              <source srcset="images/xlarge/gembangles2.webp" media="(min-width: 1200px)" />
+              <source srcset="images/large/gembangles2.webp" media="(min-width: 992px)" />
+              <img width="600" height="600" src="images/xlarge/gembangles2.webp"
+                alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus" />
             </picture>
           </div>
           <div class="col-sm-3">
             <picture>
-              <source
-                srcset="images/xlarge/gemnecklace1.webp"
-                media="(min-width: 1200px)"
-              />
-              <source
-              srcset="images/large/gemnecklace1.webp"
-              media="(min-width: 992px)"
-              />
-              <img
-                width="600"
-                height="600"
-                src="images/xlarge/gemnecklace1.webp"
-                alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus"
-              />
+              <source srcset="images/xlarge/gemnecklace1.webp" media="(min-width: 1200px)" />
+              <source srcset="images/large/gemnecklace1.webp" media="(min-width: 992px)" />
+              <img width="600" height="600" src="images/xlarge/gemnecklace1.webp"
+                alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus" />
             </picture>
           </div>
         </div>
@@ -828,56 +591,26 @@
         <div class="row collections-row-text-right" id="antique-collection-section">
           <div class="col-sm-3">
             <picture>
-              <source
-                srcset="images/xlarge/antiquebracelet1.webp"
-                media="(min-width: 1200px)"
-              />
-              <source
-              srcset="images/large/antiquebracelet1.webp"
-              media="(min-width: 992px)"
-              />
-              <img
-                width="600"
-                height="600"
-                src="images/xlarge/antiquebracelet1.webp"
-                alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus"
-              />
+              <source srcset="images/xlarge/antiquebracelet1.webp" media="(min-width: 1200px)" />
+              <source srcset="images/large/antiquebracelet1.webp" media="(min-width: 992px)" />
+              <img width="600" height="600" src="images/xlarge/antiquebracelet1.webp"
+                alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus" />
             </picture>
           </div>
           <div class="col-sm-3">
             <picture>
-              <source
-                srcset="images/xlarge/antiquebracelet2.webp"
-                media="(min-width: 1200px)"
-              />
-              <source
-              srcset="images/large/antiquebracelet2.webp"
-              media="(min-width: 992px)"
-              />
-              <img
-                width="600"
-                height="600"
-                src="images/xlarge/antiquebracelet2.webp"
-                alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus"
-              />
+              <source srcset="images/xlarge/antiquebracelet2.webp" media="(min-width: 1200px)" />
+              <source srcset="images/large/antiquebracelet2.webp" media="(min-width: 992px)" />
+              <img width="600" height="600" src="images/xlarge/antiquebracelet2.webp"
+                alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus" />
             </picture>
           </div>
           <div class="col-sm-3">
             <picture>
-              <source
-                srcset="images/xlarge/antiquebracelet3.webp"
-                media="(min-width: 1200px)"
-              />
-              <source
-              srcset="images/large/antiquebracelet3.webp"
-              media="(min-width: 992px)"
-              />
-              <img
-                width="600"
-                height="600"
-                src="images/xlarge/antiquebracelet3.webp"
-                alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus"
-              />
+              <source srcset="images/xlarge/antiquebracelet3.webp" media="(min-width: 1200px)" />
+              <source srcset="images/large/antiquebracelet3.webp" media="(min-width: 992px)" />
+              <img width="600" height="600" src="images/xlarge/antiquebracelet3.webp"
+                alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus" />
             </picture>
           </div>
           <div class="collections-section-text col-sm-3">
@@ -909,56 +642,26 @@
           </div>
           <div class="col-sm-3">
             <picture>
-              <source
-                srcset="images/xlarge/mangalsutra1.webp"
-                media="(min-width: 1200px)"
-              />
-              <source
-              srcset="images/large/mangalsutra1.webp"
-              media="(min-width: 992px)"
-              />
-              <img
-                width="600"
-                height="600"
-                src="images/xlarge/mangalsutra1.webp"
-                alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus"
-              />
+              <source srcset="images/xlarge/mangalsutra1.webp" media="(min-width: 1200px)" />
+              <source srcset="images/large/mangalsutra1.webp" media="(min-width: 992px)" />
+              <img width="600" height="600" src="images/xlarge/mangalsutra1.webp"
+                alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus" />
             </picture>
           </div>
           <div class="col-sm-3">
             <picture>
-              <source
-                srcset="images/xlarge/mangalsutra1.webp"
-                media="(min-width: 1200px)"
-              />
-              <source
-              srcset="images/large/mangalsutra1.webp"
-              media="(min-width: 992px)"
-              />
-              <img
-                width="600"
-                height="600"
-                src="images/xlarge/mangalsutra1.webp"
-                alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus"
-              />
+              <source srcset="images/xlarge/mangalsutra1.webp" media="(min-width: 1200px)" />
+              <source srcset="images/large/mangalsutra1.webp" media="(min-width: 992px)" />
+              <img width="600" height="600" src="images/xlarge/mangalsutra1.webp"
+                alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus" />
             </picture>
           </div>
           <div class="col-sm-3">
             <picture>
-              <source
-                srcset="images/xlarge/mangalsutra1.webp"
-                media="(min-width: 1200px)"
-              />
-              <source
-              srcset="images/large/mangalsutra1.webp"
-              media="(min-width: 992px)"
-              />
-              <img
-                width="600"
-                height="600"
-                src="images/xlarge/mangalsutra1.webp"
-                alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus"
-              />
+              <source srcset="images/xlarge/mangalsutra1.webp" media="(min-width: 1200px)" />
+              <source srcset="images/large/mangalsutra1.webp" media="(min-width: 992px)" />
+              <img width="600" height="600" src="images/xlarge/mangalsutra1.webp"
+                alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus" />
             </picture>
           </div>
         </div>
@@ -968,56 +671,26 @@
         <div class="row collections-row-text-right" id="engagement-collection-section">
           <div class="col-sm-3">
             <picture>
-              <source
-                srcset="images/xlarge/engag.webp"
-                media="(min-width: 1200px)"
-              />
-              <source
-              srcset="images/large/engag.webp"
-              media="(min-width: 992px)"
-              />
-              <img
-                width="600"
-                height="400"
-                src="images/xlarge/engag.webp"
-                alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus"
-              />
+              <source srcset="images/xlarge/engag.webp" media="(min-width: 1200px)" />
+              <source srcset="images/large/engag.webp" media="(min-width: 992px)" />
+              <img width="600" height="400" src="images/xlarge/engag.webp"
+                alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus" />
             </picture>
           </div>
           <div class="col-sm-3">
             <picture>
-              <source
-                srcset="images/xlarge/engag.webp"
-                media="(min-width: 1200px)"
-              />
-              <source
-              srcset="images/large/engag.webp"
-              media="(min-width: 992px)"
-              />
-              <img
-                width="600"
-                height="400"
-                src="images/xlarge/engag.webp"
-                alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus"
-              />
+              <source srcset="images/xlarge/engag.webp" media="(min-width: 1200px)" />
+              <source srcset="images/large/engag.webp" media="(min-width: 992px)" />
+              <img width="600" height="400" src="images/xlarge/engag.webp"
+                alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus" />
             </picture>
           </div>
           <div class="col-sm-3">
             <picture>
-              <source
-                srcset="images/xlarge/engag.webp"
-                media="(min-width: 1200px)"
-              />
-              <source
-              srcset="images/large/engag.webp"
-              media="(min-width: 992px)"
-              />
-              <img
-                width="600"
-                height="400"
-                src="images/xlarge/engag.webp"
-                alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus"
-              />
+              <source srcset="images/xlarge/engag.webp" media="(min-width: 1200px)" />
+              <source srcset="images/large/engag.webp" media="(min-width: 992px)" />
+              <img width="600" height="400" src="images/xlarge/engag.webp"
+                alt="Describe picture literally in short and then add about how clicking it will open lightbox to view higher res version in focus" />
             </picture>
           </div>
           <div class="collections-section-text col-sm-3">
@@ -1110,12 +783,7 @@
     <h3> REACH OUT </h3>
 
     <div class="image-separator">
-      <img 
-        src="images/test-divider-5.png" 
-        width="410" 
-        height="100"
-        alt="divider"
-        >
+      <img src="images/test-divider-5.png" width="410" height="100" alt="divider">
     </div>
 
     <div class="container">
@@ -1124,17 +792,17 @@
           <p><a href="tel:781-229-9170"><i class="fa fa-phone"></i> Talk To Us <br> 781-229-9170</a></p>
         </div>
         <div class="col-sm-3">
-          <p><i class="bi bi-clock-fill"></i> 
-            Our Hours <br> 
+          <p><i class="bi bi-clock-fill"></i>
+            Our Hours <br>
             Tue-Sat 11:30AM - 07:00PM<br>
-            Sun 12:00PM - 06:00PM<br> 
+            Sun 12:00PM - 06:00PM<br>
             Monday: Closed</p>
         </div>
         <div class="col-sm-3">
-          <p> 
+          <p>
             <a href="https://goo.gl/maps/SpqAM3tbYXB2t5BdA" target="_blank" rel="noopener noreferrer">
-            <i class="bi bi-pin-map-fill"></i> Find Us <br> 
-            85 Wilmington Road <br> Burlington, MA 01803
+              <i class="bi bi-pin-map-fill"></i> Find Us <br>
+              85 Wilmington Road <br> Burlington, MA 01803
             </a>
           </p>
         </div>
@@ -1148,7 +816,7 @@
         </div>
       </div>
     </div>
- 
+
 
   </section>
 
@@ -1269,25 +937,25 @@
 
   <script>
     jQuery.event.special.touchstart = {
-    setup: function( _, ns, handle ) {
+      setup: function (_, ns, handle) {
         this.addEventListener("touchstart", handle, { passive: !ns.includes("noPreventDefault") });
-    }
-};
-jQuery.event.special.touchmove = {
-    setup: function( _, ns, handle ) {
+      }
+    };
+    jQuery.event.special.touchmove = {
+      setup: function (_, ns, handle) {
         this.addEventListener("touchmove", handle, { passive: !ns.includes("noPreventDefault") });
-    }
-};
-jQuery.event.special.wheel = {
-    setup: function( _, ns, handle ){
+      }
+    };
+    jQuery.event.special.wheel = {
+      setup: function (_, ns, handle) {
         this.addEventListener("wheel", handle, { passive: true });
-    }
-};
-jQuery.event.special.mousewheel = {
-    setup: function( _, ns, handle ){
+      }
+    };
+    jQuery.event.special.mousewheel = {
+      setup: function (_, ns, handle) {
         this.addEventListener("mousewheel", handle, { passive: true });
-    }
-};
+      }
+    };
   </script>
 
   <script>
@@ -1324,71 +992,71 @@ jQuery.event.special.mousewheel = {
     });
   </script>
 
-<script>
+  <script>
 
-  $.ready(function () {
-    $('a[href*=#]').bind('click', function (e) {
-      e.preventDefault(); // prevent hard jump, the default behavior
+    $.ready(function () {
+      $('a[href*=#]').bind('click', function (e) {
+        e.preventDefault(); // prevent hard jump, the default behavior
 
-      var target = $(this).attr("href"); // Set the target as variable
+        var target = $(this).attr("href"); // Set the target as variable
 
-      $('html, body').stop().animate({
-        scrollTop: $(target).offset().top
-      }, 600, function () {
-        location.hash = target; //attach the hash (#jumptarget) to the pageurl
+        $('html, body').stop().animate({
+          scrollTop: $(target).offset().top
+        }, 600, function () {
+          location.hash = target; //attach the hash (#jumptarget) to the pageurl
+        });
+        return false;
       });
-      return false;
     });
-  });
 
-  $(window).scroll(function () {
+    $(window).scroll(function () {
 
-    var scrollDistance = $(window).scrollTop();
+      var scrollDistance = $(window).scrollTop();
 
-    $('.page-section').each(function (i) {
-      if ($(this).position().top <= scrollDistance) {
-        $('.navigation a.active').removeClass('active');
-        $('.navigation a').eq(i).addClass('active');
+      $('.page-section').each(function (i) {
+        if ($(this).position().top <= scrollDistance) {
+          $('.navigation a.active').removeClass('active');
+          $('.navigation a').eq(i).addClass('active');
+        }
+      });
+    }).scroll();
+
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("main").style.left = "250px";
+      document.getElementById("main").style.position = "relative";
+      document.addEventListener("click", closeNavOnClick);
+    }
+
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.left = "0";
+      document.getElementById("main").style.position = "relative";
+    }
+
+    function closeNavOnClick(event) {
+      if (!event.target.closest('.sidebar') && !event.target.closest('.openbtn')) {
+        closeNav();
+      }
+    }
+
+    $(document).mouseup(function (e) {
+      var container = $('#mySidebar');
+      if (container.is(e.target) && container.has(e.target).length === 0) {
+        closeNav();
       }
     });
-  }).scroll();
 
-  function openNav() {
-    document.getElementById("mySidebar").style.width = "250px";
-    document.getElementById("main").style.left = "250px";
-    document.getElementById("main").style.position = "relative";
-    document.addEventListener("click", closeNavOnClick);
-  }
+    function onClick() {
 
-  function closeNav() {
-    document.getElementById("mySidebar").style.width = "0";
-    document.getElementById("main").style.left = "0";
-    document.getElementById("main").style.position = "relative";
-  }
+      document.getElementById("drop").style.width = "250px";
 
-  function closeNavOnClick(event) {
-    if (!event.target.closest('.sidebar') && !event.target.closest('.openbtn')) {
-      closeNav();
+      document.getElementById("trigger1").style.marginTop = "50px";
+
+      document.getElementById("trigger1").style.position = "relative";
+
     }
-  }
-
-  $(document).mouseup(function (e) {
-    var container = $('#mySidebar');
-    if (container.is(e.target) && container.has(e.target).length === 0) {
-      closeNav();
-    }
-  });
-
-  function onClick() {
-
-    document.getElementById("drop").style.width = "250px";
-
-    document.getElementById("trigger1").style.marginTop = "50px";
-
-    document.getElementById("trigger1").style.position = "relative";
-
-  }
-</script>
+  </script>
 
   <script>
     function subscribe() {
@@ -1512,7 +1180,9 @@ jQuery.event.special.mousewheel = {
       $(".flickity-container-gold").flickity({
         wrapAround: true,
         'autoPlay': 'true',
-        pauseAutoPlayOnHover: false
+        pauseAutoPlayOnHover: false,
+        selectedAttraction: 0.0075,
+        friction: 0.2
       });
       $(".flickity-container-banner").flickity({
         'fade': true,
@@ -1520,7 +1190,8 @@ jQuery.event.special.mousewheel = {
         friction: 0.35,
         pageDots: false,
         'autoPlay': 4000,
-        pauseAutoPlayOnHover: false
+        pauseAutoPlayOnHover: false,
+        arrowShape: "M95,48H9.83L41,16.86A2,2,0,0,0,38.14,14L3.59,48.58a1.79,1.79,0,0,0-.25.31,1.19,1.19,0,0,0-.09.15l-.1.2-.06.2a.84.84,0,0,0,0,.17,2,2,0,0,0,0,.78.84.84,0,0,0,0,.17l.06.2.1.2a1.19,1.19,0,0,0,.09.15,1.79,1.79,0,0,0,.25.31L38.14,86A2,2,0,0,0,41,86a2,2,0,0,0,0-2.83L9.83,52H95a2,2,0,0,0,0-4Z"
       });
       $(".flickity-container-diamond").flickity({
         wrapAround: true,
