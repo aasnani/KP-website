@@ -2330,7 +2330,7 @@ TV and Extra Large Screens – 1201px and more
     #engagementpage,
     #templepage,
     #rhodiumpage {
-        /* padding-top: 85px; */
+        padding-top: 60px;
     }
 
     .navbar .navbar-nav .nav-item .nav-link:not(#dropdownMenuButton) {
