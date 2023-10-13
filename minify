@@ -1,1 +1,0 @@
-css-minify -f css/my-styles.css -o css/
