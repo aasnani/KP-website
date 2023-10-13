@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "NODE_ENV=dev LOG_LEVEL=debug nodemon server.cjs",
     "prod": "NODE_ENV=prod LOG_LEVEL=info node server.cjs",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "minify-css": "css-minify -f css/my-styles.css -o css/"
   },
   "repository": {
     "type": "git",
