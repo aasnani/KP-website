@@ -122,11 +122,12 @@ a {
 #mainNav {
     text-align: center !important;
     vertical-align: middle !important;
-    background: rgb(255, 255, 255);
-    box-shadow: 0 10px 10px rgb(0 0 0 / 10%);
+    background: #ffffff;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 0;
+    padding-top: 0;
 }
 
 /* Main styles for each link in navbar */
@@ -134,28 +135,26 @@ a {
     padding: .75em 0;
 }
 
-/* Colors the text of each nav link after hovering or clicked, currently overriden by !important */
-#mainNav .navbar-nav .nav-item .nav-link.active,
-#mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: rgb(167 99 5);
-}
-
 /* Hovering over any link in the navbar text color and boldness animation */
 #mainNav .navbar-nav .nav-item .nav-link.active,
 #mainNav .navbar-nav .nav-item .nav-link:hover,
 .nav-link-force-hover {
-    color: #704a57 !important;
-    text-shadow: 0 0 0.35px #704a57;
-    transition: all 200ms ease-in;
+    color: #704a57;
+    text-shadow: #704a57;
+    text-shadow: 0 0 0.75px #704a57;
+    /* color: #704a57 !important; */
+    /* text-shadow: 0 0 0.35px #704a57; */
+    transition: all 50ms ease-in;
 }
 
 /* Style for each link in collections dropdown */
 #mainNav .navbar-nav .nav-item .nav-link,
 .dropdown-item {
-    color: inherit;
-    font-size: 1.1rem;
+    color: black;
+    font-size: 1rem;
     letter-spacing: 0.5px;
     text-transform: capitalize;
+    position: relative;
 }
 
 /* Keeps the navbar elements center aligned and in the centre of the viewport. Only links and not brand */
@@ -168,40 +167,9 @@ a {
 
 /* Applies to both the top navbar and the navbar with all the links, color and is padded enough to look seamless between it and rest of page */
 #navbar-row {
-    background-color: rgb(255, 255, 255);
+    background-color: transparent;
     padding-bottom: 5px;
     width: 100%;
-}
-
-/* Just to the top section of navbar for phone no., insta and address, gives the right height and takes width */
-#top-navbar {
-    width: 100%;
-    height: 28px;
-    padding: 0;
-}
-
-/* Hovering over each link in the top section of navbar color transition */
-#top-navbar a:hover {
-    color: indianred !important;
-    transition: all 100ms ease-in-out;
-    text-decoration: none;
-}
-
-/* div present in the top navbar, keeps the links aligned to the right, bg color and slightly off the right end */
-#top-navbar div {
-    padding-right: 0.5rem;
-    text-align: right;
-    background-color: #36384d;
-}
-
-/* Text element styling in top nav */
-#top-navbar p {
-    display: inline;
-    border-left: solid;
-    padding-left: 5px;
-    font-variant-numeric: lining-nums;
-    letter-spacing: 0.5px;
-    color: #e4bab4 !important;
 }
 
 .navbar-collapse {
@@ -219,11 +187,12 @@ a {
     -ms-transition: all 200ms ease-in;
     -o-transition: all 200ms ease-in;
     transition: all 200ms ease-in;
-    border-radius: 5px;
+    border-radius: 2.5px;
     font-size: 1rem;
     border: none;
     box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.3);
     margin-top: 0px;
+    padding: .5rem;
 }
 
 /* Styles for dropdown collection menu and hovering. Lets it be visible after hovering over the link */
@@ -251,7 +220,7 @@ a {
 
 /* Each link in the dropdown style */
 .dropdown-item {
-    font-size: 1.1rem;
+    /* font-size: 1.1rem; */
     letter-spacing: 0.5px;
 }
 
@@ -262,7 +231,51 @@ a {
     text-shadow: 0 0 0.35px #704a57;
     transition: all 50ms ease-in;
     text-decoration: none;
-    background-color: rgb(230, 229, 229);
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+#mainNav .navbar-nav .nav-item .nav-link:not(#dropdownMenuButton)::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #704a57cc;
+    width: 0%;
+    content: "";
+    height: 2px;
+    transition: all 300ms ease;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link:not(#dropdownMenuButton):not(#kp-logo):hover::after {
+    width: 90%;
+}
+
+#mainNav .active-item {
+    color: #704a57 !important;
+    text-shadow: 0 0 0.75px #704a57;
+}
+
+#mainNav .active-item::after {
+    width: 100% !important;
+}
+
+.navbar .navbar-nav .nav-item .nav-link:not(#dropdownMenuButton),
+.dropdo {
+    position: relative;
+}
+
+#mainNav {}
+
+#mainNav .navbar-brand {
+    font-size: 1.75em;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+#mainNav span a:hover {
+    color: #69a4c4;
+    cursor: pointer;
 }
 
 /*#endregion*/
@@ -313,7 +326,52 @@ footer {
 footer .footer-row:not(:last-child) {
     margin-bottom: 15px;
     padding-bottom: 15px;
+
     border-bottom: solid 1px rgba(0, 0, 0, 0.4);
+}
+
+footer .footer-new-row {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.4);
+}
+
+footer .footer-col {
+    letter-spacing: 0.5px;
+}
+
+footer .footer-contact-col a {
+    color: black;
+}
+
+footer .footer-contact-col a:hover {
+    color: rgb(203, 127, 127)
+}
+
+footer .footer-contact-col i {
+    padding-right: 0.5rem;
+}
+
+footer .footer-address {
+    display: inline-flex;
+}
+
+footer .footer-contact-col div {
+    padding-bottom: 0.5rem;
+}
+
+footer .footer-col-color:nth-child(odd) {
+    background-color: rgb(253, 236, 219);
+}
+
+footer .footer-col p {
+    font-weight: bold;
+    margin-bottom: 0.6rem;
+}
+
+footer .footer-col ul {
+    list-style: none;
+    padding: 0;
 }
 
 footer .footer-row ul {
@@ -359,12 +417,25 @@ footer .footer-row #symbol {
     font-size: 20px;
 }
 
+footer .special-col {
+    width: auto !important;
+    max-width: fit-content !important;
+}
+
+footer #extended-footer-homepage-only h1 {
+    font-size: 2rem;
+}
+
+footer #extended-footer-homepage-only h2 {
+    font-size: 1.5rem;
+}
+
 footer #extended-footer-homepage-only {
     text-align: center;
     padding-top: 2rem;
 }
 
-footer #extended-footer-homepage-only h3,
+footer #extended-footer-homepage-only h2,
 footer #extended-footer-homepage-only #footer-brand-name {
     padding-top: 1.5rem;
     letter-spacing: 1px;
@@ -384,6 +455,25 @@ footer #extended-footer-homepage-only p {
 /*#endregion*/
 
 /*#region HOME PAGE */
+#landing-section {
+    padding-bottom: 45px;
+}
+
+.flickity-container-banner {
+    max-width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.flickity-container-banner .flickity-page-dots {
+    bottom: 1rem;
+}
+
+.flickity-container-banner .flickity-page-dots .dot {
+    outline: 1px solid white;
+    outline-offset: 0.25rem;
+    background: white;
+}
 
 /* Section headers like new arrivals, gold, etc.. at top of every section */
 .section-headers {
@@ -407,22 +497,53 @@ footer #extended-footer-homepage-only p {
     background-color: white !important;
 }
 
+#gold #images .images-row:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+#gold #images .text-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#gold #images .text-col p {
+    font-size: 1.6rem;
+}
+
 /* View more buttons at the end of each section */
-.kp-viewmore {
-    border: 2px solid black;
-    padding: 6px 15px;
-    border-radius: 5px;
-    position: relative;
-    top: 43px;
-    /* font-weight: 700; */
+.viewmore-div {
+    text-align: center;
+    margin-top: 1.25rem;
+}
+
+#diamond .kp-viewmore {
+    border: 1px solid white;
     color: black;
+    background-color: white;
+}
+
+#diamond .kp-viewmore:hover {
+    background: rgba(255, 255, 255, 0.900);
+    color: black;
+}
+
+.kp-viewmore {
+    border: 1px solid black;
+    padding: 0.35rem 0.85rem;
+    border-radius: 0.15rem;
+    /* position: relative; */
+    /* top: 43px; */
+    /* font-weight: 700; */
+    color: white;
+    background: black;
     transition: all .2s ease-in-out;
-    font-size: max(0.75vw, 1rem);
+    font-size: 1.25rem;
 }
 
 /* View more buttons, hover effect, at the end of each section */
 .kp-viewmore:hover {
-    background: black;
+    background: rgba(0, 0, 0, 0.771);
     color: #fff;
     text-decoration: none;
 }
@@ -437,17 +558,18 @@ footer #extended-footer-homepage-only p {
 }
 
 #new-arr-container {
-    max-width: 85%;
+    max-width: 90%;
 }
 
 #new-arr .cover-div {
-    background-color: #f0f5fb;
-    padding: 1.2rem 1rem 0rem;
+    background-color: #e3eef4;
+    padding: 1.5rem 1.2rem 0.2rem;
+    border-radius: 0.2rem;
 }
 
 /* In new arrivals section, each product has collection associated */
 .new-arrival-collection-text {
-    color: goldenrod;
+    color: #ca853b;
 }
 
 /* Bottom row of new arrivals on homepage margin from top row */
@@ -456,13 +578,37 @@ footer #extended-footer-homepage-only p {
 }
 
 /* Full horizontal section new arrivals and "contact us" */
-#contact-us {
-    background-color: aliceblue;
+#contact-us,
+#subscribe {
+    background-color: #fff7e6;
 }
 
 #new-arr img {
     width: 100%;
     height: auto;
+    border-radius: 0.15rem;
+}
+
+#new-arr-button-div {
+    margin: 1.25rem 0;
+    text-align: end;
+}
+
+#new-arr-button {
+    padding: 0.5rem 1.2rem;
+    background-color: #000000cb;
+    color: white;
+    font-size: 1.5rem;
+    margin-right: calc(var(--bs-gutter-x) * .5);
+}
+
+#new-arr-button:hover i {
+    transition: all 250ms ease-in-out;
+    color: rgb(99, 152, 173);
+}
+
+#new-arr-button i {
+    padding-left: 0.75rem;
 }
 
 /* New arrival and each row in collections just to take up entire width */
@@ -470,16 +616,71 @@ footer #extended-footer-homepage-only p {
     max-width: fit-content;
 }
 
+#gold-container {
+    max-width: 90%;
+    text-align: center;
+    /* background-color: #dbe5db; */
+    padding: 1.5rem 1rem;
+}
+
+#gold .flickity-button {
+    /* top: 40%; */
+}
+
 /* Text on gold flickity carousel */
-#gold p {
-    font-size: 1.1rem;
+#gold .card p {
+    font-size: 1.2rem;
     /* text-shadow: 0 0 0.1px black; */
     color: black;
 }
 
+#gold .flickity-container-gold button.previous {
+    left: -3rem;
+}
+
+#gold .flickity-container-gold button.next {
+    right: -3rem;
+}
+
+#gold .flickity-container-gold .flickity-button {
+    border: none;
+    color: goldenrod;
+    height: 4rem;
+    width: 4rem;
+}
+
+#gold .card {
+    /* background-color: #f9e1c0;
+    border-radius: 0; */
+}
+
+#gold .card img {
+    border: 2px solid #daa520;
+}
+
+#gold-button {
+    padding: .5rem 1.2rem;
+    /* border-radius: .15rem; */
+    border: 0.5px solid #fdbf23;
+    color: black;
+    font-size: 1.5rem;
+    background: #ffc533b8;
+    transition: all 200ms ease-in-out;
+}
+
+#gold-button:hover {
+    background: #ffc32a;
+}
+
+#diamond-container {
+    max-width: 90%;
+}
+
 /* Every image in diamond section */
-.diamond-container img {
-    cursor: pointer;
+#diamond-container img {
+    width: 100%;
+    /* border-radius: 0.2rem; */
+    outline-offset: 4px;
 }
 
 #diamond {
@@ -492,28 +693,109 @@ footer #extended-footer-homepage-only p {
 }
 
 /* Specifically diamond section header for contrasting color */
-#diamond h2 {
+#diamond h2,
+#diamond p {
     color: white;
+}
+
+#diamond .row .diamond-col {
+    border: 0.5px solid rgb(128, 151, 189);
+    padding-top: 0.75rem;
+    width: 24%;
+}
+
+#diamond .row .diamond-col:not(:last-child) {
+    margin-right: 1.33%;
+}
+
+#diamond-button-div {
+    text-align: center;
+    padding: 2rem 0 0;
+}
+
+#diamond-button {
+    padding: .5rem 1.2rem;
+    font-size: 1.5rem;
+    background: rgb(225, 217, 217);
+    color: black;
+    transition: all 200ms ease-in-out;
+}
+
+#diamond-button:hover {
+    background: white;
 }
 
 /* Diamond section each text(not fancybox) */
 #diamond .row p {
     text-align: center;
-    font-size: 1em;
-    background-color: black;
-    color: white;
+    font-size: 1.2rem;
+    color: rgb(223, 223, 223);
+    padding-top: 1rem;
+    margin-bottom: 0;
 }
 
 /* No padding at bottom of collections section for direct transition to footer */
 #collections {
-    padding-bottom: 0 !important;
+    padding-bottom: 1rem !important;
+}
+
+#collections #collection-container {
+    max-width: 85%;
+}
+
+#collections figure {
+    cursor: pointer;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#collections figure:hover img:after {
+    opacity: 1;
+}
+
+#collections figure:hover figcaption {
+    transition: all 200ms ease-in-out;
+    bottom: 0;
+}
+
+#collections figcaption {
+    transition: all 200ms ease-in-out;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.646), rgba(0, 0, 0, 0));
 }
 
 /* Every image in collections section */
 #collections img {
-    border-radius: 5px;
+    border-radius: 10px;
     width: 100%;
     height: auto;
+}
+
+#collections .collection-text {
+    color: #e9e9e9;
+    text-align: center;
+    letter-spacing: 0.75px;
+}
+
+#collections .collection-text .collection-title {
+    font-size: 1.75rem;
+    margin-bottom: 0;
+    line-height: 1.5;
+    margin-top: 0.75rem;
+}
+
+#collections .collection-text .collection-subtext {
+    font-size: 1.15rem;
+    line-height: 1.5;
+    transition: all 200ms ease-in-out;
 }
 
 /* The collections section, specifically those rows that have the text on the left */
@@ -557,7 +839,7 @@ footer #extended-footer-homepage-only p {
 #subscribe {
     padding-top: 2%;
     padding-bottom: 2%;
-    background-color: rgb(255, 255, 244);
+    /* background-color: rgb(255, 255, 244);*/
 }
 
 #subscribe #subscribe-div {
@@ -574,7 +856,6 @@ footer #extended-footer-homepage-only p {
 #subscribe #subscribe-div p {
     font-weight: normal;
     font-kerning: none;
-    padding: 1% 0;
 }
 
 #subscribe-form-col {
@@ -601,7 +882,7 @@ footer #extended-footer-homepage-only p {
     font-kerning: none;
     width: 24%;
     border: 1px solid #684f4f;
-    padding: 6px 13px;
+    padding: 8px 13px;
     background: #684f4f;
     color: #fff;
     font-size: 1rem;
@@ -727,7 +1008,7 @@ footer #extended-footer-homepage-only p {
 /* Contact us form each input */
 #contact-us .form-control {
     border: solid 1px black;
-    background-color: aliceblue;
+    background-color: transparent;
     border-radius: 0;
     color: black;
     /* font-weight: 600; */
@@ -759,7 +1040,8 @@ footer #extended-footer-homepage-only p {
     width: 100%;
     margin-top: 20px;
     color: white;
-    background-color: rgb(31, 58, 82);
+    /* background-color: rgb(31, 58, 82); */
+    background-color: #684f4f;
     border-color: gray;
     border-radius: 0;
     transition: 300ms;
@@ -767,7 +1049,7 @@ footer #extended-footer-homepage-only p {
 
 #contact-us-button:hover {
     /* background-color: rgb(73, 214, 106); */
-    background-color: rgb(74, 139, 196);
+    background: #9c7777;
 }
 
 #contact-us-button:focus {
@@ -1060,6 +1342,10 @@ footer #extended-footer-homepage-only p {
 /*#endregion*/
 
 /*#region PRODUCT PAGES */
+
+#goldpage img {
+    width: 100%;
+}
 
 #gold-necklece .img-shadow {
     /* box-shadow: 0px 3px 5px 3px rgb(0,0,0,0.2); */
@@ -1473,7 +1759,6 @@ footer #extended-footer-homepage-only p {
 }
 
 /* Keeps every other page hidden to simulate SPA */
-#goldpage,
 #diamondpage,
 #antiquepage,
 #gemstonepage,
@@ -1526,6 +1811,10 @@ body.compensate-for-scrollbar {
     font-size: 25px;
 }
 
+.flickity-container-gold {
+    padding: 1rem;
+}
+
 /* Default padding makes the cards very small so this lets them fill up the room*/
 .flickity-container-gold .card-body {
     padding: 0px !important;
@@ -1538,7 +1827,7 @@ body.compensate-for-scrollbar {
 
 /* Keeps the gold sliders with 5 cards visible(hence 20% each) and keeps them separated well enough */
 .flickity-container-gold .container-cell {
-    width: 20%;
+    width: 33%;
     margin: 0px 20px;
 }
 
@@ -1891,7 +2180,7 @@ TV and Extra Large Screens – 1201px and more
     }
 
     #contact-us {
-        padding-top: 48px;
+        /* padding-top: 48px; */
     }
 
 }
@@ -1932,10 +2221,6 @@ TV and Extra Large Screens – 1201px and more
 
     .video-cover {
         height: 40vh;
-    }
-
-    #mainNav .navbar-nav .nav-item .nav-link {
-        color: #fff;
     }
 
     .mitra-logo {
@@ -1989,10 +2274,6 @@ TV and Extra Large Screens – 1201px and more
     .left-about,
     .right-about {
         width: 100%;
-    }
-
-    #mainNav .navbar-nav .nav-item .nav-link {
-        color: #fff;
     }
 
     .cover-about {
@@ -2304,31 +2585,7 @@ TV and Extra Large Screens – 1201px and more
 }
 
 @media screen and (min-width: 992px) {
-    #mainNav .navbar-nav .nav-item .nav-link:not(#dropdownMenuButton)::after {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        background-color: #704a57;
-        width: 0%;
-        content: "";
-        height: 1.5px;
-        transition: all 0.5s;
-    }
 
-    #mainNav .navbar-nav .nav-item .nav-link:not(#dropdownMenuButton):not(#kp-logo):hover::after {
-        width: 80%;
-    }
-
-    #mainNav .active-item {
-        color: #704a57 !important;
-        text-shadow: 0 0 0.35px #704a57;
-    }
-
-    #mainNav .active-item::after {
-        width: 80% !important;
-    }
 
     .sidebar,
     .mobile-header {
@@ -2347,31 +2604,12 @@ TV and Extra Large Screens – 1201px and more
     #rhodiumpage {
         padding-top: 60px;
     }
-
-    .navbar .navbar-nav .nav-item .nav-link:not(#dropdownMenuButton) {
-        position: relative;
-    }
-
-    #mainNav .navbar-nav .nav-item {
-        /* width: 12.5%; */
-    }
-
-    #mainNav {
-        padding-top: 0;
-        -webkit-transition: padding-top .3s, padding-bottom .3s;
-        transition: padding-top .3s, padding-bottom .3s;
-        border: none;
-        background-color: #f8f2f0;
-    }
-
-    #mainNav .navbar-brand {
-        font-size: 1.75em;
-        -webkit-transition: all .3s;
-        transition: all .3s;
-    }
 }
 
+
 @media screen and (min-width: 1450px) {
+
+    /* REPLACE WITH HTML PICTURE */
     #kp-logo-test {
         height: 29px;
         width: 200px;
@@ -2386,7 +2624,7 @@ TV and Extra Large Screens – 1201px and more
 
     #mainNav .navbar-nav .nav-item .nav-link {
 
-        margin: 0.5rem 1vw 0rem 1vw !important;
+        margin: 0.5rem 0.7vw 0rem 0.7vw !important;
 
     }
 

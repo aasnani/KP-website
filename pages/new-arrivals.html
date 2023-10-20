@@ -5,13 +5,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Explore the latest gemstone treasures at our store. Discover stunning new arrivals and experience the artistry and heritage of Indian jewelry.">
+  <meta name="description"
+    content="Explore the latest treasures at our store. Discover stunning new arrivals and experience the artistry and heritage of Indian jewelry.">
   <meta name="rating" content="General">
   <meta name="referrer" content="no-referrer">
   <meta name="author" content="Armand Asnani">
   <title>New Arrivals | Kaypee Jewelers</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css" />
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
@@ -23,7 +25,8 @@
   <link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
   <link href="css/my-styles.css" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="js/flickity.pkgd.min.js"></script>
   <script src="js/flickity-fade.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
@@ -38,59 +41,69 @@
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container-fluid g-0">
 
-    <div class="row mx-auto" id="navbar-row">
-      <div class="col mx-auto" id="top-navbar">
-        <div>
-          <p><a style="color:#e4bab4" href="tel:781-229-9170"><i class="fa fa-phone" style="color:#e4bab4"></i>
-              781-229-9170</a></p>
-          <p><i class="bi bi-instagram"></i> kaypeejewelers </p>
-          <p> <a style="color:#e4bab4" href="https://goo.gl/maps/SpqAM3tbYXB2t5BdA" target="_blank"
-              rel="noopener noreferrer"><i class="bi bi-pin-map-fill" style="color:#e4bab4"></i> Burlington, MA</a></p>
+      <div class="row mx-auto" id="navbar-row">
+        <!-- <div class="col mx-auto" id="top-navbar">
+          <div>
+            <p><a style="color:#e4bab4" href="tel:781-229-9170"><i class="fa fa-phone" style="color:#e4bab4"></i>
+                781-229-9170</a></p>
+            <p><i class="bi bi-instagram"></i> kaypeejewelers </p>
+            <p> <a style="color:#e4bab4" href="https://goo.gl/maps/SpqAM3tbYXB2t5BdA" target="_blank"
+                rel="noopener noreferrer"><i class="bi bi-pin-map-fill" style="color:#e4bab4"></i> Burlington, MA</a>
+            </p>
+          </div>
+        </div> -->
+
+        <div class="w-100"></div>
+
+        <a href="/" class="navbar-brand"><img src="./images/logoplain.webp" class="img-fluid mr-auto" id="kp-logo-test"
+            aria-label="Go to home page" alt="Kaypee Jewelers Logo"></a>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+
+
+          <ul class="navbar-nav justify-content-center text-uppercase">
+            <li class="nav-item"> <a id="home-page-navlink" class="nav-link single-line-link" href="/">Home</a>
+            </li>
+            <li class="nav-item"> <a id="newarrival-page-navlink" class="nav-link single-line-link active active-item"
+                href="/new-arrivals">New Arrivals</a>
+            </li>
+            <li class="nav-item"> <a id="gold-page-navlink" class="nav-link " href="/gold-jewelry">Gold</a>
+            </li>
+            <li class="nav-item"> <a id="diamond-page-navlink" class="nav-link" href="#"
+                onclick="changePage('#diamondpage')">Diamond</a>
+            </li>
+            </li>
+            <li class="nav-item"> <a id="antique-page-navlink" class="nav-link " href="#"
+                onclick="changePage('#antiquepage')">Antique</a>
+            </li>
+            <li class="nav-item"> <a id="gemstone-page-navlink" class="nav-link " href="#"
+                onclick="changePage('#gemstonepage')">Gemstone</a>
+            </li>
+            <li class="dropdown nav-item" id="collectionsDropdown">
+              <a class="nav-link single-line-link dropdown-toggle" data-toggle="dropdown"
+                id="dropdownMenuButton">collections</a>
+              <div class="dropdown-menu dropdown-menu-right collection-menu" aria-labelledby="dropdownMenuButton"
+                id="collectionsDropdownMenu">
+                <a class="dropdown-item" href="#" onclick="changePage('#mangalsutrapage')">Mangal Sutras</a>
+                <a class="dropdown-item" href="#" onclick="changePage('#engagementpage')">Engagement Rings and Wedding
+                  Bands</a>
+                <a class="dropdown-item" href="#" onclick="changePage('#rhodiumpage')">Rhodium Bangles</a>
+                <a class="dropdown-item" href="#" onclick="changePage('#templepage')">Temple</a>
+              </div>
+            </li>
+            <li class="nav-item"> <a id="contact-us-nav-link" class="nav-link single-line-link"
+                href="/#contact-us">Contact Us</a>
+            </li>
+          </ul>
+          <span class="navbar-text" id="nav-contact">
+            <a href="tel:781-229-9170"><i class="fa fa-phone"></i>781-229-9170</a>
+            <a><i class="bi bi-instagram"></i> kaypeejewelers</a>
+            <a href="https://goo.gl/maps/SpqAM3tbYXB2t5BdA" target="_blank" rel="noopener noreferrer"><i
+                class="bi bi-pin-map-fill"></i> Burlington, MA</a>
+          </span>
         </div>
       </div>
-
-      <div class="w-100"></div>
-
-      <a href="/" class="navbar-brand"><img src="./images/logoplain.png"
-          class="img-fluid mr-auto" id="kp-logo-test"></a>
-
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav justify-content-center text-uppercase">
-          <li class="nav-item"> <a id="home-page-navlink" class="nav-link single-line-link active" href="/">Home</a>
-          </li>
-          <li class="nav-item"> <a id="newarrival-page-navlink" class="nav-link single-line-link active-item" href="/new-arrivals">New Arrivals</a>
-          </li>
-          <li class="nav-item"> <a id="gold-page-navlink" class="nav-link " href="#"
-              onclick="changePage('#goldpage')">Gold Jewelry</a>
-          </li>
-          <li class="nav-item"> <a id="diamond-page-navlink" class="nav-link" href="#"
-              onclick="changePage('#diamondpage')">Diamond Jewelry</a>
-          </li>
-          </li>
-          <li class="nav-item"> <a id="antique-page-navlink" class="nav-link " href="#"
-              onclick="changePage('#antiquepage')">Antique Jewelry</a>
-          </li>
-          <li class="nav-item"> <a id="gemstone-page-navlink" class="nav-link " href="#"
-              onclick="changePage('#gemstonepage')">Gemstone Jewelry</a>
-          </li>
-          <li class="dropdown nav-item" id="collectionsDropdown">
-            <a class="nav-link single-line-link dropdown-toggle" data-toggle="dropdown" id="dropdownMenuButton"
-              aria-haspopup="true" aria-expanded="false">collections</a>
-            <div class="dropdown-menu dropdown-menu-right collection-menu" aria-labelledby="dropdownMenuButton"
-              id="collectionsDropdownMenu">
-              <a class="dropdown-item" href="#" onclick="changePage('#mangalsutrapage')">Mangal Sutras</a>
-              <a class="dropdown-item" href="#" onclick="changePage('#engagementpage')">Engagement Rings and Wedding
-                Bands</a>
-              <a class="dropdown-item" href="#" onclick="changePage('#rhodiumpage')">Rhodium Bangles</a>
-              <a class="dropdown-item" href="#" onclick="changePage('#templepage')">Temple Jewelry</a>
-            </div>
-          </li>
-          <li class="nav-item"> <a id="contact-us-nav-link" class="nav-link single-line-link" href="/#contact-us">Contact Us</a>
-          </li>
-        </ul>
-      </div>
     </div>
-  </div>
   </nav>
 
   <div class="mobile-header">
@@ -385,16 +398,16 @@
     </div>
   </footer>
 
-<!-- Scripts -->
+  <!-- Scripts -->
 
-<script>
-  wow = new WOW(
+  <script>
+    wow = new WOW(
       {
-          animateClass: 'animate__animated' //updated default animate 4.+
+        animateClass: 'animate__animated' //updated default animate 4.+
       }
-  )
-  wow.init();
-</script>
+    )
+    wow.init();
+  </script>
 
   <script>
     $(document).ready(function () {
@@ -496,18 +509,20 @@
     $(window).on("load", function () {
       console.log("Loading Flickity");
       $(".flickity-container-new-arr-second").flickity({
-          wrapAround: true,
-          'autoPlay': 'true',
-          pauseAutoPlayOnHover: false,
-          pageDots: true,
-          prevNextButtons: false,
-          cellAlign: 'left',
-          autoPlay: '3500'
-        });
+        wrapAround: true,
+        'autoPlay': 'true',
+        pauseAutoPlayOnHover: false,
+        pageDots: true,
+        prevNextButtons: false,
+        cellAlign: 'left',
+        autoPlay: '3500'
+      });
     });
   </script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
