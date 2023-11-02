@@ -358,6 +358,10 @@ footer .footer-contact-col table {
     margin-left: auto;
 }
 
+footer .footer-contact-col table tr td:not(:last-child) {
+    padding-right: 0.3rem;
+}
+
 footer .footer-contact-col a {
     color: black;
     font-size: 1.1rem;
@@ -961,12 +965,12 @@ footer #extended-footer-homepage-only p {
 }
 
 #contact-us-row {
-    padding-top: 1rem;
+    padding-top: 1.5rem;
 }
 
 #contact-us p {
     letter-spacing: 0.75px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-align: center;
 }
 
@@ -2615,8 +2619,8 @@ TV and Extra Large Screens – 1201px and more
     }
 
     #kp-logo-test {
-        height: 29px;
-        width: 200px;
+        height: 21px;
+        width: 145px;
         margin: 0.5rem 0rem 0.5rem 1.5rem;
     }
 
@@ -2625,7 +2629,8 @@ TV and Extra Large Screens – 1201px and more
     } */
 
     #mainNav .navbar-nav .nav-item .nav-link,
-    .dropdown-item {
+    .dropdown-item,
+    #nav-contact a {
         font-size: 1vw
     }
 }
