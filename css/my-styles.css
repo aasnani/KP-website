@@ -601,7 +601,7 @@ footer #extended-footer-homepage-only p {
 /* Full horizontal section new arrivals and "contact us" */
 #contact-us,
 #subscribe {
-    background-color: #fef9ec;
+    background-color: #fffbf2;
 }
 
 #new-arr img {
@@ -800,7 +800,7 @@ footer #extended-footer-homepage-only p {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     position: absolute;
-    bottom: -40px;
+    bottom: -38px;
     left: 0;
     right: 0;
     margin-right: auto;
