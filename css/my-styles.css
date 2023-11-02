@@ -2633,6 +2633,19 @@ TV and Extra Large Screens – 1201px and more
     #nav-contact a {
         font-size: 1vw
     }
+
+    #contact-us-details-row,
+    #contact-us-message-row {
+        max-width: 100%;
+    }
+
+    #collections .collection-text .collection-title {
+        font-size: 1.2rem;
+    }
+
+    #collections .collection-text .collection-subtext {
+        font-size: 1rem;
+    }
 }
 
 @media screen and (min-width: 992px) {
