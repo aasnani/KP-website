@@ -324,7 +324,7 @@ footer {
 }
 
 footer #footer-container {
-    max-width: 85%;
+    /* max-width: 60%; */
 }
 
 footer .footer-icon-div {
