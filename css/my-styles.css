@@ -323,6 +323,15 @@ footer {
     padding-bottom: 25px;
 }
 
+footer #footer-container {
+    max-width: 85%;
+}
+
+footer .footer-icon-div {
+    text-align: center;
+    font-size: 1.3rem;
+}
+
 footer .footer-row:not(:last-child) {
     margin-bottom: 15px;
     padding-bottom: 15px;
@@ -340,16 +349,22 @@ footer .footer-col {
     letter-spacing: 0.5px;
 }
 
+footer .footer-contact-col {
+    text-align: center;
+}
+
+footer .footer-contact-col table {
+    margin-right: auto;
+    margin-left: auto;
+}
+
 footer .footer-contact-col a {
     color: black;
+    font-size: 1.1rem;
 }
 
 footer .footer-contact-col a:hover {
     color: rgb(203, 127, 127)
-}
-
-footer .footer-contact-col i {
-    padding-right: 0.5rem;
 }
 
 footer .footer-address {
@@ -403,6 +418,7 @@ footer #footer-text-row {
 
 footer .footer-row p {
     display: inline;
+    font-size: 1.3rem;
 }
 
 footer .footer-row #footer-text-left {
@@ -463,6 +479,7 @@ footer #extended-footer-homepage-only p {
     max-width: 90%;
     margin-right: auto;
     margin-left: auto;
+    padding-top: 1rem;
 }
 
 .flickity-container-banner .flickity-page-dots {
@@ -580,7 +597,7 @@ footer #extended-footer-homepage-only p {
 /* Full horizontal section new arrivals and "contact us" */
 #contact-us,
 #subscribe {
-    background-color: #fff7e6;
+    background-color: #fef9ec;
 }
 
 #new-arr img {
@@ -698,15 +715,30 @@ footer #extended-footer-homepage-only p {
     color: white;
 }
 
+#diamond .row {
+    margin-top: 1rem;
+}
+
+#diamond-slider-col {
+    display: grid;
+    align-items: center;
+}
+
+.flickity-container-diamond .dot {
+    background: whitesmoke;
+}
+
 #diamond .row .diamond-col {
     border: 0.5px solid rgb(128, 151, 189);
     padding-top: 0.75rem;
-    width: 24%;
+    width: 48%;
 }
 
 #diamond .row .diamond-col:not(:last-child) {
-    margin-right: 1.33%;
+    margin-right: 2%;
 }
+
+
 
 #diamond-button-div {
     text-align: center;
@@ -859,17 +891,18 @@ footer #extended-footer-homepage-only p {
 }
 
 #subscribe-form-col {
-    max-width: 50%;
+    max-width: 80%;
 }
 
 /* Newsletter subscribe text input */
 #subscribe-input {
     border: solid 1px black;
-    width: 75%;
+    width: 70%;
     padding: 8px 13px;
     background: transparent;
     border-radius: 0;
     display: inline;
+    margin-right: 1rem;
 }
 
 #subscribe-input:focus {
@@ -924,9 +957,25 @@ footer #extended-footer-homepage-only p {
 #contact-us {
     padding-bottom: 20px;
     scroll-margin-top: 55px;
+    padding-top: 48px
+}
+
+#contact-us-row {
+    padding-top: 1rem;
+}
+
+#contact-us p {
+    letter-spacing: 0.75px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#contact-us-container {
+    max-width: 85%;
 }
 
 #contact-us-details-row {
+    max-width: 90%;
     padding-bottom: 15px;
 }
 
@@ -948,6 +997,7 @@ footer #extended-footer-homepage-only p {
 }
 
 #contact-us-message-row {
+    max-width: 90%;
     margin-top: 20px;
 }
 
@@ -1017,7 +1067,7 @@ footer #extended-footer-homepage-only p {
 /* Contact us form each input after clicking*/
 #contact-us .form-control:focus {
     border: solid 1px black;
-    background-color: aliceblue;
+    background-color: #feedc5;
     border-radius: 0;
     color: black;
     /* font-weight: 600; */
@@ -1783,10 +1833,6 @@ footer #extended-footer-homepage-only p {
     width: 100%;
 }
 
-.flickity-container-banner button {
-    border: 1px solid black;
-}
-
 /* layout shift fancybox */
 body.compensate-for-scrollbar {
     overflow: visible !important;
@@ -1864,7 +1910,8 @@ body.compensate-for-scrollbar {
 
 /* Flickity top banner on each page buttons for left and right */
 .flickity-container-banner .flickity-button {
-    background-color: rgba(255, 255, 255, 0.4) !important;
+    background: transparent !important;
+    color: rgb(255, 255, 255, 0.6);
 }
 
 /* Flickity dots on bottom of each slider, only enabled on mobile */
@@ -1881,9 +1928,8 @@ body.compensate-for-scrollbar {
 
 /* Flickity diamond section on home page buttons for left and right */
 .flickity-container-diamond .flickity-button {
-    background-color: rgba(0, 0, 0, 0.1) !important;
-    color: antiquewhite;
-    border: solid 1px antiquewhite;
+    background: rgb(0, 0, 0, 0.1);
+    color: whitesmoke;
 }
 
 nav .row>* {
