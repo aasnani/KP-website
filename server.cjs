@@ -1,12 +1,10 @@
-import dotenv from 'dotenv';
-import fetch from 'node-fetch';
-import express from 'express';
-import nodemailer from 'nodemailer';
-import path from 'path';
-import pino from 'pino';
-import moment from 'moment';
-
-dotenv.config();
+require('dotenv').config()
+const fetch = require('node-fetch');
+const express = require('express');
+const nodemailer = require('nodemailer');
+const path = require('path');
+const pino = require('pino');
+const moment = require('moment');
 
 //Definitions
 const __DIRNAME = path.resolve();
@@ -16,7 +14,7 @@ const LOG_LEVEL = process.env.LOG_LEVEL;
 
 const date_string = moment().format("YYYY-MM-DD HH:mm:ss");
 
-const NODEMAILER_EMAIL_SETTINGS = { 
+const NODEMAILER_EMAIL_SETTINGS = {
   name: process.env.HOST,
   host: process.env.HOST,
   port: 465,
@@ -69,7 +67,7 @@ const create_nodemailer_mail_object = (name, email, phone, message) => ({
 const refresh_access_token = async () => {
   const response = await fetch(CC_REFRESH_INFO.url, CC_REFRESH_INFO.options);
   const response_json = await response.json();
-  
+
   CC_DATA_ACCESS_HEADERS['Authorization'] = 'Bearer ' + response_json['access_token'];
 };
 
@@ -90,8 +88,8 @@ const transport = pino.transport({
   targets: [
     {
       target: 'pino/file',
-      options: { 
-        destination: `${__DIRNAME}/logs/app-${date_string}.log` 
+      options: {
+        destination: `${__DIRNAME}/logs/app-${date_string}.log`
       },
       level: LOG_LEVEL
     },
@@ -101,14 +99,14 @@ const transport = pino.transport({
     },
   ],
 });
-const logger = pino({ level: LOG_LEVEL}, transport);
+const logger = pino({ level: LOG_LEVEL }, transport);
 logger.info("Logging started!");
 
 const transporter = nodemailer.createTransport(NODEMAILER_EMAIL_SETTINGS);
 
 transporter.verify(function (error, success) {
   if (error) {
-    logger.error({error}, "Error with nodemailer transporter");
+    logger.error({ error }, "Error with nodemailer transporter");
   } else {
     logger.info("Nodemailer successfully set-up and verified");
   }
@@ -122,50 +120,57 @@ let app = express();
 
 // Render static files
 app.use(express.json());
-app.use(express.static('index.html'));
+app.use(express.static('home.html'));
 app.use('/css', express.static('css'));
 app.use('/fonts', express.static('fonts'));
 app.use('/images', express.static('images'));
-app.use('/imagesbaup', express.static('imagesbaup'));
 app.use('/js', express.static('js'));
 
 //Routes
 
-app.get('/', (req,res) => {
-  res.sendFile(__DIRNAME + '/index.html');
+app.get('/', (req, res) => {
+  res.sendFile(__DIRNAME + '/homepage.html');
+})
+
+app.get('/new-arrivals', (req, res) => {
+  res.sendFile(__DIRNAME + '/pages/new-arrivals.html');
+})
+
+app.get('/gold-jewelry', (req, res) => {
+  res.sendFile(__DIRNAME + '/pages/gold-jewelry.html');
 })
 
 app.post('/addToEmailList', (req, res) => {
   logger.info("/addToEmailList - Request received");
   let email = req.query.email_address;
   let add_contact_body = create_contact_json_string(email);
-  logger.debug({add_contact_body}, "/addToEmailList - CC Payload");
-  
+  logger.debug({ add_contact_body }, "/addToEmailList - CC Payload");
+
   fetch(CC_ADD_CONTACT_ENDPOINT, get_options_object('POST', add_contact_body)).then(async api_response => {
-    if(api_response.status == 401){
+    if (api_response.status == 401) {
       await refresh_access_token();
       let response = await fetch(CC_ADD_CONTACT_ENDPOINT, get_options_object('POST', add_contact_body));
 
-      if(response.status == 200 | response.status == 201) {
+      if (response.status == 200 | response.status == 201) {
         logger.info(`/addToEmailList - CC Request handled with retry - Status:${response.status}`);
-        logger.debug({response}, "Response body of successful CC request after retry");
-        res.status(201).json({'status': 'success'});
+        logger.debug({ response }, "Response body of successful CC request after retry");
+        res.status(201).json({ 'status': 'success' });
       }
       else {
         logger.error(`/addToEmailList - CC Request failed to be handled with retry - Status:${response.status}`);
-        logger.debug({response}, "Response body of failed CC request after retry");
-        res.status(500).json({'status': 'failure'});
+        logger.debug({ response }, "Response body of failed CC request after retry");
+        res.status(500).json({ 'status': 'failure' });
       }
-    } 
+    }
     else {
-      logger.info(`/addToEmailList - CC Request handled - Status:${response.status}`);
-      logger.debug({response}, "Response body of successful CC request");
-      res.status(201).json({'status': 'success'});
+      logger.info(`/addToEmailList - CC Request handled - Status:${api_response.status}`);
+      logger.debug({ api_response }, "Response body of successful CC request");
+      res.status(201).json({ 'status': 'success' });
     }
   }).catch(async error => {
-    logger.error(`/addToEmailList - CC Request failed to be handled - Status:${response.status}`);
-    logger.debug({response}, "Response body of failed CC request");
-    res.status(500).json({'status': 'failure'});
+    logger.error(`/addToEmailList - CC Request failed to be handled - Status:${error.status}`);
+    logger.debug({ error }, "Response body of failed CC request");
+    res.status(500).json({ 'status': 'failure' });
   })
 });
 
@@ -178,15 +183,15 @@ app.post('/sendContactUs', (req, res) => {
 
   const mail = create_nodemailer_mail_object(name, email, phone, message);
 
-  logger.debug({mail}, "/sendContactUs - Email Payload");
+  logger.debug({ mail }, "/sendContactUs - Email Payload");
 
   transporter.sendMail(mail, (err, data) => {
     if (err) {
-      logger.error({err}, "/sendContactUs - Email request failed to be handled");
-      res.status(500).json({'status': 'failure'});
+      logger.error({ err }, "/sendContactUs - Email request failed to be handled");
+      res.status(500).json({ 'status': 'failure' });
     } else {
-      logger.info({data}, "/sendContactUs - Email request successfully handled");
-      res.status(200).json({'status': 'success'});;
+      logger.info({ data }, "/sendContactUs - Email request successfully handled");
+      res.status(200).json({ 'status': 'success' });;
     }
   });
 });
