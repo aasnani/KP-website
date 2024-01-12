@@ -1397,11 +1397,11 @@ footer #extended-footer-homepage-only p {
 
 /*#region PRODUCT PAGES */
 
-#goldpage img {
+#goldpage img, #diamondpage img {
     width: 100%;
 }
 
-#gold-necklece .img-shadow {
+#dropshadow .img-shadow {
     /* box-shadow: 0px 3px 5px 3px rgb(0,0,0,0.2); */
     filter: drop-shadow(2px 3px 5px rgb(0, 0, 0, 0.7));
 }
@@ -1725,7 +1725,7 @@ footer #extended-footer-homepage-only p {
 #myBtnContainer a {
     position: relative;
     text-decoration: none;
-    color: rgb(0, 0, 0, 0.5);
+    color: rgb(0, 0, 0, 1);
     padding: 6px 8px;
     margin: 0px 5px;
     cursor: pointer;
@@ -1812,16 +1812,7 @@ footer #extended-footer-homepage-only p {
     cursor: pointer;
 }
 
-/* Keeps every other page hidden to simulate SPA */
-#diamondpage,
-#antiquepage,
-#gemstonepage,
-#mangalsutrapage,
-#engagementpage,
-#templepage,
-#rhodiumpage {
-    display: none;
-}
+
 
 /* unused modals again */
 
