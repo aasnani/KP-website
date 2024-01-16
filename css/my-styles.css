@@ -1397,7 +1397,7 @@ footer #extended-footer-homepage-only p {
 
 /*#region PRODUCT PAGES */
 
-#goldpage img, #diamondpage img {
+#goldpage img, #diamondpage img, #antiquepage img, #gemstonepage img{
     width: 100%;
 }
 
