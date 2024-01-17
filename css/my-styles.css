@@ -31,6 +31,7 @@ Sections:
     src: local('Math');
 }
 
+
 body {
     margin: 0;
     /* font-family: 'Montserrat', sans-serif; */
@@ -122,7 +123,7 @@ a {
 #mainNav {
     text-align: center !important;
     vertical-align: middle !important;
-    background: #ffffff;
+    background: #fce7e7;
     box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);
     padding-left: 0;
     padding-right: 0;
@@ -975,7 +976,7 @@ footer #extended-footer-homepage-only p {
 }
 
 #contact-us-container {
-    max-width: 85%;
+    max-width: 90%;
 }
 
 #contact-us-details-row {
@@ -1411,7 +1412,7 @@ footer #extended-footer-homepage-only p {
 }
 
 .modal-dialog {
-    max-width: 70%;
+    max-width: 50%;
 }
 
 .modal-content {
@@ -1494,7 +1495,7 @@ footer #extended-footer-homepage-only p {
 }
 
 .modal-body #title {
-    border-top: 0.5px solid black;
+    /* border-top: 0.5px solid black; */
     font-size: 1.3rem;
 }
 
