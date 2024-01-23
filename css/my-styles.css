@@ -1398,7 +1398,8 @@ footer #extended-footer-homepage-only p {
 
 /*#region PRODUCT PAGES */
 
-#goldpage img, #diamondpage img, #antiquepage img, #gemstonepage img{
+#goldpage img, #diamondpage img, #antiquepage img, #gemstonepage img, #mangalsutrapage img, #engagementpage img, #templepage img,
+#rhodiumpage img{
     width: 100%;
 }
 
