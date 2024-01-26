@@ -114,18 +114,19 @@
     <a href="javascript:void(0)" class="closebtn" onClick="closeNav()">×</a>
 
     <a class="link" id="home-active" href="#">Home</a>
-    <a class="link" href="#new-arr">New Arrivals</a>
-    <a class="link" href="#gold">Gold Jewelry</a>
-    <a class="link" href="#diamond">Diamond Jewelry</a>
+    <a class="link" href="new-arrivals.html">New Arrivals</a>
+    <a class="link" href="gold-jewelry.html">Gold Jewelry</a>
+    <a class="link" href="diamond-jewelry.html">Diamond Jewelry</a>
+    <a class="link" href="antique-jewelry.html">Antique Jewelry</a>
+    <a class="link" href="gemstone-jewelry.html">Gemstone Jewelry</a>
 
-    <div class="dropdown">
-      <a class="nav-link  dropdown-toggle" data-toggle="dropdown" id="dropdownMenuButton-m" href="stone.html"
-        aria-haspopup="true" aria-expanded="false">collections</a>
-      <div id="drop" class="dropdown-menu collection-menu d-none" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item link" href="stone.html">Precious Gemstone Jewelry</a>
-        <a class="dropdown-item link" href="antique.html">Antique Jewelry</a>
-        <a class="dropdown-item link" href="mangalsutra.html">Mangal Sutras</a>
-        <a class="dropdown-item link" href="rings.html">Engagement Rings and Wedding Bands</a>
+    <div class="mobile-dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">collections</a>
+      <div class="mobile-dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="mobile-dropdown-item dropdown-item" href="mangal-sutras.html">Mangal Sutras</a>
+        <a class="mobile-dropdown-item dropdown-item" href="engagement-jewelry.html">Engagement Rings and Wedding Bands</a>
+        <a class="mobile-dropdown-item dropdown-item" href="rhodium-bangles.html">Rhodium Bangles</a>
+        <a class="mobile-dropdown-item dropdown-item" href="temple-jewelry.html">Temple Jewelry</a>
       </div>
     </div>
 
@@ -998,6 +999,23 @@
   </script>
 
   <script>
+
+
+  $(document).ready(function () {
+    $('a[href*="#"]').bind('click', function (e) {
+      e.preventDefault(); // prevent hard jump, the default behavior
+
+      var target = $(this).attr("href"); // Set the target as variable
+
+      $('html, body').stop().animate({
+        scrollTop: $(target).offset().top
+      }, 600, function () {
+        location.hash = target; //attach the hash (#jumptarget) to the pageurl
+      });
+      return false;
+    });
+  });
+
     $(window).on("load", function () {
       $(".flickity-container-gold").flickity({
         wrapAround: true,
@@ -1028,7 +1046,11 @@
         pauseAutoPlayOnHover: false
       });
     });
+
+
+
   </script>
+
 
   <script>
     (() => {
@@ -1061,25 +1083,11 @@
         $("#mySidebar").css("width", "0");
         $("#main").css("left", "0");
       });
+
     });
   </script>
 
   <script>
-
-    $(document).ready(function () {
-      $('a[href*="#"]').bind('click', function (e) {
-        e.preventDefault(); // prevent hard jump, the default behavior
-
-        var target = $(this).attr("href"); // Set the target as variable
-
-        $('html, body').stop().animate({
-          scrollTop: $(target).offset().top
-        }, 600, function () {
-          location.hash = target; //attach the hash (#jumptarget) to the pageurl
-        });
-        return false;
-      });
-    });
 
     $(window).scroll(function () {
 
@@ -1095,8 +1103,8 @@
 
 
     function openNav() {
-      document.getElementById("mySidebar").style.width = "250px";
-      document.getElementById("main").style.left = "250px";
+      document.getElementById("mySidebar").style.width = "100%";
+      // document.getElementById("main").style.left = "250px";
       document.getElementById("main").style.position = "relative";
       document.addEventListener("click", closeNavOnClick);
     }
