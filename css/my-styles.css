@@ -214,9 +214,10 @@ a {
     transform: rotate(180deg);
 }
 
+
 /* For little caret next to dropdown to rotate smoothly */
 .dropdown-toggle:after {
-    transition: 0.7s;
+    transition: 0.1s;
 }
 
 /* Each link in the dropdown style */

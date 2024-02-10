@@ -110,7 +110,37 @@
     </div>
   </div>
 
-  <div id="mySidebar" class="sidebar">
+  <div class="sidebar" id="mySidebar">
+    <a href="javascript:void(0)" class="closebtn" onClick="closeNav()">×</a>
+
+    <a class="link" id="home-active" href="#">Home</a>
+    <a class="link" href="new-arrivals.html">New Arrivals</a>
+    <a class="link" href="gold-jewelry.html">Gold Jewelry</a>
+    <a class="link" href="diamond-jewelry.html">Diamond Jewelry</a>
+    <a class="link" href="antique-jewelry.html">Antique Jewelry</a>
+    <a class="link" href="gemstone-jewelry.html">Gemstone Jewelry</a>
+
+    <div class="sidebar-item">
+  <a class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#dropdownOne" aria-expanded="false" aria-controls="dropdownOne">
+    Collections
+  </a>
+  <div id="dropdownOne" class="sidebar-dropdown collapse" aria-labelledby="dropdownMenuButton" data-bs-parent="mySidebar">
+    <div class="dropdown-body">
+      <div class="list-group">
+      <a class="link" href="mangal-sutras.html">Mangal Sutras</a>
+      <a class="link" href="engagement-jewelry.html">Engagement Rings and Wedding Bands</a>
+      <a class="link" href="rhodium-bangles.html">Rhodium Bangles</a>
+      <a class="link" href="temple-jewelry.html">Temple Jewelry</a>
+    </div>
+    </div>
+  </div>
+</div>
+<a href="index.html#contact-us" id="trigger1" class=" trigger1 link">Contact Us</a>
+
+</div>
+
+
+  <!-- <div id="mySidebar" class="sidebar">
     <a href="javascript:void(0)" class="closebtn" onClick="closeNav()">×</a>
 
     <a class="link" id="home-active" href="#">Home</a>
@@ -132,7 +162,7 @@
 
     <a href="index.html#contact-us" id="trigger1" class=" trigger1 link">Contact Us</a>
 
-  </div>
+  </div> -->
 
   <div id="homepage">
 
@@ -141,8 +171,8 @@
         <div class="container-cell">
           <picture>
             <source srcset="images/Banner/xlarge/banner_test.webp" media="(min-width: 1200px)" />
-            <source srcset="images/Banner/large/banner_test.webp" media="(min-width: 992px)" />
-            <img class="img-fluid slider-image mobile-disable" width="2960" height="1300"
+            <source srcset="images/Banner/large/banner_test.webp" media="(min-width: 1px)" />
+            <img class="img-fluid slider-image" width="2960" height="1300"
               src="images/Banner/banner_test.webp" alt="Indian Diamond Necklace" />
           </picture>
           <!-- <img src="images/Banner/xlarge/banner_test.webp" alt="Los Angeles" width="1100" class="mobile-enable"> -->
@@ -151,7 +181,7 @@
           <picture>
             <source srcset="images/Banner/xlarge/banner_test_2.webp" media="(min-width: 1200px)" />
             <source srcset="images/Banner/large/banner_test_2.webp" media="(min-width: 992px)" />
-            <img class="img-fluid slider-image mobile-disable" width="2960" height="1300"
+            <img class="img-fluid slider-image" width="2960" height="1300"
               src="images/Banner/banner_test_2.webp" alt="22kt Pearl Necklace" />
           </picture>
           <!-- <img src="images/Banner/xlarge/banner_test_2.webp" alt="Los Angeles" width="1100" class="mobile-enable"> -->
@@ -160,7 +190,7 @@
           <picture>
             <source srcset="images/Banner/xlarge/banner_test_3.webp" media="(min-width: 1200px)" />
             <source srcset="images/Banner/large/banner_test_3.webp" media="(min-width: 992px)" />
-            <img class="img-fluid slider-image mobile-disable" width="2960" height="1300"
+            <img class="img-fluid slider-image" width="2960" height="1300"
               src="images/Banner/xlarge/banner_test_3.webp" alt="Diamond Necklace with blue stone" />
           </picture>
           <!-- <img src="images/Banner/banner_test_3.webp" alt="Los Angeles" width="1100" class="mobile-enable"> -->
@@ -169,7 +199,7 @@
           <picture>
             <source srcset="images/Banner/xlarge/goldbanner.webp" media="(min-width: 1200px)" />
             <source srcset="images/Banner/large/goldbanner.webp" media="(min-width: 992px)" />
-            <img class="img-fluid slider-image mobile-disable" width="2960" height="1300"
+            <img class="img-fluid slider-image" width="2960" height="1300"
               src="images/Banner/xlarge/goldbanner.webp" alt="22kt Gold Necklace Set" />
           </picture>
           <!-- <img src="images/Banner/goldbanner.webp" alt="Los Angeles" width="1100" class="mobile-enable"> -->
@@ -1236,7 +1266,7 @@
     }
   </script>
 
-  <script>
+  <!-- <script>
     var pad = $("#collections").css("padding-top").replace("px", "");
     $('.dropdown-toggle').click(function (event) {
       $('body, html').animate({
@@ -1244,8 +1274,10 @@
       }, 600);
 
     });
-  </script>
-  <script>
+  </script> -->
+
+
+  <!-- <script>
     $(".dropdown-menu").hover(function (e) {
       $(".dropdown-toggle").attr("aria-expanded", "true");
       $(".dropdown-toggle").addClass("nav-link-force-hover");
@@ -1253,7 +1285,7 @@
       $(".dropdown-toggle").attr("aria-expanded", "false");
       $(".dropdown-toggle").removeClass("nav-link-force-hover");
     });
-  </script>
+  </script> -->
 
   <script>
     wow = new WOW(
