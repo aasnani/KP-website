@@ -22,6 +22,18 @@ Sections:
 17) UNSORTED MEDIA QUERIES
 */
 
+#new-arr, #gold {
+  padding-top:2vh;
+}
+
+#diamond{
+  padding-top:2vh;
+  padding-bottom:2vh;
+}
+ #collections {
+   padding-top:4vh;
+ }
+
 
 /*#region GLOBAL ELEMENT RULES*/
 
@@ -621,7 +633,7 @@ footer #extended-footer-homepage-only p {
     padding: 0.5rem 1.2rem;
     background-color: #000000cb;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.0rem;
     margin-right: calc(var(--bs-gutter-x) * .5);
 }
 
@@ -919,7 +931,7 @@ footer #extended-footer-homepage-only p {
 #subscribe-btn {
     font-weight: normal;
     font-kerning: none;
-    width: 24%;
+    /* width: 24%; */
     border: 1px solid #684f4f;
     padding: 8px 13px;
     background: #684f4f;
@@ -2002,15 +2014,15 @@ TV and Extra Large Screens – 1201px and more
         top: 0;
     }
 
-    #diamond,
+    /* #diamond,
     #new-arr {
         padding: 58px 0 50px;
-    }
+    } */
 
-    #collections,
+    /* #collections,
     #gold {
         padding: 58px 0 50px;
-    }
+    } */
 
     #collections strong {
         display: none
@@ -2216,14 +2228,14 @@ TV and Extra Large Screens – 1201px and more
         display: none;
     }
 
-    #diamond,
+    /* #diamond,
     #gold,
     #new-arr,
     #collections {
         padding-top: 48px;
         padding-bottom: 62px;
         scroll-margin-top: 35px;
-    }
+    } */
 
     #contact-us {
         /* padding-top: 48px; */
@@ -2351,19 +2363,19 @@ TV and Extra Large Screens – 1201px and more
 
 @media (max-width:1366px) {
 
-    #diamond,
+    /* #diamond,
     #gold,
     #collections,
     #new-arr {
         padding-top: 85px;
         padding-bottom: 123px;
         scroll-margin-top: 35px;
-    }
+    } */
 
-    #collections {
+    /* #collections {
         padding: 85px 0px 123px 0px;
         scroll-margin-top: 35px;
-    }
+    } */
 
     .collections-txt h1 {
         font-size: 19px;
@@ -2664,6 +2676,7 @@ TV and Extra Large Screens – 1201px and more
     #rhodiumpage {
         padding-top: 60px;
     }
+
 }
 
 
